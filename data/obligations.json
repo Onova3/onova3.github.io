@@ -539,5 +539,116 @@
         }
       }
     ]
+  },
+  "tva": {
+    "qui": [
+      {
+        "article": "CDI 06.01.16",
+        "texte": {
+          "fr": "L'entreprise assujettie calcule elle-même la TVA de chaque mois : TVA collectée sur ses ventes, moins la TVA payée sur ses achats.",
+          "en": "The registered business calculates each month's VAT itself: VAT collected on sales, minus VAT paid on purchases.",
+          "mg": "Ny orinasa iharan'ny TVA mihitsy no manao ny kajin'ny TVA isam-bolana: TVA voaray tamin'ny varotra, esorina ny TVA naloa tamin'ny fividianana."
+        }
+      },
+      {
+        "article": "CPF I-105",
+        "texte": {
+          "fr": "Elle déclare son existence au service fiscal dans les 10 jours qui suivent le début de l'activité taxable. Changement de profession, cession, cessation ou modification se déclarent dans le même délai.",
+          "en": "It declares its existence to the tax office within 10 days of starting the taxable activity. A change of business, sale, closure or modification is declared within the same period.",
+          "mg": "Manambara ny fisiany any amin'ny biraon'ny hetra ao anatin'ny 10 andro aorian'ny fanombohan'ny asa iharan'ny haba. Ambara ao anatin'io fe-potoana io ihany ny fiovana, famindrana, fijanonana na fanovana asa."
+        }
+      },
+      {
+        "article": "CDI 06.01.09 bis",
+        "texte": {
+          "fr": "Prestataire étranger sans établissement à Madagascar : son représentant accrédité collecte et reverse la TVA ; à défaut, c'est le client qui la reverse.",
+          "en": "Foreign provider without an establishment in Madagascar: its accredited representative collects and pays the VAT; failing that, the customer pays it.",
+          "mg": "Mpanome tolotra vahiny tsy manana toerana eto Madagasikara: ny solontenany no manangona sy mandoa ny TVA; raha tsy misy, ny mpanjifa no mandoa azy."
+        }
+      }
+    ],
+    "ou": [
+      {
+        "article": "CDI 06.01.13, 06.01.14",
+        "texte": {
+          "fr": "Chez le receveur des impôts territorialement compétent : celui du siège de la direction ou, à défaut, du principal établissement. La TVA à l'importation est perçue par la Douane.",
+          "en": "At the territorially competent tax receiver: that of the head office or, failing that, the main establishment. Import VAT is collected by Customs.",
+          "mg": "Any amin'ny mpandray vola ao amin'ny hetra mifehy ny faritra: ny misy ny foibe na, raha tsy izany, ny toeram-piasana lehibe. Ny Ladoany no mandray ny TVA amin'ny fanafarana."
+        }
+      }
+    ],
+    "document": [
+      {
+        "article": "CDI 06.01.16, CPF I-104",
+        "texte": {
+          "fr": "La déclaration mensuelle sur l'imprimé de l'Administration, qui reprend séparément les opérations taxables et non taxables du mois.",
+          "en": "The monthly return on the Administration's form, showing separately the month's taxable and non-taxable operations.",
+          "mg": "Ny fanambarana isam-bolana amin'ny taratasy avy amin'ny Fitondrana, mampisaraka ny asa iharan'ny haba sy ny tsy iharany tamin'ilay volana."
+        }
+      },
+      {
+        "article": "CDI 06.01.26",
+        "texte": {
+          "fr": "En annexe, au format électronique sur NIFONLINE : la liste des fournisseurs, des clients et des débours du mois. Sans ces annexes, la déclaration est irrecevable.",
+          "en": "Attached, in electronic format on NIFONLINE: the list of the month's suppliers, customers and disbursements. Without these attachments, the return is inadmissible.",
+          "mg": "Ampiarahina, amin'ny endrika elektronika ao amin'ny NIFONLINE: ny lisitry ny mpamatsy, ny mpanjifa ary ny vola nalain'ny hafa tamin'ilay volana. Raha tsy misy ireo, tsy raisina ny fanambarana."
+        }
+      },
+      {
+        "article": "CDI 06.01.27",
+        "texte": {
+          "fr": "Chaque vente donne lieu à une facture qui montre séparément le prix hors taxe et le montant de la TVA.",
+          "en": "Each sale requires an invoice showing the price excluding tax and the VAT amount separately.",
+          "mg": "Ny varotra tsirairay dia misy faktiora mampiseho misaraka ny vidiny tsy misy haba sy ny habetsahan'ny TVA."
+        }
+      }
+    ],
+    "quand": [
+      {
+        "article": "CDI 06.01.16",
+        "delai": "15 du mois suivant",
+        "texte": {
+          "fr": "Chaque mois, au plus tard le 15 du mois suivant, même s'il n'y a rien à payer.",
+          "en": "Every month, by the 15th of the following month, even if nothing is due.",
+          "mg": "Isam-bolana, farany ny faha-15 amin'ny volana manaraka, na dia tsy misy aloa aza."
+        }
+      },
+      {
+        "article": "CDI 06.01.22",
+        "delai": "dans les 3 mois",
+        "texte": {
+          "fr": "Une TVA déductible oubliée peut être récupérée sur l'une des déclarations des 3 mois suivants.",
+          "en": "Forgotten deductible VAT can be recovered on one of the returns of the next 3 months.",
+          "mg": "Ny TVA azo esorina nadino dia azo raisina amin'ny iray amin'ireo fanambarana ao anatin'ny 3 volana manaraka."
+        }
+      },
+      {
+        "article": "CDI 06.01.23",
+        "delai": "report du crédit pendant 3 ans",
+        "texte": {
+          "fr": "Un crédit de TVA se reporte sur les mois suivants, pendant 3 ans au plus. Il n'est remboursé que dans les cas prévus (exportateurs, zones franches, investissements…).",
+          "en": "A VAT credit is carried forward to later months, for up to 3 years. It is refunded only in the cases provided (exporters, free zones, investments…).",
+          "mg": "Ny trosa TVA dia afindra amin'ny volana manaraka, mandritra ny 3 taona farafahabetsany. Tsy averina afa-tsy amin'ny tranga voalaza (mpanondrana, faritra afaka, fampiasam-bola…)."
+        }
+      }
+    ],
+    "sanctions": [
+      {
+        "article": "CDI 06.01.26",
+        "texte": {
+          "fr": "Sans la liste des fournisseurs et des clients en annexe, la déclaration est irrecevable et l'amende pour défaut de dépôt s'applique.",
+          "en": "Without the list of suppliers and customers attached, the return is inadmissible and the fine for not filing applies.",
+          "mg": "Raha tsy misy ny lisitry ny mpamatsy sy ny mpanjifa, tsy raisina ny fanambarana ary mihatra ny onitra noho ny tsy fametrahana."
+        }
+      },
+      {
+        "article": "CDI 20.01.52.3",
+        "texte": {
+          "fr": "Une déclaration de TVA déposée en retard qui fait apparaître un crédit entraîne, après relance sans effet, une amende de 40 % du crédit déclaré.",
+          "en": "A late VAT return showing a credit triggers, after an unanswered reminder, a fine of 40% of the declared credit.",
+          "mg": "Ny fanambarana TVA napetraka tara ka misy trosa dia miteraka onitra 40 % amin'io trosa io, rehefa tsy voavaly ny fampahatsiahivana."
+        }
+      }
+    ]
   }
 }

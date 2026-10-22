@@ -105,10 +105,13 @@
   "tva": {
     "tauxNormal": 0.20,
     "tauxReduit": 0.05,
+    "tauxReduitGaz": 0.10,
     "tauxExport": 0,
     "seuilObligatoire": 400000000,
     "seuilOption": 200000000,
-    "articles": { "taux": "CDI 06.01.12", "tauxReduitRiz": "CDI 06.01.12 (LFR 2026)" },
+    "reportCreditAnnees": 3,
+    "articles": { "champ": "CDI 06.01.02, 06.01.04", "base": "CDI 06.01.11", "taux": "CDI 06.01.12", "tauxReduitGaz": "CDI 06.01.12",
+      "tauxReduitRiz": "CDI 06.01.12 (LFR 2026)", "declaration": "CDI 06.01.16", "deduction": "CDI 06.01.17, 06.01.18", "credit": "CDI 06.01.23" },
     "source": "LFI 2026 ; LFR 2026"
   },
   "penalites": {

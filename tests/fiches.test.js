@@ -5,6 +5,7 @@ import { calculIRSA, calculIRSASpecial } from '../src/calc/irsa.js';
 import { calculIS, acompteDebutActivite } from '../src/calc/is.js';
 import { calculIR } from '../src/calc/ir.js';
 import { calculIRCM as calculIRCMf } from '../src/calc/ircm.js';
+import { calculTVA as calculTVAf, calculDeclarationTVA } from '../src/calc/tva.js';
 import { lireRoute, lien } from '../src/routes.js';
 import { FICHES } from '../src/fiches/index.js';
 import { etat, fmt, tr } from '../src/ui.js';
@@ -115,6 +116,33 @@ test('Toutes les fiches de la phase 1 sont présentes et ont leurs obligations',
     assert.ok(FICHES[id], id);
     for (const cle of ['qui', 'ou', 'document', 'quand']) assert.ok(obligations[id]?.[cle]?.length, `${id}.${cle}`);
   }
+});
+
+// --- TVA (CDI 06.01.12, 06.01.16, 06.01.23) ---
+test('TVA déclaration : collectée moins déductible = à payer', () => {
+  const r = calculDeclarationTVA({ ventes: [{ ht: 30000000, taux: 0.2 }], tvaDeductible: 3000000 }, b);
+  assert.equal(r.collectee, 6000000);
+  assert.equal(r.aPayer, 3000000);
+  assert.equal(r.credit, 0);
+});
+test('TVA déclaration : crédit quand les déductions dépassent la TVA collectée', () => {
+  // 20 % × 1 000 000 = 200 000 ; 500 000 déductible → crédit de 300 000
+  const r = calculDeclarationTVA({ ventes: [{ ht: 1000000, taux: 0.2 }], tvaDeductible: 500000 }, b);
+  assert.equal(r.aPayer, 0);
+  assert.equal(r.credit, 300000);
+});
+test('TVA déclaration : exportations à 0 %, crédit antérieur imputé, arrondi à la centaine', () => {
+  // 20 % × 1 234 567 = 246 913,4 ; − 20 000 − 10 000 = 216 913,4 → 216 900
+  const r = calculDeclarationTVA({ ventes: [{ ht: 1234567, taux: 0.2 }, { ht: 5000000, taux: 0 }],
+    tvaDeductible: 20000, creditAnterieur: 10000 }, b);
+  assert.equal(r.aPayer, 216900);
+});
+test('TVA : taux réduit de 10 % sur le gaz butane (CDI 06.01.12)', () => {
+  assert.equal(b.tva.tauxReduitGaz, 0.10);
+  assert.equal(calculTVAf({ montant: 50000, taux: b.tva.tauxReduitGaz }).ttc, 55000);
+});
+test('TVA exemple de la fiche : 30 M de ventes, 3 M déductible = 3 000 000 Ar', () => {
+  assert.equal(FICHES.tva.impotExemple(b), 3000000);
 });
 
 // --- Navigation ---

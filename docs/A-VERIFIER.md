@@ -50,3 +50,14 @@ Points que le texte des codes ne tranche pas clairement. L'application suit l'in
 | 27 | IPVI : ancien calcul de la phase 0 | La phase 0 taxait une plus-value saisie librement ; l'art. 01.05.04 impose un prix de revient forfaitaire de 75 % | Corrigé : plus-value = 25 % du prix retenu |
 | 28 | Redevance IDH : barème progressif par tranches ou taux unique selon la production | CDI 01.01.27 : « pour la tranche de production supérieure à… », mais la 1re ligne dit « pour une production inférieure ou égale à » | Barème seulement affiché, pas de calcul |
 | 29 | IRM : abonnements, location d'immeubles et marchés à tranches restent à l'IRM même sous le seuil des bons de commande | CDI 01.01.46 | Signalé dans la fiche ; pas de seuil chiffré (le montant des « marchés de faible montant » est dans le Code des marchés publics) |
+
+## TVA (phase 2, étape 1)
+
+| # | Point | Texte | Choix actuel de l'application |
+|---|---|---|---|
+| 30 | Riz : exonéré ou taux réduit de 5 % ? | CDI 06.01.06 21° exonère le riz ; `data/baremes-2026.json` reprend un taux de 5 % « riz » de la LFR 2026, dont le texte n'est pas dans le projet | Les deux sont affichés ; le taux de 5 % est proposé pour le riz. Vérifier la portée exacte dans la LFR (tout le riz ou « riz de luxe » ?) |
+| 31 | Taux de 10 % sur le gaz butane | CDI 06.01.12 ; absent du barème avant cette étape | Ajouté au barème. Vérifier que la LFR 2026 ne l'a pas modifié |
+| 32 | Seuil d'option de 200 M Ar pour la TVA | CDI 06.01.04 parle seulement d'option pour le régime du réel ; le seuil de 200 M Ar vient de l'option IR (01.01.13 I) | Présenté comme « possible notamment dès 200 M Ar » |
+| 33 | Prorata de déduction (ventes taxables et exonérées mélangées) | CDI 06.01.17 2° a) et b) | Non calculé : le calculateur suppose que toute la TVA saisie est déductible |
+| 34 | Taux réduits dans la déclaration mensuelle | CDI 06.01.12 | La déclaration ne propose que le taux normal et les exportations ; les ventes à 10 % ou 5 % passent par le convertisseur HT ↔ TTC |
+| 35 | Arrondi de la TVA à payer | CPF VII-32 (LFR 2026) | Appliqué au solde à payer, pas au crédit |

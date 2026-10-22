@@ -6,5 +6,6 @@ import is from './is.js';
 import irsa from './irsa.js';
 import ircm from './ircm.js';
 import ipvi from './ipvi.js';
+import tva from './tva.js';
 
-export const FICHES = { ir, idh, irm, is, irsa, ircm, ipvi };
+export const FICHES = { ir, idh, irm, is, irsa, ircm, ipvi, tva };
