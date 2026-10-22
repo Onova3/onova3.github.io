@@ -131,3 +131,16 @@ Points que le texte des codes ne tranche pas clairement. L'application suit l'in
 | 73 | TRD : âge de l'exonération (« plus de soixante ans ») et de l'imposition (21 ans) | CDI 10.04.02, 10.04.03 | Affichés tels quels ; pas de calcul selon l'âge |
 | 74 | Taxe de séjour d'un hôtel non classé qui facture à la chambre | CDI 10.05.03 : « par nuitée par personne adulte » pour les non-classés | Le calculateur demande des nuitées-adultes pour cette catégorie |
 | 75 | Recensement et contrôle par la commune | CDI 10.03.05, 10.04.06, 10.05.05 | Non repris dans les obligations |
+
+## Licence, appareils, eaux minérales, publicité (phase 4, étape 3)
+
+| # | Point | Texte | Choix actuel de l'application |
+|---|---|---|---|
+| 76 | Licence d'alcool : la fourchette vise-t-elle le tarif annuel ou le paiement de chaque trimestre ? | CDI 10.06.08 : tarif « voté annuellement », « payable par trimestre et d'avance » | Tarif annuel dans la fourchette, payé par quarts |
+| 77 | Licence : un seul tarif pour toutes les catégories (gros, détail à emporter, sur place) ? | CDI 10.06.08 : « ce tarif peut varier suivant la catégorie des licences » | Un seul champ, la commune pouvant voter des tarifs différents par catégorie |
+| 78 | Autres licences (foires, commerces ambulants, billards, jeux vidéo) | CDI 10.06.81 : plafonds en % du « minimum de perception de l'impôt synthétique », sans montant dans le Code (voir point 10) | Non calculées |
+| 79 | Réductions de 50 % (buffets de gares, cantines d'entreprises) | CDI 10.06.06 8° et 9° | Mentionnées, non calculées |
+| 80 | Eaux minérales : « litre ou fraction de litre » par bouteille ou sur le volume total ? | CDI 10.08.03 | Fraction comptée sur le volume total déclaré ; compter par bouteille ferait payer 1 litre pour une bouteille de 50 cl |
+| 81 | Affiches au-delà de 2 m² : « Ar 188 en plus » s'ajoute-t-il aux 90 Ar du palier précédent ? | CDI 10.09.04 1° | 90 Ar + 188 Ar par m² ou fraction au-delà de 2 m² |
+| 82 | Publicité : tarifs votés par la commune sous ces limites | CDI 10.09.04 | Le calculateur montre les montants maximum, sans champ communal |
+| 83 | Appareils automatiques : la définition des « machines à sous » et « autres appareils » | CDI 10.07.01 ; texte en partie transféré au CPF I-114 | Reprise telle quelle |

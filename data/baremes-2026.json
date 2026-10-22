@@ -236,6 +236,49 @@
     "articles": { "repartition": "CDI 10.05.01", "champ": "CDI 10.05.02", "tarif": "CDI 10.05.03", "declaration": "CPF I-112", "paiement": "CPF I-113" },
     "source": "LFI 2026"
   },
+  "licence": {
+    "communes": [
+      { "id": "horsCategorie", "min": 800000, "max": 1500000, "libelle": { "fr": "Commune hors catégorie", "en": "Special-category commune", "mg": "Kaominina ivelan'ny sokajy" } },
+      { "id": "urbaine1", "min": 600000, "max": 1000000, "libelle": { "fr": "Commune urbaine de 1re catégorie", "en": "Urban commune, 1st category", "mg": "Kaominina an-tanàn-dehibe sokajy 1" } },
+      { "id": "urbaine2", "min": 350000, "max": 750000, "libelle": { "fr": "Commune urbaine de 2e catégorie", "en": "Urban commune, 2nd category", "mg": "Kaominina an-tanàn-dehibe sokajy 2" } },
+      { "id": "rurale1", "min": 300000, "max": 500000, "libelle": { "fr": "Commune rurale de 1re catégorie", "en": "Rural commune, 1st category", "mg": "Kaominina ambanivohitra sokajy 1" } },
+      { "id": "rurale2", "min": 150000, "max": 250000, "libelle": { "fr": "Commune rurale de 2e catégorie", "en": "Rural commune, 2nd category", "mg": "Kaominina ambanivohitra sokajy 2" } }
+    ],
+    "majorationEtablissementNuit": 0.5,
+    "trimestres": 4,
+    "foraineMinParJour": 15000,
+    "nuitMaxParMois": 200000,
+    "tombolaMaxTaux": 0.10,
+    "repartition": { "commune": 0.70, "region": 0.30 },
+    "articles": { "champ": "CDI 10.06.01, 10.06.05", "exonerations": "CDI 10.06.06", "tarif": "CDI 10.06.08", "foraine": "CDI 10.06.09",
+      "autres": "CDI 10.06.79 à 10.06.81", "categories": "CPF III-06", "paiement": "CPF III-47, III-48", "certificat": "CPF III-49" },
+    "source": "LFI 2026"
+  },
+  "appareils": {
+    "machineASous": 400000,
+    "autre": 100000,
+    "demiTarifSecondSemestre": 0.5,
+    "articles": { "tarif": "CDI 10.07.01", "paiement": "CPF I-114" },
+    "source": "LFI 2026"
+  },
+  "eauxMinerales": {
+    "maxParLitre": 20,
+    "articles": { "champ": "CDI 10.08.02", "base": "CDI 10.08.03", "tarif": "CDI 10.08.04", "declaration": "CPF I-115 à I-117" },
+    "source": "LFI 2026"
+  },
+  "publicite": {
+    "affiches": [
+      { "jusquaDm2": 25, "max": 30 }, { "jusquaDm2": 50, "max": 60 }, { "jusquaDm2": 200, "max": 90 }
+    ],
+    "afficheParM2AuDela": 188,
+    "multiplicateurAffichePreparee": 2,
+    "panneauParM2An": 15000,
+    "lumineuseParM2An": 15000,
+    "audiovisuelTaux": 0.01,
+    "presseTaux": 0.01,
+    "articles": { "champ": "CDI 10.09.01 à 10.09.03", "tarif": "CDI 10.09.04", "audiovisuel": "CDI 10.09.07 à 10.09.09", "paiement": "CPF I-118", "paiementAudiovisuel": "CPF I-119" },
+    "source": "LFI 2026"
+  },
   "tva": {
     "tauxNormal": 0.20,
     "tauxReduit": 0.05,

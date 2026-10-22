@@ -20,5 +20,9 @@ import ifpb from './ifpb.js';
 import tpc from './tpc.js';
 import trd from './trd.js';
 import sejour from './sejour.js';
+import licence from './licence.js';
+import appareils from './appareils.js';
+import eaux from './eaux.js';
+import publicite from './publicite.js';
 
-export const FICHES = { ir, idh, irm, is, irsa, ircm, ipvi, tva, de, timbre, assurance, tvm, ttm, tsabtj, ppa, da, ift, ifpb, tpc, trd, sejour };
+export const FICHES = { ir, idh, irm, is, irsa, ircm, ipvi, tva, de, timbre, assurance, tvm, ttm, tsabtj, ppa, da, ift, ifpb, tpc, trd, sejour, licence, appareils, eaux, publicite };

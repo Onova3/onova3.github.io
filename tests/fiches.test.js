@@ -20,6 +20,10 @@ import { calculPenalitesLocales } from '../src/calc/penalites.js';
 import { calculTPC } from '../src/calc/tpc.js';
 import { calculTRD } from '../src/calc/trd.js';
 import { calculSejour } from '../src/calc/sejour.js';
+import { calculLicence, calculLicenceForaine, calculLicenceNuit, calculLicenceTombola } from '../src/calc/licence.js';
+import { calculAppareils } from '../src/calc/appareils.js';
+import { calculEaux } from '../src/calc/eaux.js';
+import { tarifAffiche, calculPanneaux, calculPubliciteMedia } from '../src/calc/publicite.js';
 import { lireRoute, lien } from '../src/routes.js';
 import { FICHES } from '../src/fiches/index.js';
 import { etat, fmt, tr } from '../src/ui.js';
@@ -353,6 +357,37 @@ test('Taxe de séjour : nuitées × tarif, plafonds par catégorie', () => {
   assert.deepEqual(b.sejour.categories.map(c => c.max), [2000, 1000, 500]);
   assert.equal(calculSejour({ categorie: 'uneATroisEtoiles', nuitees: 600, tarif: 1000 }, b).impot, 600000);
   assert.equal(FICHES.sejour.impotExemple(b), 600000);
+});
+
+// --- Licence, appareils, eaux minérales, publicité (CDI 10.06.08 à 10.09.09) ---
+test('Licence d’alcool : tarif annuel par trimestre, majoration de nuit', () => {
+  assert.deepEqual(b.licence.communes.map(c => [c.min, c.max]), [[800000, 1500000], [600000, 1000000], [350000, 750000], [300000, 500000], [150000, 250000]]);
+  assert.equal(calculLicence({ tarifAnnuel: 600000 }, b).impot, 600000);
+  assert.equal(calculLicence({ tarifAnnuel: 600000, etablissementNuit: true }, b).impot, 900000);
+  assert.equal(calculLicence({ tarifAnnuel: 600000, trimestres: 1 }, b).impot, 150000);
+  assert.equal(FICHES.licence.impotExemple(b), 600000);
+});
+test('Autres licences : foraine, établissement de nuit, tombola', () => {
+  assert.equal(calculLicenceForaine({ jours: 3, tarifParJour: 15000 }).impot, 45000);
+  assert.equal(calculLicenceNuit({ mois: 12, tarifParMois: 200000 }).impot, 2400000);
+  assert.equal(calculLicenceTombola({ billets: 2000000, taux: 0.10 }).impot, 200000);
+});
+test('Appareils automatiques : tarifs fixes, demi-tarif au second semestre', () => {
+  assert.equal(calculAppareils({ machinesASous: 2, autres: 3 }, b).impot, 1100000);
+  assert.equal(calculAppareils({ machinesASous: 2, autres: 3, secondSemestre: true }, b).impot, 550000);
+});
+test('Eaux minérales : litres (fraction comptée) × tarif communal', () => {
+  assert.equal(calculEaux({ litres: 300000, tarifParLitre: 20 }).impot, 6000000);
+  assert.equal(calculEaux({ litres: 10.2, tarifParLitre: 20 }).litresTaxes, 11);
+  assert.equal(FICHES.eaux.impotExemple(b), 6000000);
+});
+test('Publicité : paliers des affiches, panneaux au m², audiovisuel 1 %', () => {
+  assert.deepEqual([25, 40, 200, 201, 350].map(s => tarifAffiche(s, false, b)), [30, 60, 90, 278, 466]);
+  assert.equal(tarifAffiche(40, true, b), 120);
+  assert.equal(calculPanneaux({ surfaceM2: 12 }, b).impot, 180000);
+  assert.equal(calculPanneaux({ surfaceM2: 12.3 }, b).impot, 195000);
+  assert.equal(calculPubliciteMedia({ sommes: 50000000 }, b).impot, 500000);
+  assert.equal(FICHES.publicite.impotExemple(b), 180000);
 });
 
 // --- Navigation ---

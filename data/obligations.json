@@ -1584,5 +1584,286 @@
         }
       }
     ]
+  },
+  "licence": {
+    "qui": [
+      {
+        "article": "CDI 10.06.01, CPF III-06",
+        "texte": {
+          "fr": "Tout commerce qui vend des boissons alcooliques : licence de 1re catégorie (vente en gros, 12 litres ou 12 bouteilles et plus) ou de 2e catégorie (détail, à emporter ou sur place).",
+          "en": "Any business selling alcoholic drinks: 1st-category licence (wholesale, 12 litres or 12 bottles and more) or 2nd-category (retail, take-away or on the premises).",
+          "mg": "Ny fivarotana rehetra mivarotra zava-pisotro misy alikaola: fahazoan-dalana sokajy 1 (ambongadiny, 12 litatra na 12 tavoahangy na mihoatra) na sokajy 2 (antsinjarany, entina na sotroina eo an-toerana)."
+        }
+      },
+      {
+        "article": "CDI 10.06.80",
+        "texte": {
+          "fr": "Autres licences : participants aux foires et braderies, commerces ambulants, établissements de nuit, tombolas et loteries, billards, jeux vidéo et baby-foot payants.",
+          "en": "Other licences: participants in fairs and sales, street traders, night venues, raffles and lotteries, paid billiards, video games and table football.",
+          "mg": "Fahazoan-dalana hafa: mpandray anjara amin'ny tsena fihaonana, mpivarotra mivezivezy, toerana fialam-boly amin'ny alina, tombola sy loteria, biliara, lalao video ary baby-foot mandoa."
+        }
+      }
+    ],
+    "ou": [
+      {
+        "article": "CPF III-47",
+        "texte": {
+          "fr": "Licence de vente : à la caisse du receveur du centre fiscal du ressort, par la plateforme en ligne ou sur les imprimés de l’Administration.",
+          "en": "Sales licence: at the receiver’s office of the local tax centre, through the online platform or on the Administration’s forms.",
+          "mg": "Fahazoan-dalana fivarotana: any amin'ny mpandray vola ao amin'ny foibe misahana ny hetra, amin'ny sehatra an-tserasera na amin'ny taratasy avy amin'ny Fitondrana."
+        }
+      },
+      {
+        "article": "CPF III-48, III-63",
+        "texte": {
+          "fr": "Licence foraine et autres licences : auprès de la commune (ou du comptable public pour les recettes partagées), contre ordre de recette ; l’autorisation est remise contre paiement.",
+          "en": "Fair licence and other licences: at the commune (or the public accountant for shared revenue), against a collection order; the authorisation is given against payment.",
+          "mg": "Fahazoan-dalana foraine sy ny hafa: any amin'ny kaominina (na ny mpitam-bolam-panjakana ho an'ny vola zaraina), amin'ny baiko fandraisam-bola; omena rehefa voaloa ny fahazoan-dalana."
+        }
+      }
+    ],
+    "document": [
+      {
+        "article": "CPF III-07, III-38",
+        "texte": {
+          "fr": "La catégorie de licence est affichée de façon visible ; le débitant tient un registre des entrées et sorties d’alcool.",
+          "en": "The licence category is displayed visibly; the seller keeps a register of alcohol entries and exits.",
+          "mg": "Aseho mazava ny sokajin'ny fahazoan-dalana; mitana boky fidirana sy fivoahan'ny toaka ny mpivarotra."
+        }
+      },
+      {
+        "article": "CPF III-49",
+        "texte": {
+          "fr": "Un certificat de régularité, délivré sur présentation des quittances de tous les trimestres échus, dont la référence figure sur les factures entre commerçants.",
+          "en": "A certificate of compliance, issued on presentation of receipts for all past quarters, whose reference appears on invoices between traders.",
+          "mg": "Taratasy fanamarinana fa ara-dalàna, omena rehefa aseho ny taratasy fandoavana amin'ny telo volana lasa rehetra, ary soratana amin'ny faktiora eo amin'ny mpivarotra ny laharany."
+        }
+      }
+    ],
+    "quand": [
+      {
+        "article": "CPF III-47, CDI 10.06.08",
+        "delai": "15e jour du trimestre",
+        "texte": {
+          "fr": "Par trimestre et d’avance : au plus tard le 15e jour de chaque trimestre ; pour une nouvelle licence, au plus tard le 15e jour d’exploitation. Tout trimestre commencé est dû.",
+          "en": "Quarterly in advance: by the 15th day of each quarter; for a new licence, by the 15th day of trading. Any quarter started is due.",
+          "mg": "Isaky ny telo volana sy mialoha: farany ny andro faha-15 amin'ny telo volana tsirairay; ho an'ny fahazoan-dalana vaovao, farany ny andro faha-15 amin'ny fiasana. Aloa manontolo ny telo volana efa nanomboka."
+        }
+      },
+      {
+        "article": "CPF III-48, CDI 10.06.09",
+        "delai": "avant l’exploitation",
+        "texte": {
+          "fr": "Licence foraine : payée d’avance, avant l’ouverture du débit.",
+          "en": "Fair licence: paid in advance, before opening.",
+          "mg": "Fahazoan-dalana foraine: aloa mialoha, alohan'ny hanokafana."
+        }
+      }
+    ],
+    "sanctions": [
+      {
+        "article": "CPF III-49, III-50",
+        "texte": {
+          "fr": "Sans quittances à jour, pas de certificat de régularité, et donc pas de factures d’alcool entre commerçants.",
+          "en": "Without up-to-date receipts, no certificate of compliance, and therefore no alcohol invoices between traders.",
+          "mg": "Raha tsy feno ny taratasy fandoavana, tsy omena taratasy fanamarinana, ka tsy azo atao ny faktioran'ny toaka eo amin'ny mpivarotra."
+        }
+      }
+    ]
+  },
+  "appareils": {
+    "qui": [
+      {
+        "article": "CDI 10.07.01",
+        "texte": {
+          "fr": "L'exploitant d'appareils automatiques : machines à sous et autres appareils.",
+          "en": "The operator of automatic machines: slot machines and other machines.",
+          "mg": "Ny mpitantana milina mandeha ho azy: milina filokana sy milina hafa."
+        }
+      }
+    ],
+    "ou": [
+      {
+        "article": "CPF I-114",
+        "texte": {
+          "fr": "Au régisseur de recettes de la commune où l’appareil est mis en service.",
+          "en": "To the revenue officer of the commune where the machine is put into service.",
+          "mg": "Any amin'ny mpitahiry vola ao amin'ny kaominina ampiasana ny milina."
+        }
+      }
+    ],
+    "document": [
+      {
+        "article": "CPF I-114",
+        "texte": {
+          "fr": "Une déclaration de mise en service, avec paiement au même moment.",
+          "en": "A declaration of putting into service, with payment at the same time.",
+          "mg": "Fanambarana ny fampiasana ny milina, miaraka amin'ny fandoavana."
+        }
+      },
+      {
+        "article": "CPF I-114, I-117",
+        "texte": {
+          "fr": "Chaque paiement donne lieu à une quittance du même montant, à conserver comme justificatif.",
+          "en": "Each payment gives rise to a receipt for the same amount, to keep as proof.",
+          "mg": "Isaky ny fandoavana dia omena taratasy fanamarinana mitovy vola, tehirizina ho porofo."
+        }
+      }
+    ],
+    "quand": [
+      {
+        "article": "CPF I-114",
+        "delai": "à la mise en service",
+        "texte": {
+          "fr": "Première année : à la déclaration de mise en service, plein tarif au 1er semestre, demi-tarif au 2e semestre.",
+          "en": "First year: at the declaration, full rate in the 1st half, half rate in the 2nd half.",
+          "mg": "Taona voalohany: rehefa manambara, vidiny feno amin'ny enim-bolana voalohany, antsasany amin'ny enim-bolana faharoa."
+        }
+      },
+      {
+        "article": "CPF I-114",
+        "delai": "31 janvier",
+        "texte": {
+          "fr": "Années suivantes : plein tarif au plus tard le 31 janvier.",
+          "en": "Following years: full rate by 31 January.",
+          "mg": "Taona manaraka: vidiny feno farany ny 31 janoary."
+        }
+      }
+    ]
+  },
+  "eaux": {
+    "qui": [
+      {
+        "article": "CDI 10.08.02",
+        "texte": {
+          "fr": "Les entreprises qui exploitent des sources d'eaux minérales ou gazéifiées livrées en bouteilles.",
+          "en": "Businesses operating sources of mineral or sparkling water sold in bottles.",
+          "mg": "Ny orinasa mitrandraka loharano rano mineraly na misy entona amidy anaty tavoahangy."
+        }
+      }
+    ],
+    "ou": [
+      {
+        "article": "CPF I-115, I-117",
+        "texte": {
+          "fr": "À la commune du lieu d’exploitation, au régisseur de recettes.",
+          "en": "At the commune where the source is operated, to the revenue officer.",
+          "mg": "Any amin'ny kaominina misy ny toerana, amin'ny mpitahiry vola."
+        }
+      }
+    ],
+    "document": [
+      {
+        "article": "CPF I-115",
+        "texte": {
+          "fr": "Une déclaration trimestrielle des litres mis à la consommation, par date et par client.",
+          "en": "A quarterly return of litres released for consumption, by date and by customer.",
+          "mg": "Fanambarana isaky ny telo volana ny litatra navoaka ho amin'ny fanjifana, isaky ny daty sy isaky ny mpanjifa."
+        }
+      },
+      {
+        "article": "CPF I-116",
+        "texte": {
+          "fr": "Le montant de la taxe figure au bas de chaque facture et dans la comptabilité.",
+          "en": "The tax amount appears at the bottom of each invoice and in the accounts.",
+          "mg": "Soratana eo ambany faktiora tsirairay sy ao amin'ny kaonty ny habetsahan'ny haba."
+        }
+      },
+      {
+        "article": "CPF I-114, I-117",
+        "texte": {
+          "fr": "Chaque paiement donne lieu à une quittance du même montant, à conserver comme justificatif.",
+          "en": "Each payment gives rise to a receipt for the same amount, to keep as proof.",
+          "mg": "Isaky ny fandoavana dia omena taratasy fanamarinana mitovy vola, tehirizina ho porofo."
+        }
+      }
+    ],
+    "quand": [
+      {
+        "article": "CPF I-115",
+        "delai": "fin du mois suivant le trimestre",
+        "texte": {
+          "fr": "Avant la fin du mois qui suit chaque trimestre, avec le paiement de toute la taxe du trimestre.",
+          "en": "Before the end of the month after each quarter, with payment of the whole quarter’s tax.",
+          "mg": "Alohan'ny fiafaran'ny volana manaraka ny telo volana tsirairay, miaraka amin'ny fandoavana ny haba rehetra."
+        }
+      }
+    ]
+  },
+  "publicite": {
+    "qui": [
+      {
+        "article": "CDI 10.09.02",
+        "texte": {
+          "fr": "Les personnes qui paient pour diffuser une publicité commerciale (affiches, panneaux, enseignes lumineuses, véhicules, banderoles…) dans la commune.",
+          "en": "People who pay to display commercial advertising (posters, billboards, illuminated signs, vehicles, banners…) in the commune.",
+          "mg": "Ny olona mandoa vola hanaparitahana dokam-barotra (afisy, takelaka, jiro dokam-barotra, fiara, sora-baventy…) ao amin'ny kaominina."
+        }
+      },
+      {
+        "article": "CDI 10.09.07",
+        "texte": {
+          "fr": "Publicité à la télévision, à la radio, dans la presse ou en ligne : la régie publicitaire collecte la taxe auprès des annonceurs et la reverse.",
+          "en": "Advertising on TV, radio, in the press or online: the advertising agency collects the tax from advertisers and pays it over.",
+          "mg": "Dokam-barotra amin'ny fahitalavitra, radio, gazety na aterineto: ny mpitantana ny dokam-barotra no manangona ny haba amin'ny mpanao doka ary mandoa azy."
+        }
+      }
+    ],
+    "ou": [
+      {
+        "article": "CPF I-118",
+        "texte": {
+          "fr": "Affiches et panneaux : au bureau de la commune où la publicité est posée.",
+          "en": "Posters and billboards: at the office of the commune where the advertising is placed.",
+          "mg": "Afisy sy takelaka: any amin'ny biraon'ny kaominina hametrahana ny doka."
+        }
+      },
+      {
+        "article": "CPF I-119",
+        "texte": {
+          "fr": "Publicité audiovisuelle et presse : chez le comptable du Trésor public territorialement compétent.",
+          "en": "Broadcast and press advertising: with the competent public Treasury accountant.",
+          "mg": "Dokam-barotra amin'ny fahitalavitra sy gazety: any amin'ny mpitam-bolam-panjakana mifehy ny faritra."
+        }
+      }
+    ],
+    "document": [
+      {
+        "article": "CPF I-118",
+        "texte": {
+          "fr": "Affiches papier : mention datée et signée par l’agent de la commune sur l’affiche. Panneaux et enseignes : déclaration du bénéficiaire ou de l’afficheur.",
+          "en": "Paper posters: dated, signed mention by the commune officer on the poster. Billboards and signs: return by the beneficiary or the billposter.",
+          "mg": "Afisy taratasy: fanamarihana misy daty sy sonian'ny mpiasan'ny kaominina eo amin'ny afisy. Takelaka sy jiro: fanambarana ataon'ny tompon'ny doka na ny mpametraka afisy."
+        }
+      },
+      {
+        "article": "CPF I-119",
+        "texte": {
+          "fr": "Audiovisuel : déclaration mensuelle des messages diffusés, avec la liste des annonceurs (nom, adresse, NIF ou CIN, montants).",
+          "en": "Broadcast: monthly return of messages aired, with the list of advertisers (name, address, tax number or ID, amounts).",
+          "mg": "Fahitalavitra sy radio: fanambarana isam-bolana ny doka nalefa, miaraka amin'ny lisitry ny mpanao doka (anarana, adiresy, NIF na CIN, vola)."
+        }
+      }
+    ],
+    "quand": [
+      {
+        "article": "CPF I-118",
+        "delai": "avant l’affichage",
+        "texte": {
+          "fr": "Affiches et panneaux : avant l’affichage, l’apposition ou la modification.",
+          "en": "Posters and billboards: before display, placement or modification.",
+          "mg": "Afisy sy takelaka: alohan'ny hametrahana na hanovana."
+        }
+      },
+      {
+        "article": "CPF I-119",
+        "delai": "15 du mois suivant",
+        "texte": {
+          "fr": "Audiovisuel et presse : chaque mois, au plus tard le 15 du mois suivant la collecte.",
+          "en": "Broadcast and press: each month, by the 15th of the month after collection.",
+          "mg": "Fahitalavitra sy gazety: isam-bolana, farany ny faha-15 amin'ny volana manaraka ny fanangonana."
+        }
+      }
+    ]
   }
 }
