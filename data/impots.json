@@ -134,8 +134,8 @@
       "refCPF": "Titre I, ST II, Chap. VIII",
       "categorie": "enregistrement",
       "phase": 2,
-      "calculateur": null,
-      "statut": "a-faire"
+      "calculateur": "droitVenteImmeuble, droitBail, droitCessionParts, droitSuccession, droitDonation",
+      "statut": "verifie"
     },
     {
       "numero": 9,
@@ -151,8 +151,8 @@
       "refCPF": "Titre I, ST II, Chap. VIII",
       "categorie": "enregistrement",
       "phase": 2,
-      "calculateur": null,
-      "statut": "a-faire"
+      "calculateur": "droitVisa, droitsArmes",
+      "statut": "verifie"
     },
     {
       "numero": 10,
@@ -168,8 +168,8 @@
       "refCPF": "Titre I, ST II, Chap. IX",
       "categorie": "enregistrement",
       "phase": 2,
-      "calculateur": null,
-      "statut": "a-faire"
+      "calculateur": "calculTaxeAssurance",
+      "statut": "verifie"
     },
     {
       "numero": 11,
@@ -182,11 +182,11 @@
       },
       "livre": "I",
       "refCDI": "Partie II, SP II",
-      "refCPF": null,
+      "refCPF": "Titre I, ST II, Chap. IX bis",
       "categorie": "enregistrement",
       "phase": 2,
-      "calculateur": null,
-      "statut": "a-faire"
+      "calculateur": "calculTVM",
+      "statut": "verifie"
     },
     {
       "numero": 12,
@@ -202,8 +202,8 @@
       "refCPF": "Titre I, ST II, Chap. XI",
       "categorie": "consommation",
       "phase": 2,
-      "calculateur": "calculTVA",
-      "statut": "calcul-teste"
+      "calculateur": "calculTVA, calculDeclarationTVA",
+      "statut": "verifie"
     },
     {
       "numero": 13,
