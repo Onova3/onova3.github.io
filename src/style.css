@@ -1,0 +1,25 @@
+:root{--bg:#EEF2EF;--surface:#FFF;--ink:#10261F;--muted:#56685F;--line:#D3DCD6;--accent:#0B6E4F;--accent-ink:#FFF;--soft:#DDEDE5;
+  --display:"Bricolage Grotesque",system-ui,sans-serif;--body:"Public Sans",system-ui,sans-serif;--mono:"JetBrains Mono",ui-monospace,monospace}
+@media (prefers-color-scheme:dark){:root{--bg:#0C1613;--surface:#13211C;--ink:#E4EEE9;--muted:#93A79D;--line:#25372F;--accent:#43C394;--accent-ink:#06261B;--soft:#173629;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 var(--body);
+  padding:env(safe-area-inset-top,0) max(16px,env(safe-area-inset-right,0px)) 40px max(16px,env(safe-area-inset-left,0px))}
+.wrap{max-width:960px;margin:0 auto}
+.top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;padding-block:22px 10px}
+.brand{display:flex;gap:12px;align-items:center}
+.mark{width:42px;height:42px;border-radius:9px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font:600 15px var(--mono)}
+h1{font:800 26px/1 var(--display);margin:0}.brand p{margin:3px 0 0;color:var(--muted);font-size:13px}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;padding:3px;background:var(--surface)}
+.lang button{border:0;background:none;color:var(--muted);font:600 13px var(--body);padding:6px 12px;border-radius:999px;cursor:pointer}
+.lang button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
+.search input{width:100%;font:16px var(--body);padding:12px 14px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+h2{font:800 20px var(--display);margin:26px 0 10px}
+ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.impot{display:grid;grid-template-columns:72px minmax(0,1fr) auto;gap:12px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.sigle{font:500 13px var(--mono);color:var(--accent)}
+.nom{display:flex;flex-direction:column}.nom small{color:var(--muted);font-size:12px}
+.statut{font-size:12px;color:var(--muted);text-align:right}
+.calcul-teste .statut,.verifie .statut{color:var(--accent);font-weight:600}
+@media (max-width:560px){.impot{grid-template-columns:60px minmax(0,1fr)}.statut{grid-column:2;text-align:left}}
+footer{margin-top:30px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);font-size:12.5px}

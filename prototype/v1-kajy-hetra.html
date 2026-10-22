@@ -1,0 +1,605 @@
+<title>Kajy Hetra</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: app header + scrollable tab strip; each tool = form card beside a "tax notice" ticket (stacks on phones) */
+:root{
+  --bg:#EEF2EF; --surface:#FFFFFF; --ink:#10261F; --muted:#56685F; --line:#D3DCD6;
+  --accent:#0B6E4F; --accent-ink:#FFFFFF; --soft:#DDEDE5; --stamp:#B3122B; --warn-bg:#FFF1D6; --warn-ink:#6B4A00;
+  --f-display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --f-body:"Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono:"JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --r:10px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0C1613; --surface:#13211C; --ink:#E4EEE9; --muted:#93A79D; --line:#25372F;
+  --accent:#43C394; --accent-ink:#06261B; --soft:#173629; --stamp:#FF7A85; --warn-bg:#3A2E10; --warn-ink:#FFD98A; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0C1613; --surface:#13211C; --ink:#E4EEE9; --muted:#93A79D; --line:#25372F;
+  --accent:#43C394; --accent-ink:#06261B; --soft:#173629; --stamp:#FF7A85; --warn-bg:#3A2E10; --warn-ink:#FFD98A; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.55;
+  padding-left:max(16px, env(safe-area-inset-left,0px));padding-right:max(16px, env(safe-area-inset-right,0px));padding-block:0 40px}
+.wrap{max-width:1040px;margin:0 auto}
+header.top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding-block:22px 6px}
+.brand{display:flex;align-items:center;gap:12px;min-width:0}
+.mark{width:42px;height:42px;border-radius:9px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;
+  font-family:var(--f-mono);font-weight:600;font-size:15px;flex:none}
+.brand h1{font-family:var(--f-display);font-weight:800;font-size:26px;line-height:1;margin:0;letter-spacing:-.01em}
+.brand p{margin:3px 0 0;color:var(--muted);font-size:13px;max-width:52ch}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;padding:3px;background:var(--surface)}
+.lang button{border:0;background:transparent;color:var(--muted);font:600 13px var(--f-body);padding:6px 12px;border-radius:999px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+nav.tabs{display:flex;gap:6px;overflow-x:auto;padding-block:14px 4px;scrollbar-width:none;margin-inline:-2px;padding-inline:2px}
+nav.tabs::-webkit-scrollbar{display:none}
+.tab{flex:none;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:600 14px var(--f-body);
+  padding:9px 14px;border-radius:999px;cursor:pointer;white-space:nowrap}
+.tab[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid color-mix(in srgb,var(--accent) 55%,transparent);outline-offset:2px}
+
+.panel{padding-top:14px}
+.panel h2{font-family:var(--f-display);font-weight:800;font-size:clamp(22px,4.4vw,30px);line-height:1.15;margin:4px 0 6px;text-wrap:balance;letter-spacing:-.01em}
+.lead{color:var(--muted);margin:0 0 18px;max-width:62ch}
+.grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px;align-items:start}
+@media (max-width:760px){.grid{grid-template-columns:minmax(0,1fr)}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px;display:flex;flex-direction:column;gap:16px;min-width:0}
+.eg{align-self:flex-start;font:600 11px var(--f-body);letter-spacing:.08em;text-transform:uppercase;color:var(--accent);background:var(--soft);padding:4px 8px;border-radius:5px}
+label.f{display:flex;flex-direction:column;gap:6px;font-weight:600;font-size:14px}
+.in{position:relative;display:flex;align-items:center}
+input[type=text],input[type=number],select{width:100%;font:500 17px var(--f-mono);color:var(--ink);background:var(--bg);
+  border:1px solid var(--line);border-radius:8px;padding:11px 12px;min-width:0}
+select{font:500 15px var(--f-body)}
+.in input{padding-right:46px}
+.in .u{position:absolute;right:12px;color:var(--muted);font:600 13px var(--f-mono);pointer-events:none}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:14px;cursor:pointer}
+.check input{width:18px;height:18px;margin-top:2px;accent-color:var(--accent);flex:none}
+.seg{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.seg button{border:0;background:var(--bg);color:var(--muted);font:600 14px var(--f-body);padding:10px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.step{display:flex;align-items:center;gap:8px}
+.step button{width:44px;height:44px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;font:600 20px var(--f-mono);cursor:pointer}
+.step input{text-align:center;width:80px;flex:none}
+
+/* the "avis d'imposition" ticket */
+.ticket{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px 20px 18px;position:relative;min-width:0}
+.ticket::before{content:"";position:absolute;left:0;right:0;top:0;height:5px;border-radius:var(--r) var(--r) 0 0;
+  background:repeating-linear-gradient(90deg,var(--accent) 0 18px,transparent 18px 24px)}
+.t-head{display:flex;justify-content:space-between;gap:10px;font:600 11px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-bottom:10px;border-bottom:1px dashed var(--line)}
+.rows{display:flex;flex-direction:column}
+.row{display:flex;justify-content:space-between;gap:14px;padding:9px 0;border-bottom:1px dashed var(--line);font-size:14px}
+.row span:first-child{color:var(--muted);min-width:0}
+.row span:last-child{font-family:var(--f-mono);font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right}
+.row.neg span:last-child{color:var(--muted)}
+.row.note span:first-child{color:var(--accent);font-weight:600}
+.total{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:6px 14px;padding-top:14px}
+.total .k{font-weight:600}
+.total .v{font:600 clamp(26px,6vw,34px)/1.1 var(--f-mono);color:var(--stamp);font-variant-numeric:tabular-nums}
+.sub{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.chip{font:500 13px var(--f-mono);background:var(--soft);color:var(--ink);padding:6px 10px;border-radius:6px}
+.chip b{font-family:var(--f-body);font-weight:600;color:var(--muted);margin-right:6px}
+.warn{background:var(--warn-bg);color:var(--warn-ink);border-radius:8px;padding:10px 12px;font-size:14px}
+
+.bar-wrap{margin-top:16px}
+.bar-t{font:600 11px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.bar{display:flex;height:28px;border-radius:6px;overflow:hidden;border:1px solid var(--line);background:var(--bg)}
+.bar div{min-width:0;display:grid;place-items:center;font:600 11px var(--f-mono);color:var(--ink);overflow:hidden;white-space:nowrap}
+.legend{display:flex;flex-wrap:wrap;gap:6px 12px;margin-top:8px;font:500 12px var(--f-mono);color:var(--muted)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px;border:1px solid var(--line)}
+
+details.how{margin-top:18px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:0 18px}
+details.how summary{cursor:pointer;font-weight:600;padding:14px 0;list-style-position:outside}
+details.how ol{margin:0 0 16px;padding-left:20px;display:flex;flex-direction:column;gap:8px;max-width:72ch;color:var(--ink)}
+.about{display:flex;flex-direction:column;gap:14px;max-width:70ch}
+.about ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
+.about a{color:var(--accent)}
+footer{margin-top:30px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);font-size:12.5px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+@media (prefers-reduced-motion:no-preference){.bar div{transition:flex-grow .35s ease}}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <div class="mark" aria-hidden="true">Ar</div>
+      <div>
+        <h1>Kajy Hetra</h1>
+        <p data-i18n="tagline"></p>
+      </div>
+    </div>
+    <div class="lang" role="group" aria-label="Langue / Language / Fiteny">
+      <button type="button" data-lang="fr">FR</button>
+      <button type="button" data-lang="en">EN</button>
+      <button type="button" data-lang="mg">MG</button>
+    </div>
+  </header>
+
+  <nav class="tabs" role="tablist">
+    <button class="tab" role="tab" data-tab="irsa" data-i18n="tab_irsa"></button>
+    <button class="tab" role="tab" data-tab="is" data-i18n="tab_is"></button>
+    <button class="tab" role="tab" data-tab="tva" data-i18n="tab_tva"></button>
+    <button class="tab" role="tab" data-tab="ir" data-i18n="tab_ir"></button>
+    <button class="tab" role="tab" data-tab="pen" data-i18n="tab_pen"></button>
+    <button class="tab" role="tab" data-tab="about" data-i18n="tab_about"></button>
+  </nav>
+
+  <!-- IRSA -->
+  <section class="panel" id="p-irsa" role="tabpanel">
+    <h2 data-i18n="irsa_h"></h2>
+    <p class="lead" data-i18n="irsa_lead"></p>
+    <div class="grid">
+      <div class="card">
+        <span class="eg" data-i18n="example"></span>
+        <label class="f"><span data-i18n="f_brut"></span>
+          <span class="in"><input type="text" inputmode="numeric" class="money" id="irsa-brut" value="1200000"><span class="u">Ar</span></span></label>
+        <div class="f" style="display:flex;flex-direction:column;gap:6px;font-weight:600;font-size:14px">
+          <span id="lbl-dep" data-i18n="f_dep"></span>
+          <div class="step">
+            <button type="button" id="dep-minus" aria-label="−">−</button>
+            <input type="number" id="irsa-dep" min="0" max="20" value="0" aria-labelledby="lbl-dep">
+            <button type="button" id="dep-plus" aria-label="+">+</button>
+          </div>
+        </div>
+        <label class="check"><input type="checkbox" id="irsa-cotis" checked><span data-i18n="f_cotis"></span></label>
+      </div>
+      <div class="ticket" aria-live="polite">
+        <div class="t-head"><span data-i18n="tk_irsa"></span><span data-i18n="tk_month"></span></div>
+        <div class="rows" id="irsa-rows"></div>
+        <div class="total"><span class="k" data-i18n="r_irsa"></span><span class="v" id="irsa-total"></span></div>
+        <div class="sub" id="irsa-sub"></div>
+        <div class="bar-wrap">
+          <div class="bar-t" data-i18n="bar_title"></div>
+          <div class="bar" id="irsa-bar"></div>
+          <div class="legend" id="irsa-legend"></div>
+        </div>
+      </div>
+    </div>
+    <details class="how"><summary data-i18n="how"></summary>
+      <ol><li data-i18n="irsa_how1"></li><li data-i18n="irsa_how2"></li><li data-i18n="irsa_how3"></li></ol></details>
+  </section>
+
+  <!-- IS -->
+  <section class="panel" id="p-is" role="tabpanel" hidden>
+    <h2 data-i18n="is_h"></h2>
+    <p class="lead" data-i18n="is_lead"></p>
+    <div class="grid">
+      <div class="card">
+        <span class="eg" data-i18n="example"></span>
+        <label class="f"><span data-i18n="f_ca"></span>
+          <span class="in"><input type="text" inputmode="numeric" class="money" id="is-ca" value="36000000"><span class="u">Ar</span></span></label>
+        <label class="f"><span data-i18n="f_achats"></span>
+          <span class="in"><input type="text" inputmode="numeric" class="money" id="is-achats" value="12000000"><span class="u">Ar</span></span></label>
+        <label class="f"><span data-i18n="f_sal"></span>
+          <span class="in"><input type="text" inputmode="numeric" class="money" id="is-sal" value="0"><span class="u">Ar</span></span></label>
+        <label class="f"><span data-i18n="f_act"></span>
+          <select id="is-act">
+            <option value="16000" data-i18n="act1"></option>
+            <option value="50000" data-i18n="act2"></option>
+            <option value="100000" data-i18n="act3" selected></option>
+            <option value="150000" data-i18n="act4"></option>
+          </select></label>
+      </div>
+      <div class="ticket" aria-live="polite">
+        <div class="t-head"><span data-i18n="tk_is"></span><span data-i18n="tk_year"></span></div>
+        <div class="warn" id="is-warn" hidden data-i18n="is_warn"></div>
+        <div class="rows" id="is-rows"></div>
+        <div class="total"><span class="k" data-i18n="r_is"></span><span class="v" id="is-total"></span></div>
+        <div class="sub" id="is-sub"></div>
+      </div>
+    </div>
+    <details class="how"><summary data-i18n="how"></summary>
+      <ol><li data-i18n="is_how1"></li><li data-i18n="is_how2"></li><li data-i18n="is_how3"></li></ol></details>
+  </section>
+
+  <!-- TVA -->
+  <section class="panel" id="p-tva" role="tabpanel" hidden>
+    <h2 data-i18n="tva_h"></h2>
+    <p class="lead" data-i18n="tva_lead"></p>
+    <div class="grid">
+      <div class="card">
+        <span class="eg" data-i18n="example"></span>
+        <div class="f" style="display:flex;flex-direction:column;gap:6px;font-weight:600;font-size:14px">
+          <span data-i18n="f_mode"></span>
+          <div class="seg"><button type="button" id="tva-ht" aria-pressed="true" data-i18n="mode_ht"></button><button type="button" id="tva-ttc" aria-pressed="false" data-i18n="mode_ttc"></button></div>
+        </div>
+        <label class="f"><span data-i18n="f_amount"></span>
+          <span class="in"><input type="text" inputmode="numeric" class="money" id="tva-amt" value="100000"><span class="u">Ar</span></span></label>
+        <label class="f"><span data-i18n="f_rate"></span>
+          <select id="tva-rate">
+            <option value="0.20" data-i18n="rate20" selected></option>
+            <option value="0.05" data-i18n="rate5"></option>
+            <option value="0" data-i18n="rate0"></option>
+          </select></label>
+      </div>
+      <div class="ticket" aria-live="polite">
+        <div class="t-head"><span data-i18n="tk_tva"></span><span id="tva-rate-lbl"></span></div>
+        <div class="rows" id="tva-rows"></div>
+        <div class="total"><span class="k" data-i18n="r_ttc"></span><span class="v" id="tva-total"></span></div>
+      </div>
+    </div>
+    <details class="how"><summary data-i18n="how"></summary>
+      <ol><li data-i18n="tva_how1"></li><li data-i18n="tva_how2"></li><li data-i18n="tva_how3"></li></ol></details>
+  </section>
+
+  <!-- IR / IRCM -->
+  <section class="panel" id="p-ir" role="tabpanel" hidden>
+    <h2 data-i18n="ir_h"></h2>
+    <p class="lead" data-i18n="ir_lead"></p>
+    <div class="grid">
+      <div class="card">
+        <span class="eg" data-i18n="example"></span>
+        <div class="f" style="display:flex;flex-direction:column;gap:6px;font-weight:600;font-size:14px">
+          <span data-i18n="f_kind"></span>
+          <div class="seg"><button type="button" id="ir-ir" aria-pressed="true">IR</button><button type="button" id="ir-ircm" aria-pressed="false">IRCM</button></div>
+        </div>
+        <label class="f"><span id="ir-lbl" data-i18n="f_benef"></span>
+          <span class="in"><input type="text" inputmode="numeric" class="money" id="ir-amt" value="10000000"><span class="u">Ar</span></span></label>
+      </div>
+      <div class="ticket" aria-live="polite">
+        <div class="t-head"><span id="ir-tk">IR</span><span data-i18n="tk_year"></span></div>
+        <div class="rows" id="ir-rows"></div>
+        <div class="total"><span class="k" data-i18n="r_due"></span><span class="v" id="ir-total"></span></div>
+      </div>
+    </div>
+    <details class="how"><summary data-i18n="how"></summary>
+      <ol><li data-i18n="ir_how1"></li><li data-i18n="ir_how2"></li><li data-i18n="ir_how3"></li></ol></details>
+  </section>
+
+  <!-- Pénalités -->
+  <section class="panel" id="p-pen" role="tabpanel" hidden>
+    <h2 data-i18n="pen_h"></h2>
+    <p class="lead" data-i18n="pen_lead"></p>
+    <div class="grid">
+      <div class="card">
+        <span class="eg" data-i18n="example"></span>
+        <label class="f"><span data-i18n="f_due"></span>
+          <span class="in"><input type="text" inputmode="numeric" class="money" id="pen-amt" value="500000"><span class="u">Ar</span></span></label>
+        <div class="f" style="display:flex;flex-direction:column;gap:6px;font-weight:600;font-size:14px">
+          <span id="lbl-mo" data-i18n="f_months"></span>
+          <div class="step">
+            <button type="button" id="mo-minus" aria-label="−">−</button>
+            <input type="number" id="pen-mo" min="1" max="120" value="3" aria-labelledby="lbl-mo">
+            <button type="button" id="mo-plus" aria-label="+">+</button>
+          </div>
+        </div>
+        <label class="f"><span data-i18n="f_caann"></span>
+          <span class="in"><input type="text" inputmode="numeric" class="money" id="pen-ca" value="30000000"><span class="u">Ar</span></span></label>
+        <label class="check"><input type="checkbox" id="pen-nodecl" checked><span data-i18n="f_nodecl"></span></label>
+      </div>
+      <div class="ticket" aria-live="polite">
+        <div class="t-head"><span data-i18n="tk_pen"></span><span>CPF</span></div>
+        <div class="rows" id="pen-rows"></div>
+        <div class="total"><span class="k" data-i18n="r_total"></span><span class="v" id="pen-total"></span></div>
+      </div>
+    </div>
+    <details class="how"><summary data-i18n="how"></summary>
+      <ol><li data-i18n="pen_how1"></li><li data-i18n="pen_how2"></li><li data-i18n="pen_how3"></li></ol></details>
+  </section>
+
+  <!-- About -->
+  <section class="panel" id="p-about" role="tabpanel" hidden>
+    <h2 data-i18n="about_h"></h2>
+    <div class="about">
+      <p class="lead" style="margin:0" data-i18n="about_p1"></p>
+      <p style="margin:0" data-i18n="about_p2"></p>
+      <p style="margin:0" data-i18n="about_p3"></p>
+      <strong data-i18n="about_src"></strong>
+      <ul>
+        <li><a href="https://www.impots.mg" target="_blank" rel="noopener">impots.mg</a> · Direction générale des impôts</li>
+        <li><a href="http://courrier.mefb.gov.mg/assets/vendor/ckeditor/plugins/kcfinder/upload/files/2026/lfr/LFR2026%20Ampliation%20SIGNEE%20DATEE.pdf" target="_blank" rel="noopener">Loi n° 2026-004 · LFR 2026</a></li>
+        <li><a href="https://manao.mg/fr/calcul-irsa-madagascar-2026" target="_blank" rel="noopener">IRSA 2026 · barème LFI 2026 (manao.mg)</a></li>
+        <li><a href="https://torolalana.gov.mg/fr/services/les-differents-types-d-impots-a-madagascar/" target="_blank" rel="noopener">torolalana.gov.mg · types d'impôts</a></li>
+        <li><a href="https://www.tetika.eu/fr/regimes-fiscaux-madagascar-2026" target="_blank" rel="noopener">Régimes fiscaux 2026 (tetika.eu)</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer><span data-i18n="footer"></span><span>LFI 2026 · LFR 2026</span></footer>
+</div>
+
+<script>
+const T={
+fr:{
+tagline:"Les calculs du Code des impôts et du Code des procédures fiscales, à jour de la loi de finances 2026.",
+tab_irsa:"Salaire · IRSA",tab_is:"Impôt synthétique",tab_tva:"TVA",tab_ir:"IR · IRCM",tab_pen:"Retards & amendes",tab_about:"Sources",
+example:"Exemple pré-rempli",how:"Comment c'est calculé",tk_month:"Par mois",tk_year:"Par an",
+tk_irsa:"IRSA · Salaire",tk_is:"Impôt synthétique",tk_tva:"TVA",tk_pen:"Pénalités",
+irsa_h:"Combien d'IRSA sur mon salaire ?",
+irsa_lead:"Saisissez votre salaire brut mensuel. L'application retire les cotisations sociales, applique le barème progressif 2026 et la réduction pour personnes à charge.",
+f_brut:"Salaire brut mensuel",f_dep:"Personnes à charge",f_cotis:"Déduire les cotisations CNaPS et OSTIE (1 % + 1 %)",
+r_cnaps:"CNaPS (1 %)",r_ostie:"OSTIE (1 %)",r_base:"Base imposable (arrondie)",r_theo:"IRSA selon le barème",
+r_red:"Réduction personnes à charge",r_min:"Minimum de perception (3 000 Ar)",r_irsa:"IRSA à payer",r_net:"Salaire net",r_eff:"Taux effectif",r_marg:"Tranche marginale",
+bar_title:"Répartition de la base par tranche",
+irsa_how1:"Base = salaire brut moins les cotisations salariales, plafonnées à 8 fois le SME, soit 2 400 000 Ar depuis le 1er mars 2026. La base est arrondie à la centaine d'ariary inférieure.",
+irsa_how2:"Barème mensuel : 0 % jusqu'à 350 000 Ar, puis 5 %, 10 %, 15 %, 20 % jusqu'à 4 000 000 Ar, et 25 % au-delà (loi n° 2025-021, LFI 2026).",
+irsa_how3:"Réduction de 2 000 Ar par personne à charge. Dès que la base dépasse 350 000 Ar, l'IRSA ne peut pas être inférieur à 3 000 Ar (art. 01.03.16 du Code des impôts).",
+is_h:"Impôt synthétique d'une petite activité",
+is_lead:"Pour les entrepreneurs dont le chiffre d'affaires annuel est inférieur à 200 millions d'ariary : un seul impôt remplace l'IR et la TVA.",
+f_ca:"Chiffre d'affaires annuel",f_achats:"Achats avec facture régulière",f_sal:"Salaires versés (avec IRSA déclaré)",f_act:"Type d'activité (minimum de perception)",
+act1:"Secteur primaire, petit exploitant · 16 000 Ar",act2:"Artisan, gargote, petit commerce · 50 000 Ar",act3:"Tourisme, mines, prestataire de services · 100 000 Ar",act4:"Profession libérale, activités multiples · 150 000 Ar",
+r_is_brut:"IS de base (5 % du CA)",r_is_red1:"Réduction achats (2 %)",r_is_red2:"Réduction salaires (2 %)",r_is_floor:"Plancher appliqué (3 % du CA)",r_is_min:"Minimum de perception appliqué",r_is:"Impôt synthétique",r_rate_ca:"Part du CA",
+is_warn:"Avec ce chiffre d'affaires (200 millions d'ariary ou plus), vous relevez du régime du réel et payez l'IR, pas l'impôt synthétique.",
+is_how1:"IS = 5 % du chiffre d'affaires, moins 2 % des achats facturés et 2 % des salaires déclarés avec versement de l'IRSA.",
+is_how2:"Les réductions ne peuvent pas faire descendre l'impôt sous 3 % du chiffre d'affaires, ni sous le minimum de perception de l'activité.",
+is_how3:"Acomptes provisionnels : au plus tard le 31 mars et le 30 juin pour un exercice calé sur l'année civile (art. I-17 du Code des procédures fiscales, LFR 2026).",
+tva_h:"Passer du HT au TTC",
+tva_lead:"La TVA s'applique au taux général de 20 %. Certaines opérations ont un taux réduit ou nul.",
+f_mode:"Je connais le prix",mode_ht:"Hors taxes (HT)",mode_ttc:"Toutes taxes (TTC)",f_amount:"Montant",f_rate:"Taux",
+rate20:"20 % · taux général",rate5:"5 % · taux réduit (riz de luxe)",rate0:"0 % · exportations",
+r_ht:"Prix HT",r_tva:"TVA",r_ttc:"Prix TTC",
+tva_how1:"TTC = HT × (1 + taux). Dans l'autre sens : HT = TTC ÷ (1 + taux).",
+tva_how2:"La TVA est obligatoire à partir de 400 millions d'ariary de chiffre d'affaires, et optionnelle entre 200 et 400 millions (LFI 2026).",
+tva_how3:"La déclaration et le paiement sont mensuels, au plus tard le 15 du mois suivant.",
+ir_h:"IR et IRCM : les impôts à taux fixe",
+ir_lead:"L'IR frappe le bénéfice des entreprises au régime du réel. L'IRCM frappe les revenus de placements : intérêts, dividendes, plus-values de cession.",
+f_kind:"Impôt",f_benef:"Bénéfice imposable de l'exercice",f_rcm:"Revenus de capitaux mobiliers",
+r_rate:"Taux appliqué",r_base2:"Base",r_due:"Impôt dû",r_after:"Montant après impôt",
+ir_how1:"IR : 20 % du bénéfice imposable (art. 01.01.14 du Code des impôts). Un minimum de perception s'applique selon l'activité, même en cas de perte.",
+ir_how2:"IRCM : 20 % des revenus de capitaux mobiliers. Depuis la LFR 2026, il vise aussi les plus-values de cession mobilière des personnes physiques et morales.",
+ir_how3:"Le régime du réel concerne les entreprises dont le chiffre d'affaires atteint au moins 200 millions d'ariary.",
+pen_h:"Payer en retard : combien ça coûte ?",
+pen_lead:"Le Code des procédures fiscales prévoit des intérêts sur l'impôt payé en retard, et une amende fixe quand une déclaration n'est pas déposée.",
+f_due:"Impôt à payer",f_months:"Mois de retard",f_caann:"Chiffre d'affaires annuel de l'entreprise",f_nodecl:"La déclaration n'a pas été déposée",
+r_int:"Intérêts de retard",r_amende:"Amende pour défaut de dépôt",r_total:"Total à payer",r_rule:"Règle d'intérêts",r_minint:"Minimum de 2 000 Ar appliqué",
+rule1:"1 % par mois",rule2:"2 % puis 1 %/mois",rule3:"3 % puis 1 %/mois",
+pen_how1:"Intérêts : 1 % par mois sous 100 M Ar de CA ; 2 % le premier mois puis 1 % de 100 à 400 M ; 3 % puis 1 % au-delà. Tout mois commencé est dû, avec un minimum de 2 000 Ar.",
+pen_how2:"Amende pour défaut de dépôt (art. 20.01.52, LFR 2026) : 20 000 Ar sous 50 M Ar de CA, 50 000 Ar jusqu'à 200 M, 100 000 Ar jusqu'à 400 M, 200 000 Ar au-delà.",
+pen_how3:"Le montant à payer est arrondi à la centaine d'ariary inférieure (art. VII-32 du Code des procédures fiscales, LFR 2026).",
+about_h:"Sources et limites",
+about_p1:"Kajy Hetra est un outil d'apprentissage. Les résultats sont des estimations : pour une décision réelle, vérifiez auprès de la Direction générale des impôts ou d'un conseiller fiscal.",
+about_p2:"Taux à jour au 22 octobre 2026 : loi n° 2025-021 (loi de finances 2026) et loi n° 2026-004 (loi de finances rectificative 2026, promulguée le 16 juillet 2026).",
+about_p3:"Les minimums de perception de l'impôt synthétique et les taux d'intérêts de retard proviennent des textes publiés avant 2026 ; ils n'ont pas été modifiés par la LFR 2026, mais restent à confirmer auprès de la DGI.",
+about_src:"Textes et références",
+footer:"Outil pédagogique, pas un avis fiscal."
+},
+en:{
+tagline:"Calculations from Madagascar's Tax Code and Tax Procedures Code, updated for the 2026 Finance Act.",
+tab_irsa:"Salary · IRSA",tab_is:"Synthetic tax",tab_tva:"VAT",tab_ir:"IR · IRCM",tab_pen:"Late fees & fines",tab_about:"Sources",
+example:"Sample values",how:"How it is calculated",tk_month:"Per month",tk_year:"Per year",
+tk_irsa:"IRSA · Salary",tk_is:"Synthetic tax",tk_tva:"VAT",tk_pen:"Penalties",
+irsa_h:"How much IRSA on my salary?",
+irsa_lead:"Enter your monthly gross salary. The app deducts social contributions, applies the 2026 progressive scale and the reduction for dependants.",
+f_brut:"Monthly gross salary",f_dep:"Dependants",f_cotis:"Deduct CNaPS and OSTIE contributions (1% + 1%)",
+r_cnaps:"CNaPS (1%)",r_ostie:"OSTIE (1%)",r_base:"Taxable base (rounded)",r_theo:"IRSA from the scale",
+r_red:"Dependants reduction",r_min:"Minimum charge (3,000 Ar)",r_irsa:"IRSA to pay",r_net:"Net salary",r_eff:"Effective rate",r_marg:"Marginal bracket",
+bar_title:"Taxable base by bracket",
+irsa_how1:"Base = gross salary minus employee contributions, capped at 8 times the minimum wage (2,400,000 Ar since 1 March 2026). The base is rounded down to the nearest hundred ariary.",
+irsa_how2:"Monthly scale: 0% up to 350,000 Ar, then 5%, 10%, 15%, 20% up to 4,000,000 Ar, and 25% above (Law 2025-021, 2026 Finance Act).",
+irsa_how3:"2,000 Ar reduction per dependant. Once the base exceeds 350,000 Ar, IRSA cannot be less than 3,000 Ar (Tax Code art. 01.03.16).",
+is_h:"Synthetic tax for a small business",
+is_lead:"For entrepreneurs with annual turnover under 200 million ariary: a single tax replaces income tax and VAT.",
+f_ca:"Annual turnover",f_achats:"Purchases with proper invoices",f_sal:"Salaries paid (with IRSA declared)",f_act:"Type of activity (minimum charge)",
+act1:"Primary sector, small farmer · 16,000 Ar",act2:"Craftsperson, food stall, small shop · 50,000 Ar",act3:"Tourism, mining, service provider · 100,000 Ar",act4:"Liberal profession, multiple activities · 150,000 Ar",
+r_is_brut:"Base tax (5% of turnover)",r_is_red1:"Purchases reduction (2%)",r_is_red2:"Salaries reduction (2%)",r_is_floor:"Floor applied (3% of turnover)",r_is_min:"Minimum charge applied",r_is:"Synthetic tax",r_rate_ca:"Share of turnover",
+is_warn:"With this turnover (200 million ariary or more) you fall under the real regime and pay income tax (IR), not synthetic tax.",
+is_how1:"Synthetic tax = 5% of turnover, minus 2% of invoiced purchases and 2% of salaries declared with IRSA paid.",
+is_how2:"Reductions cannot bring the tax below 3% of turnover, nor below the activity's minimum charge.",
+is_how3:"Provisional instalments: by 31 March and 30 June for a calendar-year business (Tax Procedures Code art. I-17, 2026 amending law).",
+tva_h:"From pre-tax to tax-inclusive",
+tva_lead:"VAT applies at the standard rate of 20%. Some transactions have a reduced or zero rate.",
+f_mode:"The price I know is",mode_ht:"Before tax",mode_ttc:"Tax included",f_amount:"Amount",f_rate:"Rate",
+rate20:"20% · standard rate",rate5:"5% · reduced (luxury rice)",rate0:"0% · exports",
+r_ht:"Price before tax",r_tva:"VAT",r_ttc:"Price incl. tax",
+tva_how1:"Incl. tax = before tax × (1 + rate). The other way: before tax = incl. tax ÷ (1 + rate).",
+tva_how2:"VAT registration is mandatory from 400 million ariary of turnover, and optional between 200 and 400 million (2026 Finance Act).",
+tva_how3:"Returns and payment are monthly, by the 15th of the following month.",
+ir_h:"IR and IRCM: the flat-rate taxes",
+ir_lead:"IR taxes the profit of businesses under the real regime. IRCM taxes investment income: interest, dividends, capital gains on securities.",
+f_kind:"Tax",f_benef:"Taxable profit for the year",f_rcm:"Investment income",
+r_rate:"Rate applied",r_base2:"Base",r_due:"Tax due",r_after:"Amount after tax",
+ir_how1:"IR: 20% of taxable profit (Tax Code art. 01.01.14). A minimum charge applies by activity, even when the business makes a loss.",
+ir_how2:"IRCM: 20% of investment income. Since the 2026 amending law it also covers capital gains on the sale of securities.",
+ir_how3:"The real regime applies to businesses with turnover of at least 200 million ariary.",
+pen_h:"Paying late: what does it cost?",
+pen_lead:"The Tax Procedures Code charges interest on tax paid late, and a fixed fine when a return is not filed.",
+f_due:"Tax due",f_months:"Months late",f_caann:"Business annual turnover",f_nodecl:"The return was not filed",
+r_int:"Late-payment interest",r_amende:"Fine for not filing",r_total:"Total to pay",r_rule:"Interest rule",r_minint:"2,000 Ar minimum applied",
+rule1:"1% per month",rule2:"2% then 1%/month",rule3:"3% then 1%/month",
+pen_how1:"Interest: 1% per month under 100 M Ar turnover; 2% the first month then 1% from 100 to 400 M; 3% then 1% above. Any month started counts in full, with a 2,000 Ar minimum.",
+pen_how2:"Fine for not filing (art. 20.01.52, 2026 amending law): 20,000 Ar under 50 M Ar turnover, 50,000 Ar up to 200 M, 100,000 Ar up to 400 M, 200,000 Ar above.",
+pen_how3:"The amount payable is rounded down to the nearest hundred ariary (Tax Procedures Code art. VII-32, 2026 amending law).",
+about_h:"Sources and limits",
+about_p1:"Kajy Hetra is a learning tool. Results are estimates: for a real decision, check with the Directorate General of Taxes or a tax adviser.",
+about_p2:"Rates current as of 22 October 2026: Law 2025-021 (2026 Finance Act) and Law 2026-004 (2026 amending Finance Act, promulgated 16 July 2026).",
+about_p3:"The synthetic-tax minimum charges and late-interest rates come from texts published before 2026. The 2026 amending law did not change them, but confirm them with the DGI.",
+about_src:"Laws and references",
+footer:"A learning tool, not tax advice."
+},
+mg:{
+tagline:"Kajy araka ny Fehezan-dalàna momba ny hetra sy ny Fehezan-dalàna momba ny fomba fanaraha-maso ny hetra, nohavaozina araka ny lalàna momba ny tetibola 2026.",
+tab_irsa:"Karama · IRSA",tab_is:"Hetra tsotra (IS)",tab_tva:"TVA",tab_ir:"IR · IRCM",tab_pen:"Fahatarana & sazy",tab_about:"Loharano",
+example:"Ohatra efa feno",how:"Ahoana no fanaovana ny kajy",tk_month:"Isam-bolana",tk_year:"Isan-taona",
+tk_irsa:"IRSA · Karama",tk_is:"Hetra tsotra",tk_tva:"TVA",tk_pen:"Sazy",
+irsa_h:"Firy ny IRSA amin'ny karamako?",
+irsa_lead:"Ampidiro ny karama manontolo isam-bolana. Esorin'ny fampiharana ny latsakemboka sosialy, ampiharina ny tahan'ny 2026 ary ny fihenam-bidy ho an'ny olona iantohana.",
+f_brut:"Karama manontolo isam-bolana",f_dep:"Olona iantohana",f_cotis:"Esorina ny latsakemboka CNaPS sy OSTIE (1 % + 1 %)",
+r_cnaps:"CNaPS (1 %)",r_ostie:"OSTIE (1 %)",r_base:"Fototra iainan'ny hetra",r_theo:"IRSA araka ny tahany",
+r_red:"Fihenana ho an'ny olona iantohana",r_min:"Hetra kely indrindra (3 000 Ar)",r_irsa:"IRSA aloa",r_net:"Karama madio",r_eff:"Tahan'ny hetra marina",r_marg:"Ambaratonga farany",
+bar_title:"Fizarana ny fototra isaky ny ambaratonga",
+irsa_how1:"Fototra = karama manontolo esorina ny latsakemboka, voafetra ho 8 heny ny SME (2 400 000 Ar nanomboka ny 1 martsa 2026). Boriborina ho amin'ny zato ambany ny fototra.",
+irsa_how2:"Tahany isam-bolana: 0 % hatramin'ny 350 000 Ar, avy eo 5 %, 10 %, 15 %, 20 % hatramin'ny 4 000 000 Ar, ary 25 % mihoatra izany (lalàna n° 2025-021).",
+irsa_how3:"Fihenana 2 000 Ar isaky ny olona iantohana. Raha mihoatra ny 350 000 Ar ny fototra, tsy latsaky ny 3 000 Ar ny IRSA (and. 01.03.16).",
+is_h:"Hetra tsotra ho an'ny asa madinika",
+is_lead:"Ho an'ireo mpandraharaha manana tondrom-barotra isan-taona latsaky ny 200 tapitrisa ariary: hetra iray ihany no misolo ny IR sy ny TVA.",
+f_ca:"Tondrom-barotra isan-taona",f_achats:"Fividianana misy faktiora ara-dalàna",f_sal:"Karama naloa (misy IRSA nambara)",f_act:"Karazana asa (hetra kely indrindra)",
+act1:"Fambolena, mpamboly madinika · 16 000 Ar",act2:"Mpanao asa tanana, hotely kely, mpivarotra madinika · 50 000 Ar",act3:"Fizahantany, harena an-kibon'ny tany, mpanome tolotra · 100 000 Ar",act4:"Asa tsy miankina, asa maro · 150 000 Ar",
+r_is_brut:"Hetra fototra (5 % ny tondrom-barotra)",r_is_red1:"Fihenana fividianana (2 %)",r_is_red2:"Fihenana karama (2 %)",r_is_floor:"Fetra ambany (3 % ny tondrom-barotra)",r_is_min:"Hetra kely indrindra nampiharina",r_is:"Hetra tsotra",r_rate_ca:"Ampahan'ny tondrom-barotra",
+is_warn:"Amin'io tondrom-barotra io (200 tapitrisa ariary na mihoatra), ianao dia anatin'ny rafitra tena izy ary mandoa IR fa tsy hetra tsotra.",
+is_how1:"IS = 5 % ny tondrom-barotra, esorina 2 % ny fividianana misy faktiora sy 2 % ny karama nambara.",
+is_how2:"Tsy mahatonga ny hetra ho latsaky ny 3 % ny tondrom-barotra ny fihenana, na ho latsaky ny hetra kely indrindra amin'ilay asa.",
+is_how3:"Fandoavana mialoha: farany ny 31 martsa sy ny 30 jona (and. I-17 amin'ny Fehezan-dalàna momba ny fomba, LFR 2026).",
+tva_h:"Avy amin'ny HT mankany amin'ny TTC",
+tva_lead:"20 % ny tahan'ny TVA ankapobeny. Misy asa sasany manana taha ambany na aotra.",
+f_mode:"Ny vidiny fantatro dia",mode_ht:"Tsy misy hetra (HT)",mode_ttc:"Misy hetra (TTC)",f_amount:"Vola",f_rate:"Taha",
+rate20:"20 % · taha ankapobeny",rate5:"5 % · taha ambany (vary lafo)",rate0:"0 % · fanondranana",
+r_ht:"Vidiny HT",r_tva:"TVA",r_ttc:"Vidiny TTC",
+tva_how1:"TTC = HT × (1 + taha). Ny mifamadika: HT = TTC ÷ (1 + taha).",
+tva_how2:"Tsy maintsy mandoa TVA raha 400 tapitrisa ariary na mihoatra ny tondrom-barotra; azo safidiana eo anelanelan'ny 200 sy 400 tapitrisa (LFI 2026).",
+tva_how3:"Isam-bolana ny fanambarana sy ny fandoavana, farany ny faha-15 amin'ny volana manaraka.",
+ir_h:"IR sy IRCM: hetra misy taha raikitra",
+ir_lead:"Ny IR dia amin'ny tombony azon'ny orinasa anatin'ny rafitra tena izy. Ny IRCM dia amin'ny vola miditra avy amin'ny fampiasam-bola: zana-bola, tombom-barotra.",
+f_kind:"Hetra",f_benef:"Tombony iainan'ny hetra",f_rcm:"Vola miditra avy amin'ny fampiasam-bola",
+r_rate:"Taha ampiharina",r_base2:"Fototra",r_due:"Hetra aloa",r_after:"Vola sisa aorian'ny hetra",
+ir_how1:"IR: 20 % ny tombony (and. 01.01.14). Misy hetra kely indrindra araka ny asa, na dia very aza ny orinasa.",
+ir_how2:"IRCM: 20 % ny vola miditra avy amin'ny fampiasam-bola. Nanomboka ny LFR 2026, tafiditra ao koa ny tombony amin'ny fivarotana anjara.",
+ir_how3:"Ny rafitra tena izy dia ho an'ny orinasa manana tondrom-barotra 200 tapitrisa ariary farafahakeliny.",
+pen_h:"Mandoa tara: ohatrinona no lany?",
+pen_lead:"Ny Fehezan-dalàna momba ny fomba dia mametraka zana-bola amin'ny hetra aloa tara, ary sazy raikitra raha tsy napetraka ny fanambarana.",
+f_due:"Hetra aloa",f_months:"Volana tara",f_caann:"Tondrom-barotra isan-taona",f_nodecl:"Tsy napetraka ny fanambarana",
+r_int:"Zana-bola noho ny fahatarana",r_amende:"Sazy tsy fametrahana fanambarana",r_total:"Totaliny aloa",r_rule:"Fitsipika zana-bola",r_minint:"Kely indrindra 2 000 Ar",
+rule1:"1 % isam-bolana",rule2:"2 % dia 1 %/volana",rule3:"3 % dia 1 %/volana",
+pen_how1:"Zana-bola: 1 % isam-bolana raha latsaky ny 100 tapitrisa; 2 % ny volana voalohany dia 1 % eo anelanelan'ny 100 sy 400 tapitrisa; 3 % dia 1 % mihoatra izany. Tsy latsaky ny 2 000 Ar.",
+pen_how2:"Sazy (and. 20.01.52, LFR 2026): 20 000 Ar raha latsaky ny 50 tapitrisa, 50 000 Ar hatramin'ny 200 tapitrisa, 100 000 Ar hatramin'ny 400 tapitrisa, 200 000 Ar mihoatra izany.",
+pen_how3:"Boriborina ho amin'ny zato ambany ny vola aloa (and. VII-32, LFR 2026).",
+about_h:"Loharano sy fetra",
+about_p1:"Fitaovana fianarana ny Kajy Hetra. Tombantombana ihany ny valiny: raha hanapa-kevitra ianao, manontania amin'ny Foibe misahana ny hetra (DGI) na mpanolotsaina.",
+about_p2:"Taha nohavaozina tamin'ny 22 oktobra 2026: lalàna n° 2025-021 (LFI 2026) sy lalàna n° 2026-004 (LFR 2026, navoaka ny 16 jolay 2026).",
+about_p3:"Ny hetra kely indrindra amin'ny IS sy ny tahan'ny zana-bola noho ny fahatarana dia avy amin'ny lahatsoratra talohan'ny 2026; tsy novain'ny LFR 2026 izy ireo, saingy hamafiso amin'ny DGI.",
+about_src:"Lahatsoratra sy loharano",
+footer:"Fitaovana fianarana, tsy torohevitra ara-ketra."
+}};
+
+let lang='fr';
+try{const s=localStorage.getItem('kh-lang'); if(T[s]) lang=s;}catch(e){}
+const t=k=>(T[lang][k]??T.fr[k]??k);
+const $=id=>document.getElementById(id);
+const LOC={fr:'fr-FR',en:'en-US',mg:'fr-FR'};
+const num=n=>Math.round(n).toLocaleString(LOC[lang]).replace(/[  ]/g,' ');
+const ar=n=>num(n)+' Ar';
+const pct=(n,d=1)=>(n*100).toLocaleString(LOC[lang],{maximumFractionDigits:d})+' %';
+const down100=n=>Math.floor(n/100)*100;
+const val=id=>Number(String($(id).value).replace(/\D/g,''))||0;
+const row=(k,v,cls='')=>`<div class="row ${cls}"><span>${k}</span><span>${v}</span></div>`;
+const chip=(k,v)=>`<span class="chip"><b>${k}</b>${v}</span>`;
+
+/* ---------- pure calculators ---------- */
+const BRACKETS=[[0,350000,0],[350000,400000,.05],[400000,500000,.10],[500000,600000,.15],[600000,4000000,.20],[4000000,Infinity,.25]];
+function calcIRSA(brut,dep,cotis){
+  const cap=2400000;
+  const cn=cotis?Math.round(Math.min(brut,cap)*0.01):0, os=cn;
+  const base=Math.max(0,down100(brut-cn-os));
+  const parts=BRACKETS.map(([lo,hi,r])=>{const amt=Math.max(0,Math.min(base,hi)-lo);return {lo,hi,r,amt,tax:amt*r};});
+  const theo=parts.reduce((s,p)=>s+p.tax,0);
+  const red=dep*2000;
+  let due=Math.max(0,theo-red), minApplied=false;
+  if(base>350000 && due<3000){due=3000;minApplied=true;}
+  if(base<=350000) due=0;
+  due=down100(due);
+  const marg=[...parts].reverse().find(p=>p.amt>0);
+  return {cn,os,base,parts,theo,red:Math.min(red,theo),due,minApplied,net:brut-cn-os-due,marg:marg?marg.r:0};
+}
+function calcIS(ca,achats,sal,minimum){
+  const base=ca*0.05, r1=achats*0.02, r2=sal*0.02, floor=ca*0.03;
+  let is=base-r1-r2, floorApplied=false, minApplied=false;
+  if(is<floor){is=floor;floorApplied=true;}
+  if(is<minimum){is=minimum;minApplied=true;}
+  return {base,r1,r2,floor,is:down100(is),floorApplied,minApplied,real:ca>=200000000};
+}
+function calcTVA(amt,rate,fromHT){
+  const ht=fromHT?amt:amt/(1+rate); const tva=ht*rate; return {ht,tva,ttc:ht+tva};
+}
+function calcPen(amt,months,ca,nodecl){
+  const first=ca>=400000000?.03:ca>=100000000?.02:.01;
+  let inter=amt*(first+(Math.max(1,months)-1)*0.01), minApplied=false;
+  if(amt>0 && inter<2000){inter=2000;minApplied=true;}
+  const fine=!nodecl?0:ca>=400000000?200000:ca>=200000000?100000:ca>=50000000?50000:20000;
+  return {first,inter:down100(inter),minApplied,fine,total:down100(amt+inter+fine)};
+}
+
+/* ---------- renderers ---------- */
+function rIRSA(){
+  const brut=val('irsa-brut'), dep=Math.max(0,Math.min(20,Number($('irsa-dep').value)||0)), cotis=$('irsa-cotis').checked;
+  const r=calcIRSA(brut,dep,cotis);
+  let h='';
+  if(cotis){h+=row(t('r_cnaps'),'− '+ar(r.cn),'neg')+row(t('r_ostie'),'− '+ar(r.os),'neg');}
+  h+=row(t('r_base'),ar(r.base))+row(t('r_theo'),ar(r.theo));
+  if(dep>0) h+=row(t('r_red'),'− '+ar(r.red),'neg');
+  if(r.minApplied) h+=row(t('r_min'),ar(3000),'note');
+  $('irsa-rows').innerHTML=h;
+  $('irsa-total').textContent=ar(r.due);
+  $('irsa-sub').innerHTML=chip(t('r_net'),ar(r.net))+chip(t('r_eff'),brut?pct(r.due/brut):'0 %')+chip(t('r_marg'),pct(r.marg,0));
+  const shades=[8,22,36,52,70,90];
+  const used=r.parts.filter(p=>p.amt>0);
+  $('irsa-bar').innerHTML=used.map(p=>{const i=r.parts.indexOf(p);const dark=shades[i]>50;
+    return `<div style="flex:${p.amt} 1 0;background:color-mix(in srgb,var(--accent) ${shades[i]}%,var(--surface));color:${dark?'var(--accent-ink)':'var(--ink)'}" title="${pct(p.r,0)} · ${ar(p.amt)}">${p.amt/(r.base||1)>0.09?pct(p.r,0):''}</div>`}).join('')||'<div style="flex:1"></div>';
+  $('irsa-legend').innerHTML=used.map(p=>{const i=r.parts.indexOf(p);return `<span><i style="background:color-mix(in srgb,var(--accent) ${shades[i]}%,var(--surface))"></i>${pct(p.r,0)} · ${ar(p.tax)}</span>`}).join('');
+}
+function rIS(){
+  const ca=val('is-ca'), r=calcIS(ca,val('is-achats'),val('is-sal'),Number($('is-act').value));
+  $('is-warn').hidden=!r.real;
+  let h=row(t('r_is_brut'),ar(r.base))+row(t('r_is_red1'),'− '+ar(r.r1),'neg');
+  if(r.r2>0) h+=row(t('r_is_red2'),'− '+ar(r.r2),'neg');
+  if(r.floorApplied && !r.minApplied) h+=row(t('r_is_floor'),ar(r.floor),'note');
+  if(r.minApplied) h+=row(t('r_is_min'),ar(Number($('is-act').value)),'note');
+  $('is-rows').innerHTML=h;
+  $('is-total').textContent=ar(r.is);
+  $('is-sub').innerHTML=chip(t('r_rate_ca'),ca?pct(r.is/ca,2):'—');
+}
+let tvaFromHT=true;
+function rTVA(){
+  const rate=Number($('tva-rate').value), r=calcTVA(val('tva-amt'),rate,tvaFromHT);
+  $('tva-rate-lbl').textContent=pct(rate,0);
+  $('tva-rows').innerHTML=row(t('r_ht'),ar(r.ht))+row(t('r_tva')+' ('+pct(rate,0)+')',ar(r.tva));
+  $('tva-total').textContent=ar(r.ttc);
+}
+let irKind='ir';
+function rIR(){
+  const amt=val('ir-amt'), due=down100(amt*0.20);
+  $('ir-lbl').textContent=t(irKind==='ir'?'f_benef':'f_rcm');
+  $('ir-tk').textContent=irKind.toUpperCase();
+  $('ir-rows').innerHTML=row(t('r_base2'),ar(amt))+row(t('r_rate'),pct(.2,0))+row(t('r_after'),ar(amt-due));
+  $('ir-total').textContent=ar(due);
+}
+function rPen(){
+  const amt=val('pen-amt'), mo=Math.max(1,Number($('pen-mo').value)||1), ca=val('pen-ca'), nd=$('pen-nodecl').checked;
+  const r=calcPen(amt,mo,ca,nd);
+  const rule=r.first===.03?'rule3':r.first===.02?'rule2':'rule1';
+  let h=row(t('f_due'),ar(amt))+row(t('r_rule'),t(rule))+row(t('r_int')+' · '+mo,ar(r.inter));
+  if(r.minApplied) h+=row(t('r_minint'),ar(2000),'note');
+  if(nd) h+=row(t('r_amende'),ar(r.fine));
+  $('pen-rows').innerHTML=h;
+  $('pen-total').textContent=ar(r.total);
+}
+const renderAll=()=>{rIRSA();rIS();rTVA();rIR();rPen();};
+
+/* ---------- i18n + nav ---------- */
+function applyLang(){
+  document.documentElement.lang=lang==='mg'?'mg':lang;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{el.textContent=t(el.dataset.i18n)});
+  document.querySelectorAll('.lang button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.lang===lang));
+  document.querySelectorAll('input.money').forEach(i=>{if(document.activeElement!==i) i.value=num(val(i.id))});
+  renderAll();
+}
+document.querySelectorAll('.lang button').forEach(b=>b.addEventListener('click',()=>{lang=b.dataset.lang;try{localStorage.setItem('kh-lang',lang)}catch(e){}applyLang();}));
+
+const TABS=['irsa','is','tva','ir','pen','about'];
+function show(id){
+  if(!TABS.includes(id)) id='irsa';
+  TABS.forEach(k=>{$('p-'+k).hidden=k!==id});
+  document.querySelectorAll('.tab').forEach(b=>b.setAttribute('aria-selected',b.dataset.tab===id));
+  try{history.replaceState(null,'','#'+id)}catch(e){}
+}
+document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>show(b.dataset.tab)));
+
+/* ---------- inputs ---------- */
+document.querySelectorAll('input.money').forEach(i=>{
+  i.addEventListener('input',renderAll);
+  i.addEventListener('focus',()=>{i.value=String(val(i.id)||'');});
+  i.addEventListener('blur',()=>{i.value=num(val(i.id));});
+});
+['irsa-dep','irsa-cotis','is-act','tva-rate','pen-mo','pen-nodecl'].forEach(id=>{$(id).addEventListener('input',renderAll);$(id).addEventListener('change',renderAll);});
+const stepper=(minus,plus,id,min,max)=>{
+  $(minus).addEventListener('click',()=>{$(id).value=Math.max(min,(Number($(id).value)||0)-1);renderAll();});
+  $(plus).addEventListener('click',()=>{$(id).value=Math.min(max,(Number($(id).value)||0)+1);renderAll();});
+};
+stepper('dep-minus','dep-plus','irsa-dep',0,20);
+stepper('mo-minus','mo-plus','pen-mo',1,120);
+$('tva-ht').addEventListener('click',()=>{tvaFromHT=true;$('tva-ht').setAttribute('aria-pressed','true');$('tva-ttc').setAttribute('aria-pressed','false');rTVA();});
+$('tva-ttc').addEventListener('click',()=>{tvaFromHT=false;$('tva-ttc').setAttribute('aria-pressed','true');$('tva-ht').setAttribute('aria-pressed','false');rTVA();});
+$('ir-ir').addEventListener('click',()=>{irKind='ir';$('ir-ir').setAttribute('aria-pressed','true');$('ir-ircm').setAttribute('aria-pressed','false');$('ir-amt').value=num(10000000);rIR();});
+$('ir-ircm').addEventListener('click',()=>{irKind='ircm';$('ir-ircm').setAttribute('aria-pressed','true');$('ir-ir').setAttribute('aria-pressed','false');$('ir-amt').value=num(2000000);rIR();});
+
+show((location.hash||'').slice(1));
+applyLang();
+</script>

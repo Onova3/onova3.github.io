@@ -1,0 +1,11 @@
+{
+  "name": "kajy-hetra",
+  "version": "0.1.0",
+  "description": "Calculateurs fiscaux de Madagascar (Code des impôts et Code des procédures fiscales 2026), en français, anglais et malgache.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "node --test",
+    "start": "npx --yes serve -l 3000 ."
+  }
+}

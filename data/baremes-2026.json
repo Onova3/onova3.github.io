@@ -1,0 +1,101 @@
+{
+  "annee": 2026,
+  "misAJour": "2026-10-22",
+  "textes": [
+    "Code des impôts suivant la LFI 2026 (loi n° 2025-021)",
+    "Code des procédures fiscales suivant la LFI 2026",
+    "Loi n° 2026-004 portant LFR 2026, promulguée le 16 juillet 2026"
+  ],
+  "irsa": {
+    "tranches": [
+      { "de": 0, "a": 350000, "taux": 0 },
+      { "de": 350000, "a": 400000, "taux": 0.05 },
+      { "de": 400000, "a": 500000, "taux": 0.10 },
+      { "de": 500000, "a": 600000, "taux": 0.15 },
+      { "de": 600000, "a": 4000000, "taux": 0.20 },
+      { "de": 4000000, "a": null, "taux": 0.25 }
+    ],
+    "minimum": 3000,
+    "arrondiBase": 100,
+    "reductionParPersonneACharge": 2000,
+    "regimeSpecial": [
+      { "tauxUnitaireMax": 700, "taux": 0.02 },
+      { "tauxUnitaireMax": 2000, "taux": 0.04 },
+      { "tauxUnitaireMax": null, "taux": 0.10 }
+    ],
+    "articles": { "bareme": "CDI 01.03.16", "personnesACharge": "CDI 01.03.19", "base": "CDI 01.03.07 à 01.03.09" },
+    "source": "LFI 2026"
+  },
+  "cotisationsSociales": {
+    "cnapsSalarie": 0.01,
+    "ostieSalarie": 0.01,
+    "plafond": 2400000,
+    "note": "Plafond = 8 × SME (300 000 Ar) depuis le 1er mars 2026. Hors Code des impôts : à confirmer auprès de la CNaPS.",
+    "articles": { "deductibilite": "CDI 01.03.09" }
+  },
+  "impotSynthetique": {
+    "seuilCA": 400000000,
+    "seuilOptionIR": 200000000,
+    "taux": 0.05,
+    "tauxReduitCGA": 0.03,
+    "reductionCharges": 0.02,
+    "plancherCA": 0.03,
+    "arrondiBase": 10000,
+    "acomptesDebutActivite": [
+      { "montant": 16000, "activites": "agriculteurs, éleveurs, pêcheurs, petits exploitants miniers, transporteurs à véhicules non motorisés" },
+      { "montant": 50000, "activites": "artisans, gargotiers, petits producteurs, petits commerçants" },
+      { "montant": 100000, "activites": "artisans miniers, auteurs et artistes, commerçants, hôteliers, prestataires, restaurateurs" },
+      { "montant": 150000, "activites": "professions libérales et autres" }
+    ],
+    "echeancesAcomptes": ["31 mars", "30 juin"],
+    "articles": { "champ": "CDI 01.02.02", "taux": "CDI 01.02.05", "reductions": "CDI 01.02.05 bis", "acomptes": "CDI 01.02.06", "echeances": "CPF I-17" },
+    "source": "LFI 2026 ; échéances LFR 2026"
+  },
+  "ir": {
+    "taux": 0.20,
+    "minimum": {
+      "activitesProductives": { "fixe": 500000, "tauxCA": 0.01, "activites": "agricoles, artisanales, industrielles, minières, hôtelières, touristiques" },
+      "autres": { "fixe": 1000000, "tauxCA": 0.01 },
+      "petrolieres": { "fixe": 1000000, "tauxCA": 0.007 },
+      "carburantDetail": { "fixe": 0, "tauxCA": 0.001 }
+    },
+    "articles": { "champ": "CDI 01.01.02", "taux": "CDI 01.01.14" },
+    "source": "LFI 2026"
+  },
+  "irm": { "taux": 0.08, "articles": { "taux": "CDI 01.01.51" }, "source": "LFI 2026" },
+  "ircm": {
+    "taux": 0.20,
+    "abattementDividendes": 0.5,
+    "tauxCooperatives": 0.10,
+    "arrondiBase": 1000,
+    "articles": { "calcul": "CDI 01.04.04", "champ": "CDI 01.04.02 (plus-values mobilières : LFR 2026)" },
+    "source": "LFI 2026 ; champ modifié LFR 2026"
+  },
+  "ipvi": { "taux": 0.20, "articles": { "taux": "CDI 01.05.07" }, "source": "LFI 2026" },
+  "tva": {
+    "tauxNormal": 0.20,
+    "tauxReduit": 0.05,
+    "tauxExport": 0,
+    "seuilObligatoire": 400000000,
+    "seuilOption": 200000000,
+    "articles": { "taux": "CDI 06.01.12", "tauxReduitRiz": "CDI 06.01.12 (LFR 2026)" },
+    "source": "LFI 2026 ; LFR 2026"
+  },
+  "penalites": {
+    "retard": [
+      { "caMin": 400000000, "premierMois": 0.03, "moisSuivants": 0.01 },
+      { "caMin": 100000000, "premierMois": 0.02, "moisSuivants": 0.01 },
+      { "caMin": 0, "premierMois": 0.01, "moisSuivants": 0.01 }
+    ],
+    "minimumRetard": 10000,
+    "amendeDefautDepot": [
+      { "caMin": 400000000, "montant": 200000 },
+      { "caMin": 200000000, "montant": 100000 },
+      { "caMin": 50000000, "montant": 50000 },
+      { "caMin": 0, "montant": 20000 }
+    ],
+    "arrondiImpot": 100,
+    "articles": { "retard": "CDI 20.01.53", "defautDepot": "CDI 20.01.52 (LFR 2026)", "arrondi": "CPF VII-32 (LFR 2026)" },
+    "source": "LFI 2026 ; LFR 2026"
+  }
+}

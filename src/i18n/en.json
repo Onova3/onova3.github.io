@@ -1,0 +1,13 @@
+{
+  "tagline": "Every Malagasy tax, explained and calculated from the 2026 codes.",
+  "recherche": "Search for a tax (e.g. salary, land, VAT)",
+  "cat_revenus": "Income taxes",
+  "cat_enregistrement": "Registration and vehicles",
+  "cat_consommation": "VAT and indirect taxes",
+  "cat_local": "Local taxes",
+  "statut_a-faire": "Coming",
+  "statut_calcul-teste": "Calculator ready",
+  "statut_verifie": "Available",
+  "phase": "Phase",
+  "pied": "A learning tool, not tax advice. Rates: 2026 Finance Act and amending law."
+}

@@ -1,0 +1,498 @@
+{
+  "note": "Inventaire des impôts du Code des impôts 2026. Noms malgaches à faire relire par un locuteur natif.",
+  "impots": [
+    {
+      "numero": 1,
+      "id": "ir",
+      "sigle": "IR",
+      "nom": {
+        "fr": "Impôt sur les revenus",
+        "en": "Income tax",
+        "mg": "Hetra amin'ny vola miditra"
+      },
+      "livre": "I",
+      "refCDI": "Partie I, Titre I, ST I",
+      "refCPF": "Titre I, ST II, Chap. I",
+      "categorie": "revenus",
+      "phase": 1,
+      "calculateur": "calculIR",
+      "statut": "calcul-teste"
+    },
+    {
+      "numero": 2,
+      "id": "idh",
+      "sigle": "IDH",
+      "nom": {
+        "fr": "Redevance et impôt direct sur les hydrocarbures",
+        "en": "Hydrocarbon royalty and direct tax",
+        "mg": "Hetra mivantana amin'ny solika"
+      },
+      "livre": "I",
+      "refCDI": "Partie I, Titre I, ST II",
+      "refCPF": "Titre I, ST II, Chap. II",
+      "categorie": "revenus",
+      "phase": 1,
+      "calculateur": null,
+      "statut": "a-faire"
+    },
+    {
+      "numero": 3,
+      "id": "irm",
+      "sigle": "IRM",
+      "nom": {
+        "fr": "Impôt sur les revenus des marchés",
+        "en": "Public procurement income tax",
+        "mg": "Hetra amin'ny tsenam-panjakana"
+      },
+      "livre": "I",
+      "refCDI": "Partie I, Titre I, ST III",
+      "refCPF": "Titre I, ST II, Chap. III",
+      "categorie": "revenus",
+      "phase": 1,
+      "calculateur": "calculIRM",
+      "statut": "calcul-teste"
+    },
+    {
+      "numero": 4,
+      "id": "is",
+      "sigle": "IS",
+      "nom": {
+        "fr": "Impôt synthétique",
+        "en": "Synthetic tax",
+        "mg": "Hetra tsotra"
+      },
+      "livre": "I",
+      "refCDI": "Partie I, Titre II",
+      "refCPF": "Titre I, ST II, Chap. IV",
+      "categorie": "revenus",
+      "phase": 1,
+      "calculateur": "calculIS",
+      "statut": "calcul-teste"
+    },
+    {
+      "numero": 5,
+      "id": "irsa",
+      "sigle": "IRSA",
+      "nom": {
+        "fr": "Impôt sur les revenus salariaux et assimilés",
+        "en": "Salary income tax",
+        "mg": "Hetra amin'ny karama"
+      },
+      "livre": "I",
+      "refCDI": "Partie I, Titre III",
+      "refCPF": "Titre I, ST II, Chap. V",
+      "categorie": "revenus",
+      "phase": 1,
+      "calculateur": "calculIRSA",
+      "statut": "calcul-teste"
+    },
+    {
+      "numero": 6,
+      "id": "ircm",
+      "sigle": "IRCM",
+      "nom": {
+        "fr": "Impôt sur les revenus des capitaux mobiliers",
+        "en": "Investment income tax",
+        "mg": "Hetra amin'ny tombom-bola"
+      },
+      "livre": "I",
+      "refCDI": "Partie I, Titre IV",
+      "refCPF": "Titre I, ST II, Chap. VI",
+      "categorie": "revenus",
+      "phase": 1,
+      "calculateur": "calculIRCM",
+      "statut": "calcul-teste"
+    },
+    {
+      "numero": 7,
+      "id": "ipvi",
+      "sigle": "IPVI",
+      "nom": {
+        "fr": "Impôt sur les plus-values immobilières",
+        "en": "Real estate capital gains tax",
+        "mg": "Hetra amin'ny tombony amin'ny trano sy tany"
+      },
+      "livre": "I",
+      "refCDI": "Partie I, Titre V",
+      "refCPF": "Titre I, ST II, Chap. VII",
+      "categorie": "revenus",
+      "phase": 1,
+      "calculateur": "calculIPVI",
+      "statut": "calcul-teste"
+    },
+    {
+      "numero": 8,
+      "id": "de",
+      "sigle": "DE",
+      "nom": {
+        "fr": "Droits d'enregistrement des actes et mutations",
+        "en": "Registration duties",
+        "mg": "Haba fanoratana"
+      },
+      "livre": "I",
+      "refCDI": "Partie II, SP I, Chap. I-III",
+      "refCPF": "Titre I, ST II, Chap. VIII",
+      "categorie": "enregistrement",
+      "phase": 2,
+      "calculateur": null,
+      "statut": "a-faire"
+    },
+    {
+      "numero": 9,
+      "id": "timbre",
+      "sigle": "DT",
+      "nom": {
+        "fr": "Droits de timbre",
+        "en": "Stamp duties",
+        "mg": "Haban-tsonia"
+      },
+      "livre": "I",
+      "refCDI": "Partie II, SP I, Chap. V",
+      "refCPF": "Titre I, ST II, Chap. VIII",
+      "categorie": "enregistrement",
+      "phase": 2,
+      "calculateur": null,
+      "statut": "a-faire"
+    },
+    {
+      "numero": 10,
+      "id": "assurance",
+      "sigle": "TCA",
+      "nom": {
+        "fr": "Taxe sur les contrats d'assurance",
+        "en": "Insurance contract tax",
+        "mg": "Haba amin'ny fiantohana"
+      },
+      "livre": "I",
+      "refCDI": "Partie II, SP I, Chap. VI",
+      "refCPF": "Titre I, ST II, Chap. IX",
+      "categorie": "enregistrement",
+      "phase": 2,
+      "calculateur": null,
+      "statut": "a-faire"
+    },
+    {
+      "numero": 11,
+      "id": "tvm",
+      "sigle": "TVM",
+      "nom": {
+        "fr": "Taxe sur les véhicules à moteur",
+        "en": "Motor vehicle tax",
+        "mg": "Haba amin'ny fiara"
+      },
+      "livre": "I",
+      "refCDI": "Partie II, SP II",
+      "refCPF": null,
+      "categorie": "enregistrement",
+      "phase": 2,
+      "calculateur": null,
+      "statut": "a-faire"
+    },
+    {
+      "numero": 12,
+      "id": "tva",
+      "sigle": "TVA",
+      "nom": {
+        "fr": "Taxe sur la valeur ajoutée",
+        "en": "Value added tax",
+        "mg": "Haba amin'ny lanja ampiana"
+      },
+      "livre": "I",
+      "refCDI": "Partie VI, Titre I",
+      "refCPF": "Titre I, ST II, Chap. XI",
+      "categorie": "consommation",
+      "phase": 2,
+      "calculateur": "calculTVA",
+      "statut": "calcul-teste"
+    },
+    {
+      "numero": 13,
+      "id": "da",
+      "sigle": "DA",
+      "nom": {
+        "fr": "Droit d'accises",
+        "en": "Excise duty",
+        "mg": "Haba manokana"
+      },
+      "livre": "I",
+      "refCDI": "Partie III, Titre I",
+      "refCPF": "Titre II",
+      "categorie": "consommation",
+      "phase": 3,
+      "calculateur": null,
+      "statut": "a-faire"
+    },
+    {
+      "numero": 14,
+      "id": "tsabtj",
+      "sigle": "TSABTJ",
+      "nom": {
+        "fr": "Taxe spéciale sur alcools, tabacs et jeux",
+        "en": "Special tax on alcohol, tobacco and gambling",
+        "mg": "Haba manokana amin'ny toaka, paraky ary filokana"
+      },
+      "livre": "I",
+      "refCDI": "Partie III, Titre II, Chap. I",
+      "refCPF": "Titre I, ST II, Chap. X",
+      "categorie": "consommation",
+      "phase": 3,
+      "calculateur": null,
+      "statut": "a-faire"
+    },
+    {
+      "numero": 15,
+      "id": "ppa",
+      "sigle": "PPA",
+      "nom": {
+        "fr": "Prélèvement sur les produits alcooliques",
+        "en": "Levy on alcoholic products",
+        "mg": "Fakana amin'ny toaka"
+      },
+      "livre": "I",
+      "refCDI": "Partie III, Titre II, Chap. II",
+      "refCPF": "Titre I, ST II, Chap. X",
+      "categorie": "consommation",
+      "phase": 3,
+      "calculateur": null,
+      "statut": "a-faire"
+    },
+    {
+      "numero": 16,
+      "id": "ttm",
+      "sigle": "TTM",
+      "nom": {
+        "fr": "Taxe sur les transactions mobiles",
+        "en": "Mobile transaction tax",
+        "mg": "Haba amin'ny fifanakalozana amin'ny finday"
+      },
+      "livre": "I",
+      "refCDI": "Partie III, Titre II, Chap. IV",
+      "refCPF": "Titre II",
+      "categorie": "consommation",
+      "phase": 3,
+      "calculateur": null,
+      "statut": "a-faire"
+    },
+    {
+      "numero": 17,
+      "id": "ift",
+      "sigle": "IFT",
+      "nom": {
+        "fr": "Impôt foncier sur les terrains",
+        "en": "Land tax",
+        "mg": "Hetra amin'ny tany"
+      },
+      "livre": "II",
+      "refCDI": "Titre I",
+      "refCPF": "Chap. XII",
+      "categorie": "local",
+      "phase": 4,
+      "calculateur": null,
+      "statut": "a-faire"
+    },
+    {
+      "numero": 18,
+      "id": "ifpb",
+      "sigle": "IFPB",
+      "nom": {
+        "fr": "Impôt foncier sur la propriété bâtie",
+        "en": "Built property tax",
+        "mg": "Hetra amin'ny trano"
+      },
+      "livre": "II",
+      "refCDI": "Titre II",
+      "refCPF": "Chap. XIII",
+      "categorie": "local",
+      "phase": 4,
+      "calculateur": null,
+      "statut": "a-faire"
+    },
+    {
+      "numero": 19,
+      "id": "tpc",
+      "sigle": "TPC",
+      "nom": {
+        "fr": "Taxe de protection civile",
+        "en": "Civil protection tax",
+        "mg": "Haba fiarovana sivily"
+      },
+      "livre": "II",
+      "refCDI": "Titre III",
+      "refCPF": "Chap. XIV",
+      "categorie": "local",
+      "phase": 4,
+      "calculateur": null,
+      "statut": "a-faire"
+    },
+    {
+      "numero": 20,
+      "id": "trd",
+      "sigle": "TRD",
+      "nom": {
+        "fr": "Taxe de résidence pour le développement",
+        "en": "Residence tax for development",
+        "mg": "Haba fonenana ho an'ny fampandrosoana"
+      },
+      "livre": "II",
+      "refCDI": "Titre IV",
+      "refCPF": "Chap. XV",
+      "categorie": "local",
+      "phase": 4,
+      "calculateur": null,
+      "statut": "a-faire"
+    },
+    {
+      "numero": 21,
+      "id": "sejour",
+      "sigle": "TS",
+      "nom": {
+        "fr": "Taxe de séjour",
+        "en": "Tourist tax",
+        "mg": "Haba fitoerana"
+      },
+      "livre": "II",
+      "refCDI": "Titre V",
+      "refCPF": "Chap. XVI",
+      "categorie": "local",
+      "phase": 4,
+      "calculateur": null,
+      "statut": "a-faire"
+    },
+    {
+      "numero": 22,
+      "id": "licence",
+      "sigle": "IL",
+      "nom": {
+        "fr": "Impôt de licence",
+        "en": "Licence tax",
+        "mg": "Hetra fahazoan-dalana"
+      },
+      "livre": "II",
+      "refCDI": "Titre VI",
+      "refCPF": "Titre III",
+      "categorie": "local",
+      "phase": 4,
+      "calculateur": null,
+      "statut": "a-faire"
+    },
+    {
+      "numero": 23,
+      "id": "appareils",
+      "sigle": "TAA",
+      "nom": {
+        "fr": "Taxe annuelle sur les appareils automatiques",
+        "en": "Annual tax on automatic machines",
+        "mg": "Haba isan-taona amin'ny milina mandeha ho azy"
+      },
+      "livre": "II",
+      "refCDI": "Titre VII",
+      "refCPF": "Chap. XVII",
+      "categorie": "local",
+      "phase": 4,
+      "calculateur": null,
+      "statut": "a-faire"
+    },
+    {
+      "numero": 24,
+      "id": "eaux",
+      "sigle": "TEM",
+      "nom": {
+        "fr": "Taxe sur les eaux minérales",
+        "en": "Mineral water tax",
+        "mg": "Haba amin'ny rano mineraly"
+      },
+      "livre": "II",
+      "refCDI": "Titre VIII",
+      "refCPF": "Chap. XVIII",
+      "categorie": "local",
+      "phase": 4,
+      "calculateur": null,
+      "statut": "a-faire"
+    },
+    {
+      "numero": 25,
+      "id": "publicite",
+      "sigle": "TP",
+      "nom": {
+        "fr": "Taxe sur la publicité",
+        "en": "Advertising tax",
+        "mg": "Haba amin'ny dokam-barotra"
+      },
+      "livre": "II",
+      "refCDI": "Titre IX",
+      "refCPF": "Chap. XIX",
+      "categorie": "local",
+      "phase": 4,
+      "calculateur": null,
+      "statut": "a-faire"
+    },
+    {
+      "numero": 26,
+      "id": "eau-elec",
+      "sigle": "TEE",
+      "nom": {
+        "fr": "Taxe sur l'eau et/ou l'électricité",
+        "en": "Water and electricity tax",
+        "mg": "Haba amin'ny rano sy herinaratra"
+      },
+      "livre": "II",
+      "refCDI": "Titre X",
+      "refCPF": null,
+      "categorie": "local",
+      "phase": 4,
+      "calculateur": null,
+      "statut": "a-faire"
+    },
+    {
+      "numero": 27,
+      "id": "fetes",
+      "sigle": "TF",
+      "nom": {
+        "fr": "Taxe sur les fêtes, spectacles et manifestations diverses",
+        "en": "Tax on festivals and shows",
+        "mg": "Haba amin'ny fety sy fampisehoana"
+      },
+      "livre": "II",
+      "refCDI": "Titre XI",
+      "refCPF": "Chap. XX",
+      "categorie": "local",
+      "phase": 4,
+      "calculateur": null,
+      "statut": "a-faire"
+    },
+    {
+      "numero": 28,
+      "id": "pylones",
+      "sigle": "TPY",
+      "nom": {
+        "fr": "Taxe sur les pylônes, relais, antennes ou mâts",
+        "en": "Tax on pylons and antennas",
+        "mg": "Haba amin'ny tilikambo sy antenina"
+      },
+      "livre": "II",
+      "refCDI": "Titre XII",
+      "refCPF": "Chap. XXI",
+      "categorie": "local",
+      "phase": 4,
+      "calculateur": null,
+      "statut": "a-faire"
+    },
+    {
+      "numero": 29,
+      "id": "jeux-tv",
+      "sigle": "TJR",
+      "nom": {
+        "fr": "Taxe sur les jeux radiotélévisés",
+        "en": "Tax on broadcast games",
+        "mg": "Haba amin'ny lalao amin'ny radio sy fahitalavitra"
+      },
+      "livre": "II",
+      "refCDI": "Titre XIII",
+      "refCPF": null,
+      "categorie": "local",
+      "phase": 4,
+      "calculateur": null,
+      "statut": "a-faire"
+    }
+  ]
+}

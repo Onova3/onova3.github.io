@@ -1,0 +1,13 @@
+{
+  "tagline": "Tous les impôts de Madagascar, expliqués et calculés selon les codes 2026.",
+  "recherche": "Rechercher un impôt (ex. salaire, terrain, TVA)",
+  "cat_revenus": "Impôts sur les revenus",
+  "cat_enregistrement": "Enregistrement et véhicules",
+  "cat_consommation": "TVA et impôts indirects",
+  "cat_local": "Impôts locaux",
+  "statut_a-faire": "À venir",
+  "statut_calcul-teste": "Calcul prêt",
+  "statut_verifie": "Disponible",
+  "phase": "Phase",
+  "pied": "Outil pédagogique, pas un avis fiscal. Barèmes : LFI 2026 et LFR 2026."
+}
