@@ -61,3 +61,15 @@ Points que le texte des codes ne tranche pas clairement. L'application suit l'in
 | 33 | Prorata de déduction (ventes taxables et exonérées mélangées) | CDI 06.01.17 2° a) et b) | Non calculé : le calculateur suppose que toute la TVA saisie est déductible |
 | 34 | Taux réduits dans la déclaration mensuelle | CDI 06.01.12 | La déclaration ne propose que le taux normal et les exportations ; les ventes à 10 % ou 5 % passent par le convertisseur HT ↔ TTC |
 | 35 | Arrondi de la TVA à payer | CPF VII-32 (LFR 2026) | Appliqué au solde à payer, pas au crédit |
+
+## Droits d'enregistrement (phase 2, étape 2)
+
+| # | Point | Texte | Choix actuel de l'application |
+|---|---|---|---|
+| 36 | Suspension de la perception des droits de succession : depuis quand, jusqu'à quand ? | CDI 02.03.25 I : « La perception des droits sur la déclaration de succession […] est suspendue » | Tarif affiché pour information, 0 Ar à payer |
+| 37 | Minimum de 20 000 Ar pour les cessions de parts et les donations | CDI 02.02.02 (dispositions communes) et 02.02.47 (mutations de meubles et immeubles) | Appliqué à tous les droits proportionnels |
+| 38 | Arrondi du droit à la centaine | CPF VII-32 vise « impôts, droits et taxes » | Appliqué ; base arrondie au millier (02.01.05) |
+| 39 | Valeur administrative et « table financière » des parts | Fixées par voie réglementaire (02.01.05, 02.02.43) | Saisie libre par l'utilisateur |
+| 40 | Bail à usage mixte | CDI 02.02.12 : 2 % sauf ventilation des loyers d'habitation dans le contrat | Le calculateur propose 1 % ou 2 % ; pas de ventilation |
+| 41 | Cas non calculés | Crédit-bail (droit fixe), bail emphytéotique, ventes de meubles et de véhicules (5 % ou 2 %), fonds de commerce, échanges, partages, apports en société, droits fixes de 2 000 à 16 000 Ar | Mentionnés ou absents ; à ajouter si besoin |
+| 42 | Délai de dépôt pour une donation | CPF I-34 III vise les actes de notaire (2 mois) ; aucune règle propre aux donations n'a été relevée | Pas de délai spécifique affiché |

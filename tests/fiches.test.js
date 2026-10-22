@@ -6,6 +6,7 @@ import { calculIS, acompteDebutActivite } from '../src/calc/is.js';
 import { calculIR } from '../src/calc/ir.js';
 import { calculIRCM as calculIRCMf } from '../src/calc/ircm.js';
 import { calculTVA as calculTVAf, calculDeclarationTVA } from '../src/calc/tva.js';
+import { droitVenteImmeuble, droitBail, droitCessionParts, droitSuccession, droitDonation } from '../src/calc/de.js';
 import { lireRoute, lien } from '../src/routes.js';
 import { FICHES } from '../src/fiches/index.js';
 import { etat, fmt, tr } from '../src/ui.js';
@@ -143,6 +144,45 @@ test('TVA : taux réduit de 10 % sur le gaz butane (CDI 06.01.12)', () => {
 });
 test('TVA exemple de la fiche : 30 M de ventes, 3 M déductible = 3 000 000 Ar', () => {
   assert.equal(FICHES.tva.impotExemple(b), 3000000);
+});
+
+// --- Droits d'enregistrement (CDI 02.01.05, 02.02.02, 02.02.12, 02.02.39, 02.02.43, 02.03.25) ---
+test('DE vente d’immeuble : 5 % du prix, relevé à la valeur administrative', () => {
+  assert.equal(droitVenteImmeuble({ prix: 40000000 }, b).impot, 2000000);
+  const r = droitVenteImmeuble({ prix: 40000000, valeurAdministrative: 60000000 }, b);
+  assert.ok(r.valeurAdministrativeAppliquee);
+  assert.equal(r.impot, 3000000);
+});
+test('DE : base arrondie au millier et minimum de 20 000 Ar', () => {
+  // 1 234 567 → 1 234 000 × 5 % = 61 700
+  assert.equal(droitVenteImmeuble({ prix: 1234567 }, b).impot, 61700);
+  const r = droitVenteImmeuble({ prix: 200000 }, b);
+  assert.ok(r.minimumApplique);
+  assert.equal(r.impot, 20000);
+});
+test('DE bail : loyers cumulés sur la durée ; durée indéterminée = un an', () => {
+  // 500 000 × 36 = 18 000 000 × 1 %
+  assert.equal(droitBail({ loyerMensuel: 500000, dureeMois: 36, usage: 'habitation' }, b).impot, 180000);
+  // 500 000 × 12 = 6 000 000 × 2 %
+  assert.equal(droitBail({ loyerMensuel: 500000, usage: 'autre' }, b).impot, 120000);
+});
+test('DE cession de parts : 0,5 %, valeur réelle si plus élevée, minimum', () => {
+  assert.equal(droitCessionParts({ prix: 10000000 }, b).impot, 50000);
+  assert.equal(droitCessionParts({ prix: 10000000, valeurReelle: 20000000 }, b).impot, 100000);
+  assert.equal(droitCessionParts({ prix: 1000000 }, b).impot, 20000);
+});
+test('DE succession : tarif par héritier, perception suspendue', () => {
+  const r = droitSuccession({ lien: 'collaterale', heritiers: 3 }, b);
+  assert.equal(r.tarif, 60000);
+  assert.ok(r.suspendue);
+  assert.equal(r.impot, 0);
+});
+test('DE donation : 5 %, ou 40 000 Ar par enfant ou petit-enfant', () => {
+  assert.equal(droitDonation({ valeur: 20000000 }, b).impot, 1000000);
+  assert.equal(droitDonation({ valeur: 20000000, ligneDirecteDescendante: true, donataires: 2 }, b).impot, 80000);
+});
+test('DE exemple de la fiche : terrain de 40 M Ar = 2 000 000 Ar', () => {
+  assert.equal(FICHES.de.impotExemple(b), 2000000);
 });
 
 // --- Navigation ---

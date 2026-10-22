@@ -102,6 +102,18 @@
   },
   "ipvi": { "taux": 0.20, "prixRevientForfaitaire": 0.75,
     "articles": { "champ": "CDI 01.05.02", "plusValue": "CDI 01.05.04", "taux": "CDI 01.05.07" }, "source": "LFI 2026" },
+  "enregistrement": {
+    "minimumProportionnel": 20000,
+    "arrondiBase": 1000,
+    "venteImmeuble": 0.05,
+    "bail": { "habitation": 0.01, "autre": 0.02, "emphyteotique": 0.05 },
+    "cessionParts": 0.005,
+    "succession": { "suspendue": true, "parHeritier": { "directe": 10000, "collaterale": 20000, "autre": 40000 } },
+    "donation": { "taux": 0.05, "ligneDirecteDescendanteParDonataire": 40000 },
+    "articles": { "base": "CDI 02.01.05", "minimum": "CDI 02.02.02, 02.02.47", "venteImmeuble": "CDI 02.02.39",
+      "bail": "CDI 02.02.12", "cessionParts": "CDI 02.02.43", "succession": "CDI 02.03.25 I", "donation": "CDI 02.03.25 II" },
+    "source": "LFI 2026"
+  },
   "tva": {
     "tauxNormal": 0.20,
     "tauxReduit": 0.05,

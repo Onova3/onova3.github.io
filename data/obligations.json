@@ -650,5 +650,132 @@
         }
       }
     ]
+  },
+  "de": {
+    "qui": [
+      {
+        "article": "CDI 02.07.05",
+        "texte": {
+          "fr": "Le notaire pour les actes passés devant lui ; les parties elles-mêmes pour les actes sous seing privé (contrat de bail, cession de parts…) ; les héritiers pour les successions.",
+          "en": "The notary for deeds signed before them; the parties themselves for private agreements (lease, share transfer…); the heirs for estates.",
+          "mg": "Ny notera ho an'ny taratasy natao teo anatrehany; ny mpifanaraka mihitsy ho an'ny taratasy tsy notera (fifanarahana fanofana, famindrana anjara…); ny mpandova ho an'ny lova."
+        }
+      },
+      {
+        "article": "CDI 02.07.11",
+        "texte": {
+          "fr": "Sauf clause contraire, les droits d'une vente sont à la charge du nouveau propriétaire (l'acheteur).",
+          "en": "Unless agreed otherwise, the duties on a sale are borne by the new owner (the buyer).",
+          "mg": "Raha tsy misy fifanarahana hafa, ny tompony vaovao (ny mpividy) no mandoa ny haban'ny varotra."
+        }
+      },
+      {
+        "article": "CDI 02.07.09",
+        "texte": {
+          "fr": "L'acheteur d'un immeuble ou d'un fonds de commerce doit vérifier que les impôts du vendeur sur ce bien sont payés : sinon, il devra les payer.",
+          "en": "The buyer of a building or business must check that the seller's taxes on it are paid: otherwise the buyer will have to pay them.",
+          "mg": "Ny mpividy trano na tany na fonds de commerce dia tsy maintsy manamarina fa voaloa ny hetran'ny mpivarotra momba azy: raha tsy izany, izy no handoa."
+        }
+      }
+    ],
+    "ou": [
+      {
+        "article": "CPF I-44, I-46",
+        "texte": {
+          "fr": "Acte notarié : au bureau de résidence du notaire. Vente ou bail d'immeuble sous seing privé : au bureau de la situation du bien. Autres actes sous seing privé : au bureau du domicile de l'une des parties.",
+          "en": "Notarial deed: at the notary's office of residence. Private sale or lease of a building: at the office where the property is located. Other private agreements: at the office of the domicile of one of the parties.",
+          "mg": "Taratasy notera: any amin'ny biraon'ny toerana onenan'ny notera. Varotra na fanofana trano tsy notera: any amin'ny birao misy ny fananana. Taratasy tsy notera hafa: any amin'ny biraon'ny fonenan'ny iray amin'ny mpifanaraka."
+        }
+      },
+      {
+        "article": "CPF I-50",
+        "texte": {
+          "fr": "Succession : au bureau du domicile principal du défunt.",
+          "en": "Estate: at the office of the deceased's main domicile.",
+          "mg": "Lova: any amin'ny biraon'ny fonenana fototry ny maty."
+        }
+      }
+    ],
+    "document": [
+      {
+        "article": "CDI 02.02.10",
+        "texte": {
+          "fr": "Vente d'immeuble ou de fonds de commerce, cession de bail : l'acte se termine par une mention manuscrite affirmant qu'il exprime l'intégralité du prix.",
+          "en": "Sale of a building or business, lease transfer: the deed ends with a handwritten statement that it shows the full price.",
+          "mg": "Varotra trano na fonds de commerce, famindrana fanofana: mifarana amin'ny fanamarinana soratana tanana fa ny vidiny manontolo no voasoratra ny taratasy."
+        }
+      },
+      {
+        "article": "CPF I-36, I-37, I-38",
+        "texte": {
+          "fr": "Sans acte écrit : une déclaration détaillée et estimative. Pour une location verbale d'immeuble, le bailleur déclare chaque année les loyers de l'année précédente sur la formule de l'Administration. Une location à une entreprise exige un contrat de bail écrit.",
+          "en": "Without a written deed: a detailed estimated declaration. For a verbal lease of a building, the landlord declares the previous year's rent every year on the Administration's form. A lease to a business requires a written contract.",
+          "mg": "Raha tsy misy taratasy: fanambarana antsipiriany sy tombana. Ho an'ny fanofana trano am-bava, ny tompon-trano no manambara isan-taona ny hofan-trano tamin'ny taona lasa amin'ny taratasy avy amin'ny Fitondrana. Ny fanofana amin'ny orinasa dia tsy maintsy misy fifanarahana an-tsoratra."
+        }
+      },
+      {
+        "article": "CPF I-53",
+        "texte": {
+          "fr": "Succession : une déclaration détaillée souscrite par les héritiers, légataires ou donataires.",
+          "en": "Estate: a detailed return filed by the heirs, legatees or donees.",
+          "mg": "Lova: fanambarana antsipiriany ataon'ny mpandova na ny nomena."
+        }
+      }
+    ],
+    "quand": [
+      {
+        "article": "CPF I-34 III",
+        "delai": "2 mois",
+        "texte": {
+          "fr": "Dans les 2 mois de leur date : actes des notaires, ventes d'immeubles, de fonds de commerce ou de véhicules, baux d'immeubles, actes de société et cessions de parts, partages.",
+          "en": "Within 2 months of their date: notarial deeds, sales of buildings, businesses or vehicles, building leases, company deeds and share transfers, partitions.",
+          "mg": "Ao anatin'ny 2 volana aorian'ny daty: taratasy notera, varotra trano na tany, fonds de commerce na fiara, fanofana trano, taratasy momba ny orinasa sy famindrana anjara, fizarana."
+        }
+      },
+      {
+        "article": "CPF I-34 I, II, IV",
+        "delai": "15 jours, 1 mois, 3 mois",
+        "texte": {
+          "fr": "15 jours pour les actes des intermédiaires en immeubles et fonds de commerce ; 1 mois pour les actes d'huissier ; 3 mois après le décès pour les testaments déposés chez un notaire.",
+          "en": "15 days for deeds of real estate and business intermediaries; 1 month for bailiffs' deeds; 3 months after death for wills lodged with a notary.",
+          "mg": "15 andro ho an'ny taratasin'ny mpanelanelana amin'ny trano sy fonds de commerce; 1 volana ho an'ny taratasin'ny huissier; 3 volana aorian'ny fahafatesana ho an'ny didim-pananana napetraka tany amin'ny notera."
+        }
+      },
+      {
+        "article": "CPF I-40, I-39",
+        "delai": "6 mois ou 1 an ; 3 mois",
+        "texte": {
+          "fr": "Succession : 6 mois après le décès s'il a eu lieu à Madagascar, 1 an s'il a eu lieu à l'étranger. Acte passé à l'étranger sur un bien situé à Madagascar : 3 mois après l'entrée en possession.",
+          "en": "Estate: 6 months after death if it occurred in Madagascar, 1 year if abroad. Deed signed abroad for property in Madagascar: 3 months after taking possession.",
+          "mg": "Lova: 6 volana aorian'ny fahafatesana raha teto Madagasikara, 1 taona raha tany ivelany. Taratasy natao tany ivelany momba fananana eto Madagasikara: 3 volana aorian'ny fandraisana azy."
+        }
+      },
+      {
+        "article": "CPF I-97, I-98",
+        "texte": {
+          "fr": "Les droits se paient avant l'enregistrement, au receveur des impôts, par Hetraphone ou par voie bancaire. Une contestation ne permet pas de retarder le paiement.",
+          "en": "Duties are paid before registration, to the tax receiver, by Hetraphone or bank. A dispute does not allow payment to be delayed.",
+          "mg": "Aloa alohan'ny fanoratana ny haba, any amin'ny mpandray vola ao amin'ny hetra, amin'ny Hetraphone na amin'ny banky. Tsy azo ahemotra ny fandoavana na dia misy fanoherana aza."
+        }
+      }
+    ],
+    "sanctions": [
+      {
+        "article": "CDI 20.01.53",
+        "texte": {
+          "fr": "La pénalité de retard s'applique aussi au retard d'enregistrement d'un acte.",
+          "en": "The late-payment penalty also applies to late registration of a deed.",
+          "mg": "Mihatra koa amin'ny fahatarana amin'ny fanoratana taratasy ny sazy noho ny fahatarana."
+        }
+      },
+      {
+        "article": "CDI 02.02.10, 20.01.54.10",
+        "texte": {
+          "fr": "Cacher une partie du prix est puni : l'acte contient une affirmation de sincérité faite sous les peines du Code pénal, et la dissimulation entraîne une amende.",
+          "en": "Hiding part of the price is punished: the deed contains a statement of truthfulness under criminal penalties, and concealment triggers a fine.",
+          "mg": "Voasazy ny fanafenana ampahany amin'ny vidiny: misy fanamarinana ny fahamarinana ao amin'ny taratasy, voasazy araka ny Fehezan-dalàna famaizana, ary miteraka onitra ny fanafenana."
+        }
+      }
+    ]
   }
 }
