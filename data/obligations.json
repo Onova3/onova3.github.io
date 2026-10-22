@@ -1,0 +1,99 @@
+{
+  "note": "Obligations déclaratives et de paiement tirées du Code des procédures fiscales (CPF 2026). Chaque élément porte son article. Textes malgaches à relire par un locuteur natif.",
+  "irsa": {
+    "qui": [
+      {
+        "article": "CPF I-20",
+        "texte": {
+          "fr": "L'employeur (ou l'organisme payeur) retient l'IRSA sur le salaire à chaque paiement. C'est lui qui déclare et qui paie, pas le salarié.",
+          "en": "The employer (or paying body) withholds IRSA from the salary at each payment. The employer files and pays, not the employee.",
+          "mg": "Ny mpampiasa (na ny sampana mandoa karama) no manala ny IRSA amin'ny karama isaky ny fandoavana. Izy no manambara sy mandoa, fa tsy ny mpiasa."
+        }
+      },
+      {
+        "article": "CPF I-22, I-25",
+        "texte": {
+          "fr": "Si l'employeur est à l'étranger, le salarié calcule et verse lui-même l'impôt chaque mois (ou par un représentant accrédité à Madagascar), en joignant une fiche de paie.",
+          "en": "If the employer is abroad, the employee calculates and pays the tax each month (or through an accredited representative in Madagascar), attaching a payslip.",
+          "mg": "Raha any ivelany ny mpampiasa, ny mpiasa no manao ny kajy sy mandoa ny hetra isam-bolana (na amin'ny alalan'ny solontena eto Madagasikara), miaraka amin'ny taratasy fandraisana karama."
+        }
+      },
+      {
+        "article": "CPF I-24",
+        "texte": {
+          "fr": "Un salarié payé par plusieurs employeurs déclare avant le 15 janvier, au bureau des impôts, ce qu'il reçoit de chacun. Tout changement se déclare dans les 15 jours.",
+          "en": "An employee paid by several employers declares before 15 January, at the tax office, what each one pays. Any change is declared within 15 days.",
+          "mg": "Ny mpiasa mandray karama avy amin'ny mpampiasa maromaro dia manambara alohan'ny 15 janoary, any amin'ny biraon'ny hetra, ny vola azony avy amin'ny tsirairay. Ambara ao anatin'ny 15 andro ny fiovana rehetra."
+        }
+      }
+    ],
+    "ou": [
+      {
+        "article": "CPF I-23",
+        "texte": {
+          "fr": "Au centre fiscal territorialement compétent, c'est-à-dire celui dont dépend l'employeur.",
+          "en": "At the territorially competent tax centre, that is, the one the employer depends on.",
+          "mg": "Any amin'ny foibe misahana ny hetra mifehy ny faritra misy ny mpampiasa."
+        }
+      },
+      {
+        "article": "CPF I-21",
+        "texte": {
+          "fr": "Si l'employeur paie des salaires depuis plusieurs lieux, l'impôt est versé au service des impôts du lieu de travail des salariés.",
+          "en": "If the employer pays salaries from several places, the tax is paid to the tax office of the employees' place of work.",
+          "mg": "Raha mandoa karama avy amin'ny toerana maromaro ny mpampiasa, aloa any amin'ny biraon'ny hetra misy ny toeram-piasan'ny mpiasa ny hetra."
+        }
+      }
+    ],
+    "document": [
+      {
+        "article": "CPF I-23",
+        "texte": {
+          "fr": "Le formulaire prescrit par l'Administration, avec en annexe l'état nominatif des sommes payées à chaque salarié, quel que soit le montant.",
+          "en": "The form prescribed by the Administration, with an appendix listing the amounts paid to each employee by name, whatever the amount.",
+          "mg": "Ny taratasy fanambarana napetraky ny Fitondrana, miaraka amin'ny lisitra mitanisa anarana ny vola naloa tamin'ny mpiasa tsirairay, na ohatrinona na ohatrinona."
+        }
+      }
+    ],
+    "quand": [
+      {
+        "article": "CPF I-21",
+        "delai": "15 premiers jours du mois suivant",
+        "texte": {
+          "fr": "Cas général : dans les 15 premiers jours du mois qui suit celui de la retenue.",
+          "en": "General rule: within the first 15 days of the month following the withholding.",
+          "mg": "Fitsipika ankapobeny: ao anatin'ny 15 andro voalohany amin'ny volana manaraka ny nanalana ny hetra."
+        }
+      },
+      {
+        "article": "CPF I-21",
+        "delai": "par bimestre",
+        "texte": {
+          "fr": "Employeur soumis à l'impôt synthétique : il peut regrouper les versements par période de deux mois.",
+          "en": "Employer under the synthetic tax: payments may be grouped every two months.",
+          "mg": "Mpampiasa iharan'ny hetra tsotra: azony atambatra isaky ny roa volana ny fandoavana."
+        }
+      },
+      {
+        "article": "CPF I-21",
+        "delai": "par semestre si retenues ≤ 50 000 Ar par mois",
+        "seuil": 50000,
+        "texte": {
+          "fr": "ONG, associations, projets et organismes publics ou privés non soumis à l'IR ni à l'IS : si les retenues ne dépassent pas 50 000 Ar par mois, versement par semestre, dans les 15 premiers jours du mois qui suit le semestre.",
+          "en": "NGOs, associations, projects and public or private bodies not subject to IR or synthetic tax: if withholdings do not exceed 50,000 Ar a month, payment every six months, within the first 15 days of the month after the half-year.",
+          "mg": "ONG, fikambanana, tetikasa ary sampana tsy iharan'ny IR na hetra tsotra: raha tsy mihoatra ny 50 000 Ar isam-bolana ny hetra nesorina, aloa isaky ny enim-bolana, ao anatin'ny 15 andro voalohany amin'ny volana manaraka ny enim-bolana."
+        }
+      }
+    ],
+    "sanctions": [
+      {
+        "article": "CPF I-20",
+        "texte": {
+          "fr": "La pénalité de retard est à la charge de l'employeur : c'est lui qui la paie, pas le salarié.",
+          "en": "The late-payment penalty is borne by the employer, not the employee.",
+          "mg": "Ny mpampiasa no mandoa ny sazy noho ny fahatarana, fa tsy ny mpiasa."
+        }
+      }
+    ]
+  }
+}

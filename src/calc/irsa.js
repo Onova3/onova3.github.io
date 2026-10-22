@@ -32,5 +32,5 @@ export function calculIRSA(brut, b, { personnesACharge = 0, deduireCotisations =
 /** IRSA régime spécial : rémunérations à taux unitaire (CDI 01.03.16 B). */
 export function calculIRSASpecial(remuneration, tauxUnitaire, b) {
   const palier = b.irsa.regimeSpecial.find(p => p.tauxUnitaireMax === null || tauxUnitaire <= p.tauxUnitaireMax);
-  return { taux: palier.taux, impot: arrondiInf(remuneration * palier.taux, b.penalites.arrondiImpot) };
+  return { palier, taux: palier.taux, impot: arrondiInf(remuneration * palier.taux, b.penalites.arrondiImpot) };
 }

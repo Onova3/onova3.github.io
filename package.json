@@ -6,6 +6,6 @@
   "private": true,
   "scripts": {
     "test": "node --test",
-    "start": "npx --yes serve -l 3000 ."
+    "start": "node scripts/serveur.js"
   }
 }
