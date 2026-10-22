@@ -95,5 +95,227 @@
         }
       }
     ]
+  },
+  "is": {
+    "qui": [
+      {
+        "article": "CPF I-17",
+        "texte": {
+          "fr": "L'entrepreneur calcule lui-même son impôt synthétique, le déclare et le paie.",
+          "en": "Business owners calculate their synthetic tax themselves, file it and pay it.",
+          "mg": "Ny mpandraharaha mihitsy no manao ny kajin'ny hetra tsotra, manambara ary mandoa azy."
+        }
+      },
+      {
+        "article": "CDI 01.02.07 bis",
+        "texte": {
+          "fr": "Pour les producteurs de base (agriculteurs, forestiers…), ce sont leurs clients immatriculés qui calculent, retiennent et versent l'impôt.",
+          "en": "For primary producers (farmers, foresters…), their registered customers calculate, withhold and pay the tax.",
+          "mg": "Ho an'ny mpamokatra fototra (mpamboly, mpikarakara ala…), ny mpanjifany voasoratra no manao ny kajy, manala ary mandoa ny hetra."
+        }
+      },
+      {
+        "article": "CPF I-18",
+        "texte": {
+          "fr": "Chaque année, au plus tard le 15 décembre, l'entrepreneur s'inscrit sur le registre de recensement de la commune où il exerce ou réside. Tout changement ou toute cessation se déclare dans les 20 jours.",
+          "en": "Every year, by 15 December at the latest, the business owner registers in the census register of the commune of business or residence. Any change or closure is declared within 20 days.",
+          "mg": "Isan-taona, farany ny 15 desambra, misoratra ao amin'ny bokim-panisana ao amin'ny kaominina iasany na onenany ny mpandraharaha. Ambara ao anatin'ny 20 andro ny fiovana na ny fijanonana."
+        }
+      }
+    ],
+    "ou": [
+      {
+        "article": "CPF I-17, CDI 01.02.03",
+        "texte": {
+          "fr": "Au service des impôts territorialement compétent : celui du lieu d'exercice de l'activité, ou du domicile ou siège en cas d'établissements multiples ou sans établissement fixe.",
+          "en": "At the territorially competent tax office: the one where the business operates, or of the home or head office if there are several premises or none.",
+          "mg": "Any amin'ny biraon'ny hetra mifehy ny faritra: ny toerana iasana, na ny fonenana na foibe raha maromaro na tsy misy toerana raikitra."
+        }
+      }
+    ],
+    "document": [
+      {
+        "article": "CPF I-17",
+        "texte": {
+          "fr": "La déclaration du chiffre d'affaires, revenu brut ou gain de l'année.",
+          "en": "The return of the year's turnover, gross income or gain.",
+          "mg": "Ny fanambarana ny tondrom-barotra, vola miditra na tombony tamin'ny taona."
+        }
+      },
+      {
+        "article": "CDI 01.02.05 bis, 01.02.07 bis",
+        "texte": {
+          "fr": "Pour bénéficier de la réduction de 2 % : en annexe, le détail des achats avec factures régulières et les déclarations des charges de personnel.",
+          "en": "To get the 2% reduction: attach the details of purchases with proper invoices and the staff cost declarations.",
+          "mg": "Mba hahazoana ny fihenana 2 %: ampiarahina ny antsipirian'ny fividianana misy faktiora ara-dalàna sy ny fanambarana ny saram-pikarakarana mpiasa."
+        }
+      },
+      {
+        "article": "CDI 01.02.07",
+        "texte": {
+          "fr": "Avec la déclaration : les états financiers ou un état récapitulatif des recettes et dépenses, selon la comptabilité exigée (journal de recettes et dépenses sous 100 M Ar, système minimal de trésorerie de 100 à 200 M Ar, comptabilité d'exercice au-delà et pour les sociétés commerciales).",
+          "en": "With the return: financial statements or a summary of receipts and expenses, depending on the accounts required (cash book under 100 M Ar, minimal cash-based system from 100 to 200 M Ar, accrual accounts above that and for trading companies).",
+          "mg": "Miaraka amin'ny fanambarana: ny tatitra ara-bola na ny famintinana ny vola miditra sy mivoaka, araka ny kaonty takiana (bokin'ny vola miditra sy mivoaka raha latsaky ny 100 tapitrisa Ar, rafitra tsotra 100 ka hatramin'ny 200 tapitrisa Ar, kaonty feno mihoatra izany sy ho an'ny orinasa ara-barotra)."
+        }
+      }
+    ],
+    "quand": [
+      {
+        "article": "CPF I-17",
+        "delai": "31 mars de l'année suivante",
+        "texte": {
+          "fr": "Déclaration et paiement : au plus tard le 31 mars de l'année qui suit. Exercice à cheval : au plus tard à la fin du 3e mois après la clôture.",
+          "en": "Return and payment: by 31 March of the following year. Non-calendar year: by the end of the 3rd month after closing.",
+          "mg": "Fanambarana sy fandoavana: farany ny 31 martsa amin'ny taona manaraka. Taom-piasana tsy mifanandrify amin'ny taona: farany amin'ny fiafaran'ny volana faha-3 aorian'ny fanakatonana."
+        }
+      },
+      {
+        "article": "CPF I-17",
+        "delai": "31 mars et 30 juin",
+        "texte": {
+          "fr": "Acomptes de l'année en cours (calculés sur l'impôt de l'année précédente) : 1er acompte au plus tard le 31 mars, 2e acompte au plus tard le 30 juin.",
+          "en": "Instalments for the current year (based on the previous year's tax): 1st by 31 March, 2nd by 30 June.",
+          "mg": "Fandoavana mialoha amin'ny taona ankehitriny (kajiana araka ny hetra tamin'ny taona lasa): ny voalohany farany ny 31 martsa, ny faharoa farany ny 30 jona."
+        }
+      },
+      {
+        "article": "CPF I-19",
+        "texte": {
+          "fr": "Si le chiffre d'affaires de l'année dépasse 400 M Ar : déclarer le changement de régime avant la clôture de l'exercice. Le régime du réel s'applique dès l'exercice suivant.",
+          "en": "If the year's turnover exceeds 400 M Ar: declare the change of regime before the year closes. The real regime applies from the next year.",
+          "mg": "Raha mihoatra ny 400 tapitrisa Ar ny tondrom-barotra: ambara alohan'ny fanakatonana ny taom-piasana ny fiovan'ny rafitra. Manomboka amin'ny taom-piasana manaraka ny rafitra tena izy."
+        }
+      }
+    ],
+    "sanctions": [
+      {
+        "article": "CDI 01.02.05 bis",
+        "texte": {
+          "fr": "Une réduction de 2 % prise sans facture régulière doit être reversée et entraîne en plus l'amende de l'article 20.01.54.",
+          "en": "A 2% reduction taken without a proper invoice must be paid back and also triggers the fine under article 20.01.54.",
+          "mg": "Ny fihenana 2 % nalaina tsy nisy faktiora ara-dalàna dia aloa indray ary miteraka koa ny onitra voalazan'ny andininy 20.01.54."
+        }
+      },
+      {
+        "article": "CPF I-17",
+        "texte": {
+          "fr": "En cas de manquement, les acomptes restent exigibles jusqu'à l'échéance de l'impôt, en plus des amendes et pénalités.",
+          "en": "If obligations are not met, instalments remain due until the tax deadline, on top of fines and penalties.",
+          "mg": "Raha misy tsy fanarahana ny adidy, mbola tsy maintsy aloa ny fandoavana mialoha hatramin'ny fe-potoanan'ny hetra, ankoatra ny onitra sy sazy."
+        }
+      }
+    ]
+  },
+  "ir": {
+    "qui": [
+      {
+        "article": "CPF I-11",
+        "texte": {
+          "fr": "Chaque entreprise ou personne imposable déclare elle-même ses résultats de l'exercice et paie l'impôt correspondant.",
+          "en": "Each taxable business or person files the year's results and pays the corresponding tax.",
+          "mg": "Ny orinasa na olona tsirairay iharan'ny hetra no manambara ny vokatry ny taom-piasana ary mandoa ny hetra mifanaraka amin'izany."
+        }
+      },
+      {
+        "article": "CPF I-13",
+        "texte": {
+          "fr": "Les SARL fournissent en plus un état des associés : identité, sommes versées à chacun et nombre de parts.",
+          "en": "Limited liability companies (SARL) also provide a statement of partners: identity, amounts paid to each and number of shares.",
+          "mg": "Ny SARL dia manome koa ny lisitry ny mpikambana: ny momba azy, ny vola naloa tamin'ny tsirairay ary ny isan'ny anjara."
+        }
+      }
+    ],
+    "ou": [
+      {
+        "article": "CPF I-11, CDI 01.01.12",
+        "texte": {
+          "fr": "Au bureau des impôts du lieu du siège social ou de la résidence principale, ou à défaut du lieu d'exploitation ou du principal établissement. Le service remet un récépissé.",
+          "en": "At the tax office of the head office or main residence, or failing that the place of business or main establishment. The office issues a receipt.",
+          "mg": "Any amin'ny biraon'ny hetra misy ny foibe na ny fonenana fototra, raha tsy izany ny toerana iasana na ny toeram-piasana lehibe. Manome taratasy fanamarinana ny birao."
+        }
+      }
+    ],
+    "document": [
+      {
+        "article": "CPF I-11",
+        "texte": {
+          "fr": "La déclaration annuelle des résultats et revenus, dûment signée.",
+          "en": "The annual return of results and income, duly signed.",
+          "mg": "Ny fanambarana isan-taona ny vokatra sy ny vola miditra, voasonia ara-dalàna."
+        }
+      },
+      {
+        "article": "CDI 01.01.19",
+        "texte": {
+          "fr": "Les états financiers complets (bilan, comptes de résultat par fonction et par nature, flux de trésorerie, variation des capitaux propres, annexe), également déposés sur la plateforme en ligne dédiée.",
+          "en": "Full financial statements (balance sheet, income statements by function and by nature, cash flows, changes in equity, notes), also filed on the dedicated online platform.",
+          "mg": "Ny tatitra ara-bola feno (bilan, kaontin'ny vokatra araka ny asa sy ny karazany, fivezivezen'ny vola, fiovan'ny renivola, fanazavana), apetraka koa amin'ny sehatra an-tserasera natokana."
+        }
+      }
+    ],
+    "quand": [
+      {
+        "article": "CPF I-11",
+        "delai": "15 mai de l'année suivante",
+        "texte": {
+          "fr": "Exercice clos le 31 décembre : déclaration et paiement au plus tard le 15 mai de l'année suivante.",
+          "en": "Year ending 31 December: return and payment by 15 May of the following year.",
+          "mg": "Taom-piasana mifarana ny 31 desambra: fanambarana sy fandoavana farany ny 15 mey amin'ny taona manaraka."
+        }
+      },
+      {
+        "article": "CPF I-11",
+        "delai": "15 novembre",
+        "texte": {
+          "fr": "Exercice clos le 30 juin : au plus tard le 15 novembre de la même année.",
+          "en": "Year ending 30 June: by 15 November of the same year.",
+          "mg": "Taom-piasana mifarana ny 30 jona: farany ny 15 novambra amin'io taona io ihany."
+        }
+      },
+      {
+        "article": "CPF I-11",
+        "delai": "15e jour du 4e mois après la clôture",
+        "texte": {
+          "fr": "Autre date de clôture : au plus tard le 15e jour du 4e mois qui suit la clôture.",
+          "en": "Other closing date: by the 15th day of the 4th month after closing.",
+          "mg": "Daty fanakatonana hafa: farany ny andro faha-15 amin'ny volana faha-4 aorian'ny fanakatonana."
+        }
+      },
+      {
+        "article": "CPF I-11",
+        "delai": "tous les bimestres, le 15 du dernier mois",
+        "texte": {
+          "fr": "Acomptes provisionnels (calculés sur l'impôt de l'année précédente) : tous les deux mois, au plus tard le 15 du dernier mois de la période.",
+          "en": "Provisional instalments (based on the previous year's tax): every two months, by the 15th of the last month of the period.",
+          "mg": "Fandoavana mialoha (kajiana araka ny hetra tamin'ny taona lasa): isaky ny roa volana, farany ny faha-15 amin'ny volana farany amin'ny vanim-potoana."
+        }
+      },
+      {
+        "article": "CPF I-11 bis",
+        "texte": {
+          "fr": "Une entreprise à l'IR non assujettie à la TVA dont le chiffre d'affaires dépasse 400 M Ar déclare son changement de régime avant la clôture de l'exercice.",
+          "en": "A business under IR but not registered for VAT whose turnover exceeds 400 M Ar declares its change of regime before the year closes.",
+          "mg": "Ny orinasa iharan'ny IR nefa tsy iharan'ny TVA ka mihoatra ny 400 tapitrisa Ar ny tondrom-barotra dia manambara ny fiovan'ny rafitra alohan'ny fanakatonana ny taom-piasana."
+        }
+      }
+    ],
+    "sanctions": [
+      {
+        "article": "CDI 20.01.52.3",
+        "texte": {
+          "fr": "Une déclaration d'IR déposée en retard qui fait apparaître un crédit d'impôt entraîne, après relance sans effet, une amende de 40 % du crédit déclaré.",
+          "en": "A late IR return showing a tax credit triggers, after an unanswered reminder, a fine of 40% of the declared credit.",
+          "mg": "Ny fanambarana IR napetraka tara ka misy trosa-ketra ho an'ny mpandoa dia miteraka onitra 40 % amin'io trosa io, rehefa tsy voavaly ny fampahatsiahivana."
+        }
+      },
+      {
+        "article": "CPF I-11",
+        "texte": {
+          "fr": "En cas de manquement, les acomptes restent exigibles jusqu'à l'échéance de l'impôt, en plus des amendes et pénalités.",
+          "en": "If obligations are not met, instalments remain due until the tax deadline, on top of fines and penalties.",
+          "mg": "Raha misy tsy fanarahana ny adidy, mbola tsy maintsy aloa ny fandoavana mialoha hatramin'ny fe-potoanan'ny hetra, ankoatra ny onitra sy sazy."
+        }
+      }
+    ]
   }
 }

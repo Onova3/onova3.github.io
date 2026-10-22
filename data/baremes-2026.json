@@ -42,24 +42,41 @@
     "plancherCA": 0.03,
     "arrondiBase": 10000,
     "acomptesDebutActivite": [
-      { "montant": 16000, "activites": "agriculteurs, éleveurs, pêcheurs, petits exploitants miniers, transporteurs à véhicules non motorisés" },
-      { "montant": 50000, "activites": "artisans, gargotiers, petits producteurs, petits commerçants" },
-      { "montant": 100000, "activites": "artisans miniers, auteurs et artistes, commerçants, hôteliers, prestataires, restaurateurs" },
-      { "montant": 150000, "activites": "professions libérales et autres" }
+      { "montant": 16000, "activites": {
+        "fr": "agriculteurs, éleveurs, pêcheurs, petits exploitants miniers, transporteurs à véhicules non motorisés",
+        "en": "farmers, livestock breeders, fishers, small-scale miners, non-motorised transporters",
+        "mg": "mpamboly, mpiompy, mpanjono, mpitrandraka madinika, mpitatitra tsy mampiasa fiara misy motera" } },
+      { "montant": 50000, "activites": {
+        "fr": "artisans, gargotiers, petits producteurs, petits commerçants",
+        "en": "craftspeople, food-stall keepers, small producers, small shopkeepers",
+        "mg": "mpanao asa tanana, mpivarotra sakafo, mpamokatra madinika, mpivarotra madinika" } },
+      { "montant": 100000, "activites": {
+        "fr": "artisans miniers, auteurs et artistes, commerçants, hôteliers, prestataires, restaurateurs",
+        "en": "artisanal miners, authors and artists, traders, hoteliers, service providers, restaurateurs",
+        "mg": "mpitrandraka harena an-kibon'ny tany, mpanoratra sy mpanakanto, mpivarotra, tompon-trano fandraisam-bahiny, mpanome tolotra, tompon'ny trano fisakafoanana" } },
+      { "montant": 150000, "activites": {
+        "fr": "professions libérales, activités multiples et autres",
+        "en": "liberal professions, multiple activities and others",
+        "mg": "asa tsy miankina, asa maro sy ny hafa" } }
     ],
-    "echeancesAcomptes": ["31 mars", "30 juin"],
-    "articles": { "champ": "CDI 01.02.02", "taux": "CDI 01.02.05", "reductions": "CDI 01.02.05 bis", "acomptes": "CDI 01.02.06", "echeances": "CPF I-17" },
+    "echeancesAcomptes": [
+      { "fr": "31 mars", "en": "31 March", "mg": "31 martsa" },
+      { "fr": "30 juin", "en": "30 June", "mg": "30 jona" }
+    ],
+    "articles": { "champ": "CDI 01.02.02", "regime": "CDI 01.01.13 I, CPF I-19", "taux": "CDI 01.02.05", "reductions": "CDI 01.02.05 bis", "acomptes": "CDI 01.02.06", "echeances": "CPF I-17" },
     "source": "LFI 2026 ; échéances LFR 2026"
   },
   "ir": {
     "taux": 0.20,
+    "arrondiBase": 1000,
+    "reductionParPersonneACharge": 24000,
     "minimum": {
       "activitesProductives": { "fixe": 500000, "tauxCA": 0.01, "activites": "agricoles, artisanales, industrielles, minières, hôtelières, touristiques" },
       "autres": { "fixe": 1000000, "tauxCA": 0.01 },
       "petrolieres": { "fixe": 1000000, "tauxCA": 0.007 },
       "carburantDetail": { "fixe": 0, "tauxCA": 0.001 }
     },
-    "articles": { "champ": "CDI 01.01.02", "taux": "CDI 01.01.14" },
+    "articles": { "champ": "CDI 01.01.02", "regime": "CDI 01.01.13 I", "taux": "CDI 01.01.14 I-A", "minimum": "CDI 01.01.14 I-A", "personnesACharge": "CDI 01.01.16" },
     "source": "LFI 2026"
   },
   "irm": { "taux": 0.08, "articles": { "taux": "CDI 01.01.51" }, "source": "LFI 2026" },

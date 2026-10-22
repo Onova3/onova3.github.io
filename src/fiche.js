@@ -4,8 +4,9 @@ import { t, tr, fmt, esc, art, ar, pct, ligne, champMontant, champCompteur, lire
 import { ONGLETS, lien } from './routes.js';
 import { calculPenalites } from './calc/penalites.js';
 
-const liste = (items = []) => `<ul class="puces">${items.map(i => `<li>${esc(tr(i.texte))}${art(i.article)}</li>`).join('')}</ul>`;
-const carte = (titre, items) => (items?.length ? `<div class="card"><h3>${titre}</h3>${liste(items)}</div>` : '');
+// Les textes peuvent contenir des {variables} (taux, seuils) tirées du barème par fiche.variables(b).
+const liste = (items = [], vars = {}) => `<ul class="puces">${items.map(i => `<li>${esc(fmt(tr(i.texte), vars))}${art(i.article)}</li>`).join('')}</ul>`;
+const carte = (titre, items, vars) => (items?.length ? `<div class="card"><h3>${titre}</h3>${liste(items, vars)}</div>` : '');
 
 export function rendreFiche(el, { fiche, impot, onglet, b, obligations }) {
   el.innerHTML = `
@@ -23,10 +24,10 @@ export function rendreFiche(el, { fiche, impot, onglet, b, obligations }) {
 }
 
 function comprendre(p, f, b) {
-  const c = f.comprendre, ex = c.exemple;
+  const c = f.comprendre, ex = c.exemple, v = f.variables ? f.variables(b) : {};
   p.innerHTML = `
-    <p class="lead">${esc(tr(c.definition.texte))}${art(c.definition.article)}</p>
-    <div class="grid">${carte(t('qui_paie'), c.quiPaie)}${carte(t('exonere'), c.exonerations)}${carte(t('a_savoir'), c.aSavoir)}</div>
+    <p class="lead">${esc(fmt(tr(c.definition.texte), v))}${art(c.definition.article)}</p>
+    <div class="grid">${carte(t('qui_paie'), c.quiPaie, v)}${carte(t('exonere'), c.exonerations, v)}${carte(t('a_savoir'), c.aSavoir, v)}</div>
     <div class="card exemple-vie">
       <span class="eg">${t('exemple_vie')}</span>
       <p>${esc(fmt(tr(ex.texte), ex.valeurs(b)))}</p>
