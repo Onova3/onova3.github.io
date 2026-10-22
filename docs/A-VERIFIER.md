@@ -73,3 +73,16 @@ Points que le texte des codes ne tranche pas clairement. L'application suit l'in
 | 40 | Bail à usage mixte | CDI 02.02.12 : 2 % sauf ventilation des loyers d'habitation dans le contrat | Le calculateur propose 1 % ou 2 % ; pas de ventilation |
 | 41 | Cas non calculés | Crédit-bail (droit fixe), bail emphytéotique, ventes de meubles et de véhicules (5 % ou 2 %), fonds de commerce, échanges, partages, apports en société, droits fixes de 2 000 à 16 000 Ar | Mentionnés ou absents ; à ajouter si besoin |
 | 42 | Délai de dépôt pour une donation | CPF I-34 III vise les actes de notaire (2 mois) ; aucune règle propre aux donations n'a été relevée | Pas de délai spécifique affiché |
+
+## Timbre, assurance, véhicules (phase 2, étape 3)
+
+| # | Point | Texte | Choix actuel de l'application |
+|---|---|---|---|
+| 43 | Tableau TVM recopié depuis le texte extrait | CDI 02.09.06 ; le PDF n'a pas pu être affiché pour comparaison | 5 cases testées ; à comparer ligne par ligne avec le PDF (page 84 du Code) |
+| 44 | Âge du véhicule : « n'excède pas cinq ans », « plus de cinq ans à dix ans inclus » | CDI 02.09.06, âge au premier jour de la période d'imposition | Calculé en mois depuis le mois de première mise en circulation ; 60 mois exactement = tranche « 5 ans ou moins » |
+| 45 | Motos : correspondance entre cylindrée et classe de puissance | Le tableau met CV et cm³ sur la même ligne ; aucune ligne cm³ pour « plus de 15 CV » | Les deux sont affichés ensemble dans le choix de classe |
+| 46 | Véhicules ferroviaires et utilitaires lourds | CDI 02.09.02 les cite, sans tarif propre | Traités avec le tableau général selon leur puissance |
+| 47 | Demi-tarif des visas pour les visas « transformables » (182 000 et 325 000 Ar) | CDI 02.05.06 : le demi-tarif vise « les tarifs ci-dessus », les deux visas transformables sont cités après | Pas de demi-tarif pour ces deux visas |
+| 48 | Taxe d'assurance : arrondi à la centaine | CPF VII-32 | Appliqué séparément à la taxe et à la TACAVA |
+| 49 | TACAVA : « voitures particulières » appartenant à un particulier | CDI 02.06.17, 02.06.18 (exonération si transport public ou personne morale) | Case à cocher laissée au choix de l'utilisateur |
+| 50 | Amende de l'article 20.01.54 pour la TVM | CDI 02.09.07 renvoie à 20.01.54, non encore lu en détail | Mentionnée sans montant ; le simulateur de sanctions commun reste celui de 20.01.52 et 20.01.53 |

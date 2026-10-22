@@ -7,6 +7,9 @@ import { calculIR } from '../src/calc/ir.js';
 import { calculIRCM as calculIRCMf } from '../src/calc/ircm.js';
 import { calculTVA as calculTVAf, calculDeclarationTVA } from '../src/calc/tva.js';
 import { droitVenteImmeuble, droitBail, droitCessionParts, droitSuccession, droitDonation } from '../src/calc/de.js';
+import { droitVisa, droitsArmes } from '../src/calc/timbre.js';
+import { calculTaxeAssurance } from '../src/calc/assurance.js';
+import { ageEnMois, trancheAge, calculTVM, calculTVMForfait } from '../src/calc/tvm.js';
 import { lireRoute, lien } from '../src/routes.js';
 import { FICHES } from '../src/fiches/index.js';
 import { etat, fmt, tr } from '../src/ui.js';
@@ -183,6 +186,49 @@ test('DE donation : 5 %, ou 40 000 Ar par enfant ou petit-enfant', () => {
 });
 test('DE exemple de la fiche : terrain de 40 M Ar = 2 000 000 Ar', () => {
   assert.equal(FICHES.de.impotExemple(b), 2000000);
+});
+
+// --- Timbre (CDI 02.05.06 à 02.05.08) ---
+test('Timbre : visa 3 ans à demi-tarif, sauf visas transformables', () => {
+  assert.equal(droitVisa({ id: 'v3a' }, b).montant, 292500);
+  assert.equal(droitVisa({ id: 'v3a', demiTarif: true }, b).montant, 146250);
+  assert.equal(droitVisa({ id: 'vtransf', demiTarif: true }, b).montant, 182000);
+});
+test('Timbre : 3 armes et un permis = 80 000 Ar', () => {
+  assert.equal(droitsArmes({ armes: 3, permis: true }, b).total, 80000);
+});
+
+// --- Assurance (CDI 02.06.02, 02.06.17) ---
+test('Assurance auto d’un particulier : 4,5 % + TACAVA 10 %', () => {
+  const r = calculTaxeAssurance({ prime: 600000, categorie: 'autres', tacava: true }, b);
+  assert.equal(r.taxe, 27000);
+  assert.equal(r.tacava, 60000);
+  assert.equal(r.primeTTC, 687000);
+  assert.equal(FICHES.assurance.impotExemple(b), 87000);
+});
+test('Assurance incendie d’un logement : 20 %', () => {
+  assert.equal(calculTaxeAssurance({ prime: 1000000, categorie: 'incendieAutre' }, b).total, 200000);
+});
+
+// --- TVM (CDI 02.09.06) ---
+test('TVM : âge au 1er janvier et tranches (5 ans inclus, puis plus de 5 ans)', () => {
+  assert.equal(ageEnMois(2021, 1, 2026), 60);
+  assert.equal(trancheAge(60, b), 0);
+  assert.equal(trancheAge(61, b), 1);
+  assert.equal(trancheAge(240, b), 2);
+  assert.equal(trancheAge(241, b), 3);
+});
+test('TVM : cases du tableau recopiées depuis l’article 02.09.06', () => {
+  const v = (classe, energie, annee) => calculTVM({ classe, energie, anneeMiseEnCirculation: annee, anneeImposition: 2026 }, b).taxe;
+  assert.equal(v('1-4', 'electrique', 2025), 5000);
+  assert.equal(v('10-12', 'diesel', 2018), 105000);
+  assert.equal(v('13-15', 'hybride', 2010), 135000);
+  assert.equal(v('16+', 'diesel', 1990), 340000);
+  assert.equal(v('5-9', 'essence', 2024), 30000);
+});
+test('TVM exemple de la fiche : 7 CV essence de juin 2018 = 55 000 Ar ; aéronef 2 000 000 Ar', () => {
+  assert.equal(FICHES.tvm.impotExemple(b), 55000);
+  assert.equal(calculTVMForfait('aeronef', b), 2000000);
 });
 
 // --- Navigation ---

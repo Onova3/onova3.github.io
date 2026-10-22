@@ -777,5 +777,203 @@
         }
       }
     ]
+  },
+  "timbre": {
+    "qui": [
+      {
+        "article": "CDI 02.05.06",
+        "texte": {
+          "fr": "Les étrangers (et personnes de nationalité indéterminée) qui demandent un visa ou sa prolongation.",
+          "en": "Foreigners (and people of undetermined nationality) applying for a visa or its extension.",
+          "mg": "Ny vahiny (sy ny olona tsy fantatra ny zom-pireneny) mangataka visa na fanalavana azy."
+        }
+      },
+      {
+        "article": "CDI 02.05.07, 02.05.08",
+        "texte": {
+          "fr": "Toute personne qui possède une arme à feu au 1er janvier, ou qui demande ou renouvelle un permis de port et de détention d'armes.",
+          "en": "Anyone who owns a firearm on 1 January, or who applies for or renews a firearm permit.",
+          "mg": "Izay manana basy amin'ny 1 janoary, na mangataka na manavao fahazoan-dalana hitondra sy hitazona basy."
+        }
+      }
+    ],
+    "ou": [
+      {
+        "article": "CDI 02.05.01",
+        "texte": {
+          "fr": "Au bureau des impôts territorialement compétent, qui remet un récépissé signé, ou en ligne avec un accusé de réception.",
+          "en": "At the territorially competent tax office, which issues a signed receipt, or online with an acknowledgement.",
+          "mg": "Any amin'ny biraon'ny hetra mifehy ny faritra, izay manome taratasy voasonia, na an-tserasera miaraka amin'ny fanamarinana fandraisana."
+        }
+      }
+    ],
+    "document": [
+      {
+        "article": "CDI 02.05.01",
+        "texte": {
+          "fr": "Le récépissé de paiement (ou l'accusé de réception en ligne) sert de justificatif.",
+          "en": "The payment receipt (or online acknowledgement) serves as proof.",
+          "mg": "Ny taratasy fandoavana (na ny fanamarinana an-tserasera) no porofo."
+        }
+      }
+    ],
+    "quand": [
+      {
+        "article": "CDI 02.05.06, 02.05.07",
+        "texte": {
+          "fr": "Visa et permis d'armes : au moment de la demande, de la délivrance ou du renouvellement.",
+          "en": "Visa and firearm permit: when applying, at issue or at renewal.",
+          "mg": "Visa sy fahazoan-dalana basy: rehefa mangataka, omena na havaozina."
+        }
+      },
+      {
+        "article": "CDI 02.05.08",
+        "delai": "31 mars",
+        "texte": {
+          "fr": "Impôt annuel sur les armes à feu : au plus tard le 31 mars, ou avant la délivrance de l'autorisation.",
+          "en": "Annual firearm tax: by 31 March, or before the permit is issued.",
+          "mg": "Hetra isan-taona amin'ny basy: farany ny 31 martsa, na alohan'ny hanomezana ny fahazoan-dalana."
+        }
+      }
+    ]
+  },
+  "assurance": {
+    "qui": [
+      {
+        "article": "CDI 02.06.04",
+        "texte": {
+          "fr": "L'assureur établi à Madagascar (ou son représentant) collecte la taxe sur la prime et la reverse. Pour l'assuré, elle est simplement ajoutée à la prime.",
+          "en": "The insurer established in Madagascar (or its representative) collects the tax on the premium and pays it over. For the policyholder, it is simply added to the premium.",
+          "mg": "Ny mpiantoka eto Madagasikara (na ny solontenany) no manangona ny haba amin'ny sarany ary mandoa azy. Ho an'ny voaantoka, ampiana amin'ny sarany fotsiny izany."
+        }
+      },
+      {
+        "article": "CDI 02.06.06, 02.06.07",
+        "texte": {
+          "fr": "Assureur sans établissement à Madagascar : le courtier qui a servi d'intermédiaire paie la taxe ; à défaut, c'est l'assuré.",
+          "en": "Insurer without an establishment in Madagascar: the broker who acted as intermediary pays the tax; failing that, the policyholder does.",
+          "mg": "Mpiantoka tsy manana toerana eto Madagasikara: ny mpanelanelana no mandoa ny haba; raha tsy misy, ny voaantoka."
+        }
+      },
+      {
+        "article": "CPF I-100, I-101",
+        "texte": {
+          "fr": "Les assureurs et courtiers se déclarent au bureau des impôts avant de commencer leurs opérations ; certains assureurs étrangers font agréer un représentant responsable.",
+          "en": "Insurers and brokers register with the tax office before starting business; some foreign insurers must have a responsible representative approved.",
+          "mg": "Ny mpiantoka sy ny mpanelanelana dia manambara any amin'ny biraon'ny hetra alohan'ny hanombohana; ny mpiantoka vahiny sasany dia tsy maintsy manana solontena nankatoavina."
+        }
+      }
+    ],
+    "ou": [
+      {
+        "article": "CDI 02.06.04 à 02.06.07",
+        "texte": {
+          "fr": "Au bureau des impôts du siège ou de l'agence de l'assureur ; de la résidence du courtier ; ou, pour l'assuré, de son domicile ou du lieu du risque.",
+          "en": "At the tax office of the insurer's head office or agency; of the broker's residence; or, for the policyholder, of their home or the place of the risk.",
+          "mg": "Any amin'ny biraon'ny hetra misy ny foibe na sampan'ny mpiantoka; ny fonenan'ny mpanelanelana; na, ho an'ny voaantoka, ny fonenany na ny toerana misy ny loza."
+        }
+      }
+    ],
+    "document": [
+      {
+        "article": "CDI 02.06.04, CPF I-102",
+        "texte": {
+          "fr": "Assureur : déclaration trimestrielle, puis un état annuel de liquidation. Courtier : relevé trimestriel de son répertoire des opérations.",
+          "en": "Insurer: quarterly return, then an annual settlement statement. Broker: quarterly extract of the register of transactions.",
+          "mg": "Mpiantoka: fanambarana isaky ny telo volana, avy eo tatitra isan-taona. Mpanelanelana: famintinana isaky ny telo volana ny bokiny."
+        }
+      }
+    ],
+    "quand": [
+      {
+        "article": "CDI 02.06.04",
+        "delai": "15 du mois suivant chaque trimestre ; 15 mai",
+        "texte": {
+          "fr": "Acompte au plus tard le 15 du mois qui suit chaque trimestre ; liquidation de l'année précédente au plus tard le 15 mai.",
+          "en": "Instalment by the 15th of the month after each quarter; settlement for the previous year by 15 May.",
+          "mg": "Fandoavana mialoha farany ny faha-15 amin'ny volana manaraka ny telo volana tsirairay; famaranana ny taona lasa farany ny 15 mey."
+        }
+      },
+      {
+        "article": "CDI 02.06.07",
+        "delai": "15 mai de l'année suivante",
+        "texte": {
+          "fr": "Si c'est l'assuré qui paie : au plus tard le 15 mai de l'année qui suit chaque échéance de prime.",
+          "en": "If the policyholder pays: by 15 May of the year after each premium due date.",
+          "mg": "Raha ny voaantoka no mandoa: farany ny 15 mey amin'ny taona manaraka ny fe-potoanan'ny sarany."
+        }
+      }
+    ],
+    "sanctions": [
+      {
+        "article": "CDI 02.06.08",
+        "texte": {
+          "fr": "Assureurs, représentants, courtiers et assurés sont solidaires : chacun peut être poursuivi pour la taxe et les pénalités.",
+          "en": "Insurers, representatives, brokers and policyholders are jointly liable: each can be pursued for the tax and penalties.",
+          "mg": "Mpiantoka, solontena, mpanelanelana ary voaantoka dia samy tompon'andraikitra: azo enjehina avokoa amin'ny haba sy ny sazy."
+        }
+      }
+    ]
+  },
+  "tvm": {
+    "qui": [
+      {
+        "article": "CPF I-102 bis, CDI 02.09.02",
+        "texte": {
+          "fr": "Le détenteur de tout véhicule à moteur immatriculé (voiture, moto, scooter, utilitaire), de tout bateau à moteur et de tout aéronef.",
+          "en": "The holder of any registered motor vehicle (car, motorbike, scooter, van), any motorboat and any aircraft.",
+          "mg": "Ny tompon'ny fiara misy motera voasoratra rehetra (fiara, moto, scooter, fiara fitaterana entana), sambo misy motera ary fiaramanidina."
+        }
+      }
+    ],
+    "ou": [
+      {
+        "article": "CPF I-102 bis",
+        "texte": {
+          "fr": "Sur la plateforme numérique dédiée. Le récépissé et le QR code s'impriment soi-même ou se demandent à l'unité opérationnelle des impôts.",
+          "en": "On the dedicated digital platform. The receipt and QR code can be printed yourself or requested from the tax operational unit.",
+          "mg": "Amin'ny sehatra nomerika natokana. Azo atao pirinty ny taratasy fandoavana sy ny QR code, na angatahana any amin'ny biraon'ny hetra."
+        }
+      }
+    ],
+    "document": [
+      {
+        "article": "CPF I-102 bis",
+        "texte": {
+          "fr": "Le QR code est collé sur le pare-brise et gardé dans son téléphone. La taxe est liée à la plaque, pas au propriétaire, et vaut pour une année civile.",
+          "en": "The QR code is stuck on the windscreen and kept on your phone. The tax is linked to the plate, not the owner, and is valid for one calendar year.",
+          "mg": "Apetaka eo amin'ny fitaratra eo anoloana ny QR code ary tehirizina ao amin'ny finday. Mifamatotra amin'ny laharana fa tsy amin'ny tompony ny haba, ary manan-kery mandritra ny taona iray."
+        }
+      }
+    ],
+    "quand": [
+      {
+        "article": "CPF I-102 bis",
+        "delai": "31 janvier",
+        "texte": {
+          "fr": "Au plus tard le 31 janvier pour un véhicule en service au 1er janvier ; immédiatement pour un véhicule mis en circulation après cette date.",
+          "en": "By 31 January for a vehicle in service on 1 January; immediately for a vehicle put on the road after that date.",
+          "mg": "Farany ny 31 janoary ho an'ny fiara efa mandeha amin'ny 1 janoary; avy hatrany ho an'ny fiara vao mandeha aorian'io daty io."
+        }
+      }
+    ],
+    "sanctions": [
+      {
+        "article": "CDI 02.09.07",
+        "texte": {
+          "fr": "Fausse déclaration, retard ou non-paiement : amende de l'article 20.01.54. En cas de récidive, le véhicule peut être saisi.",
+          "en": "False return, late or non-payment: fine under article 20.01.54. For a repeat offence, the vehicle may be seized.",
+          "mg": "Fanambarana diso, fahatarana na tsy fandoavana: onitra voalazan'ny andininy 20.01.54. Raha miverimberina, azo sambotra ny fiara."
+        }
+      },
+      {
+        "article": "CPF I-102 ter",
+        "texte": {
+          "fr": "Sans taxe payée : pas de renouvellement d'assurance, pas de mutation de carte grise, pas de visite technique.",
+          "en": "Without the tax paid: no insurance renewal, no registration transfer, no roadworthiness test.",
+          "mg": "Raha tsy voaloa ny haba: tsy havaozina ny fiantohana, tsy afindra ny karatra fiara, tsy atao ny fizahana ara-teknika."
+        }
+      }
+    ]
   }
 }

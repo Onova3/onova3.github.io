@@ -114,6 +114,56 @@
       "bail": "CDI 02.02.12", "cessionParts": "CDI 02.02.43", "succession": "CDI 02.03.25 I", "donation": "CDI 02.03.25 II" },
     "source": "LFI 2026"
   },
+  "timbre": {
+    "visas": [
+      { "id": "v15j", "montant": 65000, "libelle": { "fr": "Visa, séjour de 15 jours au plus", "en": "Visa, stay of up to 15 days", "mg": "Visa, fitoerana 15 andro farafahabetsany" } },
+      { "id": "v1m", "montant": 104000, "libelle": { "fr": "Visa, séjour de plus de 15 jours à 1 mois", "en": "Visa, stay of over 15 days to 1 month", "mg": "Visa, fitoerana mihoatra ny 15 andro ka hatramin'ny 1 volana" } },
+      { "id": "v2m", "montant": 130000, "libelle": { "fr": "Visa, séjour de plus de 1 mois à 2 mois", "en": "Visa, stay of over 1 month to 2 months", "mg": "Visa, fitoerana mihoatra ny 1 volana ka hatramin'ny 2 volana" } },
+      { "id": "v3m", "montant": 182000, "libelle": { "fr": "Visa, séjour de plus de 2 mois à 3 mois", "en": "Visa, stay of over 2 months to 3 months", "mg": "Visa, fitoerana mihoatra ny 2 volana ka hatramin'ny 3 volana" } },
+      { "id": "v3a", "montant": 292500, "libelle": { "fr": "Visa, séjour de plus de 3 mois à 3 ans", "en": "Visa, stay of over 3 months to 3 years", "mg": "Visa, fitoerana mihoatra ny 3 volana ka hatramin'ny 3 taona" } },
+      { "id": "v5a", "montant": 390000, "libelle": { "fr": "Visa, séjour de plus de 3 ans à 5 ans", "en": "Visa, stay of over 3 years to 5 years", "mg": "Visa, fitoerana mihoatra ny 3 taona ka hatramin'ny 5 taona" } },
+      { "id": "vdef", "montant": 487500, "libelle": { "fr": "Visa, séjour de plus de 5 ans ou séjour définitif", "en": "Visa, stay of over 5 years or permanent", "mg": "Visa, fitoerana mihoatra ny 5 taona na maharitra" } },
+      { "id": "vsortie", "montant": 130000, "libelle": { "fr": "Visa de sortie définitive", "en": "Final exit visa", "mg": "Visa fialana tanteraka" } },
+      { "id": "vprorog", "montant": 130000, "libelle": { "fr": "Prorogation de visa de séjour", "en": "Extension of residence visa", "mg": "Fanalavana visa fitoerana" } },
+      { "id": "vtransf", "montant": 182000, "demiTarif": false, "libelle": { "fr": "Visa transformable en long séjour (expatriés, investisseurs, retraités, familles…)", "en": "Visa convertible to long stay (expatriates, investors, retirees, families…)", "mg": "Visa azo ovaina ho fitoerana maharitra (mpiasa vahiny, mpampiasa vola, misotro ronono, fianakaviana…)" } },
+      { "id": "vimmig", "montant": 325000, "demiTarif": false, "libelle": { "fr": "Visa non immigrant transformable en visa immigrant", "en": "Non-immigrant visa convertible to immigrant visa", "mg": "Visa tsy mpifindra monina azo ovaina ho visa mpifindra monina" } }
+    ],
+    "reductionMissionnairesEtudiants": 0.5,
+    "permisArme": 20000,
+    "impotAnnuelParArme": 20000,
+    "articles": { "visas": "CDI 02.05.06", "permisArme": "CDI 02.05.07", "impotArmes": "CDI 02.05.08", "exonerationArmes": "CDI 02.05.09", "paiement": "CDI 02.05.01" },
+    "source": "LFI 2026"
+  },
+  "assurance": {
+    "taux": {
+      "navigation": 0.04, "incendiePro": 0.07, "incendieAutre": 0.20, "vie": 0.03, "renteViagere": 0.05, "autres": 0.045
+    },
+    "tacava": 0.10,
+    "articles": { "base": "CDI 02.06.01", "taux": "CDI 02.06.02", "exonerations": "CDI 02.06.03", "tacava": "CDI 02.06.17, 02.06.18" },
+    "source": "LFI 2026"
+  },
+  "tvm": {
+    "classes": [
+      { "id": "1-4", "cv": "1 à 4 CV", "cylindree": "0 à 250 cm³" },
+      { "id": "5-9", "cv": "5 à 9 CV", "cylindree": "251 à 500 cm³" },
+      { "id": "10-12", "cv": "10 à 12 CV", "cylindree": "501 à 1 000 cm³" },
+      { "id": "13-15", "cv": "13 à 15 CV", "cylindree": "plus de 1 000 cm³" },
+      { "id": "16+", "cv": "plus de 15 CV", "cylindree": null }
+    ],
+    "agesMaxMois": [60, 120, 240],
+    "tarifs": {
+      "1-4":   { "essence": [15000, 40000, 90000, 115000],   "diesel": [20000, 45000, 95000, 120000],   "electrique": [5000, 30000, 80000, 105000],   "hybride": [10000, 35000, 85000, 110000] },
+      "5-9":   { "essence": [30000, 55000, 105000, 130000],  "diesel": [40000, 65000, 115000, 140000],  "electrique": [10000, 35000, 85000, 110000],  "hybride": [20000, 45000, 95000, 120000] },
+      "10-12": { "essence": [60000, 85000, 135000, 160000],  "diesel": [80000, 105000, 155000, 180000], "electrique": [20000, 45000, 95000, 120000],  "hybride": [40000, 65000, 115000, 140000] },
+      "13-15": { "essence": [90000, 115000, 165000, 190000], "diesel": [120000, 145000, 195000, 220000], "electrique": [30000, 55000, 105000, 130000], "hybride": [60000, 85000, 135000, 160000] },
+      "16+":   { "essence": [180000, 205000, 255000, 280000], "diesel": [240000, 265000, 315000, 340000], "electrique": [60000, 85000, 135000, 160000], "hybride": [120000, 145000, 195000, 220000] }
+    },
+    "plaisance": 200000,
+    "autresEnginsMaritimes": 1000000,
+    "aeronef": 2000000,
+    "articles": { "champ": "CDI 02.09.01, 02.09.02", "exonerations": "CDI 02.09.03", "tarif": "CDI 02.09.06", "sanctions": "CDI 02.09.07", "declaration": "CPF I-102 bis" },
+    "source": "LFI 2026"
+  },
   "tva": {
     "tauxNormal": 0.20,
     "tauxReduit": 0.05,
