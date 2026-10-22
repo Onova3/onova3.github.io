@@ -975,5 +975,162 @@
         }
       }
     ]
+  },
+  "ttm": {
+    "qui": [
+      {
+        "article": "CDI 03.02.15, CPF I-103 bis",
+        "texte": {
+          "fr": "L'établissement de monnaie électronique (l'opérateur de mobile money) calcule la taxe sur les frais qu'il perçoit, la déclare et la paie.",
+          "en": "The electronic money institution (the mobile money operator) calculates the tax on the fees it collects, files it and pays it.",
+          "mg": "Ny orinasa mpitantana vola elektronika (mpandraharaha mobile money) no manao ny kajin'ny haba amin'ny sarany raisiny, manambara ary mandoa azy."
+        }
+      }
+    ],
+    "ou": [
+      {
+        "article": "CPF I-103 bis",
+        "texte": {
+          "fr": "À l'unité opérationnelle qui gère son dossier fiscal, sur la plateforme de déclaration en ligne (ou sur l'imprimé de l'Administration).",
+          "en": "At the operational unit managing its tax file, on the online filing platform (or on the Administration's form).",
+          "mg": "Any amin'ny sampana mitantana ny antontan-taratasiny, amin'ny sehatra fanambarana an-tserasera (na amin'ny taratasy avy amin'ny Fitondrana)."
+        }
+      }
+    ],
+    "document": [
+      {
+        "article": "CPF I-103 bis",
+        "texte": {
+          "fr": "La déclaration mensuelle des frais perçus, avec son annexe, selon le modèle de l'Administration.",
+          "en": "The monthly return of fees collected, with its appendix, using the Administration's template.",
+          "mg": "Ny fanambarana isam-bolana ny sarany voaray, miaraka amin'ny fanampiny, araka ny modely avy amin'ny Fitondrana."
+        }
+      }
+    ],
+    "quand": [
+      {
+        "article": "CPF I-103 bis",
+        "delai": "15 du mois suivant",
+        "texte": {
+          "fr": "Chaque mois, au plus tard le 15 du mois suivant.",
+          "en": "Every month, by the 15th of the following month.",
+          "mg": "Isam-bolana, farany ny faha-15 amin'ny volana manaraka."
+        }
+      }
+    ],
+    "sanctions": [
+      {
+        "article": "CPF I-103 bis",
+        "texte": {
+          "fr": "Toute omission ou manquement expose l'opérateur à l'amende pour défaut de dépôt et à la pénalité de retard.",
+          "en": "Any omission or breach exposes the operator to the fine for not filing and the late-payment penalty.",
+          "mg": "Ny tsy fanarahana rehetra dia mety hiteraka onitra noho ny tsy fametrahana sy sazy noho ny fahatarana ho an'ny mpandraharaha."
+        }
+      }
+    ]
+  },
+  "tsabtj": {
+    "qui": [
+      {
+        "article": "CDI 03.02.01",
+        "texte": {
+          "fr": "Les fabricants et les importateurs de boissons alcooliques et de tabacs. Pour les produits faits à partir d'alcool fort local, la taxe est retenue en amont.",
+          "en": "Manufacturers and importers of alcoholic drinks and tobacco. For products made from local strong alcohol, the tax is withheld upstream.",
+          "mg": "Ny mpamokatra sy ny mpanafatra zava-pisotro misy alikaola sy paraky. Ho an'ny vokatra avy amin'ny toaka mahery eto an-toerana, esorina mialoha ny haba."
+        }
+      }
+    ],
+    "ou": [
+      {
+        "article": "CDI 03.02.01, 03.02.04",
+        "texte": {
+          "fr": "Auprès du receveur de l'unité opérationnelle qui gère le dossier fiscal du fabricant ou de l'importateur.",
+          "en": "With the receiver of the operational unit managing the manufacturer's or importer's tax file.",
+          "mg": "Any amin'ny mpandray vola ao amin'ny sampana mitantana ny antontan-taratasin'ny mpamokatra na mpanafatra."
+        }
+      }
+    ],
+    "document": [
+      {
+        "article": "CDI 03.02.04",
+        "texte": {
+          "fr": "Une déclaration des quantités ou montants imposables.",
+          "en": "A return of the taxable quantities or amounts.",
+          "mg": "Fanambarana ny habetsahana na ny vola iainan'ny haba."
+        }
+      }
+    ],
+    "quand": [
+      {
+        "article": "CDI 03.02.04",
+        "delai": "15 du mois suivant",
+        "texte": {
+          "fr": "Au plus tard le 15 du mois qui suit celui de la fabrication ou de l'encaissement des recettes.",
+          "en": "By the 15th of the month after manufacture or receipt of the proceeds.",
+          "mg": "Farany ny faha-15 amin'ny volana manaraka ny famokarana na ny fandraisana ny vola."
+        }
+      }
+    ],
+    "sanctions": [
+      {
+        "article": "CDI 03.02.05, 20.01.61",
+        "texte": {
+          "fr": "Transport sans titre de mouvement ou avec un titre irrégulier : amende de 200 000 Ar.",
+          "en": "Transport without a movement document or with an irregular one: fine of 200,000 Ar.",
+          "mg": "Fitaterana tsy misy taratasy fivezivezena na misy taratasy tsy ara-dalàna: onitra 200 000 Ar."
+        }
+      },
+      {
+        "article": "CDI 20.01.63, 20.01.65",
+        "texte": {
+          "fr": "Le jugement peut ordonner la fermeture de l'établissement ou le retrait de l'autorisation. En cas de récidive dans l'année, le maximum de la peine est prononcé.",
+          "en": "The court may order closure of the business or withdrawal of the licence. For a repeat offence within a year, the maximum penalty is imposed.",
+          "mg": "Ny fitsarana dia afaka mandidy ny fanakatonana ny toerana na ny fanesorana ny fahazoan-dalana. Raha miverina ao anatin'ny herintaona, ny sazy ambony indrindra no ampiharina."
+        }
+      }
+    ]
+  },
+  "ppa": {
+    "qui": [
+      {
+        "article": "CDI 03.02.06, CPF I-103",
+        "texte": {
+          "fr": "Les fabricants de boissons alcooliques et alcoolisées. Pour les produits faits à partir d'alcool fort local, le prélèvement est retenu en amont.",
+          "en": "Manufacturers of alcoholic drinks. For products made from local strong alcohol, the levy is withheld upstream.",
+          "mg": "Ny mpamokatra zava-pisotro misy alikaola. Ho an'ny vokatra avy amin'ny toaka mahery eto an-toerana, esorina mialoha ny fakana."
+        }
+      }
+    ],
+    "ou": [
+      {
+        "article": "CPF I-103",
+        "texte": {
+          "fr": "Auprès du service des impôts qui gère le dossier du fabricant ; en cas de non-paiement, les procédures du droit d'accises s'appliquent.",
+          "en": "With the tax office managing the manufacturer's file; if unpaid, excise duty recovery procedures apply.",
+          "mg": "Any amin'ny biraon'ny hetra mitantana ny antontan-taratasin'ny mpamokatra; raha tsy voaloa, mihatra ny fomba fanarahana amin'ny haba manokana."
+        }
+      }
+    ],
+    "document": [
+      {
+        "article": "CPF I-103",
+        "texte": {
+          "fr": "Une déclaration des quantités mises à la consommation dans le mois.",
+          "en": "A return of the quantities released for consumption during the month.",
+          "mg": "Fanambarana ny habetsahana navoaka ho amin'ny fanjifana tamin'ny volana."
+        }
+      }
+    ],
+    "quand": [
+      {
+        "article": "CPF I-103",
+        "delai": "15 premiers jours du mois suivant",
+        "texte": {
+          "fr": "Dans les quinze premiers jours du mois qui suit celui de la mise à la consommation.",
+          "en": "Within the first fifteen days of the month after release for consumption.",
+          "mg": "Ao anatin'ny 15 andro voalohany amin'ny volana manaraka ny famoahana ho amin'ny fanjifana."
+        }
+      }
+    ]
   }
 }

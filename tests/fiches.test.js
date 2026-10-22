@@ -10,6 +10,9 @@ import { droitVenteImmeuble, droitBail, droitCessionParts, droitSuccession, droi
 import { droitVisa, droitsArmes } from '../src/calc/timbre.js';
 import { calculTaxeAssurance } from '../src/calc/assurance.js';
 import { ageEnMois, trancheAge, calculTVM, calculTVMForfait } from '../src/calc/tvm.js';
+import { calculTTM } from '../src/calc/ttm.js';
+import { calculTaxeSpeciale } from '../src/calc/taxeSpeciale.js';
+import { calculPrelevement } from '../src/calc/prelevementAlcools.js';
 import { lireRoute, lien } from '../src/routes.js';
 import { FICHES } from '../src/fiches/index.js';
 import { etat, fmt, tr } from '../src/ui.js';
@@ -229,6 +232,30 @@ test('TVM : cases du tableau recopiées depuis l’article 02.09.06', () => {
 test('TVM exemple de la fiche : 7 CV essence de juin 2018 = 55 000 Ar ; aéronef 2 000 000 Ar', () => {
   assert.equal(FICHES.tvm.impotExemple(b), 55000);
   assert.equal(calculTVMForfait('aeronef', b), 2000000);
+});
+
+// --- TTM, taxe spéciale, prélèvement (CDI 03.02.02, 03.02.07, 03.02.18) ---
+test('TTM : 5 % des frais, pas du montant envoyé', () => {
+  assert.equal(calculTTM(1000, b).taxe, 50);
+  assert.equal(calculTTM(2000000000, b).impot, 100000000);
+  assert.equal(FICHES.ttm.impotExemple(b), 100000000);
+});
+test('Taxe spéciale : rhum au litre d’alcool pur', () => {
+  // 1 000 l à 40° = 400 LAP × 30 Ar = 12 000 Ar
+  const r = calculTaxeSpeciale({ produit: 'rhum', quantite: 1000, degre: 40 }, b);
+  assert.equal(r.unites, 400);
+  assert.equal(r.impot, 12000);
+});
+test('Taxe spéciale : cigarettes, bière, whisky', () => {
+  assert.equal(calculTaxeSpeciale({ produit: 'cigarettes', quantite: 1 }, b).taxe, 10);
+  assert.equal(calculTaxeSpeciale({ produit: 'vinBiere', quantite: 100000 }, b).impot, 600000);
+  assert.equal(calculTaxeSpeciale({ produit: 'whisky', quantite: 1000 }, b).impot, 75000);
+  assert.equal(FICHES.tsabtj.impotExemple(b), 600000);
+});
+test('Prélèvement sur les alcools : 4 Ar par litre, export exonéré', () => {
+  assert.equal(calculPrelevement({ litres: 100000 }, b).impot, 400000);
+  assert.equal(calculPrelevement({ litres: 100000, litresExport: 30000 }, b).impot, 280000);
+  assert.equal(FICHES.ppa.impotExemple(b), 400000);
 });
 
 // --- Navigation ---

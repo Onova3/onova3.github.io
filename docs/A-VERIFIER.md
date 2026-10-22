@@ -86,3 +86,13 @@ Points que le texte des codes ne tranche pas clairement. L'application suit l'in
 | 48 | Taxe d'assurance : arrondi à la centaine | CPF VII-32 | Appliqué séparément à la taxe et à la TACAVA |
 | 49 | TACAVA : « voitures particulières » appartenant à un particulier | CDI 02.06.17, 02.06.18 (exonération si transport public ou personne morale) | Case à cocher laissée au choix de l'utilisateur |
 | 50 | Amende de l'article 20.01.54 pour la TVM | CDI 02.09.07 renvoie à 20.01.54, non encore lu en détail | Mentionnée sans montant ; le simulateur de sanctions commun reste celui de 20.01.52 et 20.01.53 |
+
+## TTM, taxe spéciale, prélèvement (phase 3, étape 1)
+
+| # | Point | Texte | Choix actuel de l'application |
+|---|---|---|---|
+| 51 | Arrondi à la centaine de très petits montants (10 Ar par paquet, 6 Ar par litre) | CPF VII-32 | Arrondi appliqué au total déclaré ; les montants unitaires de l'exemple ne sont pas arrondis |
+| 52 | Whisky : bouteilles d'une autre contenance que 70 cl | CDI 03.02.02 : « 75 Ar/70 cl de boisson » | L'utilisateur saisit un nombre de bouteilles de 70 cl |
+| 53 | Délai de déclaration de la taxe spéciale pour les importateurs | CDI 03.02.04 : 15 du mois suivant « la fabrication ou l'encaissement des recettes » | Repris tel quel |
+| 54 | Pénalités de la taxe spéciale | CDI 03.02.05 renvoie à 20.01.61 et 20.01.63 à 20.01.66 ; 20.01.62 n'est pas cité | Seuls 20.01.61, 20.01.63 et 20.01.65 sont résumés |
+| 55 | Quantités décimales (litres) dans les calculateurs | — | Les champs n'acceptent que des nombres entiers |

@@ -164,6 +164,30 @@
     "articles": { "champ": "CDI 02.09.01, 02.09.02", "exonerations": "CDI 02.09.03", "tarif": "CDI 02.09.06", "sanctions": "CDI 02.09.07", "declaration": "CPF I-102 bis" },
     "source": "LFI 2026"
   },
+  "ttm": {
+    "taux": 0.05,
+    "articles": { "champ": "CDI 03.02.14", "redevable": "CDI 03.02.15", "base": "CDI 03.02.17", "taux": "CDI 03.02.18", "declaration": "CPF I-103 bis" },
+    "source": "LFI 2026"
+  },
+  "taxeSpeciale": {
+    "produits": [
+      { "id": "rhum", "montant": 30, "unite": "lap", "libelle": { "fr": "Rhum, tafias et assimilés", "en": "Rum, tafia and similar", "mg": "Toaka gasy, rhum sy ny mitovy aminy" } },
+      { "id": "whisky", "montant": 75, "unite": "bouteille70cl", "libelle": { "fr": "Whiskies", "en": "Whiskies", "mg": "Whisky" } },
+      { "id": "vinBiere", "montant": 6, "unite": "litre", "libelle": { "fr": "Vins, bières", "en": "Wines, beers", "mg": "Divay, labiera" } },
+      { "id": "autresAlcools", "montant": 75, "unite": "litre", "libelle": { "fr": "Autres boissons alcooliques (spiritueux, liqueurs, champagnes, vermouths…)", "en": "Other alcoholic drinks (spirits, liqueurs, champagne, vermouth…)", "mg": "Zava-pisotro misy alikaola hafa (spiritueux, liqueur, champagne, vermouth…)" } },
+      { "id": "cigares", "montant": 75, "unite": "paquet", "libelle": { "fr": "Cigares, cigarillos", "en": "Cigars, cigarillos", "mg": "Sigara, sigarilo" } },
+      { "id": "cigarettes", "montant": 10, "unite": "paquet", "libelle": { "fr": "Cigarettes et tabacs à fumer", "en": "Cigarettes and smoking tobacco", "mg": "Sigara sy paraky fifoka" } },
+      { "id": "tabacMacher", "montant": 2, "unite": "sachet", "libelle": { "fr": "Tabacs à mâcher", "en": "Chewing tobacco", "mg": "Paraky hanina" } }
+    ],
+    "repartition": { "FNPDJSL": 0.70, "OFNALAT": 0.20, "LOVAKO": 0.10 },
+    "articles": { "champ": "CDI 03.02.01", "taux": "CDI 03.02.02", "affectation": "CDI 03.02.03", "declaration": "CDI 03.02.04", "penalites": "CDI 03.02.05" },
+    "source": "LFI 2026"
+  },
+  "prelevementAlcools": {
+    "parLitre": 4,
+    "articles": { "champ": "CDI 03.02.06", "taux": "CDI 03.02.07", "affectation": "CDI 03.02.08", "declaration": "CPF I-103" },
+    "source": "LFI 2026"
+  },
   "tva": {
     "tauxNormal": 0.20,
     "tauxReduit": 0.05,
