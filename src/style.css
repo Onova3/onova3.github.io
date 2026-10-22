@@ -101,3 +101,6 @@ select{font:500 15px var(--body)}
 .arr{margin:12px 0 0;color:var(--muted);font-size:12.5px}
 
 footer{margin-top:30px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);font-size:12.5px}
+.produit{display:block;width:100%;text-align:left;border:0;border-bottom:1px dashed var(--line);background:none;color:var(--ink);padding:8px 0;font:14px/1.4 var(--body);cursor:pointer}
+.produit[aria-pressed=true]{color:var(--accent);font-weight:600}
+#da-liste{max-height:360px;overflow-y:auto}

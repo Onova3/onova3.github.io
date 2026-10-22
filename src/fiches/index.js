@@ -14,5 +14,6 @@ import tvm from './tvm.js';
 import ttm from './ttm.js';
 import tsabtj from './tsabtj.js';
 import ppa from './ppa.js';
+import da from './da.js';
 
-export const FICHES = { ir, idh, irm, is, irsa, ircm, ipvi, tva, de, timbre, assurance, tvm, ttm, tsabtj, ppa };
+export const FICHES = { ir, idh, irm, is, irsa, ircm, ipvi, tva, de, timbre, assurance, tvm, ttm, tsabtj, ppa, da };

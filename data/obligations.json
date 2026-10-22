@@ -1132,5 +1132,91 @@
         }
       }
     ]
+  },
+  "da": {
+    "qui": [
+      {
+        "article": "CPF II-95",
+        "texte": {
+          "fr": "Produits fabriqués à Madagascar : le fabricant déclare et paie. Produits importés : le droit est calculé et encaissé par la Douane avant l'enlèvement de la marchandise.",
+          "en": "Products made in Madagascar: the manufacturer files and pays. Imported products: the duty is calculated and collected by Customs before the goods are released.",
+          "mg": "Vokatra vita eto Madagasikara: ny mpamokatra no manambara sy mandoa. Entana afarana: ny Ladoany no manao ny kajy sy mandray ny haba alohan'ny hamoahana ny entana."
+        }
+      },
+      {
+        "article": "CPF II-01",
+        "texte": {
+          "fr": "Il faut une autorisation de l'Administration pour fabriquer, récolter, acheter localement ou importer des produits soumis au droit d'accises.",
+          "en": "An authorisation from the Administration is required to make, harvest, buy locally or import products subject to excise duty.",
+          "mg": "Ilaina ny fahazoan-dalana avy amin'ny Fitondrana mba hamokarana, hijinjana, hividianana eto an-toerana na hanafarana vokatra iharan'ny haba manokana."
+        }
+      }
+    ],
+    "ou": [
+      {
+        "article": "CPF II-95",
+        "texte": {
+          "fr": "Chez le receveur des impôts du ressort du fabricant ; à la Douane pour les importations.",
+          "en": "With the tax receiver of the manufacturer's district; with Customs for imports.",
+          "mg": "Any amin'ny mpandray vola ao amin'ny hetra mifehy ny faritry ny mpamokatra; any amin'ny Ladoany ho an'ny entana afarana."
+        }
+      }
+    ],
+    "document": [
+      {
+        "article": "CPF II-95",
+        "texte": {
+          "fr": "Une déclaration mensuelle des quantités et valeurs mises à la consommation.",
+          "en": "A monthly return of quantities and values released for consumption.",
+          "mg": "Fanambarana isam-bolana ny habetsahana sy ny sanda navoaka ho amin'ny fanjifana."
+        }
+      },
+      {
+        "article": "CPF II-90, II-94",
+        "texte": {
+          "fr": "Un registre de fabrication coté et paraphé par les impôts, et un titre de mouvement pour chaque expédition de produits.",
+          "en": "A production register numbered and initialled by the tax office, and a movement document for each shipment of products.",
+          "mg": "Boky famokarana voaisa sy voasonian'ny hetra, ary taratasy fivezivezena isaky ny fandefasana vokatra."
+        }
+      }
+    ],
+    "quand": [
+      {
+        "article": "CPF II-95",
+        "delai": "15 du mois suivant",
+        "texte": {
+          "fr": "Au plus tard le 15 du mois qui suit la fabrication ou la mise à la consommation.",
+          "en": "By the 15th of the month after manufacture or release for consumption.",
+          "mg": "Farany ny faha-15 amin'ny volana manaraka ny famokarana na ny famoahana ho amin'ny fanjifana."
+        }
+      },
+      {
+        "article": "CPF II-98",
+        "delai": "1 mois avant la reprise",
+        "texte": {
+          "fr": "Activité saisonnière : déclarer la reprise des travaux au Directeur régional des impôts un mois avant leur début.",
+          "en": "Seasonal activity: declare the resumption of work to the Regional Tax Director one month before it starts.",
+          "mg": "Asa ara-potoana: ambara amin'ny Talen'ny hetra isam-paritra iray volana mialoha ny fanombohana indray ny asa."
+        }
+      }
+    ],
+    "sanctions": [
+      {
+        "article": "CDI 20.01.61",
+        "texte": {
+          "fr": "Transport de produits sans titre de mouvement ou avec un titre irrégulier : amende de 200 000 Ar.",
+          "en": "Transport of products without a movement document or with an irregular one: fine of 200,000 Ar.",
+          "mg": "Fitaterana vokatra tsy misy taratasy fivezivezena na misy taratasy tsy ara-dalàna: onitra 200 000 Ar."
+        }
+      },
+      {
+        "article": "CDI 20.01.66, 20.01.67",
+        "texte": {
+          "fr": "Les véhicules de transport peuvent être saisis en garantie de l'amende, et l'autorisation de fabrication peut être suspendue ou retirée.",
+          "en": "Transport vehicles may be seized as security for the fine, and the manufacturing authorisation may be suspended or withdrawn.",
+          "mg": "Azo sambotra ho antoka ny onitra ny fiara fitaterana, ary azo ahantona na esorina ny fahazoan-dalana hamokatra."
+        }
+      }
+    ]
   }
 }

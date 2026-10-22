@@ -96,3 +96,16 @@ Points que le texte des codes ne tranche pas clairement. L'application suit l'in
 | 53 | Délai de déclaration de la taxe spéciale pour les importateurs | CDI 03.02.04 : 15 du mois suivant « la fabrication ou l'encaissement des recettes » | Repris tel quel |
 | 54 | Pénalités de la taxe spéciale | CDI 03.02.05 renvoie à 20.01.61 et 20.01.63 à 20.01.66 ; 20.01.62 n'est pas cité | Seuls 20.01.61, 20.01.63 et 20.01.65 sont résumés |
 | 55 | Quantités décimales (litres) dans les calculateurs | — | Les champs n'acceptent que des nombres entiers |
+
+## Droit d'accises (phase 3, étape 2)
+
+| # | Point | Texte | Choix actuel de l'application |
+|---|---|---|---|
+| 56 | **Sens de « Sans être inférieur à Ar … /L »** : valeur taxable minimale par unité, ou droit minimum par unité ? | Annexe 2 ; CPF II-95 parle des « montants calculés à partir de la valeur minimale » pour les alcools haut degré | Lu comme une **valeur taxable minimale** : droit ≥ taux × quantité × valeur minimale. Si c'est un droit minimum, les montants sur la bière, le vin et les sacs plastiques changent fortement |
+| 57 | Colonne du minimum quand il n'y en a qu'un (42 lignes : bières, vins, alcools, plastiques…) | Position du texte sous la colonne « local » (vérifié en colonnes sur 3 lignes) | Rattaché au taux local ; le taux importé n'a pas de minimum |
+| 58 | Tableau extrait automatiquement (181 lignes) | `scripts/extraire-accises.js` ; 10 lignes témoins testées | À comparer avec le PDF (pages 94 à 105 du Code), au moins par sondage |
+| 59 | Code `39.23.29 90` | Coquille probable du Code pour `3923.29 90` | Corrigé en `3923.29 90` |
+| 60 | Cigarettes : « Par paquet de 20 » | Écrit au-dessus de la colonne locale de la position 24.02 | Appliqué au tarif local (1 440 Ar par paquet de 20) |
+| 61 | Abattement de 2 % pour les tabacs fabriqués avec au moins 70 % de tabac malgache | CDI 03.01.04 | Mentionné, non calculé |
+| 62 | Désignations des produits | Le Code n'existe qu'en français | Laissées en français dans les trois langues, avec une mention en EN et MG |
+| 63 | Annexe des « produits exportés passibles du droit d'accises » | CDI 03.01.02 1° y renvoie ; non trouvée dans le texte extrait | Non reprise |

@@ -13,6 +13,7 @@ import { ageEnMois, trancheAge, calculTVM, calculTVMForfait } from '../src/calc/
 import { calculTTM } from '../src/calc/ttm.js';
 import { calculTaxeSpeciale } from '../src/calc/taxeSpeciale.js';
 import { calculPrelevement } from '../src/calc/prelevementAlcools.js';
+import { calculAccises, chercherProduits } from '../src/calc/accises.js';
 import { lireRoute, lien } from '../src/routes.js';
 import { FICHES } from '../src/fiches/index.js';
 import { etat, fmt, tr } from '../src/ui.js';
@@ -256,6 +257,44 @@ test('Prélèvement sur les alcools : 4 Ar par litre, export exonéré', () => {
   assert.equal(calculPrelevement({ litres: 100000 }, b).impot, 400000);
   assert.equal(calculPrelevement({ litres: 100000, litresExport: 30000 }, b).impot, 280000);
   assert.equal(FICHES.ppa.impotExemple(b), 400000);
+});
+
+// --- Droit d'accises : tableau extrait (annexe 2) et calcul (CDI 03.01.04, CPF II-95) ---
+const accises = lire('data/accises-2026.json').produits;
+const ligneDA = code => accises.find(p => p.code === code);
+test('Accises : 181 lignes extraites, toutes avec deux taux lisibles', () => {
+  assert.equal(accises.length, 181);
+  for (const p of accises) for (const x of [p.local, p.importe]) assert.ok(['exonere', 'advalorem', 'specifique'].includes(x.type), p.code);
+});
+test('Accises : lignes témoins recopiées depuis le Code', () => {
+  assert.deepEqual([ligneDA('0409.00 00').local.type, ligneDA('0409.00 00').importe.taux], ['exonere', 0.05]);
+  const jus = ligneDA('2009.11 00');
+  assert.deepEqual([jus.local.taux, jus.local.valeurMinimale.montant, jus.importe.taux, jus.importe.valeurMinimale.montant], [0.025, 50, 0.10, 200]);
+  const biere = ligneDA('2203.00 90');
+  assert.deepEqual([biere.local.taux, biere.local.valeurMinimale.montant, biere.importe.taux, biere.importe.valeurMinimale], [0.125, 850, 0.5, undefined]);
+  assert.deepEqual([ligneDA('2207.10 00').local.montant, ligneDA('2207.10 00').importe.montant], [3050, 4050]);
+  assert.deepEqual([ligneDA('2402.20 00').local.montant, ligneDA('2402.20 00').local.unite, ligneDA('2402.20 00').importe.taux], [1440, 'paquet de 20', 3.25]);
+  assert.equal(ligneDA('2403.11 00').importe.montant, 25000);
+  assert.equal(ligneDA('8703.21 92').importe.taux, 0.10);
+  assert.deepEqual([ligneDA('service').local.taux, ligneDA('service').importe.taux], [0.08, 0.08]);
+});
+test('Accises : ad valorem, valeur minimale, spécifique, exonéré', () => {
+  const biere = ligneDA('2203.00 90');
+  // 12,5 % × 3 000 000 (au-dessus de 1 000 l × 850 Ar)
+  assert.equal(calculAccises(biere, { origine: 'local', valeur: 3000000, quantite: 1000 }, b).impot, 375000);
+  // valeur 500 000 < 1 000 × 850 = 850 000 → 12,5 % × 850 000 = 106 250 → 106 200
+  const r = calculAccises(biere, { origine: 'local', valeur: 500000, quantite: 1000 }, b);
+  assert.ok(r.valeurMinimaleAppliquee);
+  assert.equal(r.impot, 106200);
+  assert.equal(calculAccises(ligneDA('2402.20 00'), { origine: 'local', quantite: 100 }, b).impot, 144000);
+  assert.equal(calculAccises(ligneDA('2402.20 00'), { origine: 'importe', valeur: 1000000 }, b).impot, 3250000);
+  assert.equal(calculAccises(ligneDA('0409.00 00'), { origine: 'local', valeur: 1000000 }, b).impot, 0);
+  assert.equal(FICHES.da.impotExemple(b), 375000);
+});
+test('Accises : recherche par nom (sans accents) ou par code', () => {
+  assert.ok(chercherProduits(accises, 'biere').some(p => p.code === '2203.00 90'));
+  assert.ok(chercherProduits(accises, '2203').length >= 2);
+  assert.equal(chercherProduits(accises, '').length, 0);
 });
 
 // --- Navigation ---

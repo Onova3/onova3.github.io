@@ -1,0 +1,2962 @@
+{
+ "note": "Tableau du droit d'accises (CDI 2026, Partie III, annexe 2), extrait par scripts/extraire-accises.js. Désignations en français, telles que dans le Code. « valeurMinimale » reprend le « Sans être inférieur à » du Code : valeur taxable minimale par unité (CPF II-95).",
+ "article": "CDI 03.01.01, 03.01.04, annexe 2",
+ "produits": [
+  {
+   "code": "0409.00 00",
+   "designation": "Miel naturel",
+   "contexte": "",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.05
+   },
+   "ligneSource": 4036
+  },
+  {
+   "code": "0902.10 00",
+   "designation": "Thé vert (non fermenté) présenté en emballages immédiats d'un contenu n'excédant pas 3 kg",
+   "contexte": "Thé, même aromatisé",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.5
+   },
+   "ligneSource": 4039
+  },
+  {
+   "code": "0902.20 00",
+   "designation": "Thé vert (non fermenté) présenté autrement",
+   "contexte": "Thé, même aromatisé",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.5
+   },
+   "ligneSource": 4041
+  },
+  {
+   "code": "0902.30 00",
+   "designation": "Thé noir (fermenté) et thé partiellement fermenté présentés en emballages immédiats d'un contenu n'excédant pas 3 kg",
+   "contexte": "Thé, même aromatisé",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.5
+   },
+   "ligneSource": 4042
+  },
+  {
+   "code": "0902.40 00",
+   "designation": "Thé noir (fermenté) et thé partiellement fermenté présentés autrement",
+   "contexte": "Thé, même aromatisé",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.5
+   },
+   "ligneSource": 4044
+  },
+  {
+   "code": "1702.11 00",
+   "designation": "Contenant en poids 99% ou plus de lactose, exprimé en lactose anhydre calculé sur matière sèche",
+   "contexte": "Autres sucres, y compris le lactose, le maltose, le glucose et le fructose (lévulose)",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.05
+   },
+   "ligneSource": 4050
+  },
+  {
+   "code": "1702.19 00",
+   "designation": "Autres",
+   "contexte": "Autres sucres, y compris le lactose, le maltose, le glucose et le fructose (lévulose)",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.05
+   },
+   "ligneSource": 4052
+  },
+  {
+   "code": "1702.20 00",
+   "designation": "Sucre et sirop d’érable",
+   "contexte": "Autres sucres, y compris le lactose, le maltose, le glucose et le fructose (lévulose)",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.05
+   },
+   "ligneSource": 4053
+  },
+  {
+   "code": "1702.30 00",
+   "designation": "Glucose et sirop de glucose, ne contenant pas de fructose ou contenant en poids à l’état sec moins de 20% de fructose",
+   "contexte": "Autres sucres, y compris le lactose, le maltose, le glucose et le fructose (lévulose)",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.05
+   },
+   "ligneSource": 4054
+  },
+  {
+   "code": "1702.40 00",
+   "designation": "Glucose et sirop de glucose, contenant en poids à l’état sec de 20% inclus à 50% exclus de fructose, à l’exception du sucre inverti (ou interverti)",
+   "contexte": "Autres sucres, y compris le lactose, le maltose, le glucose et le fructose (lévulose)",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.05
+   },
+   "ligneSource": 4056
+  },
+  {
+   "code": "1702.50 00",
+   "designation": "Fructose chimiquement pur",
+   "contexte": "Autres sucres, y compris le lactose, le maltose, le glucose et le fructose (lévulose)",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.05
+   },
+   "ligneSource": 4058
+  },
+  {
+   "code": "1702.60 00",
+   "designation": "Autre fructose et sirop de fructose, contenant en poids à l’état sec plus de 50% de fructose, à l’exception du sucre inverti (ou interverti)",
+   "contexte": "Autres sucres, y compris le lactose, le maltose, le glucose et le fructose (lévulose)",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.05
+   },
+   "ligneSource": 4059
+  },
+  {
+   "code": "1702.90 00",
+   "designation": "Autres, y compris le sucre inverti (ou interverti) et les autres sucres contenant en poids à l’état sec 50% de fructose",
+   "contexte": "Autres sucres, y compris le lactose, le maltose, le glucose et le fructose (lévulose)",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.05
+   },
+   "ligneSource": 4061
+  },
+  {
+   "code": "1704.10 00",
+   "designation": "Gommes à mâcher (chewing-gum), même enrobées de sucre",
+   "contexte": "Sucreries sans cacao (y compris le chocolat blanc)",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.05
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4064
+  },
+  {
+   "code": "1704.90 00",
+   "designation": "Autres",
+   "contexte": "Sucreries sans cacao (y compris le chocolat blanc)",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.05
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4065
+  },
+  {
+   "code": "1806.10 10",
+   "designation": "Conditionnés dans des contenants de 25 kg et plus",
+   "contexte": "Chocolat et autres préparations alimentaires contenant du cacao › - Poudre de cacao, avec addition de sucre ou d’autres édulcorants",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.02
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4068
+  },
+  {
+   "code": "1806.10 90",
+   "designation": "Autres",
+   "contexte": "Chocolat et autres préparations alimentaires contenant du cacao › - Poudre de cacao, avec addition de sucre ou d’autres édulcorants",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.02
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4069
+  },
+  {
+   "code": "1806.20 00",
+   "designation": "Autres préparations présentées soit en blocs ou en barres d’un poids excédant 2 kg, soit à l’état liquide ou pâteux ou en poudres, granulés ou formes similaires, en récipients ou en emballages immédiats, d’un contenu excédant 2kg",
+   "contexte": "Chocolat et autres préparations alimentaires contenant du cacao › - Poudre de cacao, avec addition de sucre ou d’autres édulcorants",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.02
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4070
+  },
+  {
+   "code": "1806.31 00",
+   "designation": "Fourrés",
+   "contexte": "Chocolat et autres préparations alimentaires contenant du cacao › -Autres, présentés en tablettes, barres ou bâtons",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.02
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4074
+  },
+  {
+   "code": "1806.32 00",
+   "designation": "Non fourrés",
+   "contexte": "Chocolat et autres préparations alimentaires contenant du cacao › -Autres, présentés en tablettes, barres ou bâtons",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.02
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4075
+  },
+  {
+   "code": "1806.90 00",
+   "designation": "Autres",
+   "contexte": "Chocolat et autres préparations alimentaires contenant du cacao › -Autres, présentés en tablettes, barres ou bâtons",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.02
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4076
+  },
+  {
+   "code": "2007.10 00",
+   "designation": "Préparations homogénéisées",
+   "contexte": "Confitures, gelées, marmelades, purées et pâtes de fruits, obtenues par cuisson,",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.05
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4082
+  },
+  {
+   "code": "2007.91 00",
+   "designation": "Agrumes",
+   "contexte": "Confitures, gelées, marmelades, purées et pâtes de fruits, obtenues par cuisson, › - Autres",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.05
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4084
+  },
+  {
+   "code": "2007.99 00",
+   "designation": "Autres",
+   "contexte": "Confitures, gelées, marmelades, purées et pâtes de fruits, obtenues par cuisson, › - Autres",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.05
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4085
+  },
+  {
+   "code": "2008.11 00",
+   "designation": "Arachides",
+   "contexte": "Fruits et autres parties comestibles de plantes, autrement préparés ou conservés,",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4090
+  },
+  {
+   "code": "2008.19 00",
+   "designation": "Autres y compris les mélanges",
+   "contexte": "Fruits et autres parties comestibles de plantes, autrement préparés ou conservés,",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4091
+  },
+  {
+   "code": "2008.20 10",
+   "designation": "Avec addition d’alcool",
+   "contexte": "Fruits et autres parties comestibles de plantes, autrement préparés ou conservés, › -Ananas",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4093
+  },
+  {
+   "code": "2008.20 90",
+   "designation": "Sans addition d’alcool",
+   "contexte": "Fruits et autres parties comestibles de plantes, autrement préparés ou conservés, › -Ananas",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4094
+  },
+  {
+   "code": "2008.30 10",
+   "designation": "Avec addition d’alcool",
+   "contexte": "Fruits et autres parties comestibles de plantes, autrement préparés ou conservés, › -Agrumes",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4097
+  },
+  {
+   "code": "2008.30 90",
+   "designation": "Sans addition d’alcool",
+   "contexte": "Fruits et autres parties comestibles de plantes, autrement préparés ou conservés, › -Agrumes",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4098
+  },
+  {
+   "code": "2008.40 10",
+   "designation": "Avec addition d’alcool",
+   "contexte": "Fruits et autres parties comestibles de plantes, autrement préparés ou conservés, › - Poires",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4101
+  },
+  {
+   "code": "2008.40 90",
+   "designation": "Sans addition d’alcool",
+   "contexte": "Fruits et autres parties comestibles de plantes, autrement préparés ou conservés, › - Poires",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4102
+  },
+  {
+   "code": "2008.50 10",
+   "designation": "Avec addition d’alcool",
+   "contexte": "Fruits et autres parties comestibles de plantes, autrement préparés ou conservés, › - Abricots",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4105
+  },
+  {
+   "code": "2008.50 90",
+   "designation": "Sans addition d’alcool",
+   "contexte": "Fruits et autres parties comestibles de plantes, autrement préparés ou conservés, › - Abricots",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4106
+  },
+  {
+   "code": "2008.60 10",
+   "designation": "Avec addition d’alcool",
+   "contexte": "Fruits et autres parties comestibles de plantes, autrement préparés ou conservés, › - Cerises",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4109
+  },
+  {
+   "code": "2008.60 90",
+   "designation": "Sans addition d’alcool",
+   "contexte": "Fruits et autres parties comestibles de plantes, autrement préparés ou conservés, › - Cerises",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4110
+  },
+  {
+   "code": "2008.70 10",
+   "designation": "Avec addition d’alcool",
+   "contexte": "Fruits et autres parties comestibles de plantes, autrement préparés ou conservés, › - Pêches, y compris les brugnons et nectarines",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4113
+  },
+  {
+   "code": "2008.70 90",
+   "designation": "Sans addition d’alcool",
+   "contexte": "Fruits et autres parties comestibles de plantes, autrement préparés ou conservés, › - Pêches, y compris les brugnons et nectarines",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4114
+  },
+  {
+   "code": "2008.80 10",
+   "designation": "Avec addition d’alcool",
+   "contexte": "Fruits et autres parties comestibles de plantes, autrement préparés ou conservés, › - Fraises",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4116
+  },
+  {
+   "code": "2008.80 90",
+   "designation": "Sans addition d’alcool",
+   "contexte": "Fruits et autres parties comestibles de plantes, autrement préparés ou conservés, › - Fraises",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4117
+  },
+  {
+   "code": "2008.91 10",
+   "designation": "Avec addition d’alcool",
+   "contexte": "Fruits et autres parties comestibles de plantes, autrement préparés ou conservés, › - - Cœurs de palmiers",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4121
+  },
+  {
+   "code": "2008.91 90",
+   "designation": "Sans addition d’alcool",
+   "contexte": "Fruits et autres parties comestibles de plantes, autrement préparés ou conservés, › - - Cœurs de palmiers",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4122
+  },
+  {
+   "code": "2008.93 10",
+   "designation": "Avec addition d’alcool",
+   "contexte": "Fruits et autres parties comestibles de plantes, autrement préparés ou conservés, › - - Canneberges (Vaccinium macrocarpon, Vaccinium oxycoccos), airelles rouges",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4126
+  },
+  {
+   "code": "2008.93 90",
+   "designation": "Sans addition d’alcool",
+   "contexte": "Fruits et autres parties comestibles de plantes, autrement préparés ou conservés, › - - Canneberges (Vaccinium macrocarpon, Vaccinium oxycoccos), airelles rouges",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4127
+  },
+  {
+   "code": "2008.97 10",
+   "designation": "Avec addition d’alcool",
+   "contexte": "Fruits et autres parties comestibles de plantes, autrement préparés ou conservés, › - - Mélanges",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4130
+  },
+  {
+   "code": "2008.97 90",
+   "designation": "Sans addition d’alcool",
+   "contexte": "Fruits et autres parties comestibles de plantes, autrement préparés ou conservés, › - - Mélanges",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4131
+  },
+  {
+   "code": "2008.99 10",
+   "designation": "Avec addition d’alcool",
+   "contexte": "Fruits et autres parties comestibles de plantes, autrement préparés ou conservés, › - - Autres",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4134
+  },
+  {
+   "code": "2008.99 90",
+   "designation": "Sans addition d’alcool",
+   "contexte": "Fruits et autres parties comestibles de plantes, autrement préparés ou conservés, › - - Autres",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4135
+  },
+  {
+   "code": "2009.11 00",
+   "designation": "Congelés",
+   "contexte": "Jus de fruits (y compris les moûts de raisin et l’eau de noix de coco) ou de",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.025,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 50,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 200,
+     "unite": "litre"
+    }
+   },
+   "ligneSource": 4144
+  },
+  {
+   "code": "2009.12 00",
+   "designation": "Non congelés, d’une valeur Brix n’excédant pas 20",
+   "contexte": "Jus de fruits (y compris les moûts de raisin et l’eau de noix de coco) ou de",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.025,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 50,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 200,
+     "unite": "litre"
+    }
+   },
+   "ligneSource": 4148
+  },
+  {
+   "code": "2009.19 00",
+   "designation": "Autres",
+   "contexte": "Jus de fruits (y compris les moûts de raisin et l’eau de noix de coco) ou de",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.025,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 50,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 200,
+     "unite": "litre"
+    }
+   },
+   "ligneSource": 4152
+  },
+  {
+   "code": "2009.21 00",
+   "designation": "D’une valeur Brix n’excédant pas 20",
+   "contexte": "Jus de fruits (y compris les moûts de raisin et l’eau de noix de coco) ou de › - Jus de pamplemousse ou de pomelo",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.025,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 50,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 200,
+     "unite": "litre"
+    }
+   },
+   "ligneSource": 4157
+  },
+  {
+   "code": "2009.29 00",
+   "designation": "Autres",
+   "contexte": "Jus de fruits (y compris les moûts de raisin et l’eau de noix de coco) ou de › - Jus de pamplemousse ou de pomelo",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.025,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 50,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 200,
+     "unite": "litre"
+    }
+   },
+   "ligneSource": 4161
+  },
+  {
+   "code": "2009.31 00",
+   "designation": "D’une valeur Brix n’excédant pas 20",
+   "contexte": "Jus de fruits (y compris les moûts de raisin et l’eau de noix de coco) ou de › - Jus de tout autre agrume",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.025,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 50,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 200,
+     "unite": "litre"
+    }
+   },
+   "ligneSource": 4166
+  },
+  {
+   "code": "2009.39 00",
+   "designation": "Autres",
+   "contexte": "Jus de fruits (y compris les moûts de raisin et l’eau de noix de coco) ou de › - Jus de tout autre agrume",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.025,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 50,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 200,
+     "unite": "litre"
+    }
+   },
+   "ligneSource": 4170
+  },
+  {
+   "code": "2009.41 00",
+   "designation": "D’une valeur Brix n’excédant pas 20",
+   "contexte": "Jus de fruits (y compris les moûts de raisin et l’eau de noix de coco) ou de › - Jus d'ananas",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.025,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 50,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 200,
+     "unite": "litre"
+    }
+   },
+   "ligneSource": 4176
+  },
+  {
+   "code": "2009.49 00",
+   "designation": "Autres",
+   "contexte": "Jus de fruits (y compris les moûts de raisin et l’eau de noix de coco) ou de › - Jus d'ananas",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.025,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 50,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 200,
+     "unite": "litre"
+    }
+   },
+   "ligneSource": 4180
+  },
+  {
+   "code": "2009.50 00",
+   "designation": "Jus de tomate",
+   "contexte": "Jus de fruits (y compris les moûts de raisin et l’eau de noix de coco) ou de › - Jus d'ananas",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.025,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 50,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 200,
+     "unite": "litre"
+    }
+   },
+   "ligneSource": 4184
+  },
+  {
+   "code": "2009.61 00",
+   "designation": "D’une valeur Brix n’excédant pas 30",
+   "contexte": "Jus de fruits (y compris les moûts de raisin et l’eau de noix de coco) ou de › - Jus de raisin (y compris les moûts de raisin)",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.025,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 50,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 200,
+     "unite": "litre"
+    }
+   },
+   "ligneSource": 4189
+  },
+  {
+   "code": "2009.69 00",
+   "designation": "Autres",
+   "contexte": "Jus de fruits (y compris les moûts de raisin et l’eau de noix de coco) ou de › - Jus de raisin (y compris les moûts de raisin)",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.025,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 50,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 200,
+     "unite": "litre"
+    }
+   },
+   "ligneSource": 4197
+  },
+  {
+   "code": "2009.71 00",
+   "designation": "D’une valeur Brix n’excédant pas 20",
+   "contexte": "Jus de fruits (y compris les moûts de raisin et l’eau de noix de coco) ou de › - Jus de pomme",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.025,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 50,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 200,
+     "unite": "litre"
+    }
+   },
+   "ligneSource": 4203
+  },
+  {
+   "code": "2009.79 00",
+   "designation": "Autres",
+   "contexte": "Jus de fruits (y compris les moûts de raisin et l’eau de noix de coco) ou de › - Jus de pomme",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.025,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 50,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 200,
+     "unite": "litre"
+    }
+   },
+   "ligneSource": 4207
+  },
+  {
+   "code": "2009.81 00",
+   "designation": "Jus d’airelle rouge (Vaccinium macrocarpon, Vaccinium oxycoccos, Vaccinium vitis-idaea)",
+   "contexte": "Jus de fruits (y compris les moûts de raisin et l’eau de noix de coco) ou de › - Jus de tout autre fruit ou légume",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.025,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 50,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 200,
+     "unite": "litre"
+    }
+   },
+   "ligneSource": 4213
+  },
+  {
+   "code": "2009.89 00",
+   "designation": "Autres",
+   "contexte": "Jus de fruits (y compris les moûts de raisin et l’eau de noix de coco) ou de › - Jus de tout autre fruit ou légume",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.025,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 50,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 200,
+     "unite": "litre"
+    }
+   },
+   "ligneSource": 4218
+  },
+  {
+   "code": "2009.90 00",
+   "designation": "Mélanges de jus",
+   "contexte": "Jus de fruits (y compris les moûts de raisin et l’eau de noix de coco) ou de › - Jus de tout autre fruit ou légume",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.025,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 50,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 200,
+     "unite": "litre"
+    }
+   },
+   "ligneSource": 4222
+  },
+  {
+   "code": "2106.90 30",
+   "designation": "Préparations concentrées pour boissons",
+   "contexte": "Préparations alimentaires non dénommées ni comprises ailleurs › - Autres",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.025,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 1000,
+     "unite": "kg"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 4000,
+     "unite": "kg"
+    }
+   },
+   "ligneSource": 4229
+  },
+  {
+   "code": "2106.90 40",
+   "designation": "Sirop de sucre aromatisé ou coloré",
+   "contexte": "Préparations alimentaires non dénommées ni comprises ailleurs › - Autres",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.025,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 50,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 200,
+     "unite": "litre"
+    }
+   },
+   "ligneSource": 4233
+  },
+  {
+   "code": "2201.10 10",
+   "designation": "Eaux naturelles non distillées",
+   "contexte": "Eaux, y compris les eaux minérales naturelles ou artificielles et les eaux gazéifiées, › - Eaux minérales et eaux gazéifiées",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.025,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 50,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 200,
+     "unite": "litre"
+    }
+   },
+   "ligneSource": 4241
+  },
+  {
+   "code": "2201.10 20",
+   "designation": "Eaux minérales naturelles, eaux minérales artificielles, non aromatisées ni",
+   "contexte": "Eaux, y compris les eaux minérales naturelles ou artificielles et les eaux gazéifiées, › - Eaux minérales et eaux gazéifiées",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.025,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 50,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 200,
+     "unite": "litre"
+    }
+   },
+   "ligneSource": 4246
+  },
+  {
+   "code": "2201.10 30",
+   "designation": "Eaux gazéifiées non aromatisées ni sucrées",
+   "contexte": "Eaux, y compris les eaux minérales naturelles ou artificielles et les eaux gazéifiées, › - Eaux minérales et eaux gazéifiées",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.025,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 50,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 200,
+     "unite": "litre"
+    }
+   },
+   "ligneSource": 4251
+  },
+  {
+   "code": "2201.90 00",
+   "designation": "Autres",
+   "contexte": "Eaux, y compris les eaux minérales naturelles ou artificielles et les eaux gazéifiées, › - Eaux minérales et eaux gazéifiées",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.025,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 50,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 200,
+     "unite": "litre"
+    }
+   },
+   "ligneSource": 4259
+  },
+  {
+   "code": "2202.10 10",
+   "designation": "Eaux minérales, additionnées de sucre ou d'autres édulcorants ou aromatisées",
+   "contexte": "Eaux y compris les eaux minérales et les eaux gazéifiées, additionnées de sucre ou › - Eaux, y compris les eaux minérales et les eaux gazéifiées, additionnées de sucre ou",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.025,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 50,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 200,
+     "unite": "litre"
+    }
+   },
+   "ligneSource": 4268
+  },
+  {
+   "code": "2202.10 20",
+   "designation": "Autres eaux, additionnées de sucre ou d'autres édulcorants ou aromatisées",
+   "contexte": "Eaux y compris les eaux minérales et les eaux gazéifiées, additionnées de sucre ou › - Eaux, y compris les eaux minérales et les eaux gazéifiées, additionnées de sucre ou",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.025,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 50,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 200,
+     "unite": "litre"
+    }
+   },
+   "ligneSource": 4273
+  },
+  {
+   "code": "2202.91 00",
+   "designation": "Bière sans alcool",
+   "contexte": "Eaux y compris les eaux minérales et les eaux gazéifiées, additionnées de sucre ou › - Autres",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.025,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 50,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 200,
+     "unite": "litre"
+    }
+   },
+   "ligneSource": 4279
+  },
+  {
+   "code": "2202.99 00",
+   "designation": "Autres",
+   "contexte": "Eaux y compris les eaux minérales et les eaux gazéifiées, additionnées de sucre ou › - Autres",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.025,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 50,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 200,
+     "unite": "litre"
+    }
+   },
+   "ligneSource": 4284
+  },
+  {
+   "code": "2203.00 10",
+   "designation": "D'un titre alcoolique de 4° ou moins",
+   "contexte": "Bières de malt",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.125,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 850,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.5
+   },
+   "ligneSource": 4290
+  },
+  {
+   "code": "2203.00 90",
+   "designation": "Autres",
+   "contexte": "Bières de malt",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.125,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 850,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.5
+   },
+   "ligneSource": 4295
+  },
+  {
+   "code": "2204.10 10",
+   "designation": "De champagne",
+   "contexte": "Vins de raisins frais, y compris les vins enrichis en alcool ; moûts de raisin autres › -Vins mousseux",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.5,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 800,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 2
+   },
+   "ligneSource": 4303
+  },
+  {
+   "code": "2204.10 90",
+   "designation": "Autres",
+   "contexte": "Vins de raisins frais, y compris les vins enrichis en alcool ; moûts de raisin autres › -Vins mousseux",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.5,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 800,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 2
+   },
+   "ligneSource": 4308
+  },
+  {
+   "code": "2204.21 00",
+   "designation": "En récipients d'une contenance n'excédant pas 2 l",
+   "contexte": "Vins de raisins frais, y compris les vins enrichis en alcool ; moûts de raisin autres › -Autres vins; moûts de raisins dont la fermentation a été empêchée ou arrêtée par",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.125,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 100,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.5
+   },
+   "ligneSource": 4319
+  },
+  {
+   "code": "2204.22 00",
+   "designation": "En récipients d'une contenance excédant 2 l mais n’excédant pas 10 l",
+   "contexte": "Vins de raisins frais, y compris les vins enrichis en alcool ; moûts de raisin autres › -Autres vins; moûts de raisins dont la fermentation a été empêchée ou arrêtée par",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.125,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 100,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.5
+   },
+   "ligneSource": 4324
+  },
+  {
+   "code": "2204.29 11",
+   "designation": "En récipients d'une contenance n'excédant pas 2 l",
+   "contexte": "Vins de raisins frais, y compris les vins enrichis en alcool ; moûts de raisin autres › - - Autres",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.125,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 100,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.5
+   },
+   "ligneSource": 4332
+  },
+  {
+   "code": "2204.29 19",
+   "designation": "Autres",
+   "contexte": "Vins de raisins frais, y compris les vins enrichis en alcool ; moûts de raisin autres › - - Autres",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.125,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 100,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.5
+   },
+   "ligneSource": 4337
+  },
+  {
+   "code": "2204.29 21",
+   "designation": "En récipients d'une contenance n'excédant pas 2 l",
+   "contexte": "Vins de raisins frais, y compris les vins enrichis en alcool ; moûts de raisin autres › - - -Vins de liqueur, mistelles ou moûts mutés à l'alcool, provenant exclusivement de",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.375,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 600,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 1.5
+   },
+   "ligneSource": 4343
+  },
+  {
+   "code": "2204.29 29",
+   "designation": "Autres",
+   "contexte": "Vins de raisins frais, y compris les vins enrichis en alcool ; moûts de raisin autres › - - -Vins de liqueur, mistelles ou moûts mutés à l'alcool, provenant exclusivement de",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.375,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 600,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 1.5
+   },
+   "ligneSource": 4348
+  },
+  {
+   "code": "2204.29 31",
+   "designation": "En récipients d'une contenance n'excédant pas 2 l",
+   "contexte": "Vins de raisins frais, y compris les vins enrichis en alcool ; moûts de raisin autres › - - -Vins vinés",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.125,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 100,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.5
+   },
+   "ligneSource": 4353
+  },
+  {
+   "code": "2204.29 39",
+   "designation": "Autres",
+   "contexte": "Vins de raisins frais, y compris les vins enrichis en alcool ; moûts de raisin autres › - - -Vins vinés",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.125,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 100,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.5
+   },
+   "ligneSource": 4357
+  },
+  {
+   "code": "2204.29 90",
+   "designation": "Autres",
+   "contexte": "Vins de raisins frais, y compris les vins enrichis en alcool ; moûts de raisin autres › - - -Vins vinés",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.125,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 100,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.5
+   },
+   "ligneSource": 4361
+  },
+  {
+   "code": "2204.30 00",
+   "designation": "Autres moûts de raisin",
+   "contexte": "Vins de raisins frais, y compris les vins enrichis en alcool ; moûts de raisin autres › - - -Vins vinés",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.125,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 100,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.5
+   },
+   "ligneSource": 4365
+  },
+  {
+   "code": "2205.10 10",
+   "designation": "Vermouths",
+   "contexte": "Vermouths et autres vins de raisins frais préparés à l'aide de plantes ou de › - En récipients d’une contenance n’excédant pas 2 l",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.375
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 1.5,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 600,
+     "unite": "litre"
+    }
+   },
+   "ligneSource": 4373
+  },
+  {
+   "code": "2205.10 90",
+   "designation": "Autres",
+   "contexte": "Vermouths et autres vins de raisins frais préparés à l'aide de plantes ou de › - En récipients d’une contenance n’excédant pas 2 l",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.375,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 600,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 1.5
+   },
+   "ligneSource": 4380
+  },
+  {
+   "code": "2205.90 10",
+   "designation": "Vermouths",
+   "contexte": "Vermouths et autres vins de raisins frais préparés à l'aide de plantes ou de › - Autres",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.375,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 600,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 1.5
+   },
+   "ligneSource": 4385
+  },
+  {
+   "code": "2205.90 90",
+   "designation": "Autres",
+   "contexte": "Vermouths et autres vins de raisins frais préparés à l'aide de plantes ou de › - Autres",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.375,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 600,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 1.5
+   },
+   "ligneSource": 4389
+  },
+  {
+   "code": "2206.00 11",
+   "designation": "En récipients d'une contenance n'excédant pas 2 l",
+   "contexte": "",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.25,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 100,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 1
+   },
+   "ligneSource": 4398
+  },
+  {
+   "code": "2206.00 19",
+   "designation": "Autres",
+   "contexte": "",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.25,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 100,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 1
+   },
+   "ligneSource": 4402
+  },
+  {
+   "code": "2206.00 90",
+   "designation": "Autres boissons fermentées (betsabetsa, jus fermenté de cocotier etc)",
+   "contexte": "",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.25,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 100,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 1
+   },
+   "ligneSource": 4406
+  },
+  {
+   "code": "2207.10 00",
+   "designation": "Alcool éthylique non dénaturé d'un titre alcoométrique volumique de 80p.100 vol. ou plus",
+   "contexte": "Alcool éthylique non dénaturé d'un titre alcoométrique volumique de 80p.100 vol",
+   "local": {
+    "type": "specifique",
+    "montant": 3050,
+    "unite": "litre"
+   },
+   "importe": {
+    "type": "specifique",
+    "montant": 4050,
+    "unite": "litre"
+   },
+   "ligneSource": 4412
+  },
+  {
+   "code": "2207.20 10",
+   "designation": "Alcool éthylique dénaturé d’un titre alcoométrique volumique de 90p100 vol.ou plus (ou éthanol combustible) (2)",
+   "contexte": "Alcool éthylique non dénaturé d'un titre alcoométrique volumique de 80p.100 vol › -Alcool éthylique et eaux-de-vie dénaturés de tous titres",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "exonere"
+   },
+   "ligneSource": 4417
+  },
+  {
+   "code": "2207.20 20",
+   "designation": "Alcool éthylique dénaturé d’un titre alcoométrique volumique inférieur à 90p100 vol",
+   "contexte": "Alcool éthylique non dénaturé d'un titre alcoométrique volumique de 80p.100 vol › -Alcool éthylique et eaux-de-vie dénaturés de tous titres",
+   "local": {
+    "type": "specifique",
+    "montant": 3050,
+    "unite": "litre"
+   },
+   "importe": {
+    "type": "specifique",
+    "montant": 4050,
+    "unite": "litre"
+   },
+   "ligneSource": 4420
+  },
+  {
+   "code": "2207.20 30",
+   "designation": "Eaux de vie dénaturées de tous titres",
+   "contexte": "Alcool éthylique non dénaturé d'un titre alcoométrique volumique de 80p.100 vol › -Alcool éthylique et eaux-de-vie dénaturés de tous titres",
+   "local": {
+    "type": "specifique",
+    "montant": 3050,
+    "unite": "litre"
+   },
+   "importe": {
+    "type": "specifique",
+    "montant": 4050,
+    "unite": "litre"
+   },
+   "ligneSource": 4423
+  },
+  {
+   "code": "2208.20 10",
+   "designation": "En récipients d'une contenance n'excédant pas 2l",
+   "contexte": "Alcool éthylique non dénaturé d'un titre alcoométrique volumique de moins de › -Eaux-de-vie de vin ou de marc de raisin",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.1,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 640,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 2.6
+   },
+   "ligneSource": 4444
+  },
+  {
+   "code": "2208.20 90",
+   "designation": "Autres",
+   "contexte": "Alcool éthylique non dénaturé d'un titre alcoométrique volumique de moins de › -Eaux-de-vie de vin ou de marc de raisin",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.1,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 640,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 2.6
+   },
+   "ligneSource": 4448
+  },
+  {
+   "code": "2208.30 10",
+   "designation": "En récipients d'une contenance n'excédant pas 2l",
+   "contexte": "Alcool éthylique non dénaturé d'un titre alcoométrique volumique de moins de › -Whiskies",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.1,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 1920,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 2.75
+   },
+   "ligneSource": 4454
+  },
+  {
+   "code": "2208.30 90",
+   "designation": "Autres",
+   "contexte": "Alcool éthylique non dénaturé d'un titre alcoométrique volumique de moins de › -Whiskies",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.1,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 1920,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 2.75
+   },
+   "ligneSource": 4458
+  },
+  {
+   "code": "2208.40 10",
+   "designation": "En récipients d'une contenance n'excédant pas 2l",
+   "contexte": "Alcool éthylique non dénaturé d'un titre alcoométrique volumique de moins de › - Rhum et autres eaux de vie provenant de la distillation, après fermentation, de",
+   "local": {
+    "type": "specifique",
+    "montant": 500,
+    "unite": "litre"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 2.6
+   },
+   "ligneSource": 4465
+  },
+  {
+   "code": "2208.40 90",
+   "designation": "Autres",
+   "contexte": "Alcool éthylique non dénaturé d'un titre alcoométrique volumique de moins de › - Rhum et autres eaux de vie provenant de la distillation, après fermentation, de",
+   "local": {
+    "type": "specifique",
+    "montant": 500,
+    "unite": "litre"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 2.6
+   },
+   "ligneSource": 4466
+  },
+  {
+   "code": "2208.50 10",
+   "designation": "En récipients d'une contenance n'excédant pas 2l",
+   "contexte": "Alcool éthylique non dénaturé d'un titre alcoométrique volumique de moins de › - Gin et genièvre",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.1,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 1150,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 2.6
+   },
+   "ligneSource": 4469
+  },
+  {
+   "code": "2208.50 90",
+   "designation": "Autres",
+   "contexte": "Alcool éthylique non dénaturé d'un titre alcoométrique volumique de moins de › - Gin et genièvre",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.1,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 1150,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 2.6
+   },
+   "ligneSource": 4473
+  },
+  {
+   "code": "2208.60 00",
+   "designation": "Vodka",
+   "contexte": "Alcool éthylique non dénaturé d'un titre alcoométrique volumique de moins de › - Gin et genièvre",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.1,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 1150,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 2.6
+   },
+   "ligneSource": 4477
+  },
+  {
+   "code": "2208.70 00",
+   "designation": "Liqueurs",
+   "contexte": "Alcool éthylique non dénaturé d'un titre alcoométrique volumique de moins de › - Gin et genièvre",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.1,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 1150,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 2.6
+   },
+   "ligneSource": 4481
+  },
+  {
+   "code": "2208.90 11",
+   "designation": "moins de 15°",
+   "contexte": "Alcool éthylique non dénaturé d'un titre alcoométrique volumique de moins de › - Autres",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.1,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 1050,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 2.6
+   },
+   "ligneSource": 4491
+  },
+  {
+   "code": "2208.90 12",
+   "designation": "15° et plus",
+   "contexte": "Alcool éthylique non dénaturé d'un titre alcoométrique volumique de moins de › - Autres",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.1,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 1050,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 2.6
+   },
+   "ligneSource": 4500
+  },
+  {
+   "code": "2208.90 90",
+   "designation": "Autres",
+   "contexte": "Alcool éthylique non dénaturé d'un titre alcoométrique volumique de moins de › - Autres",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.1,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 1050,
+     "unite": "litre"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 2.6
+   },
+   "ligneSource": 4504
+  },
+  {
+   "code": "2401.10 00",
+   "designation": "Tabacs non écotés",
+   "contexte": "Tabacs bruts ou non fabriqués ; déchets de tabac",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "exonere"
+   },
+   "ligneSource": 4509
+  },
+  {
+   "code": "2401.20 00",
+   "designation": "Tabacs partiellement ou totalement écotés",
+   "contexte": "Tabacs bruts ou non fabriqués ; déchets de tabac",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "exonere"
+   },
+   "ligneSource": 4510
+  },
+  {
+   "code": "2401.30 00",
+   "designation": "Déchets de tabac",
+   "contexte": "Tabacs bruts ou non fabriqués ; déchets de tabac",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "exonere"
+   },
+   "ligneSource": 4511
+  },
+  {
+   "code": "2402.10 00",
+   "designation": "Cigares (y compris ceux à bouts coupés) et cigarillos, contenant du tabac",
+   "contexte": "Cigares (y compris ceux à bouts coupés), cigarillos et cigarettes, en tabac ou en",
+   "local": {
+    "type": "specifique",
+    "montant": 1440,
+    "unite": "paquet de 20"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 3.25
+   },
+   "ligneSource": 4516
+  },
+  {
+   "code": "2402.20 00",
+   "designation": "Cigarettes contenant du tabac",
+   "contexte": "Cigares (y compris ceux à bouts coupés), cigarillos et cigarettes, en tabac ou en",
+   "local": {
+    "type": "specifique",
+    "montant": 1440,
+    "unite": "paquet de 20"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 3.25
+   },
+   "ligneSource": 4518
+  },
+  {
+   "code": "2402.90 00",
+   "designation": "Autres",
+   "contexte": "Cigares (y compris ceux à bouts coupés), cigarillos et cigarettes, en tabac ou en",
+   "local": {
+    "type": "specifique",
+    "montant": 1440,
+    "unite": "paquet de 20"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 3.25
+   },
+   "ligneSource": 4519
+  },
+  {
+   "code": "2403.11 00",
+   "designation": "Tabac pour pipe à eau visé à la Note 1 de sous-positions du présent Chapitre",
+   "contexte": "Autres tabacs et succédanés de tabac, fabriqués; tabacs \"homogénéisés\" ou",
+   "local": {
+    "type": "specifique",
+    "montant": 25000,
+    "unite": "kg"
+   },
+   "importe": {
+    "type": "specifique",
+    "montant": 25000,
+    "unite": "kg"
+   },
+   "ligneSource": 4524
+  },
+  {
+   "code": "2403.19 00",
+   "designation": "Autres",
+   "contexte": "Autres tabacs et succédanés de tabac, fabriqués; tabacs \"homogénéisés\" ou",
+   "local": {
+    "type": "specifique",
+    "montant": 25000,
+    "unite": "kg"
+   },
+   "importe": {
+    "type": "specifique",
+    "montant": 25000,
+    "unite": "kg"
+   },
+   "ligneSource": 4525
+  },
+  {
+   "code": "2403.91 00",
+   "designation": "Tabacs \"homogénéisés\" ou reconstitués\"",
+   "contexte": "Autres tabacs et succédanés de tabac, fabriqués; tabacs \"homogénéisés\" ou › -Autres",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "exonere"
+   },
+   "ligneSource": 4528
+  },
+  {
+   "code": "2403.99 10",
+   "designation": "Tabac à mâcher :",
+   "contexte": "Autres tabacs et succédanés de tabac, fabriqués; tabacs \"homogénéisés\" ou › - - Autres",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.5
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.5
+   },
+   "ligneSource": 4530
+  },
+  {
+   "code": "2403.99 20",
+   "designation": "Carottes, poudre à priser (poudre pure)",
+   "contexte": "Autres tabacs et succédanés de tabac, fabriqués; tabacs \"homogénéisés\" ou › - - Autres",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.7
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.7
+   },
+   "ligneSource": 4531
+  },
+  {
+   "code": "2403.99 90",
+   "designation": "Autres",
+   "contexte": "Autres tabacs et succédanés de tabac, fabriqués; tabacs \"homogénéisés\" ou › - - Autres",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.5
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.7
+   },
+   "ligneSource": 4532
+  },
+  {
+   "code": "2404.11 00",
+   "designation": ".- Contenant du tabac ou du tabac reconstitué",
+   "contexte": "Produits contenant du tabac, du tabac reconstitué, de la nicotine ou des",
+   "local": {
+    "type": "specifique",
+    "montant": 25000,
+    "unite": "kg"
+   },
+   "importe": {
+    "type": "specifique",
+    "montant": 25000,
+    "unite": "kg"
+   },
+   "ligneSource": 4539
+  },
+  {
+   "code": "2404.12 00",
+   "designation": "Autres, contenant de la nicotine",
+   "contexte": "Produits contenant du tabac, du tabac reconstitué, de la nicotine ou des",
+   "local": {
+    "type": "specifique",
+    "montant": 25000,
+    "unite": "kg"
+   },
+   "importe": {
+    "type": "specifique",
+    "montant": 25000,
+    "unite": "kg"
+   },
+   "ligneSource": 4540
+  },
+  {
+   "code": "2404.19 00",
+   "designation": "Autres",
+   "contexte": "Produits contenant du tabac, du tabac reconstitué, de la nicotine ou des",
+   "local": {
+    "type": "specifique",
+    "montant": 25000,
+    "unite": "kg"
+   },
+   "importe": {
+    "type": "specifique",
+    "montant": 25000,
+    "unite": "kg"
+   },
+   "ligneSource": 4541
+  },
+  {
+   "code": "2404.91 00",
+   "designation": "Pour une application orale",
+   "contexte": "Produits contenant du tabac, du tabac reconstitué, de la nicotine ou des › - Autres",
+   "local": {
+    "type": "specifique",
+    "montant": 25000,
+    "unite": "kg"
+   },
+   "importe": {
+    "type": "specifique",
+    "montant": 25000,
+    "unite": "kg"
+   },
+   "ligneSource": 4543
+  },
+  {
+   "code": "2404.92 00",
+   "designation": "Pour une application percutanée",
+   "contexte": "Produits contenant du tabac, du tabac reconstitué, de la nicotine ou des › - Autres",
+   "local": {
+    "type": "specifique",
+    "montant": 25000,
+    "unite": "kg"
+   },
+   "importe": {
+    "type": "specifique",
+    "montant": 25000,
+    "unite": "kg"
+   },
+   "ligneSource": 4544
+  },
+  {
+   "code": "2404.99 00",
+   "designation": "Autres",
+   "contexte": "Produits contenant du tabac, du tabac reconstitué, de la nicotine ou des › - Autres",
+   "local": {
+    "type": "specifique",
+    "montant": 25000,
+    "unite": "kg"
+   },
+   "importe": {
+    "type": "specifique",
+    "montant": 25000,
+    "unite": "kg"
+   },
+   "ligneSource": 4545
+  },
+  {
+   "code": "2501.00 11",
+   "designation": "Brut",
+   "contexte": "Sel (y compris le sel préparé pour la table et le sel dénaturé) et chlorure de",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.5
+   },
+   "ligneSource": 4551
+  },
+  {
+   "code": "2501.00 12",
+   "designation": "Brut dénaturé",
+   "contexte": "Sel (y compris le sel préparé pour la table et le sel dénaturé) et chlorure de",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.5
+   },
+   "ligneSource": 4552
+  },
+  {
+   "code": "2501.00 19",
+   "designation": "Autres",
+   "contexte": "Sel (y compris le sel préparé pour la table et le sel dénaturé) et chlorure de",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.5
+   },
+   "ligneSource": 4553
+  },
+  {
+   "code": "2501.00 20",
+   "designation": "Chlorure de sodium pur, même en solution aqueuse ou additionné d'agents",
+   "contexte": "Sel (y compris le sel préparé pour la table et le sel dénaturé) et chlorure de",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.5
+   },
+   "ligneSource": 4554
+  },
+  {
+   "code": "3923.10 00",
+   "designation": "Boîtes, caisses, casiers et articles similaires",
+   "contexte": "Articles de transport ou d'emballage, en matières plastiques ; bouchons,",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.025,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 5,
+     "unite": "pièce"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4565
+  },
+  {
+   "code": "3923.21 00",
+   "designation": "En polymères de l'éthylène",
+   "contexte": "Articles de transport ou d'emballage, en matières plastiques ; bouchons, › - Sacs, sachets, pochettes et cornets",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.025,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 5,
+     "unite": "pièce"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4570
+  },
+  {
+   "code": "3923.29 10",
+   "designation": "Sacs et sachets en cellulose régénérée",
+   "contexte": "Articles de transport ou d'emballage, en matières plastiques ; bouchons, › - - En autres matières plastiques",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.025,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 5,
+     "unite": "pièce"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4575
+  },
+  {
+   "code": "3923.29 90",
+   "designation": "Autres",
+   "contexte": "Articles de transport ou d'emballage, en matières plastiques ; bouchons, › - - En autres matières plastiques",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.025,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 5,
+     "unite": "pièce"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4579
+  },
+  {
+   "code": "3923.30 10",
+   "designation": "Biberons",
+   "contexte": "Articles de transport ou d'emballage, en matières plastiques ; bouchons, › - - Bonbonnes, bouteilles, flacons et articles similaires",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "exonere"
+   },
+   "ligneSource": 4584
+  },
+  {
+   "code": "3923.30 90",
+   "designation": "Autres",
+   "contexte": "Articles de transport ou d'emballage, en matières plastiques ; bouchons, › - - Bonbonnes, bouteilles, flacons et articles similaires",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "exonere"
+   },
+   "ligneSource": 4585
+  },
+  {
+   "code": "3923.40 00",
+   "designation": "Bobines, fusettes, canettes et supports similaires",
+   "contexte": "Articles de transport ou d'emballage, en matières plastiques ; bouchons, › - - Bonbonnes, bouteilles, flacons et articles similaires",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.025,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 5,
+     "unite": "pièce"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4586
+  },
+  {
+   "code": "3923.50 00",
+   "designation": "Bouchons, couvercles, capsules et autres dispositifs de fermeture",
+   "contexte": "Articles de transport ou d'emballage, en matières plastiques ; bouchons, › - - Bonbonnes, bouteilles, flacons et articles similaires",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.025,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 5,
+     "unite": "pièce"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4590
+  },
+  {
+   "code": "3923.90 00",
+   "designation": "Autres",
+   "contexte": "Articles de transport ou d'emballage, en matières plastiques ; bouchons, › - - Bonbonnes, bouteilles, flacons et articles similaires",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.025,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 5,
+     "unite": "pièce"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4594
+  },
+  {
+   "code": "3924.10 00",
+   "designation": "Vaisselle et autres articles pour le service de la table ou de la cuisine",
+   "contexte": "Vaisselle, autres articles de ménage ou d'économie domestique et articles",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.05,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 10,
+     "unite": "pièce"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4601
+  },
+  {
+   "code": "3924.90 10",
+   "designation": "Objets pour l'hygiène ou la toilette",
+   "contexte": "Vaisselle, autres articles de ménage ou d'économie domestique et articles › - Autres",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.025,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 5,
+     "unite": "pièce"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4606
+  },
+  {
+   "code": "3924.90 90",
+   "designation": "Autres",
+   "contexte": "Vaisselle, autres articles de ménage ou d'économie domestique et articles › - Autres",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.025,
+    "valeurMinimale": {
+     "type": "specifique",
+     "montant": 5,
+     "unite": "pièce"
+    }
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4610
+  },
+  {
+   "code": "71.01",
+   "designation": "Perles fines ou de culture, même travaillées ou assorties mais non enfilées, ni montées ni serties ; perles fines ou de culture, enfilées temporairement pour la facilité du transport",
+   "contexte": "",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.2
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.2
+   },
+   "ligneSource": 4619
+  },
+  {
+   "code": "71.02",
+   "designation": "Diamants, même travaillés, mais non montés ni sertis",
+   "contexte": "",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.2
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.2
+   },
+   "ligneSource": 4623
+  },
+  {
+   "code": "71.03",
+   "designation": "Pierres gemmes (précieuses ou fines) autres que les diamants, même travaillées ou assorties mais non enfilées, ni montées, ni serties ; pierres gemmes (précieuses ou fines) autres que les diamants, non assorties, enfilées temporairement pour la facilité du transport",
+   "contexte": "",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.2
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.2
+   },
+   "ligneSource": 4625
+  },
+  {
+   "code": "8703.10 00",
+   "designation": "Véhicules spécialement conçus pour se déplacer sur la neige ; véhicules spéciaux pour le transport de personnes sur les terrains de golf et véhicules similaires",
+   "contexte": "Voitures de tourisme et autres véhicules automobiles principalement conçus pour",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.05
+   },
+   "ligneSource": 4635
+  },
+  {
+   "code": "8703.21 20",
+   "designation": "Quad",
+   "contexte": "Voitures de tourisme et autres véhicules automobiles principalement conçus pour › - - D'une cylindrée n'excédant pas 1.000 cm3",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.05
+   },
+   "ligneSource": 4639
+  },
+  {
+   "code": "8703.21 91",
+   "designation": "Neufs",
+   "contexte": "Voitures de tourisme et autres véhicules automobiles principalement conçus pour › - - - Autres",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.05
+   },
+   "ligneSource": 4641
+  },
+  {
+   "code": "8703.21 92",
+   "designation": "Usagés",
+   "contexte": "Voitures de tourisme et autres véhicules automobiles principalement conçus pour › - - - Autres",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4642
+  },
+  {
+   "code": "8703.22 91",
+   "designation": "Neufs",
+   "contexte": "Voitures de tourisme et autres véhicules automobiles principalement conçus pour › - - D’une cylindrée excédant 1.000 cm3 mais n’excédant pas 1.500 cm3",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.05
+   },
+   "ligneSource": 4647
+  },
+  {
+   "code": "8703.22 92",
+   "designation": "Usagés",
+   "contexte": "Voitures de tourisme et autres véhicules automobiles principalement conçus pour › - - D’une cylindrée excédant 1.000 cm3 mais n’excédant pas 1.500 cm3",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4648
+  },
+  {
+   "code": "8703.23 91",
+   "designation": "Neufs",
+   "contexte": "Voitures de tourisme et autres véhicules automobiles principalement conçus pour › - - D’une cylindrée excédant 1.500 cm3 mais n’excédant pas 3.000 cm3",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.05
+   },
+   "ligneSource": 4653
+  },
+  {
+   "code": "8703.23 92",
+   "designation": "Usagés",
+   "contexte": "Voitures de tourisme et autres véhicules automobiles principalement conçus pour › - - D’une cylindrée excédant 1.500 cm3 mais n’excédant pas 3.000 cm3",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4654
+  },
+  {
+   "code": "8703.24 91",
+   "designation": "Neufs",
+   "contexte": "Voitures de tourisme et autres véhicules automobiles principalement conçus pour › - - D'une cylindrée excédant 3.000 cm3",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.05
+   },
+   "ligneSource": 4659
+  },
+  {
+   "code": "8703.24 92",
+   "designation": "Usagés",
+   "contexte": "Voitures de tourisme et autres véhicules automobiles principalement conçus pour › - - D'une cylindrée excédant 3.000 cm3",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4660
+  },
+  {
+   "code": "8703.31 91",
+   "designation": "Neufs",
+   "contexte": "Voitures de tourisme et autres véhicules automobiles principalement conçus pour › - - D'une cylindrée n'excédant pas 1.500 cm3",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.05
+   },
+   "ligneSource": 4667
+  },
+  {
+   "code": "8703.31 92",
+   "designation": "Usagés",
+   "contexte": "Voitures de tourisme et autres véhicules automobiles principalement conçus pour › - - D'une cylindrée n'excédant pas 1.500 cm3",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4668
+  },
+  {
+   "code": "8703.32 91",
+   "designation": "Neufs",
+   "contexte": "Voitures de tourisme et autres véhicules automobiles principalement conçus pour › - - D'une cylindrée excédant 1.500 cm3 mais n'excédant pas 2.500 cm3",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.05
+   },
+   "ligneSource": 4672
+  },
+  {
+   "code": "8703.32 92",
+   "designation": "Usagés",
+   "contexte": "Voitures de tourisme et autres véhicules automobiles principalement conçus pour › - - D'une cylindrée excédant 1.500 cm3 mais n'excédant pas 2.500 cm3",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4673
+  },
+  {
+   "code": "8703.33 91",
+   "designation": "Neufs",
+   "contexte": "Voitures de tourisme et autres véhicules automobiles principalement conçus pour › - - D'une cylindrée excédant 2.500 cm3",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.05
+   },
+   "ligneSource": 4682
+  },
+  {
+   "code": "8703.33 92",
+   "designation": "Usagés",
+   "contexte": "Voitures de tourisme et autres véhicules automobiles principalement conçus pour › - - D'une cylindrée excédant 2.500 cm3",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4683
+  },
+  {
+   "code": "8703.90 10",
+   "designation": "Neufs",
+   "contexte": "Voitures de tourisme et autres véhicules automobiles principalement conçus pour › - Autres",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.05
+   },
+   "ligneSource": 4687
+  },
+  {
+   "code": "8703.90 20",
+   "designation": "Usagés",
+   "contexte": "Voitures de tourisme et autres véhicules automobiles principalement conçus pour › - Autres",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4688
+  },
+  {
+   "code": "8711.10 10",
+   "designation": "Neufs",
+   "contexte": "Motocycles (y compris les cyclomoteurs) et cycles équipés d'un moteur auxiliaire, › - A moteur à piston alternatif, d'une cylindrée et n'excédant pas 50 cm3",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.05
+   },
+   "ligneSource": 4693
+  },
+  {
+   "code": "8711.10 20",
+   "designation": "Usagés",
+   "contexte": "Motocycles (y compris les cyclomoteurs) et cycles équipés d'un moteur auxiliaire, › - A moteur à piston alternatif, d'une cylindrée et n'excédant pas 50 cm3",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4694
+  },
+  {
+   "code": "8711.20 10",
+   "designation": "Neufs",
+   "contexte": "Motocycles (y compris les cyclomoteurs) et cycles équipés d'un moteur auxiliaire, › - A moteur à piston alternatif, d'une cylindrée excédant 50 cm3 mais n'excédant pas",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.05
+   },
+   "ligneSource": 4699
+  },
+  {
+   "code": "8711.20 20",
+   "designation": "usagés",
+   "contexte": "Motocycles (y compris les cyclomoteurs) et cycles équipés d'un moteur auxiliaire, › - A moteur à piston alternatif, d'une cylindrée excédant 50 cm3 mais n'excédant pas",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4700
+  },
+  {
+   "code": "8711.30 10",
+   "designation": "Neufs",
+   "contexte": "Motocycles (y compris les cyclomoteurs) et cycles équipés d'un moteur auxiliaire, › - A moteur à piston alternatif, d'une cylindrée excédant 250 cm3 mais n'excédant pas",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.05
+   },
+   "ligneSource": 4705
+  },
+  {
+   "code": "8711.30 20",
+   "designation": "usagés",
+   "contexte": "Motocycles (y compris les cyclomoteurs) et cycles équipés d'un moteur auxiliaire, › - A moteur à piston alternatif, d'une cylindrée excédant 250 cm3 mais n'excédant pas",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4706
+  },
+  {
+   "code": "8711.40 10",
+   "designation": "Neufs",
+   "contexte": "Motocycles (y compris les cyclomoteurs) et cycles équipés d'un moteur auxiliaire, › - A moteur à piston alternatif, d'une cylindrée excédant 500 cm3 mais n'excédant pas",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.05
+   },
+   "ligneSource": 4711
+  },
+  {
+   "code": "8711.40 20",
+   "designation": "Usagés",
+   "contexte": "Motocycles (y compris les cyclomoteurs) et cycles équipés d'un moteur auxiliaire, › - A moteur à piston alternatif, d'une cylindrée excédant 500 cm3 mais n'excédant pas",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4712
+  },
+  {
+   "code": "8711.50 10",
+   "designation": "Neufs",
+   "contexte": "Motocycles (y compris les cyclomoteurs) et cycles équipés d'un moteur auxiliaire, › - A moteur à piston alternatif, d'une cylindrée excédant 800 cm3",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.05
+   },
+   "ligneSource": 4716
+  },
+  {
+   "code": "8711.50 20",
+   "designation": "Usagés",
+   "contexte": "Motocycles (y compris les cyclomoteurs) et cycles équipés d'un moteur auxiliaire, › - A moteur à piston alternatif, d'une cylindrée excédant 800 cm3",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4717
+  },
+  {
+   "code": "8711.90 10",
+   "designation": "Neufs",
+   "contexte": "Motocycles (y compris les cyclomoteurs) et cycles équipés d'un moteur auxiliaire, › - Autres",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.05
+   },
+   "ligneSource": 4721
+  },
+  {
+   "code": "8711.90 20",
+   "designation": "usagés",
+   "contexte": "Motocycles (y compris les cyclomoteurs) et cycles équipés d'un moteur auxiliaire, › - Autres",
+   "local": {
+    "type": "exonere"
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.1
+   },
+   "ligneSource": 4722
+  },
+  {
+   "code": "service",
+   "designation": "Communication nationale et internationale par téléphonie et réseaux mobiles incluant Internet, trafic voix, trafic sms ou mms et transfert de données",
+   "contexte": "",
+   "local": {
+    "type": "advalorem",
+    "taux": 0.08
+   },
+   "importe": {
+    "type": "advalorem",
+    "taux": 0.08
+   },
+   "ligneSource": 4725
+  }
+ ]
+}
