@@ -3,7 +3,9 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { calculIRSA, calculIRSASpecial } from '../src/calc/irsa.js';
 import { calculIS } from '../src/calc/is.js';
-import { calculIR, calculIRM, calculIPVI } from '../src/calc/ir.js';
+import { calculIR } from '../src/calc/ir.js';
+import { calculIRM } from '../src/calc/irm.js';
+import { calculIPVI } from '../src/calc/ipvi.js';
 import { calculIRCM } from '../src/calc/ircm.js';
 import { calculTVA } from '../src/calc/tva.js';
 import { calculPenalites } from '../src/calc/penalites.js';
@@ -61,9 +63,18 @@ test('IR : minimum 1 000 000 + 1 % du CA pour une entreprise en perte', () => {
   assert.equal(r.impot, 4000000);
   assert.ok(r.minimumApplique);
 });
-test('IRM 8 % et IPVI 20 %', () => {
+test('IRM 8 % du montant du marché', () => {
   assert.equal(calculIRM(10000000, b).impot, 800000);
-  assert.equal(calculIPVI(30000000, b).impot, 6000000);
+});
+test('IPVI : plus-value = 25 % du prix de cession (prix de revient forfaitaire de 75 %), taxée à 20 %', () => {
+  const r = calculIPVI({ prixCession: 30000000 }, b);
+  assert.equal(r.plusValue, 7500000);
+  assert.equal(r.impot, 1500000);
+});
+test('IPVI : prix de cession relevé à la valeur administrative', () => {
+  const r = calculIPVI({ prixCession: 20000000, valeurAdministrative: 40000000 }, b);
+  assert.ok(r.valeurAdministrativeAppliquee);
+  assert.equal(r.impot, 2000000);
 });
 
 test('IRCM : abattement de 50 % sur les dividendes', () => {

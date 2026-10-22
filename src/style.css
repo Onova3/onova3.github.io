@@ -73,6 +73,7 @@ select{font:500 15px var(--body)}
 .check input{width:18px;height:18px;margin-top:2px;accent-color:var(--accent);flex:none}
 .seg{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:8px;overflow:hidden}
 .seg button{border:0;background:var(--bg);color:var(--muted);font:600 14px var(--body);padding:10px;cursor:pointer}
+.seg3{grid-template-columns:repeat(3,1fr)}
 .seg button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
 .step{display:flex;align-items:center;gap:8px}
 .step button{width:44px;height:44px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;font:600 20px var(--mono);cursor:pointer}

@@ -16,9 +16,3 @@ export function calculIR({ benefice, caHT, categorie = 'autres', personnesACharg
   return { base, calcule, reduction, minimum, minimumApplique,
     impot: arrondiInf(Math.max(calcule - reduction, minimum), b.penalites.arrondiImpot) };
 }
-
-/** IRM : 8 % du montant du marché (CDI 01.01.51). */
-export const calculIRM = (montant, b) => ({ taux: b.irm.taux, impot: arrondiInf(montant * b.irm.taux, b.penalites.arrondiImpot) });
-
-/** IPVI : 20 % de la plus-value imposable (CDI 01.05.07). */
-export const calculIPVI = (plusValue, b) => ({ taux: b.ipvi.taux, impot: arrondiInf(Math.max(0, plusValue) * b.ipvi.taux, b.penalites.arrondiImpot) });

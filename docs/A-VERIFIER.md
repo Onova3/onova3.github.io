@@ -36,3 +36,17 @@ Points que le texte des codes ne tranche pas clairement. L'application suit l'in
 | 18 | Minimum des transporteurs | CDI 01.01.14 I-A : fixé par texte réglementaire | Non proposé dans le calculateur |
 | 19 | Régimes particuliers (non-résidents 10 %, associés-gérants de SARL, éducation et santé 10 %, exportateurs 3 %, réduction pour investissement) | CDI 01.01.14 I-C, II, III, V, VI | Mentionnés, non calculés |
 | 20 | Pourcentages et montants cités dans les textes explicatifs (répartition de l'IS, plafonds 1 % et 5 %, abattement 10 000 000 Ar, seuils comptables 100 et 200 M Ar) | Articles cités à côté de chaque texte | Écrits dans les textes des fiches et non dans le barème, car ils ne servent à aucun calcul |
+
+## IRM, IRCM, IPVI, IDH (étape 3)
+
+| # | Point | Texte | Choix actuel de l'application |
+|---|---|---|---|
+| 21 | Base de l'IRM : montant hors taxe ou toutes taxes | CDI 01.01.50 : « le montant du marché », sans précision | Le montant saisi est utilisé tel quel |
+| 22 | Plus-values de cession mobilière (IRCM) : taux et calcul | CDI 01.04.02 6° (champ élargi par la LFR 2026) ; 01.04.04 ne prévoit d'abattement que pour les dividendes | Mentionnées dans la fiche ; pas de choix « plus-values » dans le calculateur (seuls intérêts, dividendes, ristournes sont demandés) |
+| 23 | Taux de 10 % : seulement pour les distributions annuelles décidées par l'assemblée générale | CDI 01.04.04 | Appliqué à tout montant choisi comme « ristournes de coopérative » |
+| 24 | Conventions fiscales (taux IRCM réduits pour les non-résidents) | CDI 01.04.04 : « sous réserve des Conventions » | Non prises en compte (prévues en phase 6) |
+| 25 | IPVI : valeur administrative minimale | CDI 01.05.04 : fixée par texte réglementaire, absent des codes | Saisie libre par l'utilisateur |
+| 26 | IPVI : arrondi de la plus-value | Aucun arrondi de base prévu au Titre V | Seul l'impôt est arrondi à la centaine (CPF VII-32) |
+| 27 | IPVI : ancien calcul de la phase 0 | La phase 0 taxait une plus-value saisie librement ; l'art. 01.05.04 impose un prix de revient forfaitaire de 75 % | Corrigé : plus-value = 25 % du prix retenu |
+| 28 | Redevance IDH : barème progressif par tranches ou taux unique selon la production | CDI 01.01.27 : « pour la tranche de production supérieure à… », mais la 1re ligne dit « pour une production inférieure ou égale à » | Barème seulement affiché, pas de calcul |
+| 29 | IRM : abonnements, location d'immeubles et marchés à tranches restent à l'IRM même sous le seuil des bons de commande | CDI 01.01.46 | Signalé dans la fiche ; pas de seuil chiffré (le montant des « marchés de faible montant » est dans le Code des marchés publics) |

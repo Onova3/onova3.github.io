@@ -79,7 +79,19 @@
     "articles": { "champ": "CDI 01.01.02", "regime": "CDI 01.01.13 I", "taux": "CDI 01.01.14 I-A", "minimum": "CDI 01.01.14 I-A", "personnesACharge": "CDI 01.01.16" },
     "source": "LFI 2026"
   },
-  "irm": { "taux": 0.08, "articles": { "taux": "CDI 01.01.51" }, "source": "LFI 2026" },
+  "irm": { "taux": 0.08, "articles": { "champ": "CDI 01.01.45, 01.01.48", "base": "CDI 01.01.50", "taux": "CDI 01.01.51", "exigibilite": "CDI 01.01.49" }, "source": "LFI 2026" },
+  "idh": {
+    "redevance": {
+      "petroleBrut": { "unite": "barils par jour", "tranches": [
+        { "jusqua": 25000, "taux": 0.08 }, { "jusqua": 50000, "taux": 0.10 }, { "jusqua": 75000, "taux": 0.12 },
+        { "jusqua": 100000, "taux": 0.15 }, { "jusqua": 130000, "taux": 0.17 }, { "jusqua": null, "taux": 0.20 } ] },
+      "gazNaturel": { "unite": "mètres cubes standard par jour", "tranches": [
+        { "jusqua": 12000000, "taux": 0.05 }, { "jusqua": 24000000, "taux": 0.075 }, { "jusqua": null, "taux": 0.10 } ] }
+    },
+    "reportDeficitExploitation": 7,
+    "articles": { "champ": "CDI 01.01.26", "redevance": "CDI 01.01.27", "idh": "CDI 01.01.31, 01.01.39", "deficit": "CDI 01.01.40" },
+    "source": "LFI 2026"
+  },
   "ircm": {
     "taux": 0.20,
     "abattementDividendes": 0.5,
@@ -88,7 +100,8 @@
     "articles": { "calcul": "CDI 01.04.04", "champ": "CDI 01.04.02 (plus-values mobilières : LFR 2026)" },
     "source": "LFI 2026 ; champ modifié LFR 2026"
   },
-  "ipvi": { "taux": 0.20, "articles": { "taux": "CDI 01.05.07" }, "source": "LFI 2026" },
+  "ipvi": { "taux": 0.20, "prixRevientForfaitaire": 0.75,
+    "articles": { "champ": "CDI 01.05.02", "plusValue": "CDI 01.05.04", "taux": "CDI 01.05.07" }, "source": "LFI 2026" },
   "tva": {
     "tauxNormal": 0.20,
     "tauxReduit": 0.05,

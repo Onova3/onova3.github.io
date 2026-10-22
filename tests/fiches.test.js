@@ -4,6 +4,7 @@ import { readFileSync } from 'node:fs';
 import { calculIRSA, calculIRSASpecial } from '../src/calc/irsa.js';
 import { calculIS, acompteDebutActivite } from '../src/calc/is.js';
 import { calculIR } from '../src/calc/ir.js';
+import { calculIRCM as calculIRCMf } from '../src/calc/ircm.js';
 import { lireRoute, lien } from '../src/routes.js';
 import { FICHES } from '../src/fiches/index.js';
 import { etat, fmt, tr } from '../src/ui.js';
@@ -87,6 +88,33 @@ test('IR : minimum selon la catégorie d’activité', () => {
 });
 test('IR exemple de la fiche : minimum de 7 000 000 Ar appliqué', () => {
   assert.equal(FICHES.ir.impotExemple(b), 7000000);
+});
+
+// --- IRM, IRCM, IPVI : exemples des fiches ---
+test('IRM exemple de la fiche : 50 M Ar de marché = 4 000 000 Ar', () => {
+  assert.equal(FICHES.irm.impotExemple(b), 4000000);
+});
+test('IRCM : ristournes de coopérative à 10 %, base au millier inférieur', () => {
+  // 1 234 567 → 1 234 000 × 10 % = 123 400
+  assert.equal(calculIRCMf({ montant: 1234567, nature: 'cooperative' }, b).impot, 123400);
+});
+test('IRCM exemple de la fiche : 2 M Ar de dividendes = 200 000 Ar', () => {
+  assert.equal(FICHES.ircm.impotExemple(b), 200000);
+});
+test('IPVI exemple de la fiche : terrain vendu 80 M Ar = 4 000 000 Ar', () => {
+  // plus-value 25 % × 80 000 000 = 20 000 000 ; 20 %
+  assert.equal(FICHES.ipvi.impotExemple(b), 4000000);
+});
+test('IDH : fiche sans calculateur, redevance lue dans le barème', () => {
+  assert.equal(FICHES.idh.monterCalculateur, undefined);
+  etat.lang = 'fr';
+  assert.match(FICHES.idh.variables(b).petrole, /^8 % jusqu'à 25 000, .* 20 % au-delà \(barils par jour\)$/);
+});
+test('Toutes les fiches de la phase 1 sont présentes et ont leurs obligations', () => {
+  for (const id of ['ir', 'idh', 'irm', 'is', 'irsa', 'ircm', 'ipvi']) {
+    assert.ok(FICHES[id], id);
+    for (const cle of ['qui', 'ou', 'document', 'quand']) assert.ok(obligations[id]?.[cle]?.length, `${id}.${cle}`);
+  }
 });
 
 // --- Navigation ---

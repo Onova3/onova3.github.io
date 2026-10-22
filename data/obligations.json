@@ -317,5 +317,227 @@
         }
       }
     ]
+  },
+  "irm": {
+    "qui": [
+      {
+        "article": "CPF I-15 I",
+        "texte": {
+          "fr": "Marché payé par un comptable public : le comptable retient l'impôt à la source et le reverse. Le titulaire immatriculé déclare ensuite l'impôt retenu, avec la pièce qui prouve la retenue.",
+          "en": "Contract paid by a public accountant: the accountant withholds the tax at source and pays it over. The registered contractor then declares the tax withheld, with proof of withholding.",
+          "mg": "Tsena aloan'ny mpitam-bolam-panjakana: ny mpitam-bola no manala ny hetra ary mandoa azy. Ny tompon'ny tsena voasoratra avy eo no manambara ny hetra nesorina, miaraka amin'ny porofon'ny fanalana."
+        }
+      },
+      {
+        "article": "CPF I-16 I, III",
+        "texte": {
+          "fr": "Marché payé directement par un bailleur de fonds, ou par des subventions et dons : le titulaire déclare et paie lui-même l'impôt.",
+          "en": "Contract paid directly by a donor, or through grants and gifts: the contractor files and pays the tax.",
+          "mg": "Tsena aloan'ny mpamatsy vola mivantana, na amin'ny fanampiana sy fanomezana: ny tompon'ny tsena mihitsy no manambara sy mandoa ny hetra."
+        }
+      },
+      {
+        "article": "CPF I-15 II, III, IV",
+        "texte": {
+          "fr": "Titulaire non résident : il désigne un représentant accrédité à Madagascar. Sous-traitants : le titulaire retient l'impôt. Consortium : le chef de file retient, chaque membre déclare sa part.",
+          "en": "Non-resident contractor: appoints an accredited representative in Madagascar. Subcontractors: the contractor withholds the tax. Consortium: the lead member withholds, each member declares its share.",
+          "mg": "Tompon'ny tsena tsy mponina: manendry solontena eto Madagasikara. Mpanao asa an-tsokosoko: ny tompon'ny tsena no manala ny hetra. Fiaraha-miasa: ny mpitarika no manala, ny mpikambana tsirairay no manambara ny anjarany."
+        }
+      }
+    ],
+    "ou": [
+      {
+        "article": "CPF I-15 I, I-16 I",
+        "texte": {
+          "fr": "Retenue à la source : reversée au receveur de la Direction des grandes entreprises. Déclaration du titulaire, ou paiement direct : auprès de l'unité opérationnelle qui gère son dossier fiscal.",
+          "en": "Withholding at source: paid to the receiver of the Large Taxpayers Directorate. Contractor's return, or direct payment: at the operational unit managing the tax file.",
+          "mg": "Hetra nesorina avy hatrany: aloa any amin'ny mpandray vola ao amin'ny Foibe misahana ny orinasa lehibe. Fanambaran'ny tompon'ny tsena, na fandoavana mivantana: any amin'ny sampana mitantana ny antontan-taratasiny."
+        }
+      }
+    ],
+    "document": [
+      {
+        "article": "CPF I-15 V",
+        "texte": {
+          "fr": "L'organisme qui retient l'impôt remet une attestation de retenue (modèle de l'Administration), à joindre à la déclaration du titulaire.",
+          "en": "The body withholding the tax issues a withholding certificate (Administration template), to be attached to the contractor's return.",
+          "mg": "Ny sampana manala ny hetra dia manome taratasy fanamarinana ny fanalana (modely avy amin'ny Fitondrana), ampiarahina amin'ny fanambaran'ny tompon'ny tsena."
+        }
+      },
+      {
+        "article": "CPF I-16 bis",
+        "texte": {
+          "fr": "L'entreprise garde ses obligations comptables et déclaratives (IR ou IS selon son régime). Si elle n'est pas assujettie à la TVA, elle joint la liste de ses fournisseurs et de ses achats.",
+          "en": "The business keeps its accounting and filing obligations (IR or synthetic tax depending on its regime). If not registered for VAT, it attaches the list of its suppliers and purchases.",
+          "mg": "Mijanona ny adidy ara-kaonty sy fanambarana (IR na hetra tsotra araka ny rafitra). Raha tsy iharan'ny TVA, ampiarahina ny lisitry ny mpamatsy sy ny fividianana."
+        }
+      }
+    ],
+    "quand": [
+      {
+        "article": "CPF I-15, I-16",
+        "delai": "15 du mois suivant",
+        "texte": {
+          "fr": "Au plus tard le 15 du mois qui suit la retenue (pour le comptable) ou l'encaissement du prix, des avances ou des acomptes (pour le titulaire).",
+          "en": "By the 15th of the month after the withholding (for the accountant) or after receiving the price, advances or instalments (for the contractor).",
+          "mg": "Farany ny faha-15 amin'ny volana manaraka ny fanalana (ho an'ny mpitam-bola) na ny fandraisana ny vidiny, ny vola mialoha (ho an'ny tompon'ny tsena)."
+        }
+      }
+    ]
+  },
+  "ircm": {
+    "qui": [
+      {
+        "article": "CDI 01.04.08",
+        "texte": {
+          "fr": "C'est l'organisme qui paie les revenus (banque, société, coopérative) qui calcule, retient, déclare et verse l'impôt. Celui qui reçoit les revenus n'a rien à faire.",
+          "en": "The body paying the income (bank, company, cooperative) calculates, withholds, declares and pays the tax. The recipient has nothing to do.",
+          "mg": "Ny sampana mandoa ny vola (banky, orinasa, koperativa) no manao ny kajy, manala, manambara ary mandoa ny hetra. Tsy misy atao ny mandray ny vola."
+        }
+      }
+    ],
+    "ou": [
+      {
+        "article": "CPF I-26, I-27 A",
+        "texte": {
+          "fr": "Au bureau des impôts territorialement compétent, c'est-à-dire l'unité opérationnelle qui gère le dossier de l'organisme payeur.",
+          "en": "At the territorially competent tax office, that is, the operational unit managing the paying body's file.",
+          "mg": "Any amin'ny biraon'ny hetra mifehy ny faritra, izany hoe ny sampana mitantana ny antontan-taratasin'ny mpandoa."
+        }
+      }
+    ],
+    "document": [
+      {
+        "article": "CPF I-27 C",
+        "texte": {
+          "fr": "Une déclaration, avec la liste des associés et le nombre de titres de chacun, et un état indiquant notamment la somme sur laquelle l'impôt est dû.",
+          "en": "A return, with the list of partners and the number of securities each holds, and a statement showing in particular the amount on which tax is due.",
+          "mg": "Fanambarana, miaraka amin'ny lisitry ny mpikambana sy ny isan'ny anjaran'ny tsirairay, ary tatitra milaza indrindra ny vola iainan'ny hetra."
+        }
+      }
+    ],
+    "quand": [
+      {
+        "article": "CPF I-27 A, B",
+        "delai": "15 du mois suivant le paiement",
+        "texte": {
+          "fr": "L'impôt est dû dès que les revenus sont mis à disposition ou inscrits en compte. Déclaration et paiement au plus tard le 15 du mois qui suit.",
+          "en": "Tax is due as soon as the income is made available or credited to an account. Return and payment by the 15th of the following month.",
+          "mg": "Tsy maintsy aloa ny hetra raha vao omena na soratana ao amin'ny kaonty ny vola. Fanambarana sy fandoavana farany ny faha-15 amin'ny volana manaraka."
+        }
+      }
+    ]
+  },
+  "ipvi": {
+    "qui": [
+      {
+        "article": "CDI 01.05.02, CPF I-29",
+        "texte": {
+          "fr": "Le vendeur doit l'impôt. En pratique, le notaire (ou la partie qui présente l'acte sous seing privé) le paie avec les droits d'enregistrement de la vente. À défaut, l'acheteur peut être poursuivi.",
+          "en": "The seller owes the tax. In practice, the notary (or the party presenting a private deed) pays it with the registration duties on the sale. Otherwise, the buyer may be pursued.",
+          "mg": "Ny mpivarotra no tompon'andraikitra amin'ny hetra. Raha ny marina, ny notera (na izay mitondra ny taratasy tsy notera) no mandoa azy miaraka amin'ny haba fanoratana ny varotra. Raha tsy izany, mety hanenjehana ny mpividy."
+        }
+      },
+      {
+        "article": "CPF I-31",
+        "texte": {
+          "fr": "Les notaires et officiers publics sont responsables du paiement de l'impôt révélé par les actes qu'ils reçoivent.",
+          "en": "Notaries and public officers are liable for paying the tax revealed by the deeds they receive.",
+          "mg": "Ny notera sy ny mpiasam-panjakana manao taratasy no tompon'andraikitra amin'ny fandoavana ny hetra hita ao amin'ny taratasy raisiny."
+        }
+      }
+    ],
+    "ou": [
+      {
+        "article": "CPF I-29, CDI 01.05.08",
+        "texte": {
+          "fr": "Auprès du receveur des impôts, au moment de l'enregistrement de l'acte de vente. Un récépissé est remis avec l'acte enregistré.",
+          "en": "With the tax receiver, when the deed of sale is registered. A receipt is issued with the registered deed.",
+          "mg": "Any amin'ny mpandray vola ao amin'ny hetra, rehefa soratana ny taratasy fivarotana. Omena taratasy fanamarinana miaraka amin'ny taratasy voasoratra."
+        }
+      }
+    ],
+    "document": [
+      {
+        "article": "CPF I-33",
+        "texte": {
+          "fr": "L'acte de vente doit indiquer l'origine de la propriété : date et mode d'acquisition, et valeur du bien quand le vendeur l'a acquis.",
+          "en": "The deed of sale must state the origin of ownership: date and method of acquisition, and value of the property when the seller acquired it.",
+          "mg": "Tsy maintsy asehon'ny taratasy fivarotana ny niandohan'ny fananana: daty sy fomba nahazoana azy, ary ny sandany tamin'ny nahazoan'ny mpivarotra azy."
+        }
+      }
+    ],
+    "quand": [
+      {
+        "article": "CPF I-29, I-34 III",
+        "delai": "avec l'enregistrement, dans les 2 mois de l'acte",
+        "texte": {
+          "fr": "En même temps que les droits d'enregistrement. Un acte de vente d'immeuble s'enregistre dans les 2 mois de sa date.",
+          "en": "At the same time as the registration duties. A deed of sale of real estate must be registered within 2 months of its date.",
+          "mg": "Miaraka amin'ny haba fanoratana. Ny taratasy fivarotana trano na tany dia soratana ao anatin'ny 2 volana aorian'ny daty nanaovana azy."
+        }
+      }
+    ],
+    "sanctions": [
+      {
+        "article": "CPF I-30",
+        "texte": {
+          "fr": "Quand l'État ou une collectivité achète le bien, aucun paiement ne peut être fait au vendeur tant qu'il n'a pas justifié du paiement de l'impôt.",
+          "en": "When the State or a local authority buys the property, nothing can be paid to the seller until the tax has been paid.",
+          "mg": "Raha ny Fanjakana na vondrom-bahoaka no mividy, tsy misy vola aloa amin'ny mpivarotra raha tsy mampiseho porofo fa naloany ny hetra."
+        }
+      }
+    ]
+  },
+  "idh": {
+    "qui": [
+      {
+        "article": "CPF I-14",
+        "texte": {
+          "fr": "Les sociétés pétrolières déclarent chaque année leurs résultats de l'année précédente.",
+          "en": "Oil companies file their previous year's results every year.",
+          "mg": "Ny orinasa solika no manambara isan-taona ny vokatry ny taona lasa."
+        }
+      }
+    ],
+    "ou": [
+      {
+        "article": "CPF I-14, CDI 01.01.12",
+        "texte": {
+          "fr": "Comme pour l'IR : au bureau des impôts du lieu du siège social ou du principal établissement.",
+          "en": "As for IR: at the tax office of the head office or main establishment.",
+          "mg": "Toy ny IR: any amin'ny biraon'ny hetra misy ny foibe na ny toeram-piasana lehibe."
+        }
+      }
+    ],
+    "document": [
+      {
+        "article": "CDI 01.01.33, CPF I-14",
+        "texte": {
+          "fr": "La déclaration des résultats, avec des états financiers établis par année civile pour les opérations pétrolières, et les mêmes pièces que pour l'IR.",
+          "en": "The return of results, with financial statements prepared per calendar year for oil operations, and the same documents as for IR.",
+          "mg": "Ny fanambarana ny vokatra, miaraka amin'ny tatitra ara-bola isan-taona ho an'ny asa momba ny solika, ary ireo taratasy mitovy amin'ny IR."
+        }
+      }
+    ],
+    "quand": [
+      {
+        "article": "CPF I-14",
+        "delai": "15 mai, 15 novembre ou 4 mois après la clôture",
+        "texte": {
+          "fr": "Au plus tard le 15 mai pour un exercice calé sur l'année civile, le 15 novembre pour un exercice clos le 30 juin, et 4 mois après la clôture dans les autres cas.",
+          "en": "By 15 May for a calendar year, 15 November for a year ending 30 June, and 4 months after closing otherwise.",
+          "mg": "Farany ny 15 mey raha mifanandrify amin'ny taona ny taom-piasana, ny 15 novambra raha mifarana ny 30 jona, ary 4 volana aorian'ny fanakatonana amin'ny tranga hafa."
+        }
+      },
+      {
+        "article": "CDI 01.01.39, CPF I-11",
+        "texte": {
+          "fr": "Acomptes en cours d'année, selon les mêmes règles que l'IR (tous les deux mois).",
+          "en": "Instalments during the year, under the same rules as IR (every two months).",
+          "mg": "Fandoavana mialoha mandritra ny taona, araka ny fitsipika mitovy amin'ny IR (isaky ny roa volana)."
+        }
+      }
+    ]
   }
 }
