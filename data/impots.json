@@ -16,7 +16,7 @@
       "categorie": "revenus",
       "phase": 1,
       "calculateur": "calculIR",
-      "statut": "calcul-teste"
+      "statut": "verifie"
     },
     {
       "numero": 2,
@@ -33,7 +33,7 @@
       "categorie": "revenus",
       "phase": 1,
       "calculateur": null,
-      "statut": "a-faire"
+      "statut": "verifie"
     },
     {
       "numero": 3,
@@ -50,7 +50,7 @@
       "categorie": "revenus",
       "phase": 1,
       "calculateur": "calculIRM",
-      "statut": "calcul-teste"
+      "statut": "verifie"
     },
     {
       "numero": 4,
@@ -67,7 +67,7 @@
       "categorie": "revenus",
       "phase": 1,
       "calculateur": "calculIS",
-      "statut": "calcul-teste"
+      "statut": "verifie"
     },
     {
       "numero": 5,
@@ -84,7 +84,7 @@
       "categorie": "revenus",
       "phase": 1,
       "calculateur": "calculIRSA",
-      "statut": "calcul-teste"
+      "statut": "verifie"
     },
     {
       "numero": 6,
@@ -101,7 +101,7 @@
       "categorie": "revenus",
       "phase": 1,
       "calculateur": "calculIRCM",
-      "statut": "calcul-teste"
+      "statut": "verifie"
     },
     {
       "numero": 7,
@@ -118,7 +118,7 @@
       "categorie": "revenus",
       "phase": 1,
       "calculateur": "calculIPVI",
-      "statut": "calcul-teste"
+      "statut": "verifie"
     },
     {
       "numero": 8,

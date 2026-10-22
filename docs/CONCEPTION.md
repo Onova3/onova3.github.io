@@ -1,6 +1,6 @@
 # Kajy Hetra — Dossier de conception
 
-Version 0.1 · 22 octobre 2026
+Version 0.2 · 22 octobre 2026 (fin de la phase 1)
 
 ## 1. Le produit en une phrase
 
@@ -30,7 +30,9 @@ Règle : un taux, un seuil ou un délai n'entre dans l'application **que s'il es
 | Barèmes | Un fichier `data/baremes-2026.json`, chaque valeur avec son article | Mise à jour annuelle sans toucher au code |
 | Tests | `node --test` (intégré à Node.js, aucune dépendance) | Chaque calcul vérifié contre des exemples du Code |
 | Hébergement | GitHub Pages (gratuit) | Lien public stable, mises à jour par simple publication |
-| Langues | Fichiers `src/i18n/fr.json`, `en.json`, `mg.json` | Les traductions se relisent sans toucher au code |
+| Langues | Fichiers `src/i18n/fr.json`, `en.json`, `mg.json` pour l'interface ; textes `{ fr, en, mg }` dans les fiches et les données | Les traductions se relisent sans toucher au code |
+| Navigation | Liens à dièse : `#/` (accueil), `#/irsa` (fiche), `#/irsa/calculer`, `#/irsa/declarer`, `#/irsa/sanctions` (`src/routes.js`) | Chaque fiche et chaque onglet a un lien partageable, sans serveur |
+| Serveur local | `npm start` lance `scripts/serveur.js` (Node, sans dépendance) | Fonctionne sans connexion ni téléchargement |
 
 ## 4. Inventaire complet
 
@@ -102,30 +104,40 @@ Chaque impôt suit le même gabarit, en quatre onglets :
 3. **Déclarer et payer** : qui déclare, où, avec quel formulaire, à quelle date (tiré du CPF).
 4. **Sanctions** : ce qui se passe en cas de retard ou d'oubli, avec un simulateur relié au module Sanctions.
 
-Structure des données d'une fiche (`data/impots.json`) :
+### Où vit chaque morceau (construit en phase 1)
 
-```json
-{
-  "id": "irsa",
-  "sigle": "IRSA",
-  "nom": { "fr": "...", "en": "...", "mg": "..." },
-  "livre": "I", "partie": "I", "titre": "III",
-  "articlesCDI": ["01.03.01", "01.03.16", "01.03.19"],
-  "articlesCPF": ["I-22"],
-  "categorie": "revenus",
-  "profils": ["salarie", "employeur"],
-  "calculateur": "irsa",
-  "echeances": [{ "quand": "15 du mois suivant", "article": "CPF ..." }],
-  "statut": "a-faire | en-cours | verifie"
-}
+| Morceau | Fichier | Contenu |
+|---|---|---|
+| Gabarit | `src/fiche.js` | En-tête, quatre onglets, onglets Déclarer et Sanctions communs à tous les impôts |
+| Contenu d'un impôt | `src/fiches/<id>.js`, déclaré dans `src/fiches/index.js` | Textes Comprendre (trilingues, chacun avec son article), exemple de la vie courante, calculateur |
+| Inventaire et statut | `data/impots.json` | Sigle, nom, références CDI et CPF, catégorie, phase, statut |
+| Taux, seuils | `data/baremes-2026.json` | Chaque valeur avec son article ; les textes des fiches les reprennent par `{variable}` |
+| Obligations du CPF | `data/obligations.json` | Par impôt : `qui`, `ou`, `document`, `quand` (avec `delai`), `sanctions` ; chaque élément a son article et un texte fr, en, mg |
+| Calculs | `src/calc/<impot>.js` | Fonctions pures, testées dans `tests/` |
+| Affichage commun | `src/ui.js` | Langue, formats d'ariary, lignes du ticket « avis d'imposition », champs |
+
+Forme d'une fiche (`src/fiches/<id>.js`) :
+
+```js
+export default {
+  id: 'irsa',
+  variables: b => ({ taux: ... }),          // facultatif : valeurs du barème citées dans les textes
+  comprendre: { definition, quiPaie, exonerations, aSavoir, exemple },
+  monterCalculateur: (panneau, b) => {...}, // absent pour une fiche sans calculateur (IDH)
+  impotExemple: b => ...,                   // pré-remplit le simulateur de sanctions
+};
 ```
+
+Pour ajouter un impôt : écrire `src/fiches/<id>.js`, l'ajouter à `src/fiches/index.js`, compléter `data/obligations.json`, puis ajouter les tests. Les tests vérifient que chaque texte existe dans les trois langues et porte un article.
+
+Statut dans `data/impots.json` : `a-faire` → `calcul-teste` → `verifie` (fiche complète et validée).
 
 ## 6. Écrans
 
 | Écran | Rôle |
 |---|---|
 | Accueil | Recherche en langage courant (« je loue une maison »), entrée par profil (salarié, créateur d'activité, propriétaire, étudiant), entrée par livre du Code |
-| Fiche impôt | Les quatre onglets ci-dessus |
+| Fiche impôt | Les quatre onglets ci-dessus (fait en phase 1) |
 | Calendrier | Échéances du mois en cours et à venir |
 | Sanctions | Simulateur général retard et défaut de dépôt |
 | Guides | Les procédures du CPF, pas à pas |
@@ -138,7 +150,8 @@ Identité visuelle : celle de la version 1 (vert ravinala, résultat présenté 
 
 - Chaque calcul a au moins un test reprenant un exemple chiffré.
 - Chaque ligne de résultat affiche son article.
-- Arrondis : base IRSA à la centaine inférieure (art. 01.03.16), revenus IRCM au millier inférieur (art. 01.04.04), impôt à payer à la centaine inférieure (CPF art. VII-32, LFR 2026).
+- Arrondis : base IRSA à la centaine inférieure (art. 01.03.16), bénéfice IR et IDH au millier inférieur (art. 01.01.14, 01.01.39), base IS à la dizaine de milliers inférieure (art. 01.02.05), revenus IRCM au millier inférieur (art. 01.04.04), impôt à payer à la centaine inférieure (CPF art. VII-32, LFR 2026).
+- Les points que le texte ne tranche pas sont notés dans `docs/A-VERIFIER.md`, avec le choix fait par l'application.
 - Les traductions malgaches sont relues par un locuteur natif avant chaque mise en ligne.
 - Un écran « Sources » indique la date de mise à jour des barèmes.
 
@@ -155,12 +168,22 @@ Identité visuelle : celle de la version 1 (vert ravinala, résultat présenté 
 
 Ces corrections sont déjà intégrées dans `src/calc/` et `data/baremes-2026.json`.
 
+Corrections faites pendant la phase 1, en relisant les articles :
+
+| Point | Avant (phase 0) | Code 2026 |
+|---|---|---|
+| Bénéfice IR | non arrondi | arrondi au millier d'ariary inférieur (art. 01.01.14 I-A) |
+| Personnes à charge à l'IR | absent | réduction de 24 000 Ar par an et par personne, personnes physiques (art. 01.01.16) |
+| Plancher de 3 % de l'IS | pouvait relever l'impôt au-dessus du montant avant réduction | limite seulement la réduction de 2 % (art. 01.02.05 bis) |
+| Réduction IS | achats et salaires | aussi charges patronales, formation, santé, dons (art. 01.02.05 bis) |
+| IPVI | 20 % d'une plus-value saisie librement | prix retenu ≥ valeur administrative, prix de revient forfaitaire de 75 %, donc plus-value = 25 % du prix (art. 01.05.04) |
+
 ## 9. Phases
 
 | Phase | Contenu | Livrable |
 |---|---|---|
-| 0 | Socle : structure, barèmes, calculs de base corrigés, tests | ce dépôt |
-| 1 | Impôts sur les revenus (n° 1 à 7) + accueil + gabarit de fiche | première mise en ligne |
+| 0 | Socle : structure, barèmes, calculs de base corrigés, tests | Terminée |
+| 1 | Impôts sur les revenus (n° 1 à 7) + accueil + gabarit de fiche | Terminée le 22 octobre 2026 : 7 fiches, 45 tests ; reste la relecture du malgache et des points « À vérifier » avant la première mise en ligne |
 | 2 | Enregistrement, timbre, assurance, véhicules, TVA (n° 8 à 12) | |
 | 3 | Impôts indirects (n° 13 à 16) | |
 | 4 | Impôts locaux (n° 17 à 29) | |
