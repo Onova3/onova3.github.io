@@ -17,5 +17,8 @@ import ppa from './ppa.js';
 import da from './da.js';
 import ift from './ift.js';
 import ifpb from './ifpb.js';
+import tpc from './tpc.js';
+import trd from './trd.js';
+import sejour from './sejour.js';
 
-export const FICHES = { ir, idh, irm, is, irsa, ircm, ipvi, tva, de, timbre, assurance, tvm, ttm, tsabtj, ppa, da, ift, ifpb };
+export const FICHES = { ir, idh, irm, is, irsa, ircm, ipvi, tva, de, timbre, assurance, tvm, ttm, tsabtj, ppa, da, ift, ifpb, tpc, trd, sejour };

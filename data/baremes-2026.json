@@ -212,6 +212,30 @@
     "articles": { "champ": "CDI 10.02.02", "exonerations": "CDI 10.02.03, 10.02.04", "base": "CDI 10.02.06", "revision": "CDI 10.02.09", "calcul": "CDI 10.02.10", "declaration": "CPF I-107" },
     "source": "LFI 2026"
   },
+  "tpc": {
+    "maxParChien": 5000,
+    "maxParAnimal": 5000,
+    "maxParArmeBlanche": 5000,
+    "forfaitProfessionnel": 25000,
+    "articles": { "champ": "CDI 10.03.02", "tarif": "CDI 10.03.03", "declaration": "CPF I-109", "recouvrement": "CDI 10.03.06" },
+    "source": "LFI 2026"
+  },
+  "trd": {
+    "max": 5000,
+    "demiTarif": 0.5,
+    "ageMinimum": 21,
+    "articles": { "champ": "CDI 10.04.02", "exonerations": "CDI 10.04.03", "tarif": "CDI 10.04.04", "declaration": "CPF I-110", "paiement": "CPF I-111" },
+    "source": "LFI 2026"
+  },
+  "sejour": {
+    "categories": [
+      { "id": "quatreCinqEtoiles", "max": 2000, "unite": "chambre", "libelle": { "fr": "Hôtel 4 ou 5 étoiles", "en": "4- or 5-star hotel", "mg": "Hotely 4 na 5 kintana" } },
+      { "id": "uneATroisEtoiles", "max": 1000, "unite": "chambre", "libelle": { "fr": "Hôtel 1 à 3 étoiles", "en": "1- to 3-star hotel", "mg": "Hotely 1 ka hatramin'ny 3 kintana" } },
+      { "id": "autres", "max": 500, "unite": "adulte", "libelle": { "fr": "Ravinala, chambre d'hôtes, pension, village de vacances, non classé", "en": "Ravinala, guest house, boarding house, holiday village, unclassified", "mg": "Ravinala, trano fandraisam-bahiny kely, trano fialan-tsasatra, tsy voasokajy" } }
+    ],
+    "articles": { "repartition": "CDI 10.05.01", "champ": "CDI 10.05.02", "tarif": "CDI 10.05.03", "declaration": "CPF I-112", "paiement": "CPF I-113" },
+    "source": "LFI 2026"
+  },
   "tva": {
     "tauxNormal": 0.20,
     "tauxReduit": 0.05,

@@ -121,3 +121,13 @@ Points que le texte des codes ne tranche pas clairement. L'application suit l'in
 | 68 | IFPB : forfaits communaux pour certains immeubles | CDI 10.02.10 : montants fixés par délibération | Mentionnés dans le Code, non proposés dans le calculateur |
 | 69 | IFT : superficie en hectares entiers | — | Le champ n'accepte pas les décimales (0,5 ha) |
 | 70 | Redevance d'ordures ménagères (ROM) sur l'avis de l'IFPB | CPF VII-01 (loi n° 2014-020) | Non calculée |
+
+## TPC, TRD, taxe de séjour (phase 4, étape 2)
+
+| # | Point | Texte | Choix actuel de l'application |
+|---|---|---|---|
+| 71 | Forfait de 25 000 Ar des éleveurs et marchands : montant fixe ou lui aussi un maximum ? | CDI 10.03.03 : « fixée forfaitairement », dans un article qui parle de maxima | Montant fixe, non modifiable |
+| 72 | TRD : demi-tarif cumulable (époux et déjà imposé à l'IR, l'IS ou l'IRSA) ? | CDI 10.04.04 | Une seule réduction de moitié, au plus |
+| 73 | TRD : âge de l'exonération (« plus de soixante ans ») et de l'imposition (21 ans) | CDI 10.04.02, 10.04.03 | Affichés tels quels ; pas de calcul selon l'âge |
+| 74 | Taxe de séjour d'un hôtel non classé qui facture à la chambre | CDI 10.05.03 : « par nuitée par personne adulte » pour les non-classés | Le calculateur demande des nuitées-adultes pour cette catégorie |
+| 75 | Recensement et contrôle par la commune | CDI 10.03.05, 10.04.06, 10.05.05 | Non repris dans les obligations |

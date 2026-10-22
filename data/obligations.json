@@ -1418,5 +1418,171 @@
         }
       }
     ]
+  },
+  "tpc": {
+    "qui": [
+      {
+        "article": "CDI 10.03.02",
+        "texte": {
+          "fr": "Le propriétaire, au 1er janvier, de chiens de 3 mois ou plus, d'animaux dangereux domestiqués ou d'armes blanches (à défaut, leur détenteur).",
+          "en": "The owner, on 1 January, of dogs aged 3 months or more, dangerous domesticated animals or bladed weapons (failing that, their keeper).",
+          "mg": "Ny tompon'ny alika 3 volana na mihoatra, biby mampidi-doza novolena, na fitaovam-piadiana maranitra, amin'ny 1 janoary (raha tsy fantatra, izay mitazona azy)."
+        }
+      }
+    ],
+    "ou": [
+      {
+        "article": "CPF I-109, CDI 10.03.06",
+        "texte": {
+          "fr": "Déclaration au bureau de la commune ou du fokontany du lieu de résidence ; paiement au régisseur de recettes de la commune.",
+          "en": "Return to the commune or fokontany office where you live; payment to the commune’s revenue officer.",
+          "mg": "Fanambarana any amin'ny biraon'ny kaominina na fokontany misy ny fonenana; aloa any amin'ny mpitahiry vola ao amin'ny kaominina."
+        }
+      }
+    ],
+    "document": [
+      {
+        "article": "CPF I-109",
+        "texte": {
+          "fr": "Une déclaration écrite : nom du propriétaire, description et nombre des chiens, animaux et armes blanches. Dans les communes rurales, une déclaration orale notée au fokontany suffit.",
+          "en": "A written return: owner’s name, description and number of dogs, animals and bladed weapons. In rural communes, an oral return recorded at the fokontany is enough.",
+          "mg": "Fanambarana an-tsoratra: anaran'ny tompony, famaritana sy isan'ny alika, biby ary fitaovam-piadiana maranitra. Any ambanivohitra, ampy ny fanambarana am-bava soratana ao amin'ny fokontany."
+        }
+      }
+    ],
+    "quand": [
+      {
+        "article": "CPF I-109",
+        "delai": "15 janvier",
+        "texte": {
+          "fr": "Au plus tard le 15 janvier de chaque année.",
+          "en": "By 15 January each year.",
+          "mg": "Farany ny 15 janoary isan-taona."
+        }
+      },
+      {
+        "article": "CPF VI-15",
+        "delai": "90 jours",
+        "texte": {
+          "fr": "En cas de désaccord : réclamation dans les 90 jours qui suivent la réception de l'acte d'imposition.",
+          "en": "If you disagree: complaint within 90 days of receiving the tax assessment.",
+          "mg": "Raha tsy manaiky: fitarainana ao anatin'ny 90 andro aorian'ny nandraisana ny taratasy fanaovana hetra."
+        }
+      }
+    ]
+  },
+  "trd": {
+    "qui": [
+      {
+        "article": "CDI 10.04.02",
+        "texte": {
+          "fr": "Toute personne de 21 ans ou plus qui réside dans la commune au 1er janvier.",
+          "en": "Anyone aged 21 or over living in the commune on 1 January.",
+          "mg": "Izay olona 21 taona na mihoatra monina ao amin'ny kaominina amin'ny 1 janoary."
+        }
+      }
+    ],
+    "ou": [
+      {
+        "article": "CPF I-110, I-111",
+        "texte": {
+          "fr": "Au bureau de la commune ou du fokontany du lieu de résidence ; paiement au régisseur de recettes de la commune, qui remet une quittance.",
+          "en": "At the commune or fokontany office where you live; payment to the commune’s revenue officer, who issues a receipt.",
+          "mg": "Any amin'ny biraon'ny kaominina na fokontany misy ny fonenana; aloa any amin'ny mpitahiry vola ao amin'ny kaominina, izay manome taratasy fanamarinana."
+        }
+      }
+    ],
+    "document": [
+      {
+        "article": "CPF I-110",
+        "texte": {
+          "fr": "Une déclaration écrite (nom, date de naissance, situation familiale, conjoint, adresse, profession). Le paiement est inscrit dans le karinem-pokontany ou une fiche individuelle remise au contribuable.",
+          "en": "A written return (name, date of birth, marital status, spouse, address, occupation). Payment is recorded in the karinem-pokontany or an individual record given to the taxpayer.",
+          "mg": "Fanambarana an-tsoratra (anarana, daty nahaterahana, fanambadiana, vady, adiresy, asa). Soratana ao amin'ny karinem-pokontany na taratasy manokana omena ny mpandoa ny fandoavana."
+        }
+      }
+    ],
+    "quand": [
+      {
+        "article": "CPF I-110",
+        "delai": "15 juin",
+        "texte": {
+          "fr": "Déclaration et paiement de toute la taxe en même temps, au plus tard le 15 juin.",
+          "en": "Return and payment of the whole tax at the same time, by 15 June.",
+          "mg": "Fanambarana sy fandoavana ny haba manontolo miaraka, farany ny 15 jona."
+        }
+      },
+      {
+        "article": "CPF VI-15",
+        "delai": "90 jours",
+        "texte": {
+          "fr": "En cas de désaccord : réclamation dans les 90 jours qui suivent la réception de l'acte d'imposition.",
+          "en": "If you disagree: complaint within 90 days of receiving the tax assessment.",
+          "mg": "Raha tsy manaiky: fitarainana ao anatin'ny 90 andro aorian'ny nandraisana ny taratasy fanaovana hetra."
+        }
+      }
+    ]
+  },
+  "sejour": {
+    "qui": [
+      {
+        "article": "CDI 10.05.02, CPF I-112",
+        "texte": {
+          "fr": "L'exploitant d'un hôtel, d'une chambre d'hôtes, d'une pension ou de tout hébergement payant. Il ajoute la taxe en bas de chaque facture et la perçoit auprès du client.",
+          "en": "The operator of a hotel, guest room, boarding house or any paid accommodation. The operator adds the tax at the bottom of each invoice and collects it from the guest.",
+          "mg": "Ny mpitantana hotely, trano fandraisam-bahiny, trano fialan-tsasatra na toerana fandraisana mandoa rehetra. Izy no manampy ny haba eo ambany faktiora tsirairay ary mandray azy amin'ny mpanjifa."
+        }
+      }
+    ],
+    "ou": [
+      {
+        "article": "CPF I-112, I-113",
+        "texte": {
+          "fr": "Au bureau de la commune du lieu d'exploitation. La part de la Région (hôtels de 4 étoiles et plus) passe par le chef d'arrondissement ou le Trésor.",
+          "en": "At the office of the commune where the business operates. The Region’s share (4-star hotels and above) goes through the district head or the Treasury.",
+          "mg": "Any amin'ny biraon'ny kaominina misy ny toerana. Ny anjaran'ny Faritra (hotely 4 kintana na mihoatra) dia mandalo amin'ny lehiben'ny boriboritany na ny Tahirim-bolam-panjakana."
+        }
+      }
+    ],
+    "document": [
+      {
+        "article": "CPF I-112",
+        "texte": {
+          "fr": "Déclaration d’existence dans les 30 jours après l’ouverture, puis chaque mois un état récapitulatif des fiches de renseignement remplies par les clients.",
+          "en": "Declaration of existence within 30 days of opening, then each month a summary of the registration forms filled in by guests.",
+          "mg": "Fanambarana ny fisiana ao anatin'ny 30 andro aorian'ny fanokafana, avy eo isam-bolana famintinana ny taratasy fenoin'ny mpanjifa."
+        }
+      }
+    ],
+    "quand": [
+      {
+        "article": "CPF I-112",
+        "delai": "10 du mois suivant",
+        "texte": {
+          "fr": "Chaque mois, au plus tard le 10 : état récapitulatif et versement de toute la taxe perçue le mois précédent.",
+          "en": "Each month, by the 10th: summary and payment of all the tax collected the previous month.",
+          "mg": "Isam-bolana, farany ny faha-10: famintinana sy fandoavana ny haba rehetra voaray tamin'ny volana teo aloha."
+        }
+      },
+      {
+        "article": "CPF I-112",
+        "delai": "30 jours",
+        "texte": {
+          "fr": "Déclaration d’existence : dans les 30 jours après l’ouverture.",
+          "en": "Declaration of existence: within 30 days of opening.",
+          "mg": "Fanambarana ny fisiana: ao anatin'ny 30 andro aorian'ny fanokafana."
+        }
+      }
+    ],
+    "sanctions": [
+      {
+        "article": "CPF I-112",
+        "texte": {
+          "fr": "La taxe doit apparaître distinctement sur chaque facture et dans la comptabilité de l’établissement.",
+          "en": "The tax must appear separately on each invoice and in the establishment’s accounts.",
+          "mg": "Tsy maintsy hita mazava amin'ny faktiora tsirairay sy ao amin'ny kaonty ny haba."
+        }
+      }
+    ]
   }
 }

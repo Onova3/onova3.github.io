@@ -17,6 +17,9 @@ import { calculAccises, chercherProduits } from '../src/calc/accises.js';
 import { calculIFT } from '../src/calc/ift.js';
 import { calculIFPB } from '../src/calc/ifpb.js';
 import { calculPenalitesLocales } from '../src/calc/penalites.js';
+import { calculTPC } from '../src/calc/tpc.js';
+import { calculTRD } from '../src/calc/trd.js';
+import { calculSejour } from '../src/calc/sejour.js';
 import { lireRoute, lien } from '../src/routes.js';
 import { FICHES } from '../src/fiches/index.js';
 import { etat, fmt, tr } from '../src/ui.js';
@@ -331,6 +334,25 @@ test('Impôts locaux : pénalité de retard de 1 % par mois (CDI 20.01.53.4)', (
   assert.equal(r.interets, 3000);
   assert.equal(r.total, 103000);
   assert.ok(FICHES.ift.impotLocal && FICHES.ifpb.impotLocal);
+});
+
+// --- TPC, TRD, taxe de séjour (CDI 10.03.03, 10.04.04, 10.05.03) ---
+test('TPC : tarifs votés par objet, forfait professionnel', () => {
+  const tarifs = { tarifChien: 5000, tarifAnimal: 5000, tarifArme: 5000 };
+  assert.equal(calculTPC({ chiens: 2, armes: 1, ...tarifs }, b).impot, 15000);
+  assert.equal(calculTPC({ chiens: 2, tarifChien: 3000, tarifAnimal: 0, tarifArme: 0 }, b).impot, 6000);
+  assert.equal(calculTPC({ chiens: 40, ...tarifs, professionnel: true }, b).impot, 25000);
+  assert.equal(FICHES.tpc.impotExemple(b), 15000);
+});
+test('TRD : tarif communal, demi-tarif', () => {
+  assert.equal(calculTRD({ tarif: 5000 }, b).impot, 5000);
+  assert.equal(calculTRD({ tarif: 5000, demiTarif: true }, b).impot, 2500);
+  assert.equal(FICHES.trd.impotExemple(b), 2500);
+});
+test('Taxe de séjour : nuitées × tarif, plafonds par catégorie', () => {
+  assert.deepEqual(b.sejour.categories.map(c => c.max), [2000, 1000, 500]);
+  assert.equal(calculSejour({ categorie: 'uneATroisEtoiles', nuitees: 600, tarif: 1000 }, b).impot, 600000);
+  assert.equal(FICHES.sejour.impotExemple(b), 600000);
 });
 
 // --- Navigation ---
