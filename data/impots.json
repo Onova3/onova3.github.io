@@ -219,8 +219,8 @@
       "refCPF": "Titre II",
       "categorie": "consommation",
       "phase": 3,
-      "calculateur": null,
-      "statut": "a-faire"
+      "calculateur": "calculAccises",
+      "statut": "verifie"
     },
     {
       "numero": 14,
@@ -236,8 +236,8 @@
       "refCPF": "Titre I, ST II, Chap. X",
       "categorie": "consommation",
       "phase": 3,
-      "calculateur": null,
-      "statut": "a-faire"
+      "calculateur": "calculTaxeSpeciale",
+      "statut": "verifie"
     },
     {
       "numero": 15,
@@ -250,11 +250,11 @@
       },
       "livre": "I",
       "refCDI": "Partie III, Titre II, Chap. II",
-      "refCPF": "Titre I, ST II, Chap. X",
+      "refCPF": "Titre I, ST II, Chap. X (I-103)",
       "categorie": "consommation",
       "phase": 3,
-      "calculateur": null,
-      "statut": "a-faire"
+      "calculateur": "calculPrelevement",
+      "statut": "verifie"
     },
     {
       "numero": 16,
@@ -267,11 +267,11 @@
       },
       "livre": "I",
       "refCDI": "Partie III, Titre II, Chap. IV",
-      "refCPF": "Titre II",
+      "refCPF": "Titre I, ST II, Chap. X (I-103 bis)",
       "categorie": "consommation",
       "phase": 3,
-      "calculateur": null,
-      "statut": "a-faire"
+      "calculateur": "calculTTM",
+      "statut": "verifie"
     },
     {
       "numero": 17,

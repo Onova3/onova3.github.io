@@ -1,6 +1,6 @@
 # Kajy Hetra — Dossier de conception
 
-Version 0.3 · 22 octobre 2026 (fin de la phase 2)
+Version 0.4 · 22 octobre 2026 (fin de la phase 3)
 
 ## 1. Le produit en une phrase
 
@@ -52,10 +52,10 @@ Règle : un taux, un seuil ou un délai n'entre dans l'application **que s'il es
 | 10 | Taxe sur les contrats d'assurance | Partie II, SP I, Chap. VI | Titre I, ST II, Chap. IX | Calculateur avec TACAVA (fait) | 2 |
 | 11 | Taxe sur les véhicules à moteur | Partie II, SP II | Titre I, ST II, Chap. IX bis | Calculateur : puissance, énergie, âge ; forfaits bateaux et aéronefs (fait) | 2 |
 | 12 | Taxe sur la valeur ajoutée (TVA) | Partie VI, Titre I | Titre I, ST II, Chap. XI | Calculateur HT/TTC + déclaration mensuelle (fait) | 2 |
-| 13 | Droit d'accises (DA) | Partie III, Titre I + annexe | Titre II | Recherche par produit | 3 |
-| 14 | Taxe spéciale alcools, tabacs, jeux | Partie III, Titre II, Chap. I | Titre I, ST II, Chap. X | Fiche + calcul | 3 |
-| 15 | Prélèvement sur produits alcooliques | Partie III, Titre II, Chap. II | Titre I, ST II, Chap. X | Fiche + calcul | 3 |
-| 16 | Taxe sur les transactions mobiles | Partie III, Titre II, Chap. IV | Titre II | Calculateur | 3 |
+| 13 | Droit d'accises (DA) | Partie III, Titre I + annexe | Titre II | Recherche par produit (nom ou code) + calcul : 181 lignes extraites par `scripts/extraire-accises.js` vers `data/accises-2026.json` (fait) | 3 |
+| 14 | Taxe spéciale alcools et tabacs | Partie III, Titre II, Chap. I | CDI 03.02.04 | Calcul par produit, rhum au litre d’alcool pur (fait) | 3 |
+| 15 | Prélèvement sur produits alcooliques | Partie III, Titre II, Chap. II | Titre I, ST II, Chap. X (I-103) | Calcul au litre, export déduit (fait) | 3 |
+| 16 | Taxe sur les transactions mobiles | Partie III, Titre II, Chap. IV | Titre I, ST II, Chap. X (I-103 bis) | Calcul sur les frais de l’opérateur (fait) | 3 |
 
 ### 4.2 Livre II · Impôts locaux
 
@@ -187,6 +187,16 @@ Corrections et compléments faits pendant la phase 2 :
 | Droits de succession | — | tarif par héritier, perception suspendue (art. 02.03.25 I) |
 | Timbre | « barème consultable » général | le tarif général est abrogé (art. 02.05.05) ; restent les visas et les armes à feu |
 
+Points relevés pendant la phase 3 :
+
+| Point | Avant | Code 2026 |
+|---|---|---|
+| Taxe sur les transactions mobiles | souvent présentée comme un pourcentage du montant envoyé | 5 % des **frais** hors taxes perçus par l’opérateur (art. 03.02.17) |
+| Taxe spéciale | « alcools, tabacs, jeux » | les jeux de hasard n’ont plus de tarif dans l’article 03.02.02 ; seuls alcools et tabacs restent |
+| « Sans être inférieur à » du tableau des accises | — | lu comme une valeur taxable minimale (CPF II-95) ; à confirmer (point 56 de `docs/A-VERIFIER.md`) |
+
+Les données extraites automatiquement d’un texte (tableau des accises) passent par un script relançable, qui signale les lignes illisibles au lieu de les deviner ; chaque correction manuelle y est écrite avec sa raison.
+
 ## 9. Phases
 
 | Phase | Contenu | Livrable |
@@ -194,7 +204,7 @@ Corrections et compléments faits pendant la phase 2 :
 | 0 | Socle : structure, barèmes, calculs de base corrigés, tests | Terminée |
 | 1 | Impôts sur les revenus (n° 1 à 7) + accueil + gabarit de fiche | Terminée le 22 octobre 2026 : 7 fiches, 45 tests ; reste la relecture du malgache et des points « À vérifier » avant la première mise en ligne |
 | 2 | Enregistrement, timbre, assurance, véhicules, TVA (n° 8 à 12) | Terminée le 22 octobre 2026 : 5 fiches, 64 tests au total, points « À vérifier » 30 à 50 |
-| 3 | Impôts indirects (n° 13 à 16) | |
+| 3 | Impôts indirects (n° 13 à 16) | Terminée le 22 octobre 2026 : 4 fiches, 72 tests au total, points « À vérifier » 51 à 63 |
 | 4 | Impôts locaux (n° 17 à 29) | |
 | 5 | Modules CPF transversaux | |
 | 6 | Régimes spécifiques et conventions | |
