@@ -25,6 +25,30 @@ export const champCompteur = (id, libelle, valeur, min, max) =>
     <input type="number" id="${id}" min="${min}" max="${max}" value="${valeur}" aria-labelledby="${id}-l">
     <button type="button" data-pas="1" data-cible="${id}" aria-label="+">+</button></div></div>`;
 export const lireMontant = el => Number(String(el.value).replace(/\D/g, '')) || 0;
+
+/**
+ * Champ « taux ou tarif voté par ma commune » (impôts locaux).
+ * Affiche la règle légale (fourchette, plafond ou absence de borne) et un avertissement si la saisie en sort.
+ * @param {object} o { id, libelle, valeur, min = null, max = null, unite = 'Ar', article, regle }
+ */
+export function champCommunal({ id, libelle, valeur, min = null, max = null, unite = 'Ar', article, regle }) {
+  return `<div class="f communal" data-min="${min ?? ''}" data-max="${max ?? ''}">
+    <span>${libelle}</span>
+    <span class="in"><input type="text" inputmode="numeric" class="money" id="${id}" value="${nombre(valeur)}"><span class="u">${unite}</span></span>
+    <span class="aide">${regle}${article ? `<small class="art">${esc(article)}</small>` : ''}</span>
+    <span class="warn" id="${id}-hors" hidden></span></div>`;
+}
+
+/** Contrôle d'un champ communal : renvoie la valeur lue et affiche l'avertissement si elle sort de la fourchette légale. */
+export function lireCommunal(racine, id) {
+  const input = racine.querySelector('#' + id), bloc = input.closest('.communal'), v = lireMontant(input);
+  const min = bloc.dataset.min === '' ? null : Number(bloc.dataset.min), max = bloc.dataset.max === '' ? null : Number(bloc.dataset.max);
+  const hors = (min !== null && v < min) || (max !== null && v > max);
+  const avis = racine.querySelector(`#${id}-hors`);
+  avis.hidden = !hors;
+  avis.textContent = hors ? t('hors_fourchette') : '';
+  return v;
+}
 export const lireEntier = (el, min, max) => Math.max(min, Math.min(max, Math.floor(Number(el.value)) || 0));
 
 /** Branche les champs d'un conteneur : recalcul à chaque saisie, mise en forme des montants, compteurs +/−. */

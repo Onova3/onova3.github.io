@@ -51,5 +51,8 @@
   "r_interets": "Late-payment penalty ({n} months)",
   "r_min_retard": "{min} minimum applied",
   "r_amende": "Fine for not filing",
-  "r_total": "Total to pay"
+  "r_total": "Total to pay",
+  "hors_fourchette": "This amount is outside the limits set by the Code: check your commune's decision.",
+  "valeur_exemple": "Example value: enter the rate voted by your commune.",
+  "sanc_local": "Local tax: late-payment penalty of {taux} per month late."
 }

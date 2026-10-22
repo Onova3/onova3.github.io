@@ -188,6 +188,30 @@
     "articles": { "champ": "CDI 03.02.06", "taux": "CDI 03.02.07", "affectation": "CDI 03.02.08", "declaration": "CPF I-103" },
     "source": "LFI 2026"
   },
+  "ift": {
+    "categories": [
+      { "numero": 1, "mode": "tarifHa", "libelle": { "fr": "Cultures de rente : café, cacao, vanille, girofle, poivre, canne à sucre, cocotiers…", "en": "Cash crops: coffee, cocoa, vanilla, cloves, pepper, sugar cane, coconut…", "mg": "Vokatra fanondrana: kafe, kakao, lavanila, jirofo, dipoavatra, fary, voanio…" } },
+      { "numero": 2, "mode": "tarifHa", "libelle": { "fr": "Bois, forêts, lacs, marécages", "en": "Woods, forests, lakes, marshes", "mg": "Ala, farihy, honahona" } },
+      { "numero": 3, "mode": "tarifHa", "libelle": { "fr": "Cultures maraîchères et vivrières, riz", "en": "Market gardening and food crops, rice", "mg": "Legioma sy vokatra fihinana, vary" } },
+      { "numero": 4, "mode": "tarifHa", "libelle": { "fr": "Pâturages, terrains non exploitables, jachères", "en": "Pasture, unusable land, fallow land", "mg": "Kijana, tany tsy azo ampiasaina, tany avela hiala sasatra" } },
+      { "numero": 5, "mode": "tarifHa", "libelle": { "fr": "Terrains exploitables non exploités", "en": "Usable land left unused", "mg": "Tany azo ampiasaina nefa tsy ampiasaina" } },
+      { "numero": 6, "mode": "valeurVenale", "libelle": { "fr": "Terrains non agricoles ou non bâtis en zone urbanisée", "en": "Non-farm land or vacant land in urban areas", "mg": "Tany tsy fambolena na tsy misy trano ao an-tanàn-dehibe" } }
+    ],
+    "tauxCategorie6": 0.01,
+    "minimum": 2000,
+    "dureeTarifAnnees": 4,
+    "articles": { "champ": "CDI 10.01.02", "exonerations": "CDI 10.01.03, 10.01.04", "calcul": "CDI 10.01.07", "declaration": "CPF I-106" },
+    "source": "LFI 2026"
+  },
+  "ifpb": {
+    "taux": 0.05,
+    "minimum": 5000,
+    "partValeurLocativeReduite": 0.30,
+    "majorationSansRevision": 0.05,
+    "exonerationConstructionNeuveAnnees": 5,
+    "articles": { "champ": "CDI 10.02.02", "exonerations": "CDI 10.02.03, 10.02.04", "base": "CDI 10.02.06", "revision": "CDI 10.02.09", "calcul": "CDI 10.02.10", "declaration": "CPF I-107" },
+    "source": "LFI 2026"
+  },
   "tva": {
     "tauxNormal": 0.20,
     "tauxReduit": 0.05,
@@ -207,6 +231,7 @@
       { "caMin": 0, "premierMois": 0.01, "moisSuivants": 0.01 }
     ],
     "minimumRetard": 10000,
+    "retardLivreII": 0.01,
     "amendeDefautDepot": [
       { "caMin": 400000000, "montant": 200000 },
       { "caMin": 200000000, "montant": 100000 },
@@ -214,7 +239,7 @@
       { "caMin": 0, "montant": 20000 }
     ],
     "arrondiImpot": 100,
-    "articles": { "retard": "CDI 20.01.53", "defautDepot": "CDI 20.01.52 (LFR 2026)", "arrondi": "CPF VII-32 (LFR 2026)" },
+    "articles": { "retard": "CDI 20.01.53", "retardLivreII": "CDI 20.01.53.4", "defautDepot": "CDI 20.01.52 (LFR 2026)", "arrondi": "CPF VII-32 (LFR 2026)" },
     "source": "LFI 2026 ; LFR 2026"
   }
 }

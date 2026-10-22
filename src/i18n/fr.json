@@ -51,5 +51,8 @@
   "r_interets": "Pénalité de retard ({n} mois)",
   "r_min_retard": "Minimum de {min} appliqué",
   "r_amende": "Amende pour défaut de dépôt",
-  "r_total": "Total à payer"
+  "r_total": "Total à payer",
+  "hors_fourchette": "Ce montant sort des limites fixées par le Code : vérifiez la délibération de votre commune.",
+  "valeur_exemple": "Valeur d'exemple : saisissez le tarif voté par votre commune.",
+  "sanc_local": "Impôt local : pénalité de retard de {taux} par mois de retard."
 }

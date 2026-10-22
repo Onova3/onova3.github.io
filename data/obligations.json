@@ -1218,5 +1218,205 @@
         }
       }
     ]
+  },
+  "ift": {
+    "qui": [
+      {
+        "article": "CDI 10.01.02, CPF I-106",
+        "texte": {
+          "fr": "Le propriétaire ou l'occupant effectif du terrain au 1er janvier.",
+          "en": "The owner or actual occupant of the land on 1 January.",
+          "mg": "Ny tompon'ny tany na izay tena mampiasa azy amin'ny 1 janoary."
+        }
+      }
+    ],
+    "ou": [
+      {
+        "article": "CPF I-106, CDI 10.01.06",
+        "texte": {
+          "fr": "Déclaration au bureau de la commune où se trouve le terrain ; l'impôt est établi par le centre fiscal et recouvré par la commune.",
+          "en": "Return to the office of the commune where the land is; the tax is assessed by the tax centre and collected by the commune.",
+          "mg": "Fanambarana any amin'ny biraon'ny kaominina misy ny tany; ny foibe misahana ny hetra no manao ny kajy ary ny kaominina no manangona."
+        }
+      },
+      {
+        "article": "CPF VII-01",
+        "texte": {
+          "fr": "C'est la commune qui recouvre les impôts fonciers.",
+          "en": "The commune collects property taxes.",
+          "mg": "Ny kaominina no manangona ny hetra amin'ny tany sy trano."
+        }
+      }
+    ],
+    "document": [
+      {
+        "article": "CPF I-106",
+        "texte": {
+          "fr": "Une déclaration écrite ou en ligne : situation du terrain, superficie par culture ou affectation, nom des locataires et montant du loyer.",
+          "en": "A written or online return: location of the land, area by crop or use, names of tenants and rent.",
+          "mg": "Fanambarana an-tsoratra na an-tserasera: toerana misy ny tany, velarany isaky ny voly na fampiasana, anaran'ny mpanofa sy ny hofany."
+        }
+      },
+      {
+        "article": "CPF I-106, I-107",
+        "texte": {
+          "fr": "Dans les communes rurales éloignées, la déclaration peut être faite oralement au Maire, qui la note dans un registre.",
+          "en": "In remote rural communes, the return can be made orally to the Mayor, who records it in a register.",
+          "mg": "Any amin'ny kaominina ambanivohitra lavitra, azo atao am-bava amin'ny Ben'ny tanàna ny fanambarana, izay manoratra azy ao amin'ny boky."
+        }
+      }
+    ],
+    "quand": [
+      {
+        "article": "CPF I-106",
+        "delai": "15 octobre",
+        "texte": {
+          "fr": "Déclaration au plus tard le 15 octobre ; tout changement dans la location avant le 1er janvier se déclare par une déclaration rectificative.",
+          "en": "Return by 15 October; any change in the lease before 1 January requires a corrected return.",
+          "mg": "Fanambarana farany ny 15 oktobra; ny fiovana amin'ny fanofana alohan'ny 1 janoary dia ambara amin'ny fanambarana fanitsiana."
+        }
+      },
+      {
+        "article": "CDI 10.01.05",
+        "delai": "15 octobre",
+        "texte": {
+          "fr": "Demande d'exonération pour un terrain nouvellement mis en culture ou reboisé : au plus tard le 15 octobre.",
+          "en": "Exemption request for newly cultivated or reforested land: by 15 October.",
+          "mg": "Fangatahana fanafahana ho an'ny tany vao nambolena na novolena hazo: farany ny 15 oktobra."
+        }
+      },
+      {
+        "article": "CPF VII-01",
+        "delai": "à partir du 1er mars",
+        "texte": {
+          "fr": "L'impôt est exigible à partir du 1er mars. La commune envoie un avis d'imposition signé par le Maire et visé par le centre fiscal (ou doté d'un code QR) ; sans ce visa, l'avis est nul.",
+          "en": "The tax is due from 1 March. The commune sends a tax notice signed by the Mayor and stamped by the tax centre (or bearing a QR code); without it, the notice is void.",
+          "mg": "Tsy maintsy aloa manomboka ny 1 martsa ny hetra. Mandefa fampandrenesana hetra nosoniavin'ny Ben'ny tanàna sy nohamarinin'ny foibe misahana ny hetra (na misy QR code) ny kaominina; raha tsy misy izany, tsy manan-kery ilay fampandrenesana."
+        }
+      },
+      {
+        "article": "CPF VI-15",
+        "delai": "90 jours",
+        "texte": {
+          "fr": "En cas de désaccord : réclamation dans les 90 jours qui suivent la réception de l'avis d'imposition.",
+          "en": "If you disagree: complaint within 90 days of receiving the tax notice.",
+          "mg": "Raha tsy manaiky: fitarainana ao anatin'ny 90 andro aorian'ny nandraisana ny fampandrenesana hetra."
+        }
+      }
+    ],
+    "sanctions": [
+      {
+        "article": "CDI 10.01.10",
+        "texte": {
+          "fr": "Récolte perdue (cyclone, inondation, criquets, incendie…) : demande de réduction ou de décharge dans les 3 mois. Le Maire peut faire une demande collective pour toute la commune.",
+          "en": "Crop lost (cyclone, flood, locusts, fire…): request for reduction or discharge within 3 months. The Mayor can make a collective request for the whole commune.",
+          "mg": "Vokatra simba (rivodoza, tondra-drano, valala, afo…): fangatahana fihenana na fanafahana ao anatin'ny 3 volana. Afaka manao fangatahana iombonana ho an'ny kaominina iray manontolo ny Ben'ny tanàna."
+        }
+      }
+    ]
+  },
+  "ifpb": {
+    "qui": [
+      {
+        "article": "CDI 10.02.02, CPF I-107",
+        "texte": {
+          "fr": "Le propriétaire au 1er janvier (ou l'usufruitier), pour toute construction achevée, quels que soient les matériaux, et pour les terrains à usage industriel ou commercial.",
+          "en": "The owner on 1 January (or usufructuary), for any completed building whatever the materials, and for land used for industry or trade.",
+          "mg": "Ny tompony amin'ny 1 janoary (na izay mampiasa azy), ho an'ny trano vita rehetra na inona na inona fitaovana, sy ny tany ampiasaina ho an'ny indostria na varotra."
+        }
+      }
+    ],
+    "ou": [
+      {
+        "article": "CPF I-107, CDI 10.02.07",
+        "texte": {
+          "fr": "Déclaration au bureau de la commune où se trouve l'immeuble ; l'impôt est établi par le centre fiscal et recouvré par la commune.",
+          "en": "Return to the office of the commune where the building is; the tax is assessed by the tax centre and collected by the commune.",
+          "mg": "Fanambarana any amin'ny biraon'ny kaominina misy ny trano; ny foibe misahana ny hetra no manao ny kajy ary ny kaominina no manangona."
+        }
+      },
+      {
+        "article": "CPF VII-01",
+        "texte": {
+          "fr": "C'est la commune qui recouvre les impôts fonciers.",
+          "en": "The commune collects property taxes.",
+          "mg": "Ny kaominina no manangona ny hetra amin'ny tany sy trano."
+        }
+      }
+    ],
+    "document": [
+      {
+        "article": "CPF I-107",
+        "texte": {
+          "fr": "Une déclaration écrite ou en ligne : locataires et loyers (locaux nus et meublés), locaux occupés par le propriétaire, occupants gratuits, locaux vacants.",
+          "en": "A written or online return: tenants and rents (unfurnished and furnished), premises used by the owner, rent-free occupants, vacant premises.",
+          "mg": "Fanambarana an-tsoratra na an-tserasera: mpanofa sy hofany (efitra foana sy misy fanaka), efitra ampiasain'ny tompony, mipetraka maimaimpoana, efitra foana."
+        }
+      },
+      {
+        "article": "CPF I-108",
+        "texte": {
+          "fr": "Toute vente de l'immeuble présentée au centre fiscal est accompagnée d'un certificat de situation juridique.",
+          "en": "Any sale of the building presented to the tax centre must come with a certificate of legal status.",
+          "mg": "Ny varotra trano rehetra entina any amin'ny foibe misahana ny hetra dia arahina taratasy fanamarinana ny toe-javatra ara-dalàna."
+        }
+      },
+      {
+        "article": "CPF I-106, I-107",
+        "texte": {
+          "fr": "Dans les communes rurales éloignées, la déclaration peut être faite oralement au Maire, qui la note dans un registre.",
+          "en": "In remote rural communes, the return can be made orally to the Mayor, who records it in a register.",
+          "mg": "Any amin'ny kaominina ambanivohitra lavitra, azo atao am-bava amin'ny Ben'ny tanàna ny fanambarana, izay manoratra azy ao amin'ny boky."
+        }
+      }
+    ],
+    "quand": [
+      {
+        "article": "CPF I-107",
+        "delai": "15 octobre",
+        "texte": {
+          "fr": "Déclaration avant le 15 octobre ; tout changement dans la location avant le 1er janvier se déclare par une déclaration rectificative.",
+          "en": "Return before 15 October; any change in the lease before 1 January requires a corrected return.",
+          "mg": "Fanambarana alohan'ny 15 oktobra; ny fiovana amin'ny fanofana alohan'ny 1 janoary dia ambara amin'ny fanambarana fanitsiana."
+        }
+      },
+      {
+        "article": "CDI 10.02.05",
+        "delai": "avant le 1er avril",
+        "texte": {
+          "fr": "Construction neuve : demande d'exonération au centre fiscal avec le permis d'habiter. Si la maison est achevée au dernier trimestre, produire le permis avant le 1er avril de l'année suivante.",
+          "en": "New building: exemption request to the tax centre with the occupancy permit. If completed in the last quarter, produce the permit before 1 April of the following year.",
+          "mg": "Trano vaovao: fangatahana fanafahana any amin'ny foibe misahana ny hetra miaraka amin'ny fahazoan-dalana hipetraka. Raha vita tamin'ny telo volana farany, atolotra alohan'ny 1 aprily amin'ny taona manaraka ny fahazoan-dalana."
+        }
+      },
+      {
+        "article": "CPF VII-01",
+        "delai": "à partir du 1er mars",
+        "texte": {
+          "fr": "L'impôt est exigible à partir du 1er mars. La commune envoie un avis d'imposition signé par le Maire et visé par le centre fiscal (ou doté d'un code QR) ; sans ce visa, l'avis est nul.",
+          "en": "The tax is due from 1 March. The commune sends a tax notice signed by the Mayor and stamped by the tax centre (or bearing a QR code); without it, the notice is void.",
+          "mg": "Tsy maintsy aloa manomboka ny 1 martsa ny hetra. Mandefa fampandrenesana hetra nosoniavin'ny Ben'ny tanàna sy nohamarinin'ny foibe misahana ny hetra (na misy QR code) ny kaominina; raha tsy misy izany, tsy manan-kery ilay fampandrenesana."
+        }
+      },
+      {
+        "article": "CPF VI-15",
+        "delai": "90 jours",
+        "texte": {
+          "fr": "En cas de désaccord : réclamation dans les 90 jours qui suivent la réception de l'avis d'imposition.",
+          "en": "If you disagree: complaint within 90 days of receiving the tax notice.",
+          "mg": "Raha tsy manaiky: fitarainana ao anatin'ny 90 andro aorian'ny nandraisana ny fampandrenesana hetra."
+        }
+      }
+    ],
+    "sanctions": [
+      {
+        "article": "CDI 10.02.06",
+        "texte": {
+          "fr": "Des loyers déclarés trop bas ne réduisent pas l'impôt : la valeur locative ne peut pas descendre sous l'évaluation de la commission communale.",
+          "en": "Under-declared rent does not reduce the tax: the rental value cannot fall below the municipal commission's valuation.",
+          "mg": "Tsy mampihena ny hetra ny hofan-trano ambara ambany loatra: tsy azo latsaky ny tombanan'ny vaomiera ao amin'ny kaominina ny sanda fanofana."
+        }
+      }
+    ]
   }
 }

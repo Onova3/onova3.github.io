@@ -14,6 +14,9 @@ import { calculTTM } from '../src/calc/ttm.js';
 import { calculTaxeSpeciale } from '../src/calc/taxeSpeciale.js';
 import { calculPrelevement } from '../src/calc/prelevementAlcools.js';
 import { calculAccises, chercherProduits } from '../src/calc/accises.js';
+import { calculIFT } from '../src/calc/ift.js';
+import { calculIFPB } from '../src/calc/ifpb.js';
+import { calculPenalitesLocales } from '../src/calc/penalites.js';
 import { lireRoute, lien } from '../src/routes.js';
 import { FICHES } from '../src/fiches/index.js';
 import { etat, fmt, tr } from '../src/ui.js';
@@ -295,6 +298,39 @@ test('Accises : recherche par nom (sans accents) ou par code', () => {
   assert.ok(chercherProduits(accises, 'biere').some(p => p.code === '2203.00 90'));
   assert.ok(chercherProduits(accises, '2203').length >= 2);
   assert.equal(chercherProduits(accises, '').length, 0);
+});
+
+// --- Impôts fonciers (CDI 10.01.07, 10.02.06, 10.02.09, 10.02.10) et pénalité locale (20.01.53.4) ---
+test('IFT : tarif par hectare voté, 1 % de la valeur en catégorie 6, minimum 2 000 Ar', () => {
+  assert.equal(calculIFT({ categorie: 3, hectares: 2, tarifParHa: 5000 }, b).impot, 10000);
+  assert.equal(calculIFT({ categorie: 6, valeurVenale: 20000000 }, b).impot, 200000);
+  const r = calculIFT({ categorie: 4, hectares: 0, tarifParHa: 5000 }, b);
+  assert.ok(r.minimumApplique);
+  assert.equal(r.impot, 2000);
+  assert.equal(FICHES.ift.impotExemple(b), 10000);
+});
+test('IFPB : maison louée, loyers ou évaluation communale si plus élevée', () => {
+  // 300 000 × 12 = 3 600 000 × 5 %
+  assert.equal(calculIFPB({ usage: 'loue', loyersAnnuels: 3600000 }, b).impot, 180000);
+  const r = calculIFPB({ usage: 'loue', loyersAnnuels: 3600000, valeurCommission: 5000000 }, b);
+  assert.ok(r.commissionAppliquee);
+  assert.equal(r.impot, 250000);
+  assert.equal(FICHES.ifpb.impotExemple(b), 180000);
+});
+test('IFPB : résidence principale à 30 %, majoration sans révision, minimum 5 000 Ar', () => {
+  // 2 400 000 × 30 % = 720 000 × 5 % = 36 000
+  assert.equal(calculIFPB({ usage: 'residencePrincipale', valeurCommission: 2400000 }, b).impot, 36000);
+  // 2 400 000 × 1,05 × 30 % × 5 % = 37 800
+  assert.equal(calculIFPB({ usage: 'residencePrincipale', valeurCommission: 2400000, sansRevision: true }, b).impot, 37800);
+  const r = calculIFPB({ usage: 'residencePrincipale', valeurCommission: 200000 }, b);
+  assert.ok(r.minimumApplique);
+  assert.equal(r.impot, 5000);
+});
+test('Impôts locaux : pénalité de retard de 1 % par mois (CDI 20.01.53.4)', () => {
+  const r = calculPenalitesLocales({ impot: 100000, moisRetard: 3 }, b);
+  assert.equal(r.interets, 3000);
+  assert.equal(r.total, 103000);
+  assert.ok(FICHES.ift.impotLocal && FICHES.ifpb.impotLocal);
 });
 
 // --- Navigation ---

@@ -15,3 +15,13 @@ export function calculPenalites({ impot, moisRetard, ca, defautDepot = false }, 
   return { regle, interets: arrondiInf(interets, p.arrondiImpot), minimumApplique, amende,
     total: arrondiInf(impot + interets + amende, p.arrondiImpot) };
 }
+
+/**
+ * Pénalité de retard des impôts du Livre II (impôts locaux, CDI 20.01.53.4) : un taux par mois de retard,
+ * tout mois commencé étant dû.
+ */
+export function calculPenalitesLocales({ impot, moisRetard }, b) {
+  const p = b.penalites, mois = Math.max(1, Math.ceil(moisRetard));
+  const interets = impot > 0 ? arrondiInf(impot * p.retardLivreII * mois, p.arrondiImpot) : 0;
+  return { mois, interets, total: arrondiInf(impot + interets, p.arrondiImpot) };
+}

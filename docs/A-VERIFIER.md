@@ -109,3 +109,15 @@ Points que le texte des codes ne tranche pas clairement. L'application suit l'in
 | 61 | Abattement de 2 % pour les tabacs fabriqués avec au moins 70 % de tabac malgache | CDI 03.01.04 | Mentionné, non calculé |
 | 62 | Désignations des produits | Le Code n'existe qu'en français | Laissées en français dans les trois langues, avec une mention en EN et MG |
 | 63 | Annexe des « produits exportés passibles du droit d'accises » | CDI 03.01.02 1° y renvoie ; non trouvée dans le texte extrait | Non reprise |
+
+## IFT, IFPB et impôts locaux (phase 4, étape 1)
+
+| # | Point | Texte | Choix actuel de l'application |
+|---|---|---|---|
+| 64 | Minimum de 10 000 Ar des pénalités de retard pour les impôts locaux | CDI 20.01.53 (minimum) et 20.01.53.4 (1 % par mois pour le Livre II) | Seul le taux de 1 % par mois est appliqué, sans minimum |
+| 65 | Amende pour défaut de déclaration foncière | CPF I-106 et I-107 ne renvoient à aucune amende ; CDI 20.01.52 vise les déclarations « comportant une périodicité » | Non affichée pour l'IFT et l'IFPB |
+| 66 | Délai de paiement de l'IFPB après l'avis d'imposition | CPF VII-01 : exigible à partir du 1er mars ; pas de date limite relevée | Seule la date d'exigibilité est affichée |
+| 67 | IFPB d'un immeuble loué quand l'évaluation communale est inconnue | CDI 10.02.06 1° | Le calcul prend les loyers seuls si l'évaluation est laissée à 0 |
+| 68 | IFPB : forfaits communaux pour certains immeubles | CDI 10.02.10 : montants fixés par délibération | Mentionnés dans le Code, non proposés dans le calculateur |
+| 69 | IFT : superficie en hectares entiers | — | Le champ n'accepte pas les décimales (0,5 ha) |
+| 70 | Redevance d'ordures ménagères (ROM) sur l'avis de l'IFPB | CPF VII-01 (loi n° 2014-020) | Non calculée |

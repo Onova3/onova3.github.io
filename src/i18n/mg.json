@@ -51,5 +51,8 @@
   "r_interets": "Sazy noho ny fahatarana ({n} volana)",
   "r_min_retard": "Farafahakeliny {min} nampiharina",
   "r_amende": "Onitra noho ny tsy fametrahana fanambarana",
-  "r_total": "Totaliny aloa"
+  "r_total": "Totaliny aloa",
+  "hors_fourchette": "Mivoaka ny fetra napetraky ny Fehezan-dalàna io vola io: hamarino ny fanapahan-kevitry ny kaominanao.",
+  "valeur_exemple": "Ohatra fotsiny: ampidiro ny taha nolanian'ny kaominanao.",
+  "sanc_local": "Hetra ifotony: sazy noho ny fahatarana {taux} isaky ny volana tara."
 }
