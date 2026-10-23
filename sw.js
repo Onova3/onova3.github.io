@@ -1,6 +1,6 @@
 // Service worker : garde l'application sur le téléphone pour qu'elle marche sans réseau.
 // Changer VERSION à chaque mise en ligne. Un test vérifie que FICHIERS liste tous les fichiers de src/ et data/.
-const VERSION = 'kh-0.7.0';
+const VERSION = 'kh-0.8.0';
 const FICHIERS = [
   './',
   'index.html',
@@ -13,6 +13,12 @@ const FICHIERS = [
   'src/partage.js',
   'src/bauhaus.js',
   'src/etats.js',
+  'src/memoire.js',
+  'src/recherche.js',
+  'src/signaler.js',
+  'src/modules/lexique.js',
+  'data/mots-courants.json',
+  'data/lexique.json',
   'assets/polices/archivo-800.woff2',
   'assets/polices/public-sans.woff2',
   'assets/polices/jetbrains-mono.woff2',

@@ -9,6 +9,6 @@ export function monter(el) {
       <a class="profil" href="${lienModule('guides')}"><b>${t('module_guides')}</b><span>${t('guides_court')}</span></a>
       <a class="profil" href="${lienModule('sanctions')}"><b>${t('module_sanctions')}</b><span>${t('sanctions_court')}</span></a>
       <a class="profil" href="${lienModule('quiz')}"><b>${t('module_quiz')}</b><span>${t('quiz_court')}</span></a>
-      <div class="profil a-venir" aria-disabled="true"><b>${t('lexique')}</b><span>${t('lexique_court')}</span><em class="badge">${t('a_venir')}</em></div>
+      <a class="profil" href="${lienModule('lexique')}"><b>${t('lexique')}</b><span>${t('lexique_court')}</span></a>
     </div>`;
 }

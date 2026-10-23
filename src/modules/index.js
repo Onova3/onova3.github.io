@@ -8,5 +8,6 @@ import * as sanctions from './sanctions.js';
 import * as guides from './guides.js';
 import * as quiz from './quiz.js';
 import * as sources from './sources.js';
+import * as lexique from './lexique.js';
 
-export const MODULES_ECRANS = { accueil, impots, calendrier, apprendre, plus, sanctions, guides, quiz, sources };
+export const MODULES_ECRANS = { accueil, impots, calendrier, apprendre, plus, sanctions, guides, quiz, sources, lexique };

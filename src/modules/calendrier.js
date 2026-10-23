@@ -12,7 +12,8 @@ const aujourdhui = () => new Date().toISOString().slice(0, 10);
 
 export function monter(el, { impots, obligations, profils, sous }) {
   const profil = profils.find(p => p.id === sous) ?? null;
-  const liste = calendrier({ obligations, impots, ids: profil?.impots ?? null, depuis: aujourdhui(), mois: 12 });
+  const termines = impots.filter(i => i.statut === 'verifie');
+  const liste = calendrier({ obligations, impots: termines, ids: profil?.impots ?? null, depuis: aujourdhui(), mois: 12 });
   const parMois = new Map();
   for (const e of liste) {
     const cle = e.date.slice(0, 7);

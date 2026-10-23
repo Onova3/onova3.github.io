@@ -1,11 +1,11 @@
 // Liens partageables : #/ (accueil), #/irsa (fiche, onglet Comprendre), #/irsa/calculer, etc.
 // Écrans : #/impots, #/calendrier, #/apprendre, #/plus, et leurs sous-écrans (#/guides/payer, #/quiz/tva, #/sources…).
 export const ONGLETS = ['comprendre', 'calculer', 'declarer', 'sanctions'];
-export const MODULES = ['impots', 'calendrier', 'apprendre', 'plus', 'sanctions', 'guides', 'quiz', 'sources'];
+export const MODULES = ['impots', 'calendrier', 'apprendre', 'plus', 'sanctions', 'guides', 'quiz', 'sources', 'lexique'];
 
 /** Les 5 onglets de la barre de navigation, dans l'ordre. */
 export const BARRE = ['accueil', 'impots', 'calendrier', 'apprendre', 'plus'];
-const PARENT = { sanctions: 'apprendre', guides: 'apprendre', quiz: 'apprendre', sources: 'plus' };
+const PARENT = { sanctions: 'apprendre', guides: 'apprendre', quiz: 'apprendre', lexique: 'apprendre', sources: 'plus' };
 
 export function lireRoute(hash = '') {
   const [id = '', suite = ''] = hash.replace(/^#\/?/, '').split('/');

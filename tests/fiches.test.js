@@ -864,3 +864,72 @@ test('Confirmation : durée d’affichage entre 2,5 et 6 secondes selon la longu
 test('Hors connexion : bandeau discret présent dans la page', () => {
   assert.match(readFileSync('index.html', 'utf8'), /class="bandeau-hors-ligne" id="hors-ligne" hidden/);
 });
+
+// --- Usage quotidien : favoris, récents, historique, recherche, signalement, lexique ---
+import { basculerFavori, ajouterRecent, ajouterCalcul, creerMemoire, MAX_HISTORIQUE } from '../src/memoire.js';
+import { rechercher, normaliser } from '../src/recherche.js';
+import { lienSignalement, CONTACT } from '../src/signaler.js';
+test('Favoris et récents : ajout, retrait, sans doublon, limités', () => {
+  assert.deepEqual(basculerFavori([], 'irsa'), ['irsa']);
+  assert.deepEqual(basculerFavori(['irsa', 'tva'], 'irsa'), ['tva']);
+  assert.deepEqual(ajouterRecent(['tva', 'irsa'], 'irsa'), ['irsa', 'tva']);
+  assert.equal(ajouterRecent(['a', 'b', 'c', 'd', 'e', 'f'], 'g').length, 6);
+});
+test('Historique : 20 calculs au plus, un calcul identique remonte au lieu d’être dupliqué', () => {
+  const c = (n, v) => ({ fiche: 'irsa', mode: 'commun', valeurs: { brut: v }, total: n, date: 'x' });
+  let h = [];
+  for (let i = 0; i < 25; i++) h = ajouterCalcul(h, c(String(i), String(i)));
+  assert.equal(h.length, MAX_HISTORIQUE);
+  assert.equal(h[0].total, '24');
+  h = ajouterCalcul(h, c('10 bis', '10'));
+  assert.equal(h[0].total, '10 bis');
+  assert.equal(h.filter(x => x.valeurs.brut === '10').length, 1);
+});
+test('Mémoire : favoris et historique passent par le module de stockage, même indisponible', () => {
+  for (const support of [faux(), null]) {
+    const m = creerMemoire(creerStockage(support));
+    assert.equal(m.basculerFavori('irsa'), true);
+    assert.deepEqual(m.favoris(), ['irsa']);
+    m.noterCalcul({ fiche: 'irsa', mode: null, valeurs: { a: '1' }, total: '1 Ar', date: 'x' });
+    assert.equal(m.historique().length, 1);
+    m.preparerRestauration(m.historique()[0]);
+    assert.equal(m.prendreRestauration('tva'), null, 'autre fiche');
+    m.effacerHistorique();
+    assert.deepEqual(m.historique(), []);
+  }
+});
+const motsCourants = lire('data/mots-courants.json').mots;
+test('Recherche : mots courants (salaire, loyer, terrain, petit commerce) et accents ignorés', () => {
+  const liste = lire('data/impots.json').impots;
+  const ids = q => rechercher(liste, motsCourants, q).map(i => i.id);
+  assert.ok(ids('salaire').includes('irsa'));
+  assert.ok(ids('Salarié').includes('irsa'));
+  assert.ok(ids('loyer').includes('de'));
+  assert.ok(ids('terrain').includes('ift'));
+  assert.ok(ids('petit commerce').includes('is'));
+  assert.ok(ids('karama').includes('irsa'));
+  assert.equal(normaliser('Épicerie'), 'epicerie');
+  for (const m of motsCourants) {
+    assert.ok(m.article && m.mots.fr.length && m.mots.en.length && m.mots.mg.length, m.id);
+    for (const id of m.impots) assert.ok(liste.some(i => i.id === id), id);
+  }
+});
+test('Signaler une erreur : lien e-mail pré-rempli vers le contact choisi', () => {
+  const l = lienSignalement({ sujet: 'Hetrako — erreur : IRSA', lignes: ['Décrivez', 'https://x/#/irsa'] });
+  assert.ok(l.startsWith(`mailto:${CONTACT}?subject=`));
+  assert.match(decodeURIComponent(l), /body=Décrivez\nhttps:\/\/x\/#\/irsa/);
+});
+test('Lexique : chaque terme en trois langues, chaque article cité existe dans le Code', () => {
+  const termes = lire('data/lexique.json').termes;
+  const cdi = readFileSync('codes/CDI-2026.txt', 'utf8'), cpf = readFileSync('codes/CPF-2026.txt', 'utf8');
+  assert.ok(termes.length >= 12);
+  for (const x of termes) {
+    assert.ok(trilingue(x.terme) && trilingue(x.definition), x.id);
+    if (x.article === null) continue;
+    const [code, num] = x.article.replace(' (LFR 2026)', '').split(' ');
+    assert.ok((code === 'CDI' ? cdi : cpf).includes(`Article ${num}`), x.article);
+  }
+  assert.deepEqual(lireRoute('#/lexique'), { page: 'module', id: 'lexique', sous: null });
+  assert.equal(ongletBarre(lireRoute('#/lexique')), 'apprendre');
+  assert.equal(lienRetour(lireRoute('#/plus/historique')), '#/plus');
+});

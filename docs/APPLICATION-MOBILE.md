@@ -16,12 +16,13 @@ La barre d'onglets (en bas sur téléphone, à gauche à partir de 900 px de lar
 | | Guides pas à pas (6) | `#/guides`, `#/guides/payer`… | Fait |
 | | Sanctions (simulateur) | `#/sanctions` | Fait |
 | | Quiz de révision (4 chapitres) | `#/quiz`, `#/quiz/tva`… | Fait |
-| | Lexique | — | À venir (étape 4) |
+| | Lexique (15 termes, avec article) | `#/lexique` | Fait |
 | **Plus** | Réglages : langue, thème, taille du texte | `#/plus` | Fait |
 | | Sources et limites, date des barèmes | `#/sources` | Fait |
 | | À propos, numéro de version | `#/plus/a-propos` | Fait |
 | | Revoir la présentation | bouton dans `#/plus` | Fait |
-| | Signaler une erreur | — | Étape 4 |
+| | Historique des 20 derniers calculs | `#/plus/historique` | Fait |
+| | Signaler une erreur (e-mail pré-rempli) | lien dans Plus et dans chaque fiche | Fait |
 | | Conditions d'utilisation, Confidentialité | — | Étape 5 |
 
 ## 2. Navigation
@@ -61,6 +62,16 @@ Affiché une seule fois, mémorisé par `src/stockage.js` :
 | Erreur | Message clair et « Réessayer » (`etatErreur`), textes en trois langues même si les fichiers de langue manquent | Données illisibles au démarrage |
 | Hors connexion | Bandeau discret sous l'en-tête (`#hors-ligne`) ; « Connexion rétablie » au retour | Partout |
 | Confirmation | Petit message en bas de l'écran, lu par les lecteurs d'écran (`confirmer`), 2,5 à 6 s | Réglage enregistré, résultat copié, partage impossible, connexion rétablie |
+
+## 5 bis. Usage quotidien (fait)
+
+- **Recherche** : sigle, nom dans les trois langues, ou mot courant (`data/mots-courants.json`, accents ignorés) — `src/recherche.js`.
+- **Raccourcis** : Salarié (IRSA), Petit commerçant (calendrier de l'impôt synthétique), Propriétaire (calendrier foncier), Étudiant (Apprendre).
+- **Favoris** (étoile sur chaque fiche), **consultés récemment** (6) et **historique** (20 calculs, rouverts avec leurs valeurs et leur mode) — `src/memoire.js`, enregistrés uniquement par `src/stockage.js`. Un calcul est noté 1,5 s après la dernière saisie de l'utilisateur.
+- **Partage** du résultat : partage du téléphone, sinon copie (étape 3 de l'identité).
+- **Signaler une erreur** : `src/signaler.js`, e-mail pré-rempli (fiche, onglet, lien, version, langue) vers l'adresse du propriétaire du projet.
+- **Calendrier** : échéances des impôts au statut « vérifié », mois par mois à partir du mois en cours.
+- **Lexique** : `data/lexique.json`, un test vérifie que chaque article cité existe dans le texte du Code.
 
 ## 6. Accessibilité
 

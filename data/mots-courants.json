@@ -1,0 +1,29 @@
+{
+  "note": "Mots de tous les jours qui mènent aux fiches. Chaque lien est justifié par l'article où le Code traite la situation. Mots malgaches à relire.",
+  "mots": [
+    {
+      "id": "salaire",
+      "mots": { "fr": ["salaire", "salarié", "paie", "fiche de paie"], "en": ["salary", "wage", "employee", "payslip"], "mg": ["karama", "mpiasa"] },
+      "impots": ["irsa"],
+      "article": "CDI 01.03.01 et s."
+    },
+    {
+      "id": "loyer",
+      "mots": { "fr": ["loyer", "location", "bail", "louer"], "en": ["rent", "lease", "renting"], "mg": ["hofan-trano", "hofa", "fanofana"] },
+      "impots": ["de", "ifpb"],
+      "article": "CDI 02.02.12 (baux) ; Livre II, Titre II (impôt foncier sur la propriété bâtie)"
+    },
+    {
+      "id": "terrain",
+      "mots": { "fr": ["terrain", "parcelle", "vente de terrain"], "en": ["land", "plot"], "mg": ["tany", "tanim-bary"] },
+      "impots": ["ift", "ipvi", "de"],
+      "article": "Livre II, Titre I (impôt foncier sur les terrains) ; CDI 01.05.01 (plus-values immobilières) ; Partie II, SP I (mutations)"
+    },
+    {
+      "id": "petit-commerce",
+      "mots": { "fr": ["petit commerce", "petit commerçant", "boutique", "épicerie", "commerce"], "en": ["small business", "small shop", "shopkeeper"], "mg": ["varotra madinika", "mpivarotra", "tsena"] },
+      "impots": ["is"],
+      "article": "CDI 01.02.02, 01.02.06 (petits commerçants)"
+    }
+  ]
+}

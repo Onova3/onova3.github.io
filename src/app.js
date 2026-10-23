@@ -10,6 +10,7 @@ import { CLE as CLE_BIENVENUE, doitAfficher, marquerAccepte } from './bienvenue.
 import { ouvrirBienvenue } from './bienvenue-ecran.js';
 
 import { squelette, etatErreur, ERREUR_DEMARRAGE, confirmer } from './etats.js';
+import { creerMemoire } from './memoire.js';
 import { etatVide } from './composants.js';
 import { composition } from './bauhaus.js';
 
@@ -17,19 +18,22 @@ const LANGUES = ['fr', 'en', 'mg'];
 const json = async u => { const r = await fetch(u); if (!r.ok) throw new Error(`${u} : ${r.status}`); return r.json(); };
 
 // Données chargées au démarrage (voir demarrer()).
-let impots, b, obligations, profils, guides, quiz, TEXTES;
+let impots, b, obligations, profils, guides, quiz, motsCourants, lexique, TEXTES;
 async function chargerDonnees() {
-  const [inventaire, bareme, oblig, donneesProfils, donneesGuides, donneesQuiz, ...textes] = await Promise.all([
+  const [inventaire, bareme, oblig, donneesProfils, donneesGuides, donneesQuiz, donneesMots, donneesLexique, ...textes] = await Promise.all([
     json('data/impots.json'), json('data/baremes-2026.json'), json('data/obligations.json'), json('data/profils.json'), json('data/guides.json'), json('data/quiz.json'),
+    json('data/mots-courants.json'), json('data/lexique.json'),
     ...LANGUES.map(l => json(`src/i18n/${l}.json`)),
   ]);
   impots = inventaire.impots; b = bareme; obligations = oblig;
   profils = donneesProfils.profils; guides = donneesGuides.guides; quiz = donneesQuiz.chapitres;
+  motsCourants = donneesMots.mots; lexique = donneesLexique.termes;
   TEXTES = Object.fromEntries(LANGUES.map((l, i) => [l, textes[i]]));
 }
 
 // Réglages mémorisés (src/stockage.js) : langue, thème, taille du texte.
 const stockage = creerStockage();
+const memoire = creerMemoire(stockage); // favoris, consultations récentes, historique des calculs
 const sombreSysteme = matchMedia('(prefers-color-scheme: dark)');
 function appliquerApparence() {
   const racine = document.documentElement, choix = stockage.preference('theme');
@@ -88,9 +92,9 @@ function afficher() {
   routePrecedente = { cle, id: r.id, page: r.page };
 
   const impot = r.page === 'fiche' ? impots.find(i => i.id === r.id) : null;
-  const ctx = { impots, obligations, profils, guides, quiz, b, sous: r.sous ?? null, reglages };
+  const ctx = { impots, obligations, profils, guides, quiz, motsCourants, lexique, b, sous: r.sous ?? null, reglages, memoire };
   if (impot && FICHES[r.id]) {
-    rendreFiche(contenu, { fiche: FICHES[r.id], impot, onglet: r.onglet, b, obligations });
+    rendreFiche(contenu, { fiche: FICHES[r.id], impot, onglet: r.onglet, b, obligations, memoire });
     document.title = `${impot.sigle} · Hetrako`;
   } else if (r.page === 'module' && MODULES_ECRANS[r.id]) {
     MODULES_ECRANS[r.id].monter(contenu, ctx);

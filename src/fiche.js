@@ -7,27 +7,76 @@ import { texteResultat, lireTicket, partager } from './partage.js';
 import { etatVide } from './composants.js';
 import { confirmer } from './etats.js';
 import { composition } from './bauhaus.js';
+import { lireValeurs, remettreValeurs } from './memoire.js';
+import { lienSignalement } from './signaler.js';
+import { VERSION } from './version.js';
 
 // Les textes peuvent contenir des {variables} (taux, seuils) tirées du barème par fiche.variables(b).
 const liste = (items = [], vars = {}) => `<ul class="puces">${items.map(i => `<li>${esc(fmt(tr(i.texte), vars))}${art(i.article)}</li>`).join('')}</ul>`;
 const carte = (titre, items, vars) => (items?.length ? `<div class="card"><h3>${titre}</h3>${liste(items, vars)}</div>` : '');
 
-export function rendreFiche(el, { fiche, impot, onglet, b, obligations }) {
+export function rendreFiche(el, { fiche, impot, onglet, b, obligations, memoire }) {
+  const favori = memoire.estFavori(fiche.id);
   el.innerHTML = `
     <header class="fiche-tete">
-      <div class="etiquettes"><span class="sigle-g">${esc(impot.sigle)}</span>
-        <span class="refs">CDI · ${esc(impot.refCDI)}</span><span class="refs">CPF · ${esc(impot.refCPF ?? '—')}</span></div>
+      <div class="fiche-haut">
+        <div class="etiquettes"><span class="sigle-g">${esc(impot.sigle)}</span>
+          <span class="refs">CDI · ${esc(impot.refCDI)}</span><span class="refs">CPF · ${esc(impot.refCPF ?? '—')}</span></div>
+        <button type="button" class="etoile" id="favori" aria-pressed="${favori}" aria-label="${esc(t('favori_ajouter'))}">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg></button>
+      </div>
       <h2>${esc(tr(impot.nom))}</h2>
     </header>
     <nav class="tabs" role="tablist">${ONGLETS.map(o =>
       `<a class="tab" role="tab" href="${lien(fiche.id, o)}" aria-selected="${o === onglet}">${t('onglet_' + o)}</a>`).join('')}</nav>
-    <section class="panel" role="tabpanel" id="panneau"></section>`;
+    <section class="panel" role="tabpanel" id="panneau"></section>
+    <p class="signaler"><a href="${lienSignalement(signalement(impot, onglet))}">${t('signaler_erreur')}</a></p>`;
+  memoire.noterConsultation(fiche.id);
+  el.querySelector('#favori').addEventListener('click', e => {
+    const ajoute = memoire.basculerFavori(fiche.id);
+    e.currentTarget.setAttribute('aria-pressed', ajoute);
+    confirmer(t(ajoute ? 'favori_ajoute' : 'favori_retire'));
+  });
   const panneaux = { comprendre, calculer, declarer, sanctions };
   const panneau = el.querySelector('#panneau');
-  panneaux[onglet](panneau, fiche, b, obligations[fiche.id] ?? {});
+  if (onglet === 'calculer') {
+    // Un calcul rouvert depuis l'historique : on remet d'abord le bon mode (bouton data-mode), puis les valeurs.
+    const calcul = memoire.prendreRestauration(fiche.id);
+    panneaux.calculer(panneau, fiche, b);
+    if (calcul) {
+      if (calcul.mode) panneau.querySelector(`[data-mode="${CSS.escape(calcul.mode)}"]`)?.click();
+      remettreValeurs(panneau, calcul.valeurs);
+    }
+    suivreCalculs(panneau, impot, memoire);
+  } else panneaux[onglet](panneau, fiche, b, obligations[fiche.id] ?? {});
   completerResultats(panneau, impot);
   // Certains calculateurs se redessinent (changement de mode) : on complète à nouveau leurs résultats.
   new MutationObserver(() => completerResultats(panneau, impot)).observe(panneau, { childList: true });
+}
+
+const signalement = (impot, onglet) => ({
+  sujet: `Hetrako — ${t('signaler_erreur')} : ${impot.sigle} (${t('onglet_' + onglet)})`,
+  lignes: [t('signaler_corps'), '', '', '—', `${impot.sigle} · ${tr(impot.nom)}`, location.href, `Hetrako ${VERSION} · ${document.documentElement.lang}`],
+});
+
+/** Enregistre le calcul dans l'historique quelques secondes après la dernière saisie de l'utilisateur. */
+function suivreCalculs(panneau, impot, memoire) {
+  let minuteur = null;
+  const noter = () => {
+    const ticket = panneau.querySelector('.ticket'), v = ticket?.querySelector('.total .v');
+    if (!v) return;
+    memoire.noterCalcul({
+      fiche: impot.id, sigle: impot.sigle,
+      mode: panneau.querySelector('[data-mode][aria-pressed=true]')?.dataset.mode ?? null,
+      valeurs: lireValeurs(panneau),
+      libelle: ticket.querySelector('.total .k')?.textContent.trim() ?? '', total: v.textContent.trim(),
+      date: new Date().toISOString(),
+    });
+  };
+  const planifier = e => { if (!e.isTrusted) return; clearTimeout(minuteur); minuteur = setTimeout(noter, 1500); };
+  panneau.addEventListener('input', planifier);
+  panneau.addEventListener('change', planifier);
+  panneau.addEventListener('click', e => { if (e.target.closest('[data-pas], [data-mode], .produit, .seg button')) planifier(e); });
 }
 
 /**

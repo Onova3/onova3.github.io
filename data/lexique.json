@@ -1,0 +1,215 @@
+{
+  "note": "Termes utilisés dans les fiches, expliqués simplement. L'article est celui du Code où le terme est défini ou appliqué ; null si le terme n'est pas défini par le Code. Textes malgaches à relire.",
+  "termes": [
+    {
+      "id": "nif",
+      "terme": {
+        "fr": "Numéro d'immatriculation fiscale (NIF)",
+        "en": "Tax identification number (NIF)",
+        "mg": "Laharana fanondroana ara-ketra (NIF)"
+      },
+      "definition": {
+        "fr": "Numéro attribué en ligne à toute personne ou entreprise qui doit payer un impôt. Il figure sur ses déclarations et ses paiements.",
+        "en": "Number assigned online to every person or business liable to tax. It appears on returns and payments.",
+        "mg": "Laharana omena an-tserasera ho an'ny olona na orinasa tsy maintsy mandoa hetra. Hita amin'ny fanambarana sy ny fandoavana izy."
+      },
+      "article": "CPF I-01"
+    },
+    {
+      "id": "base",
+      "terme": {
+        "fr": "Base imposable",
+        "en": "Taxable base",
+        "mg": "Fototry ny hetra"
+      },
+      "definition": {
+        "fr": "Montant sur lequel on applique le taux de l'impôt. Pour l'IRSA, ce sont les salaires et avantages, après déduction des cotisations sociales.",
+        "en": "Amount to which the tax rate is applied. For IRSA, it is salaries and benefits after social contributions.",
+        "mg": "Ny vola ampiharana ny tahan'ny hetra. Ho an'ny IRSA, ny karama sy tombontsoa aorian'ny fanalana ny latsakemboka sosialy."
+      },
+      "article": "CDI 01.03.07 à 01.03.09"
+    },
+    {
+      "id": "tranche",
+      "terme": {
+        "fr": "Tranche du barème",
+        "en": "Tax band",
+        "mg": "Sokajin'ny taha"
+      },
+      "definition": {
+        "fr": "Partie du revenu taxée à un même taux. Chaque tranche a son taux ; seule la part du revenu comprise dans la tranche paie ce taux.",
+        "en": "Part of income taxed at one rate. Each band has its rate; only the part of income within the band pays that rate.",
+        "mg": "Ampahany amin'ny fidiram-bola iharan'ny taha iray. Samy manana ny tahany ny sokajy tsirairay."
+      },
+      "article": "CDI 01.03.16"
+    },
+    {
+      "id": "charge",
+      "terme": {
+        "fr": "Personne à charge",
+        "en": "Dependant",
+        "mg": "Olona iantohana"
+      },
+      "definition": {
+        "fr": "Enfant ou personne que le salarié fait vivre. Chaque personne à charge réduit l'IRSA d'un montant fixé par le Code.",
+        "en": "Child or person supported by the employee. Each dependant reduces IRSA by an amount set by the Code.",
+        "mg": "Zaza na olona velomin'ny mpiasa. Mampihena ny IRSA amin'ny vola voafaritry ny Fehezan-dalàna ny olona iantohana tsirairay."
+      },
+      "article": "CDI 01.03.19"
+    },
+    {
+      "id": "taux-effectif",
+      "terme": {
+        "fr": "Taux effectif",
+        "en": "Effective rate",
+        "mg": "Taha marina"
+      },
+      "definition": {
+        "fr": "Part de l'impôt dans le revenu brut, calculée par l'application pour comparer. Ce n'est pas un taux fixé par le Code.",
+        "en": "Share of tax in gross income, calculated by the app for comparison. It is not a rate set by the Code.",
+        "mg": "Ampahan'ny hetra amin'ny fidiram-bola, kajian'ny fampiharana hanaovana fampitahana. Tsy taha voafaritry ny Fehezan-dalàna izy."
+      },
+      "article": null
+    },
+    {
+      "id": "is",
+      "terme": {
+        "fr": "Impôt synthétique",
+        "en": "Synthetic tax",
+        "mg": "Hetra tambabe"
+      },
+      "definition": {
+        "fr": "Impôt des petites entreprises dont le chiffre d'affaires reste sous le seuil fixé par le Code ; il est calculé sur ce chiffre d'affaires.",
+        "en": "Tax for small businesses whose turnover stays below the threshold set by the Code; it is calculated on that turnover.",
+        "mg": "Hetra ho an'ny orinasa madinika izay ambanin'ny fetra voafaritry ny Fehezan-dalàna ny tondrom-barotra; kajiana amin'io tondrom-barotra io."
+      },
+      "article": "CDI 01.02.02"
+    },
+    {
+      "id": "acompte",
+      "terme": {
+        "fr": "Acompte",
+        "en": "Instalment",
+        "mg": "Fandoavana mialoha"
+      },
+      "definition": {
+        "fr": "Paiement partiel de l'impôt synthétique de l'année en cours, calculé sur l'impôt de l'année précédente ; un montant fixe s'applique en début d'activité.",
+        "en": "Partial payment of the current year's synthetic tax, calculated on the previous year's tax; a fixed amount applies when starting a business.",
+        "mg": "Fandoavana ampahany amin'ny hetra tambaben'ny taona, kajiana amin'ny hetran'ny taona lasa; vola raikitra no mihatra amin'ny fanombohan'ny asa."
+      },
+      "article": "CDI 01.02.06"
+    },
+    {
+      "id": "abattement",
+      "terme": {
+        "fr": "Abattement",
+        "en": "Allowance",
+        "mg": "Fanalana"
+      },
+      "definition": {
+        "fr": "Part d'un revenu qui n'est pas imposée. Pour l'IRCM, les dividendes ne sont imposés que sur une partie de leur montant.",
+        "en": "Part of income that is not taxed. For IRCM, dividends are taxed on only part of their amount.",
+        "mg": "Ampahan'ny fidiram-bola tsy iharan'ny hetra. Ho an'ny IRCM, ampahany amin'ny tombom-barotra zaraina ihany no iharan'ny hetra."
+      },
+      "article": "CDI 01.04.04"
+    },
+    {
+      "id": "arrondi",
+      "terme": {
+        "fr": "Arrondi",
+        "en": "Rounding",
+        "mg": "Fanatsarana isa"
+      },
+      "definition": {
+        "fr": "Règle qui supprime les petites unités d'un montant ; l'impôt à payer est arrondi à la centaine d'ariary inférieure.",
+        "en": "Rule that drops small units of an amount; tax payable is rounded down to the nearest hundred ariary.",
+        "mg": "Fitsipika manala ny isa madinika; boribory ho amin'ny zato ariary ambany ny hetra aloa."
+      },
+      "article": "CPF VII-32 (LFR 2026)"
+    },
+    {
+      "id": "penalite",
+      "terme": {
+        "fr": "Pénalité de retard",
+        "en": "Late-payment penalty",
+        "mg": "Sazy noho ny fahatarana"
+      },
+      "definition": {
+        "fr": "Somme ajoutée à l'impôt quand il est déclaré ou payé en retard, calculée par mois de retard avec un minimum.",
+        "en": "Amount added to tax declared or paid late, calculated per month late with a minimum.",
+        "mg": "Vola ampiana amin'ny hetra raha tara ny fanambarana na ny fandoavana, kajiana isam-bolana miaraka amin'ny farafahakeliny."
+      },
+      "article": "CDI 20.01.53"
+    },
+    {
+      "id": "taxation-office",
+      "terme": {
+        "fr": "Taxation d'office",
+        "en": "Default assessment",
+        "mg": "Hetra napetraky ny fitondrana"
+      },
+      "definition": {
+        "fr": "Impôt fixé directement par l'administration quand le contribuable ne déclare pas ou ne fournit pas les documents demandés.",
+        "en": "Tax set directly by the tax office when the taxpayer does not file or provide requested documents.",
+        "mg": "Hetra apetraky ny fitondrana mivantana raha tsy manambara na tsy manome ny taratasy angatahina ny mpandoa hetra."
+      },
+      "article": "CPF V-12"
+    },
+    {
+      "id": "notification",
+      "terme": {
+        "fr": "Notification primitive",
+        "en": "Initial notice",
+        "mg": "Fampandrenesana voalohany"
+      },
+      "definition": {
+        "fr": "Lettre par laquelle l'administration propose des corrections après un contrôle ; le contribuable peut y répondre.",
+        "en": "Letter in which the tax office proposes adjustments after an audit; the taxpayer can reply.",
+        "mg": "Taratasy anaovan'ny fitondrana tolo-kevitra fanitsiana aorian'ny fanaraha-maso; afaka mamaly ny mpandoa hetra."
+      },
+      "article": "CPF V-04"
+    },
+    {
+      "id": "reclamation",
+      "terme": {
+        "fr": "Réclamation contentieuse",
+        "en": "Formal dispute",
+        "mg": "Fitarainana"
+      },
+      "definition": {
+        "fr": "Demande faite pour corriger une erreur dans le calcul ou la base de l'impôt.",
+        "en": "Request to correct an error in the calculation or base of the tax.",
+        "mg": "Fangatahana hanitsiana hadisoana amin'ny kajy na ny fototry ny hetra."
+      },
+      "article": "CPF VI-13"
+    },
+    {
+      "id": "reprise",
+      "terme": {
+        "fr": "Droit de reprise (prescription)",
+        "en": "Right of recovery (limitation period)",
+        "mg": "Zo hamerina (fe-potoana)"
+      },
+      "definition": {
+        "fr": "Délai pendant lequel l'administration peut encore corriger un impôt ; en général jusqu'à la fin de la troisième année suivante.",
+        "en": "Period during which the tax office can still correct a tax; generally until the end of the third following year.",
+        "mg": "Fe-potoana mbola ahafahan'ny fitondrana manitsy hetra; amin'ny ankapobeny hatramin'ny faran'ny taona fahatelo manaraka."
+      },
+      "article": "CPF IX-02"
+    },
+    {
+      "id": "communication",
+      "terme": {
+        "fr": "Droit de communication",
+        "en": "Right to request information",
+        "mg": "Zo hangataka fampahalalana"
+      },
+      "definition": {
+        "fr": "Pouvoir de l'administration de demander des documents et renseignements à toute personne pour établir et contrôler l'impôt.",
+        "en": "Power of the tax office to request documents and information from anyone to assess and check tax.",
+        "mg": "Fahefan'ny fitondrana hangataka taratasy sy fampahalalana amin'ny olona rehetra mba hamaritana sy hanaraha-maso ny hetra."
+      },
+      "article": "CPF IV-01"
+    }
+  ]
+}

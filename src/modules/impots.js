@@ -3,18 +3,16 @@ import { lien } from '../routes.js';
 import { FICHES } from '../fiches/index.js';
 import { t, tr, esc } from '../ui.js';
 import { etatVide } from '../composants.js';
+import { rechercher } from '../recherche.js';
 import { composition } from '../bauhaus.js';
 
 const CATEGORIES = ['revenus', 'enregistrement', 'consommation', 'local'];
 
-/** Impôts dont le sigle ou le nom (dans une des trois langues) contient la recherche. Fonction pure. */
-export function filtrerImpots(impots, recherche) {
-  const q = recherche.trim().toLowerCase();
-  return impots.filter(i => !q || [i.sigle, i.nom.fr, i.nom.en, i.nom.mg].some(s => s.toLowerCase().includes(q)));
-}
+/** Impôts trouvés par sigle, nom (trois langues) ou mot courant (salaire, loyer…). Fonction pure. */
+export const filtrerImpots = (impots, recherche, motsCourants = []) => rechercher(impots, motsCourants, recherche);
 
-export function listeImpots(impots, recherche) {
-  const garde = new Set(filtrerImpots(impots, recherche));
+export function listeImpots(impots, recherche, motsCourants = []) {
+  const garde = new Set(filtrerImpots(impots, recherche, motsCourants));
   return CATEGORIES.map(c => {
     const items = impots.filter(i => i.categorie === c && garde.has(i));
     if (!items.length) return '';
@@ -30,14 +28,14 @@ export function listeImpots(impots, recherche) {
 
 let recherche = '';
 
-export function monter(el, { impots }) {
+export function monter(el, { impots, motsCourants }) {
   el.innerHTML = `
     <header class="fiche-tete"><h2>${t('nav_impots')}</h2></header>
     <label class="search"><span class="sr">${t('recherche')}</span>
       <input id="q" type="search" placeholder="${esc(t('recherche'))}" value="${esc(recherche)}" autocomplete="off"></label>
     <div id="liste"></div>`;
   const q = el.querySelector('#q'), out = el.querySelector('#liste');
-  const maj = () => { out.innerHTML = listeImpots(impots, recherche); };
+  const maj = () => { out.innerHTML = listeImpots(impots, recherche, motsCourants); };
   q.addEventListener('input', () => { recherche = q.value; maj(); });
   el.addEventListener('click', e => { if (e.target.closest('[data-effacer]')) { recherche = ''; q.value = ''; maj(); q.focus(); } });
   maj();
