@@ -24,6 +24,10 @@ import { calculLicence, calculLicenceForaine, calculLicenceNuit, calculLicenceTo
 import { calculAppareils } from '../src/calc/appareils.js';
 import { calculEaux } from '../src/calc/eaux.js';
 import { tarifAffiche, calculPanneaux, calculPubliciteMedia } from '../src/calc/publicite.js';
+import { calculEauElec } from '../src/calc/eauElec.js';
+import { calculFetes } from '../src/calc/fetes.js';
+import { calculPylones } from '../src/calc/pylones.js';
+import { calculJeuxTv } from '../src/calc/jeuxTv.js';
 import { lireRoute, lien } from '../src/routes.js';
 import { FICHES } from '../src/fiches/index.js';
 import { etat, fmt, tr } from '../src/ui.js';
@@ -388,6 +392,35 @@ test('Publicité : paliers des affiches, panneaux au m², audiovisuel 1 %', () =
   assert.equal(calculPanneaux({ surfaceM2: 12.3 }, b).impot, 195000);
   assert.equal(calculPubliciteMedia({ sommes: 50000000 }, b).impot, 500000);
   assert.equal(FICHES.publicite.impotExemple(b), 180000);
+});
+
+// --- Eau et électricité, fêtes, pylônes, jeux radiotélévisés (CDI 10.10 à 10.13) ---
+test('Eau et électricité : 10 % du montant hors taxe', () => {
+  assert.equal(calculEauElec(80000, b).impot, 8000);
+  assert.equal(FICHES['eau-elec'].impotExemple(b), 8000);
+});
+test('Fêtes et spectacles : 5 % des places, 3 % des recettes, cautionnement 5 %', () => {
+  assert.equal(calculFetes({ type: 'places', montant: 1000000 }, b).impot, 50000);
+  const r = calculFetes({ type: 'spectacle', montant: 15000000, billetsMisEnVente: 20000000 }, b);
+  assert.equal(r.impot, 450000);
+  assert.equal(r.cautionnement, 1000000);
+  assert.equal(FICHES.fetes.impotExemple(b), 450000);
+});
+test('Pylônes : tarifs votés plafonnés, par pylône et par antenne', () => {
+  assert.equal(calculPylones({ pylones: 3, antennes: 2, tarifPylone: 1000000, tarifAntenne: 600000 }).impot, 4200000);
+  assert.equal(FICHES.pylones.impotExemple(b), 4200000);
+});
+test('Jeux radiotélévisés : 10 Ar par SMS, 20 Ar par appel', () => {
+  assert.equal(calculJeuxTv({ sms: 50000, appels: 10000 }, b).impot, 700000);
+  assert.equal(FICHES['jeux-tv'].impotExemple(b), 700000);
+});
+test('Les 29 impôts de l’inventaire ont une fiche et des obligations', () => {
+  const ids = lire('data/impots.json').impots.map(i => i.id);
+  assert.equal(ids.length, 29);
+  for (const id of ids) {
+    assert.ok(FICHES[id], `fiche ${id}`);
+    assert.ok(obligations[id]?.qui?.length && obligations[id]?.quand?.length, `obligations ${id}`);
+  }
 });
 
 // --- Navigation ---

@@ -1865,5 +1865,229 @@
         }
       }
     ]
+  },
+  "eau-elec": {
+    "qui": [
+      {
+        "article": "CDI 10.10.02, 10.10.05",
+        "texte": {
+          "fr": "Tous les abonnés de la société d'eau et d'électricité (sauf la commune elle-même) la paient avec leur facture ; la société la reverse à la commune.",
+          "en": "All subscribers of the water and electricity company (except the commune itself) pay it with their bill; the company pays it over to the commune.",
+          "mg": "Ny mpanjifan'ny orinasa mpamatsy rano sy herinaratra rehetra (afa-tsy ny kaominina) no mandoa azy miaraka amin'ny faktiora; ny orinasa no mandoa azy amin'ny kaominina."
+        }
+      }
+    ],
+    "ou": [
+      {
+        "article": "CDI 10.10.05",
+        "texte": {
+          "fr": "Rien à faire pour l’abonné : la taxe est payée avec la facture d’eau ou d’électricité.",
+          "en": "Nothing for the subscriber to do: the tax is paid with the water or electricity bill.",
+          "mg": "Tsy misy atao ny mpanjifa: aloa miaraka amin'ny faktioran'ny rano na herinaratra ny haba."
+        }
+      }
+    ],
+    "document": [
+      {
+        "article": "CDI 10.10.05",
+        "texte": {
+          "fr": "La facture indique distinctement le libellé, le taux et le montant de la taxe.",
+          "en": "The bill shows the tax’s name, rate and amount separately.",
+          "mg": "Asehon'ny faktiora mazava ny anaran'ny haba, ny tahany ary ny habetsany."
+        }
+      }
+    ],
+    "quand": [
+      {
+        "article": "CDI 10.10.05",
+        "delai": "avec la facture",
+        "texte": {
+          "fr": "À chaque paiement de facture. La société reverse à la commune sur la base des factures encaissées.",
+          "en": "With each bill payment. The company pays the commune on the basis of bills collected.",
+          "mg": "Isaky ny fandoavana faktiora. Ny orinasa no mandoa ny kaominina araka ny faktiora voaray."
+        }
+      }
+    ],
+    "sanctions": [
+      {
+        "article": "CDI 10.10.05",
+        "texte": {
+          "fr": "La société concessionnaire est personnellement responsable si elle n’applique pas les taxes votées par la commune.",
+          "en": "The concession company is financially liable if it fails to apply the taxes voted by the commune.",
+          "mg": "Tompon'andraikitra ara-bola ny orinasa raha tsy mampihatra ny haba nolanian'ny kaominina."
+        }
+      }
+    ]
+  },
+  "fetes": {
+    "qui": [
+      {
+        "article": "CDI 10.11.02, CPF I-120",
+        "texte": {
+          "fr": "L'organisateur d'une fête, d'un spectacle ou d'une manifestation à entrée payante, sur les billets ou tickets vendus.",
+          "en": "The organiser of a festival, show or event with paid entry, on tickets sold.",
+          "mg": "Ny mpikarakara fety, fampisehoana na hetsika mandoa fidirana, amin'ny tapakila amidy."
+        }
+      }
+    ],
+    "ou": [
+      {
+        "article": "CPF I-120, I-121",
+        "texte": {
+          "fr": "Déclaration au bureau de la collectivité ; paiement au régisseur de recettes de la commune.",
+          "en": "Return to the local authority office; payment to the commune’s revenue officer.",
+          "mg": "Fanambarana any amin'ny biraon'ny vondrom-bahoaka; aloa any amin'ny mpitahiry vola ao amin'ny kaominina."
+        }
+      }
+    ],
+    "document": [
+      {
+        "article": "CPF I-120",
+        "texte": {
+          "fr": "Une déclaration de l’événement, et un cautionnement provisoire de 5 % de la valeur des billets mis en vente.",
+          "en": "A declaration of the event, and a provisional deposit of 5% of the value of tickets offered for sale.",
+          "mg": "Fanambarana ny hetsika, ary antoka vonjimaika 5 % amin'ny vidin'ny tapakila amidy."
+        }
+      },
+      {
+        "article": "CPF I-120",
+        "texte": {
+          "fr": "Les personnes qui exercent des activités attractives doivent avoir une carte fiscale.",
+          "en": "People running attractions must hold a tax card.",
+          "mg": "Tsy maintsy manana karatra ara-ketra ny olona manao asa fialam-boly."
+        }
+      }
+    ],
+    "quand": [
+      {
+        "article": "CPF I-120",
+        "delai": "24 heures avant",
+        "texte": {
+          "fr": "Déclaration au moins 24 heures avant l’ouverture.",
+          "en": "Declaration at least 24 hours before opening.",
+          "mg": "Fanambarana 24 ora farafahakeliny alohan'ny fanokafana."
+        }
+      },
+      {
+        "article": "CPF I-120",
+        "delai": "jour même, semaine ou mois",
+        "texte": {
+          "fr": "Paiement le jour même, ou chaque semaine ou chaque mois selon la nature du spectacle.",
+          "en": "Payment the same day, or weekly or monthly depending on the type of show.",
+          "mg": "Aloa amin'io andro io ihany, na isan-kerinandro na isam-bolana araka ny karazana fampisehoana."
+        }
+      }
+    ]
+  },
+  "pylones": {
+    "qui": [
+      {
+        "article": "CDI 10.12.02",
+        "texte": {
+          "fr": "Le propriétaire, au 1er janvier, de pylônes, relais, antennes ou mâts de communication, même installés dans une propriété privée.",
+          "en": "The owner, on 1 January, of communication pylons, relays, antennas or masts, even installed on private property.",
+          "mg": "Ny tompon'ny tilikambo, relais, antenina na andry fifandraisana amin'ny 1 janoary, na apetraka amin'ny tany manokana aza."
+        }
+      }
+    ],
+    "ou": [
+      {
+        "article": "CPF I-122, I-123",
+        "texte": {
+          "fr": "À la commune d’implantation des équipements.",
+          "en": "At the commune where the equipment is installed.",
+          "mg": "Any amin'ny kaominina misy ny fitaovana."
+        }
+      }
+    ],
+    "document": [
+      {
+        "article": "CPF I-122",
+        "texte": {
+          "fr": "Une déclaration annuelle : nombre, localisation, caractéristiques et date d’installation des équipements, références fiscales du propriétaire ou de ses clients.",
+          "en": "An annual return: number, location, specifications and installation date of the equipment, tax references of the owner or its customers.",
+          "mg": "Fanambarana isan-taona: isa, toerana, toetra ary daty nametrahana ny fitaovana, laharana ara-ketran'ny tompony na ny mpanjifany."
+        }
+      }
+    ],
+    "quand": [
+      {
+        "article": "CPF I-122",
+        "delai": "15 octobre",
+        "texte": {
+          "fr": "Déclaration et paiement de toute la taxe au plus tard le 15 octobre.",
+          "en": "Return and payment of the whole tax by 15 October.",
+          "mg": "Fanambarana sy fandoavana ny haba manontolo farany ny 15 oktobra."
+        }
+      },
+      {
+        "article": "CDI 10.12.02",
+        "texte": {
+          "fr": "Équipement installé au dernier trimestre : taxé seulement à partir du 1er janvier suivant.",
+          "en": "Equipment installed in the last quarter: taxed only from the following 1 January.",
+          "mg": "Fitaovana napetraka tamin'ny telo volana farany: iharan'ny haba manomboka amin'ny 1 janoary manaraka ihany."
+        }
+      }
+    ]
+  },
+  "jeux-tv": {
+    "qui": [
+      {
+        "article": "CDI 10.13.03",
+        "texte": {
+          "fr": "L'organisateur du jeu radiotélévisé ou de téléréalité, sur chaque SMS ou appel de participation.",
+          "en": "The organiser of the broadcast or reality game, on each participation text or call.",
+          "mg": "Ny mpikarakara ny lalao amin'ny radio na fahitalavitra, isaky ny SMS na antso fandraisana anjara."
+        }
+      }
+    ],
+    "ou": [
+      {
+        "article": "CDI 10.13.04",
+        "texte": {
+          "fr": "Déclarations au service des impôts qui gère le dossier fiscal de l’organisateur.",
+          "en": "Returns to the tax office managing the organiser’s tax file.",
+          "mg": "Fanambarana any amin'ny biraon'ny hetra mitantana ny antontan-taratasin'ny mpikarakara."
+        }
+      },
+      {
+        "article": "CDI 10.13.05",
+        "texte": {
+          "fr": "Paiement chez le comptable du Trésor public territorialement compétent.",
+          "en": "Payment to the competent public Treasury accountant.",
+          "mg": "Aloa any amin'ny mpitam-bolam-panjakana mifehy ny faritra."
+        }
+      }
+    ],
+    "document": [
+      {
+        "article": "CDI 10.13.04, 10.13.05",
+        "texte": {
+          "fr": "Une déclaration écrite du jeu (durée, envergure), une déclaration mensuelle du nombre d’appels et de SMS par date, et un état récapitulatif final.",
+          "en": "A written declaration of the game (duration, scope), a monthly return of calls and texts by date, and a final summary.",
+          "mg": "Fanambarana an-tsoratra ny lalao (faharetany, sehatra), fanambarana isam-bolana ny isan'ny antso sy SMS isaky ny daty, ary famintinana farany."
+        }
+      }
+    ],
+    "quand": [
+      {
+        "article": "CDI 10.13.04",
+        "delai": "30 jours",
+        "texte": {
+          "fr": "Déclaration du jeu au moins 30 jours avant son lancement ; état récapitulatif dans les 30 jours après sa clôture.",
+          "en": "Declaration of the game at least 30 days before launch; summary within 30 days after it closes.",
+          "mg": "Fanambarana ny lalao 30 andro farafahakeliny alohan'ny hanombohany; famintinana ao anatin'ny 30 andro aorian'ny fiafarany."
+        }
+      },
+      {
+        "article": "CDI 10.13.05",
+        "delai": "avant le 15 du mois suivant",
+        "texte": {
+          "fr": "Versement chaque mois, avant le 15 du mois qui suit la collecte.",
+          "en": "Payment each month, before the 15th of the month after collection.",
+          "mg": "Fandoavana isam-bolana, alohan'ny faha-15 amin'ny volana manaraka ny fanangonana."
+        }
+      }
+    ]
   }
 }

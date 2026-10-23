@@ -144,3 +144,14 @@ Points que le texte des codes ne tranche pas clairement. L'application suit l'in
 | 81 | Affiches au-delà de 2 m² : « Ar 188 en plus » s'ajoute-t-il aux 90 Ar du palier précédent ? | CDI 10.09.04 1° | 90 Ar + 188 Ar par m² ou fraction au-delà de 2 m² |
 | 82 | Publicité : tarifs votés par la commune sous ces limites | CDI 10.09.04 | Le calculateur montre les montants maximum, sans champ communal |
 | 83 | Appareils automatiques : la définition des « machines à sous » et « autres appareils » | CDI 10.07.01 ; texte en partie transféré au CPF I-114 | Reprise telle quelle |
+
+## Eau et électricité, fêtes, pylônes, jeux radiotélévisés (phase 4, étape 4)
+
+| # | Point | Texte | Choix actuel de l'application |
+|---|---|---|---|
+| 84 | Taxe sur l'eau et l'électricité : 10 % « du tarif moyen hors taxe de la catégorie tarifaire » ou du montant facturé ? | CDI 10.10.03 (base : montant HT facturé) et 10.10.04 (taux : 10 % du tarif moyen) | 10 % du montant hors taxe de la facture |
+| 85 | Taxe sur l'eau et l'électricité : taux fixe ou voté par la commune ? | CDI 10.10.04 fixe 10 % ; CDI 10.10.05 parle des « taxes votées par la Commune » | Taux fixe de 10 % |
+| 86 | Cautionnement de 5 % des fêtes : imputé sur la taxe ou restitué ? | CPF I-120 : « cautionnement provisoire » | Affiché à part, sans imputation |
+| 87 | Pylônes : un équipement installé au dernier trimestre | CDI 10.12.02 | Mentionné ; non géré par le calculateur |
+| 88 | Jeux radiotélévisés : pas de chapitre dans le CPF | Obligations tirées des articles 10.13.04 et 10.13.05 du CDI | Repris tels quels |
+| 89 | Pénalité de 1 % par mois (20.01.53.4) pour des taxes versées au Trésor (jeux radiotélévisés, publicité audiovisuelle) | CDI 20.01.53.4 vise les impôts du Livre II | Appliquée à toutes les fiches du Livre II |

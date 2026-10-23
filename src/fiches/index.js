@@ -24,5 +24,9 @@ import licence from './licence.js';
 import appareils from './appareils.js';
 import eaux from './eaux.js';
 import publicite from './publicite.js';
+import eauElec from './eauElec.js';
+import fetes from './fetes.js';
+import pylones from './pylones.js';
+import jeuxTv from './jeuxTv.js';
 
-export const FICHES = { ir, idh, irm, is, irsa, ircm, ipvi, tva, de, timbre, assurance, tvm, ttm, tsabtj, ppa, da, ift, ifpb, tpc, trd, sejour, licence, appareils, eaux, publicite };
+export const FICHES = { ir, idh, irm, is, irsa, ircm, ipvi, tva, de, timbre, assurance, tvm, ttm, tsabtj, ppa, da, ift, ifpb, tpc, trd, sejour, licence, appareils, eaux, publicite, 'eau-elec': eauElec, fetes, pylones, 'jeux-tv': jeuxTv };

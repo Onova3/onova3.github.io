@@ -279,6 +279,34 @@
     "articles": { "champ": "CDI 10.09.01 à 10.09.03", "tarif": "CDI 10.09.04", "audiovisuel": "CDI 10.09.07 à 10.09.09", "paiement": "CPF I-118", "paiementAudiovisuel": "CPF I-119" },
     "source": "LFI 2026"
   },
+  "eauElec": {
+    "taux": 0.10,
+    "articles": { "champ": "CDI 10.10.02", "base": "CDI 10.10.03", "taux": "CDI 10.10.04", "recouvrement": "CDI 10.10.05" },
+    "source": "LFI 2026"
+  },
+  "fetes": {
+    "types": [
+      { "id": "places", "taux": 0.05, "base": "places", "libelle": { "fr": "Cinéma permanent, vidéo, cirque, music-hall, bal, courses, attractions", "en": "Permanent cinema, video, circus, music hall, dance, races, attractions", "mg": "Sinema maharitra, video, cirque, music-hall, baly, hazakazaka, fialam-boly" } },
+      { "id": "ambulant", "taux": 0.03, "base": "recettes", "libelle": { "fr": "Cinéma ambulant", "en": "Travelling cinema", "mg": "Sinema mivezivezy" } },
+      { "id": "spectacle", "taux": 0.03, "base": "recettes", "libelle": { "fr": "Sport, théâtre, concert, spectacle de variétés", "en": "Sport, theatre, concert, variety show", "mg": "Fanatanjahantena, tantara an-tsehatra, kaonseritra, fampisehoana" } }
+    ],
+    "cautionnement": 0.05,
+    "articles": { "champ": "CDI 10.11.02", "exonerations": "CDI 10.11.03, 10.11.04", "base": "CDI 10.11.05", "taux": "CDI 10.11.06", "declaration": "CPF I-120", "recouvrement": "CPF I-121" },
+    "source": "LFI 2026"
+  },
+  "pylones": {
+    "maxParPylone": 1000000,
+    "maxParAntenne": 600000,
+    "repartition": { "commune": 0.60, "region": 0.40 },
+    "articles": { "champ": "CDI 10.12.02", "tarif": "CDI 10.12.03", "declaration": "CPF I-122", "recouvrement": "CPF I-123" },
+    "source": "LFI 2026"
+  },
+  "jeuxTv": {
+    "parSms": 10,
+    "parAppel": 20,
+    "articles": { "champ": "CDI 10.13.02", "tarif": "CDI 10.13.03", "declaration": "CDI 10.13.04", "paiement": "CDI 10.13.05" },
+    "source": "LFI 2026"
+  },
   "tva": {
     "tauxNormal": 0.20,
     "tauxReduit": 0.05,
