@@ -1,6 +1,6 @@
 {
   "version": "0.0.1",
   "configurations": [
-    { "name": "kajy-hetra", "runtimeExecutable": "npm", "runtimeArgs": ["start"], "port": 3000 }
+    { "name": "hetrako", "runtimeExecutable": "npm", "runtimeArgs": ["start"], "port": 3000 }
   ]
 }

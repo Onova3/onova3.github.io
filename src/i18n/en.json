@@ -113,7 +113,7 @@
   "revoir_court": "Language, introduction and notice",
   "bv_langue_titre": "Choose your language",
   "bv_continuer": "Continue",
-  "bv_presentation": "Introduction to Kajy Hetra",
+  "bv_presentation": "Introduction to Hetrako",
   "bv_passer": "Skip",
   "bv_diapo": "slide",
   "bv_suivant": "Next",
@@ -124,7 +124,8 @@
   "bv_horsLigne_titre": "Even offline",
   "bv_horsLigne_texte": "After the first opening, tax sheets and calculations remain available without a network.",
   "bv_avert_titre": "A learning tool, not tax advice",
-  "bv_avert_texte": "Kajy Hetra helps you understand and estimate. It replaces neither the tax administration nor an adviser. Before any decision, check with the tax offices.",
+  "bv_avert_texte": "Hetrako helps you understand and estimate. It replaces neither the tax administration nor an adviser. Before any decision, check with the tax offices.",
   "bv_avert_accord": "I understand",
-  "bv_commencer": "Start"
+  "bv_commencer": "Start",
+  "slogan": "Ny hetrako · My tax"
 }

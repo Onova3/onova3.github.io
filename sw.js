@@ -1,11 +1,26 @@
 // Service worker : garde l'application sur le téléphone pour qu'elle marche sans réseau.
 // Changer VERSION à chaque mise en ligne. Un test vérifie que FICHIERS liste tous les fichiers de src/ et data/.
-const VERSION = 'kh-0.2.0';
+const VERSION = 'kh-0.3.0';
 const FICHIERS = [
   './',
   'index.html',
   'manifest.webmanifest',
-  'icone.svg',
+  'src/logo.js',
+  'src/polices.css',
+  'assets/polices/archivo-800.woff2',
+  'assets/polices/public-sans.woff2',
+  'assets/polices/jetbrains-mono.woff2',
+  'assets/icones/apple-touch-icon-180.png',
+  'assets/icones/favicon.svg',
+  'assets/icones/icone-16.png',
+  'assets/icones/icone-192.png',
+  'assets/icones/icone-32.png',
+  'assets/icones/icone-512.png',
+  'assets/icones/icone-64.png',
+  'assets/icones/icone-maskable-192.png',
+  'assets/icones/icone-maskable-512.png',
+  'assets/icones/icone-ronde-192.png',
+  'assets/icones/icone-ronde-512.png',
   'data/accises-2026.json',
   'data/baremes-2026.json',
   'data/guides.json',

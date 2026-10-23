@@ -1,6 +1,6 @@
 {
-  "name": "kajy-hetra",
-  "version": "0.2.0",
+  "name": "hetrako",
+  "version": "0.3.0",
   "description": "Calculateurs fiscaux de Madagascar (Code des impôts et Code des procédures fiscales 2026), en français, anglais et malgache.",
   "type": "module",
   "private": true,

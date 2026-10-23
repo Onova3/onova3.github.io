@@ -80,15 +80,15 @@ function afficher() {
   const ctx = { impots, obligations, profils, guides, quiz, b, sous: r.sous ?? null, reglages };
   if (impot && FICHES[r.id]) {
     rendreFiche(contenu, { fiche: FICHES[r.id], impot, onglet: r.onglet, b, obligations });
-    document.title = `${impot.sigle} · Kajy Hetra`;
+    document.title = `${impot.sigle} · Hetrako`;
   } else if (r.page === 'module' && MODULES_ECRANS[r.id]) {
     MODULES_ECRANS[r.id].monter(contenu, ctx);
-    document.title = `${t('module_' + r.id)} · Kajy Hetra`;
+    document.title = `${t('module_' + r.id)} · Hetrako`;
   } else if (r.page === 'fiche') {
     contenu.innerHTML = `<p class="lead">${t('introuvable')}</p>`;
   } else {
     MODULES_ECRANS.accueil.monter(contenu, ctx);
-    document.title = 'Kajy Hetra';
+    document.title = 'Hetrako';
   }
 }
 

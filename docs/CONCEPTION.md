@@ -1,4 +1,4 @@
-# Kajy Hetra — Dossier de conception
+# Hetrako — Dossier de conception
 
 Version 0.5 · 23 octobre 2026 (fin de la phase 4 : les 29 impôts ont leur fiche)
 
@@ -221,7 +221,7 @@ Points relevés pendant la phase 4 :
 
 ## 10. Application mobile
 
-Kajy Hetra est une application web installable (PWA), sans étape de compilation :
+Hetrako est une application web installable (PWA), sans étape de compilation :
 
 - `manifest.webmanifest` et `icone.svg` : sur Android (Chrome) « Ajouter à l'écran d'accueil », sur iPhone (Safari) « Partager › Sur l'écran d'accueil ». L'application s'ouvre alors en plein écran, sans barre d'adresse.
 - `sw.js` : met en cache tous les fichiers de `src/` et `data/` ; tout fonctionne sans réseau après la première visite. Changer `VERSION` à chaque mise en ligne. Un test vérifie que la liste est complète.

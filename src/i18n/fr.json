@@ -113,7 +113,7 @@
   "revoir_court": "Langue, présentation et avertissement",
   "bv_langue_titre": "Choisissez votre langue",
   "bv_continuer": "Continuer",
-  "bv_presentation": "Présentation de Kajy Hetra",
+  "bv_presentation": "Présentation de Hetrako",
   "bv_passer": "Passer",
   "bv_diapo": "diapositive",
   "bv_suivant": "Suivant",
@@ -124,7 +124,8 @@
   "bv_horsLigne_titre": "Même sans connexion",
   "bv_horsLigne_texte": "Après la première ouverture, les fiches et les calculs restent disponibles sans réseau.",
   "bv_avert_titre": "Outil pédagogique, pas un avis fiscal",
-  "bv_avert_texte": "Kajy Hetra aide à comprendre et à estimer. Il ne remplace ni l’administration fiscale ni un conseiller. Avant toute décision, vérifiez auprès des services des impôts.",
+  "bv_avert_texte": "Hetrako aide à comprendre et à estimer. Il ne remplace ni l’administration fiscale ni un conseiller. Avant toute décision, vérifiez auprès des services des impôts.",
   "bv_avert_accord": "J’ai compris",
-  "bv_commencer": "Commencer"
+  "bv_commencer": "Commencer",
+  "slogan": "Ny hetrako · Mon impôt"
 }

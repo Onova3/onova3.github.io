@@ -1,4 +1,4 @@
-# Kajy Hetra
+# Hetrako
 
 Application web trilingue (français, anglais, malgache) qui explique et calcule tous les impôts du Code des impôts de Madagascar, avec les obligations et sanctions du Code des procédures fiscales. Public : étudiants et jeunes.
 

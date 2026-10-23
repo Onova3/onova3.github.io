@@ -1,6 +1,7 @@
 // Affichage du premier lancement par-dessus l'application (logique dans src/bienvenue.js). Textes malgaches à relire.
 import { avancer, DIAPOSITIVES } from './bienvenue.js';
 import { t } from './ui.js';
+import { logoHTML } from './logo.js';
 
 const LANGUES = [['fr', 'Français'], ['en', 'English'], ['mg', 'Malagasy']];
 const ICONES = {
@@ -36,7 +37,7 @@ export function ouvrirBienvenue({ reglages, onFin }) {
   }
 
   const langue = () => `
-    <div class="bv-logo"><div class="mark" aria-hidden="true">Ar</div><b>Kajy Hetra</b></div>
+    <div class="bv-logo">${logoHTML({ empile: true, taille: 80 })}</div>
     <h2 id="bv-titre">${t('bv_langue_titre')}</h2>
     <p class="lead">Fidio ny fiteny · Choose your language</p>
     <div class="bv-langues">${LANGUES.map(([code, nom]) =>

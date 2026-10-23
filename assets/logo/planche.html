@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hetrako · planche du logo</title>
+<link rel="stylesheet" href="../../src/polices.css">
+<style>
+  body{margin:0;font:15px/1.5 "Public Sans",system-ui,sans-serif;color:#111412;background:#F2F3F1;padding:24px}
+  h1{font:800 28px "Archivo";letter-spacing:-.02em;margin:0 0 4px}
+  h2{font:500 12px "JetBrains Mono";letter-spacing:.1em;text-transform:uppercase;margin:32px 0 12px;padding-bottom:8px;border-bottom:2px solid #141414}
+  .grille{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+  figure{margin:0;padding:24px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;min-height:170px;background:#FFF}
+  figcaption{font:500 11px "JetBrains Mono";letter-spacing:.06em;text-transform:uppercase;color:#5E6662}
+  .vert{background:#0B6E4F}.vert figcaption{color:#A9DCC4}
+  .sombre{background:#0C1412}.sombre figcaption{color:#93A39B}
+  .icones{display:flex;flex-wrap:wrap;align-items:flex-end;gap:24px;background:#FFF;padding:24px}
+  .icones div{display:flex;flex-direction:column;align-items:center;gap:6px;font:500 11px "JetBrains Mono";color:#5E6662}
+  img{display:block}
+</style>
+</head>
+<body>
+<h1>Hetrako</h1>
+<p>Ny hetrako · Mon impôt — symbole sur une grille de 120 × 120 (src/logo.js).</p>
+
+<h2>Logo et variantes</h2>
+<div class="grille">
+  <figure><img src="logo.svg" height="56" alt=""><figcaption>Normale</figcaption></figure>
+  <figure class="vert"><img src="logo-sur-vert.svg" height="56" alt=""><figcaption>Sur fond vert</figcaption></figure>
+  <figure class="sombre"><img src="logo-sombre.svg" height="56" alt=""><figcaption>Mode sombre</figcaption></figure>
+  <figure><img src="logo-mono.svg" height="56" alt=""><figcaption>Monochrome noir</figcaption></figure>
+  <figure><img src="logo-empile.svg" height="140" alt=""><figcaption>Empilée</figcaption></figure>
+  <figure><img src="symbole.svg" height="120" alt=""><figcaption>Symbole seul</figcaption></figure>
+</div>
+
+<h2>Icônes de l'application</h2>
+<div class="icones">
+  <div><img src="../icones/icone-16.png" width="16" alt="">16</div>
+  <div><img src="../icones/icone-32.png" width="32" alt="">32</div>
+  <div><img src="../icones/icone-64.png" width="64" alt="">64</div>
+  <div><img src="../icones/icone-192.png" width="96" alt="">192</div>
+  <div><img src="../icones/icone-512.png" width="128" alt="">512</div>
+  <div><img src="../icones/icone-maskable-512.png" width="128" alt="">Android (plein)</div>
+  <div><img src="../icones/icone-ronde-512.png" width="128" alt="">Android (rond)</div>
+  <div><img src="../icones/apple-touch-icon-180.png" width="90" alt="">iPhone</div>
+  <div><img src="../icones/favicon.svg" width="32" alt="">Onglet</div>
+</div>
+</body>
+</html>

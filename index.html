@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Kajy Hetra</title>
+<title>Hetrako</title>
 <meta name="description" content="Tous les impôts de Madagascar, expliqués et calculés selon les codes 2026.">
 <meta name="theme-color" content="#0B6E4F" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0C1613" media="(prefers-color-scheme: dark)">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="apple-mobile-web-app-title" content="Kajy Hetra">
+<meta name="apple-mobile-web-app-title" content="Hetrako">
 <script>
 // Thème et taille du texte appliqués avant l'affichage, pour éviter un flash blanc (mêmes valeurs que src/reglages.js et src/stockage.js).
 try {
@@ -22,17 +22,18 @@ try {
 } catch (e) {}
 </script>
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="icon" href="icone.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="icone.svg">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Public+Sans:wght@400;600&family=JetBrains+Mono:wght@500;600&display=swap">
+<link rel="icon" href="assets/icones/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/icones/icone-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/icones/apple-touch-icon-180.png">
+<link rel="preload" href="assets/polices/archivo-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="src/polices.css">
 <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
-<div class="demarrage" id="demarrage" aria-hidden="true"><div class="mark">Ar</div><b>Kajy Hetra</b></div>
+<div class="demarrage" id="demarrage" aria-hidden="true"><span class="logo logo--empile"><svg viewBox="0 0 120 120" width="96" height="96" aria-hidden="true"><rect x="0" y="0" width="120" height="120" rx="26" fill="#0B6E4F"/><rect x="28" y="26" width="12" height="68" rx="6" fill="#E6F2EC"/><rect x="80" y="26" width="12" height="68" rx="6" fill="#E6F2EC"/><rect x="44" y="50" width="32" height="7" rx="3.5" fill="#F2B13C"/><rect x="44" y="63" width="32" height="7" rx="3.5" fill="#F2B13C"/></svg><span class="logo-nom">Hetra<span class="ko">ko</span></span></span></div>
 <div class="wrap">
   <header class="top">
-    <a class="brand" href="#/"><div class="mark" aria-hidden="true">Ar</div>
-      <div><h1>Kajy Hetra</h1><p data-i18n="tagline"></p></div></a>
+    <a class="brand" href="#/"><h1><span class="logo"><svg viewBox="0 0 120 120" width="40" height="40" aria-hidden="true"><rect x="0" y="0" width="120" height="120" rx="26" fill="#0B6E4F"/><rect x="28" y="26" width="12" height="68" rx="6" fill="#E6F2EC"/><rect x="80" y="26" width="12" height="68" rx="6" fill="#E6F2EC"/><rect x="44" y="50" width="32" height="7" rx="3.5" fill="#F2B13C"/><rect x="44" y="63" width="32" height="7" rx="3.5" fill="#F2B13C"/></svg><span class="logo-nom">Hetra<span class="ko">ko</span></span></span></h1><p data-i18n="slogan"></p></a>
   </header>
   <p class="warn" id="relire" hidden data-i18n="a_relire"></p>
   <p class="warn" id="hors-ligne" hidden data-i18n="hors_ligne"></p>

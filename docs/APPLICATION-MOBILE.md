@@ -1,4 +1,4 @@
-# Kajy Hetra — organisation de l'application mobile
+# Hetrako — organisation de l'application mobile
 
 Application web installable (PWA), sans framework ni compilation. Ce document décrit les écrans, la navigation, le premier lancement, les états des écrans et les évolutions futures. Il complète `CONCEPTION.md`.
 

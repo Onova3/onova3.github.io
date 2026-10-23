@@ -7,7 +7,7 @@ import { fileURLToPath } from 'node:url';
 const racine = fileURLToPath(new URL('..', import.meta.url));
 const port = Number(process.env.PORT) || 3000;
 const TYPES = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json',
-  '.svg': 'image/svg+xml', '.webmanifest': 'application/manifest+json', '.png': 'image/png', '.pdf': 'application/pdf', '.txt': 'text/plain' };
+  '.svg': 'image/svg+xml', '.woff2': 'font/woff2', '.webmanifest': 'application/manifest+json', '.png': 'image/png', '.pdf': 'application/pdf', '.txt': 'text/plain' };
 
 createServer(async (req, res) => {
   const chemin = decodeURIComponent(new URL(req.url, 'http://x').pathname);
@@ -20,4 +20,4 @@ createServer(async (req, res) => {
   } catch {
     res.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' }).end('Introuvable');
   }
-}).listen(port, () => console.log(`Kajy Hetra : http://localhost:${port}`));
+}).listen(port, () => console.log(`Hetrako : http://localhost:${port}`));

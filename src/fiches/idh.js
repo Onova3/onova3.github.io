@@ -66,9 +66,9 @@ const comprendre = {
   ],
   exemple: {
     texte: {
-      fr: 'Une société exploite un gisement de pétrole dans le canal de Mozambique. Chaque année, elle paie la redevance sur le pétrole extrait, puis l’IDH sur son bénéfice, au même taux que l’IR ({taux}). Ces calculs dépendent des contrats pétroliers : Kajy Hetra n’a pas de calculateur pour cet impôt.',
-      en: 'A company operates an oil field in the Mozambique Channel. Each year it pays the royalty on oil extracted, then IDH on its profit, at the same rate as IR ({taux}). These calculations depend on the petroleum contracts: Kajy Hetra has no calculator for this tax.',
-      mg: "Orinasa iray mitrandraka solika ao amin'ny lakandranon'i Mozambika. Isan-taona, mandoa ny haba amin'ny solika voatrandraka izy, avy eo ny IDH amin'ny tombony, amin'ny taha mitovy amin'ny IR ({taux}). Miankina amin'ny fifanarahana momba ny solika ireo kajy ireo: tsy manana fitaovana fikajiana ho an'ity hetra ity ny Kajy Hetra.",
+      fr: 'Une société exploite un gisement de pétrole dans le canal de Mozambique. Chaque année, elle paie la redevance sur le pétrole extrait, puis l’IDH sur son bénéfice, au même taux que l’IR ({taux}). Ces calculs dépendent des contrats pétroliers : Hetrako n’a pas de calculateur pour cet impôt.',
+      en: 'A company operates an oil field in the Mozambique Channel. Each year it pays the royalty on oil extracted, then IDH on its profit, at the same rate as IR ({taux}). These calculations depend on the petroleum contracts: Hetrako has no calculator for this tax.',
+      mg: "Orinasa iray mitrandraka solika ao amin'ny lakandranon'i Mozambika. Isan-taona, mandoa ny haba amin'ny solika voatrandraka izy, avy eo ny IDH amin'ny tombony, amin'ny taha mitovy amin'ny IR ({taux}). Miankina amin'ny fifanarahana momba ny solika ireo kajy ireo: tsy manana fitaovana fikajiana ho an'ity hetra ity ny Hetrako.",
     },
     valeurs: b => ({ taux: pct(b.ir.taux, 0) }),
   },

@@ -598,7 +598,7 @@ test('Hors ligne : le service worker met en cache tous les fichiers de src/ et d
   const { readdirSync, statSync } = await import('node:fs');
   const tous = d => readdirSync(d).flatMap(f => { const p = `${d}/${f}`; return statSync(p).isDirectory() ? tous(p) : [p]; });
   const sw = readFileSync('sw.js', 'utf8');
-  for (const f of [...tous('src'), ...tous('data'), 'index.html', 'manifest.webmanifest', 'icone.svg']) assert.ok(sw.includes(`'${f}'`), f);
+  for (const f of [...tous('src'), ...tous('data'), ...tous('assets/icones'), ...tous('assets/polices').filter(f => f.endsWith('.woff2')), 'index.html', 'manifest.webmanifest']) assert.ok(sw.includes(`'${f}'`), f);
   const m = JSON.parse(readFileSync('manifest.webmanifest', 'utf8'));
   assert.equal(m.display, 'standalone');
 });
@@ -710,4 +710,45 @@ test('Premier lancement : langue → 3 diapositives → avertissement → fin', 
 });
 test('Premier lancement : « Passer » mène à l’avertissement, jamais à la fin', () => {
   assert.equal(avancer({ etape: 'presentation', diapo: 0 }, 'passer').etape, 'avertissement');
+});
+
+// --- Identité Hetrako : nom, logo, icônes, polices ---
+import { readdirSync as lsDir, statSync as statF } from 'node:fs';
+const lister = d => lsDir(d).flatMap(f => { const p = d + '/' + f; return statF(p).isDirectory() ? lister(p) : [p]; });
+import { GEOMETRIE, VARIANTES, formesSymbole, symbole, logo, logoHTML } from '../src/logo.js';
+test('Logo : le H suit exactement la grille de 120 × 120', () => {
+  assert.deepEqual(GEOMETRIE.carre, { x: 0, y: 0, width: 120, height: 120, rx: 26 });
+  assert.deepEqual(GEOMETRIE.colonnes, [{ x: 28, y: 26, width: 12, height: 68, rx: 6 }, { x: 80, y: 26, width: 12, height: 68, rx: 6 }]);
+  assert.deepEqual(GEOMETRIE.barres, [{ x: 44, y: 50, width: 32, height: 7, rx: 3.5 }, { x: 44, y: 63, width: 32, height: 7, rx: 3.5 }]);
+  const n = formesSymbole();
+  assert.ok(n.includes('fill="#0B6E4F"') && n.includes('fill="#E6F2EC"') && n.includes('fill="#F2B13C"'));
+  assert.equal((n.match(/<rect/g) || []).length, 5);
+});
+test('Logo : variantes sur vert, sombre, monochrome et empilée', () => {
+  assert.equal(VARIANTES.surVert.colonne, '#FFFFFF');
+  assert.equal(VARIANTES.surVert.ko, '#A9DCC4');
+  assert.ok(Object.values(VARIANTES.mono).every(c => ['#141414', '#FFFFFF'].includes(c)));
+  assert.ok(logo({ empile: true }).includes('text-anchor="middle"'));
+  assert.ok(logo().includes('>ko</tspan>') && logo().includes('font-weight="800"'));
+  assert.ok(symbole({ taille: 32 }).includes('width="32"'));
+  assert.ok(logoHTML().includes('<span class="ko">ko</span>'));
+});
+test('Nom : « Hetrako » partout, plus aucune trace de l’ancien nom dans l’application', () => {
+  const ancien = /kajy\s*hetra/i;
+  const fichiers = ['index.html', 'manifest.webmanifest', 'sw.js', ...lister('src'), 'README.md', 'CLAUDE.md', 'docs/CONCEPTION.md', 'docs/APPLICATION-MOBILE.md'];
+  for (const f of fichiers) {
+    const texte = readFileSync(f, 'utf8').replace(/prototype\/v1-kajy-hetra\.html/g, '').replace(/dossier `kajy-hetra`|vers\/kajy-hetra|dossier `kajy-hetr/g, '');
+    assert.doesNotMatch(texte, ancien, f);
+  }
+  assert.equal(JSON.parse(readFileSync('manifest.webmanifest', 'utf8')).name, 'Hetrako');
+  for (const l of ['fr', 'en', 'mg']) assert.match(lire(`src/i18n/${l}.json`).slogan, /^Ny hetrako/);
+});
+test('Icônes et polices : présentes, déclarées et sans chargement depuis Internet', () => {
+  const m = JSON.parse(readFileSync('manifest.webmanifest', 'utf8'));
+  for (const i of m.icons) assert.ok(readFileSync(i.src).length > 0, i.src);
+  assert.ok(m.icons.some(i => i.purpose === 'maskable' && i.sizes === '512x512'));
+  for (const t of [16, 32, 64, 192, 512]) assert.ok(readFileSync(`assets/icones/icone-${t}.png`).subarray(1, 4).toString() === 'PNG', t);
+  const html = readFileSync('index.html', 'utf8');
+  assert.doesNotMatch(html, /fonts\.googleapis|fonts\.gstatic/);
+  for (const p of ['archivo-800', 'public-sans', 'jetbrains-mono']) assert.equal(readFileSync(`assets/polices/${p}.woff2`).subarray(0, 4).toString(), 'wOF2');
 });

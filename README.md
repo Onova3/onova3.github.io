@@ -1,4 +1,4 @@
-# Kajy Hetra
+# Hetrako
 
 Calculateurs et fiches de tous les impôts de Madagascar, selon le Code des impôts et le Code des procédures fiscales 2026. En français, anglais et malgache.
 

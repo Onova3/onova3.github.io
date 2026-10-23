@@ -3,14 +3,14 @@ import { t, tr, esc } from '../ui.js';
 
 const L = {
   titre: { fr: 'Sources et limites', en: 'Sources and limits', mg: 'Loharano sy fetra' },
-  lead: { fr: 'Chaque taux, seuil ou délai de Kajy Hetra est rattaché à un article de ces textes. Aucun chiffre ne vient d’un site tiers.', en: 'Every rate, threshold or time limit in Kajy Hetra is tied to an article of these texts. No figure comes from a third-party site.', mg: "Ny taha, fetra ary fe-potoana rehetra ao amin'ny Kajy Hetra dia mifandray amin'ny andininy ao amin'ireo lahatsoratra ireo. Tsy misy isa avy amin'ny tranonkala hafa." },
+  lead: { fr: 'Chaque taux, seuil ou délai de Hetrako est rattaché à un article de ces textes. Aucun chiffre ne vient d’un site tiers.', en: 'Every rate, threshold or time limit in Hetrako is tied to an article of these texts. No figure comes from a third-party site.', mg: "Ny taha, fetra ary fe-potoana rehetra ao amin'ny Hetrako dia mifandray amin'ny andininy ao amin'ireo lahatsoratra ireo. Tsy misy isa avy amin'ny tranonkala hafa." },
   textes: { fr: 'Textes utilisés', en: 'Texts used', mg: 'Lahatsoratra ampiasaina' },
   maj: { fr: 'Barèmes mis à jour le', en: 'Rates updated on', mg: 'Nohavaozina ny taha tamin’ny' },
   annee: { fr: 'Année d’imposition', en: 'Tax year', mg: 'Taom-pandoavana' },
   verifies: { fr: 'Impôts vérifiés', en: 'Taxes checked', mg: 'Hetra voamarina' },
   pdf: { fr: 'Télécharger les codes (PDF)', en: 'Download the codes (PDF)', mg: 'Haka ny fehezan-dalàna (PDF)' },
   limites: { fr: 'Limites', en: 'Limits', mg: 'Fetra' },
-  l1: { fr: 'Kajy Hetra explique et fait des simulations ; ce n’est ni un logiciel de déclaration ni un avis fiscal.', en: 'Kajy Hetra explains and simulates; it is neither filing software nor tax advice.', mg: "Manazava sy manao tombana ny Kajy Hetra; tsy rindrambaiko fanambarana na torohevitra ara-ketra izy." },
+  l1: { fr: 'Hetrako explique et fait des simulations ; ce n’est ni un logiciel de déclaration ni un avis fiscal.', en: 'Hetrako explains and simulates; it is neither filing software nor tax advice.', mg: "Manazava sy manao tombana ny Hetrako; tsy rindrambaiko fanambarana na torohevitra ara-ketra izy." },
   l2: { fr: 'Les changements de la LFR 2026 sont reportés dans les barèmes, mais pas encore dans le texte des codes.', en: 'LFR 2026 changes are included in the rates, but not yet in the text of the codes.', mg: "Tafiditra ao amin'ny taha ny fanovana LFR 2026, fa tsy mbola ao amin'ny lahatsoratry ny fehezan-dalàna." },
   l3: { fr: 'Les points que le texte ne tranche pas sont listés avec le choix fait par l’application.', en: 'Points the text leaves open are listed with the choice made by the application.', mg: "Voatanisa miaraka amin'ny safidy natao ireo teboka tsy mazava ao amin'ny lahatsoratra." },
   l4: { fr: 'Les textes en malgache n’ont pas encore été relus par un locuteur natif.', en: 'Malagasy texts have not yet been reviewed by a native speaker.', mg: "Tsy mbola novakian'ny teratany ny lahatsoratra malagasy." },

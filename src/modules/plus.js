@@ -19,7 +19,7 @@ function choix(cle, actuel, libelle) {
 function aPropos(el) {
   el.innerHTML = `
     <header class="fiche-tete"><h2>${t('a_propos')}</h2></header>
-    <div class="ticket"><div class="t-head"><span>Kajy Hetra</span><span>v${VERSION}</span></div>
+    <div class="ticket"><div class="t-head"><span>Hetrako</span><span>v${VERSION}</span></div>
       <div class="rows">
         <div class="row"><span>${t('version')}</span><span>${VERSION}</span></div>
       </div>
