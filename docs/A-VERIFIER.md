@@ -186,3 +186,7 @@ Points que le texte des codes ne tranche pas clairement. L'application suit l'in
 | 103 | Prescription : point de départ « année au titre de laquelle l'impôt est dû » (IR) ou « année d'exigibilité » (TVA) | CPF IX-02, IX-05 | Le calculateur demande une seule année, à saisir selon le cas |
 | 104 | Durée de conservation des documents comptables hors impôt synthétique | CDI 01.02.07 (3 ans pour l'IS) ; pas d'article général relevé | Seuls l'IS (3 ans) et la TVA (délai de reprise) sont indiqués |
 | 105 | Délai de 30 jours d'opposition aux poursuites (impôts recouvrés par le Trésor) et de 15 jours (services fiscaux) | CPF VIII-01, VIII-05 | Seul le délai de 15 jours est affiché dans le guide Payer |
+| 106 | Délai de réponse au droit de communication : 10 jours dans le texte, « 30 jours depuis la LFR 2026 » dans CONCEPTION | CPF IV-02 | Le guide affiche 10 jours (texte du CPF 2026) ; à confirmer avec la LFR 2026 |
+| 107 | Seuil de 100 millions d'Ar pour la déclaration de communication des personnes physiques | CPF IV-08 | Repris tel quel ; à confirmer qu'il n'a pas changé avec la LFR 2026 |
+| 108 | Amende de 150 % pour opposition au contrôle | CDI 20.01.54, CPF V-32 | Citée dans le guide Contrôle ; taux à relire dans l'article |
+| 109 | Délais de réclamation (30 jours impôts d'État, 90 jours impôts locaux) et de saisine du juge (30 jours) | CPF VI-15, VI-27 | Repris tels quels ; vérifier les cas particuliers (taxation d'office, retenues) |

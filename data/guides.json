@@ -3,129 +3,1092 @@
   "guides": [
     {
       "id": "immatriculation",
-      "titre": { "fr": "S'immatriculer et obtenir sa carte fiscale", "en": "Registering and getting a tax card", "mg": "Misoratra sy mahazo karatra ara-ketra" },
+      "titre": {
+        "fr": "S'immatriculer et obtenir sa carte fiscale",
+        "en": "Registering and getting a tax card",
+        "mg": "Misoratra sy mahazo karatra ara-ketra"
+      },
       "intro": {
         "fr": "Avant de commencer une activité imposable, il faut un numéro d'immatriculation fiscale (NIF) et une carte fiscale. Le NIF est personnel, unique et permanent.",
         "en": "Before starting a taxable activity, you need a tax identification number (NIF) and a tax card. The NIF is personal, unique and permanent.",
         "mg": "Alohan'ny hanombohana asa iharan'ny hetra, ilaina ny laharana ara-ketra (NIF) sy ny karatra ara-ketra. Manokana, tokana ary maharitra ny NIF."
       },
       "etapes": [
-        { "article": "CPF I-01, I-02",
-          "titre": { "fr": "Demander son NIF en ligne", "en": "Apply for a NIF online", "mg": "Mangataka NIF an-tserasera" },
-          "texte": { "fr": "Toute personne ou entreprise dont les activités, les biens ou les revenus sont imposables à Madagascar reçoit un NIF, sur sa déclaration ou d'office. La carte fiscale est remise quand la demande est validée.", "en": "Any person or business whose activities, property or income are taxable in Madagascar receives a NIF, on application or automatically. The tax card is issued when the application is approved.", "mg": "Ny olona na orinasa rehetra iharan'ny hetra eto Madagasikara ny asany, fananany na vola miditra dia mahazo NIF, raha mangataka na avy amin'ny fitondrana. Omena ny karatra ara-ketra rehefa ekena ny fangatahana." } },
-        { "article": "CPF I-03",
-          "titre": { "fr": "Déclarer l'entreprise avant de commencer", "en": "Register the business before starting", "mg": "Manambara ny orinasa alohan'ny hanombohana" },
-          "texte": { "fr": "Une entreprise dépose une déclaration spéciale d'immatriculation avec son adresse exacte, au moment de sa création et avant toute activité. Sinon, l'administration peut fermer l'établissement jusqu'à régularisation.", "en": "A business files a special registration return with its exact address, when it is set up and before any activity. Otherwise, the tax office may close the premises until it complies.", "mg": "Ny orinasa dia mametraka fanambarana manokana miaraka amin'ny adiresy marina, rehefa vao miorina sy alohan'ny asa rehetra. Raha tsy izany, afaka manakatona ny toerana ny fitondrana mandra-panarahana." } },
-        { "article": "CPF I-03, CDI 01.02.06",
-          "titre": { "fr": "Choisir son régime et payer le premier acompte", "en": "Choose a regime and pay the first instalment", "mg": "Misafidy rafitra ary mandoa ny vola mialoha voalohany" },
-          "texte": { "fr": "Une entreprise nouvelle est à l'impôt synthétique et paie un acompte de début d'activité. Elle peut opter pour le régime du réel par une simple lettre, selon des critères réglementaires.", "en": "A new business is under the synthetic tax and pays a start-up instalment. It may opt for the real regime by a simple letter, subject to regulatory criteria.", "mg": "Ny orinasa vaovao dia iharan'ny hetra tsotra ary mandoa vola mialoha. Afaka misafidy ny rafitra tena izy amin'ny taratasy tsotra izy, araka ny fepetra voafaritra." } },
-        { "article": "CPF I-04",
-          "titre": { "fr": "Obtenir les autorisations préalables", "en": "Obtain prior authorisations", "mg": "Mahazo ireo fahazoan-dalana mialoha" },
-          "texte": { "fr": "Importateurs, exportateurs et industriels font d'abord une déclaration sur leurs activités ; les grossistes ont besoin d'une autorisation du Directeur général des impôts ; les activités réglementées, de l'autorisation du ministère concerné.", "en": "Importers, exporters and manufacturers first file a statement on their activities; wholesalers need authorisation from the Director General of Taxes; regulated activities, from the relevant ministry.", "mg": "Ny mpanafatra, mpanondrana ary indostrialy dia manambara aloha ny asany; ny mpivarotra ambongadiny dia mila fahazoan-dalana avy amin'ny Talen'ny hetra; ny asa voafehy, avy amin'ny minisitera voakasika." } },
-        { "article": "CPF I-05, I-07",
-          "titre": { "fr": "Afficher la carte et citer son NIF", "en": "Display the card and quote the NIF", "mg": "Mampiseho ny karatra sy mitanisa ny NIF" },
-          "texte": { "fr": "La carte fiscale est affichée de façon visible sur le lieu d'activité. Le NIF figure sur tous les documents remis à l'administration, les contrats de marchés publics et les déclarations en douane.", "en": "The tax card is displayed visibly at the place of business. The NIF appears on all documents given to the authorities, public contracts and customs declarations.", "mg": "Aseho mazava eo amin'ny toeram-piasana ny karatra ara-ketra. Soratana amin'ny taratasy rehetra omena ny fitondrana, ny fifanarahana tsenam-panjakana ary ny fanambarana amin'ny ladoany ny NIF." } },
-        { "article": "CPF I-06",
-          "titre": { "fr": "Renouveler la carte chaque année", "en": "Renew the card every year", "mg": "Manavao ny karatra isan-taona" },
-          "texte": { "fr": "La carte se renouvelle chaque année au moment de la déclaration annuelle (IR ou impôt synthétique), à condition d'être en règle. Elle peut s'éditer en ligne et a la même valeur que la carte papier.", "en": "The card is renewed each year with the annual return (IR or synthetic tax), provided you are compliant. It can be printed online and has the same value as the paper card.", "mg": "Havaozina isan-taona ny karatra rehefa manao ny fanambarana isan-taona (IR na hetra tsotra), raha ara-dalàna. Azo atao pirinty an-tserasera ary mitovy hery amin'ny karatra taratasy." } },
-        { "article": "CPF I-08, I-09, I-10",
-          "titre": { "fr": "Signaler les changements, la mise en veille, la fermeture", "en": "Report changes, dormancy and closure", "mg": "Mampahafantatra ny fiovana, ny fiatoana, ny fanakatonana" },
-          "texte": { "fr": "Changement d'adresse, de situation familiale ou d'activité : dans les 20 jours, avec mise à jour sur NIFONLINE. Mise en veille ou reprise : déclaration dans les 20 jours. Fermeture définitive : les obligations continuent jusqu'à la radiation.", "en": "Change of address, family status or activity: within 20 days, updating NIFONLINE. Dormancy or restart: return within 20 days. Final closure: obligations continue until deregistration.", "mg": "Fiovan'ny adiresy, toe-panambadiana na asa: ao anatin'ny 20 andro, havaozina ao amin'ny NIFONLINE. Fiatoana na fiverenana: fanambarana ao anatin'ny 20 andro. Fanakatonana tanteraka: mitohy ny adidy mandra-pamafana." } }
+        {
+          "article": "CPF I-01, I-02",
+          "titre": {
+            "fr": "Demander son NIF en ligne",
+            "en": "Apply for a NIF online",
+            "mg": "Mangataka NIF an-tserasera"
+          },
+          "texte": {
+            "fr": "Toute personne ou entreprise dont les activités, les biens ou les revenus sont imposables à Madagascar reçoit un NIF, sur sa déclaration ou d'office. La carte fiscale est remise quand la demande est validée.",
+            "en": "Any person or business whose activities, property or income are taxable in Madagascar receives a NIF, on application or automatically. The tax card is issued when the application is approved.",
+            "mg": "Ny olona na orinasa rehetra iharan'ny hetra eto Madagasikara ny asany, fananany na vola miditra dia mahazo NIF, raha mangataka na avy amin'ny fitondrana. Omena ny karatra ara-ketra rehefa ekena ny fangatahana."
+          }
+        },
+        {
+          "article": "CPF I-03",
+          "titre": {
+            "fr": "Déclarer l'entreprise avant de commencer",
+            "en": "Register the business before starting",
+            "mg": "Manambara ny orinasa alohan'ny hanombohana"
+          },
+          "texte": {
+            "fr": "Une entreprise dépose une déclaration spéciale d'immatriculation avec son adresse exacte, au moment de sa création et avant toute activité. Sinon, l'administration peut fermer l'établissement jusqu'à régularisation.",
+            "en": "A business files a special registration return with its exact address, when it is set up and before any activity. Otherwise, the tax office may close the premises until it complies.",
+            "mg": "Ny orinasa dia mametraka fanambarana manokana miaraka amin'ny adiresy marina, rehefa vao miorina sy alohan'ny asa rehetra. Raha tsy izany, afaka manakatona ny toerana ny fitondrana mandra-panarahana."
+          }
+        },
+        {
+          "article": "CPF I-03, CDI 01.02.06",
+          "titre": {
+            "fr": "Choisir son régime et payer le premier acompte",
+            "en": "Choose a regime and pay the first instalment",
+            "mg": "Misafidy rafitra ary mandoa ny vola mialoha voalohany"
+          },
+          "texte": {
+            "fr": "Une entreprise nouvelle est à l'impôt synthétique et paie un acompte de début d'activité. Elle peut opter pour le régime du réel par une simple lettre, selon des critères réglementaires.",
+            "en": "A new business is under the synthetic tax and pays a start-up instalment. It may opt for the real regime by a simple letter, subject to regulatory criteria.",
+            "mg": "Ny orinasa vaovao dia iharan'ny hetra tsotra ary mandoa vola mialoha. Afaka misafidy ny rafitra tena izy amin'ny taratasy tsotra izy, araka ny fepetra voafaritra."
+          }
+        },
+        {
+          "article": "CPF I-04",
+          "titre": {
+            "fr": "Obtenir les autorisations préalables",
+            "en": "Obtain prior authorisations",
+            "mg": "Mahazo ireo fahazoan-dalana mialoha"
+          },
+          "texte": {
+            "fr": "Importateurs, exportateurs et industriels font d'abord une déclaration sur leurs activités ; les grossistes ont besoin d'une autorisation du Directeur général des impôts ; les activités réglementées, de l'autorisation du ministère concerné.",
+            "en": "Importers, exporters and manufacturers first file a statement on their activities; wholesalers need authorisation from the Director General of Taxes; regulated activities, from the relevant ministry.",
+            "mg": "Ny mpanafatra, mpanondrana ary indostrialy dia manambara aloha ny asany; ny mpivarotra ambongadiny dia mila fahazoan-dalana avy amin'ny Talen'ny hetra; ny asa voafehy, avy amin'ny minisitera voakasika."
+          }
+        },
+        {
+          "article": "CPF I-05, I-07",
+          "titre": {
+            "fr": "Afficher la carte et citer son NIF",
+            "en": "Display the card and quote the NIF",
+            "mg": "Mampiseho ny karatra sy mitanisa ny NIF"
+          },
+          "texte": {
+            "fr": "La carte fiscale est affichée de façon visible sur le lieu d'activité. Le NIF figure sur tous les documents remis à l'administration, les contrats de marchés publics et les déclarations en douane.",
+            "en": "The tax card is displayed visibly at the place of business. The NIF appears on all documents given to the authorities, public contracts and customs declarations.",
+            "mg": "Aseho mazava eo amin'ny toeram-piasana ny karatra ara-ketra. Soratana amin'ny taratasy rehetra omena ny fitondrana, ny fifanarahana tsenam-panjakana ary ny fanambarana amin'ny ladoany ny NIF."
+          }
+        },
+        {
+          "article": "CPF I-06",
+          "titre": {
+            "fr": "Renouveler la carte chaque année",
+            "en": "Renew the card every year",
+            "mg": "Manavao ny karatra isan-taona"
+          },
+          "texte": {
+            "fr": "La carte se renouvelle chaque année au moment de la déclaration annuelle (IR ou impôt synthétique), à condition d'être en règle. Elle peut s'éditer en ligne et a la même valeur que la carte papier.",
+            "en": "The card is renewed each year with the annual return (IR or synthetic tax), provided you are compliant. It can be printed online and has the same value as the paper card.",
+            "mg": "Havaozina isan-taona ny karatra rehefa manao ny fanambarana isan-taona (IR na hetra tsotra), raha ara-dalàna. Azo atao pirinty an-tserasera ary mitovy hery amin'ny karatra taratasy."
+          }
+        },
+        {
+          "article": "CPF I-08, I-09, I-10",
+          "titre": {
+            "fr": "Signaler les changements, la mise en veille, la fermeture",
+            "en": "Report changes, dormancy and closure",
+            "mg": "Mampahafantatra ny fiovana, ny fiatoana, ny fanakatonana"
+          },
+          "texte": {
+            "fr": "Changement d'adresse, de situation familiale ou d'activité : dans les 20 jours, avec mise à jour sur NIFONLINE. Mise en veille ou reprise : déclaration dans les 20 jours. Fermeture définitive : les obligations continuent jusqu'à la radiation.",
+            "en": "Change of address, family status or activity: within 20 days, updating NIFONLINE. Dormancy or restart: return within 20 days. Final closure: obligations continue until deregistration.",
+            "mg": "Fiovan'ny adiresy, toe-panambadiana na asa: ao anatin'ny 20 andro, havaozina ao amin'ny NIFONLINE. Fiatoana na fiverenana: fanambarana ao anatin'ny 20 andro. Fanakatonana tanteraka: mitohy ny adidy mandra-pamafana."
+          }
+        }
       ],
       "droits": [
-        { "article": "CPF I-06", "texte": { "fr": "La carte en ligne a la même valeur juridique que la carte papier, toujours disponible au centre fiscal.", "en": "The online card has the same legal value as the paper card, always available at the tax centre.", "mg": "Mitovy hery ara-dalàna amin'ny karatra taratasy ny karatra an-tserasera, izay azo alaina foana any amin'ny foibe misahana ny hetra." } },
-        { "article": "CPF I-08", "texte": { "fr": "La dernière adresse déclarée fait foi : la tenir à jour évite de manquer un courrier de l'administration.", "en": "The last declared address is the one that counts: keeping it up to date avoids missing letters from the tax office.", "mg": "Ny adiresy farany nambara no manan-kery: tsy hahadiso taratasy avy amin'ny fitondrana raha havaozina izany." } }
+        {
+          "article": "CPF I-06",
+          "texte": {
+            "fr": "La carte en ligne a la même valeur juridique que la carte papier, toujours disponible au centre fiscal.",
+            "en": "The online card has the same legal value as the paper card, always available at the tax centre.",
+            "mg": "Mitovy hery ara-dalàna amin'ny karatra taratasy ny karatra an-tserasera, izay azo alaina foana any amin'ny foibe misahana ny hetra."
+          }
+        },
+        {
+          "article": "CPF I-08",
+          "texte": {
+            "fr": "La dernière adresse déclarée fait foi : la tenir à jour évite de manquer un courrier de l'administration.",
+            "en": "The last declared address is the one that counts: keeping it up to date avoids missing letters from the tax office.",
+            "mg": "Ny adiresy farany nambara no manan-kery: tsy hahadiso taratasy avy amin'ny fitondrana raha havaozina izany."
+          }
+        }
       ],
       "delais": [
-        { "article": "CPF I-08", "duree": { "fr": "20 jours", "en": "20 days", "mg": "20 andro" }, "libelle": { "fr": "Signaler un changement (adresse, famille, activité)", "en": "Report a change (address, family, activity)", "mg": "Mampahafantatra fiovana" } },
-        { "article": "CPF I-09", "duree": { "fr": "20 jours", "en": "20 days", "mg": "20 andro" }, "libelle": { "fr": "Déclarer une mise en veille ou une reprise", "en": "Report dormancy or restart", "mg": "Manambara fiatoana na fiverenana" } },
-        { "article": "CPF I-105", "duree": { "fr": "10 jours", "en": "10 days", "mg": "10 andro" }, "libelle": { "fr": "Déclaration d'existence à la TVA après le début de l'activité", "en": "VAT existence return after starting", "mg": "Fanambarana ny fisiana amin'ny TVA" } }
+        {
+          "article": "CPF I-08",
+          "duree": {
+            "fr": "20 jours",
+            "en": "20 days",
+            "mg": "20 andro"
+          },
+          "libelle": {
+            "fr": "Signaler un changement (adresse, famille, activité)",
+            "en": "Report a change (address, family, activity)",
+            "mg": "Mampahafantatra fiovana"
+          }
+        },
+        {
+          "article": "CPF I-09",
+          "duree": {
+            "fr": "20 jours",
+            "en": "20 days",
+            "mg": "20 andro"
+          },
+          "libelle": {
+            "fr": "Déclarer une mise en veille ou une reprise",
+            "en": "Report dormancy or restart",
+            "mg": "Manambara fiatoana na fiverenana"
+          }
+        },
+        {
+          "article": "CPF I-105",
+          "duree": {
+            "fr": "10 jours",
+            "en": "10 days",
+            "mg": "10 andro"
+          },
+          "libelle": {
+            "fr": "Déclaration d'existence à la TVA après le début de l'activité",
+            "en": "VAT existence return after starting",
+            "mg": "Fanambarana ny fisiana amin'ny TVA"
+          }
+        }
       ],
       "sanctions": [
-        { "article": "CPF I-03, I-06", "texte": { "fr": "Sans immatriculation : fermeture possible de l'établissement. Faute de déclarer ou de payer : blocage de la carte fiscale.", "en": "Without registration: the premises may be closed. Failure to file or pay: the tax card may be blocked.", "mg": "Raha tsy voasoratra: mety hakatona ny toerana. Raha tsy manambara na tsy mandoa: mety hosakanana ny karatra ara-ketra." } }
+        {
+          "article": "CPF I-03, I-06",
+          "texte": {
+            "fr": "Sans immatriculation : fermeture possible de l'établissement. Faute de déclarer ou de payer : blocage de la carte fiscale.",
+            "en": "Without registration: the premises may be closed. Failure to file or pay: the tax card may be blocked.",
+            "mg": "Raha tsy voasoratra: mety hakatona ny toerana. Raha tsy manambara na tsy mandoa: mety hosakanana ny karatra ara-ketra."
+          }
+        }
       ]
     },
     {
       "id": "payer",
-      "titre": { "fr": "Payer ses impôts", "en": "Paying your taxes", "mg": "Mandoa ny hetra" },
+      "titre": {
+        "fr": "Payer ses impôts",
+        "en": "Paying your taxes",
+        "mg": "Mandoa ny hetra"
+      },
       "intro": {
         "fr": "Selon l'impôt, on paie soi-même sur déclaration (IR, TVA, IS…), ou après un avis d'imposition (impôts fonciers et locaux). Voici les règles communes.",
         "en": "Depending on the tax, you pay yourself on your own return (IR, VAT, synthetic tax…), or after a tax notice (property and local taxes). Here are the common rules.",
         "mg": "Araka ny hetra, mandoa ianao rehefa manambara (IR, TVA, IS…), na rehefa nahazo fampandrenesana hetra (hetra amin'ny tany sy trano ary hetra ifotony). Ireto ny fitsipika iraisana."
       },
       "etapes": [
-        { "article": "CPF VII-32",
-          "titre": { "fr": "Déclarer et payer à son service des impôts", "en": "File and pay at your tax office", "mg": "Manambara sy mandoa any amin'ny biraon'ny hetra" },
-          "texte": { "fr": "Les impôts sur déclaration se paient, à l'initiative du contribuable, au service fiscal qui gère son dossier ; les impôts communaux, au service de recouvrement de la commune. On peut payer par avance, par acomptes.", "en": "Self-assessed taxes are paid, on the taxpayer's initiative, to the tax office managing the file; municipal taxes, to the commune's collection office. You can pay early, in instalments.", "mg": "Ny hetra ambara dia aloan'ny mpandoa any amin'ny biraon'ny hetra mitantana ny antontan-taratasiny; ny hetra ifotony, any amin'ny kaominina. Azo aloa mialoha, amin'ny ampahany." } },
-        { "article": "CPF VII-32",
-          "titre": { "fr": "Choisir le moyen de paiement", "en": "Choose how to pay", "mg": "Misafidy ny fomba fandoavana" },
-          "texte": { "fr": "Espèces, chèque, effet bancaire ou postal, paiement en ligne, téléphone mobile, ou virement au compte du comptable public. Au-delà d'un seuil fixé par décision, le virement est obligatoire.", "en": "Cash, cheque, bank or postal bill, online payment, mobile phone, or transfer to the public accountant's account. Above a threshold set by decision, transfer is mandatory.", "mg": "Vola an-tanana, seky, taratasy avy amin'ny banky na paositra, fandoavana an-tserasera, finday, na famindram-bola any amin'ny kaontin'ny mpitam-bolam-panjakana. Mihoatra ny fetra voafaritra, tsy maintsy famindram-bola." } },
-        { "article": "CPF VII-32",
-          "titre": { "fr": "Arrondir le montant", "en": "Round the amount", "mg": "Boriborina ny vola" },
-          "texte": { "fr": "Le montant à payer est arrondi à la centaine d'ariary inférieure (règle ajoutée par la LFR 2026).", "en": "The amount payable is rounded down to the nearest hundred ariary (rule added by the 2026 amending law).", "mg": "Boriborina ho amin'ny zato ariary ambany ny vola aloa (fitsipika nampidirin'ny LFR 2026)." } },
-        { "article": "CPF VII-01, VII-33",
-          "titre": { "fr": "Impôts locaux : attendre l'avis d'imposition", "en": "Local taxes: wait for the tax notice", "mg": "Hetra ifotony: miandry ny fampandrenesana" },
-          "texte": { "fr": "Les impôts fonciers sont exigibles à partir du 1er mars. L'avis d'imposition doit être signé par le Maire et visé par le centre fiscal (ou porter un code QR) : sinon il est nul.", "en": "Property taxes are due from 1 March. The tax notice must be signed by the Mayor and stamped by the tax centre (or bear a QR code): otherwise it is void.", "mg": "Tsy maintsy aloa manomboka ny 1 martsa ny hetra amin'ny tany sy trano. Tsy maintsy nosoniavin'ny Ben'ny tanàna sy nohamarinin'ny foibe misahana ny hetra (na misy QR code) ny fampandrenesana: raha tsy izany, tsy manan-kery." } },
-        { "article": "CPF VII-02, VII-03",
-          "titre": { "fr": "Demander un paiement échelonné ou différé", "en": "Ask for payment by instalments or deferral", "mg": "Mangataka fandoavana tsikelikely na ahemotra" },
-          "texte": { "fr": "Pour les impôts fonciers, on peut demander à la commune un paiement échelonné. Le centre fiscal peut aussi différer le paiement selon la période où les contribuables ont le plus de ressources, mais pas au-delà du 1er novembre.", "en": "For property taxes, you can ask the commune to pay in instalments. The tax centre can also defer payment to when taxpayers have most income, but not beyond 1 November.", "mg": "Ho an'ny hetra amin'ny tany sy trano, azo angatahana amin'ny kaominina ny fandoavana tsikelikely. Afaka manemotra ny fandoavana ihany koa ny foibe misahana ny hetra, nefa tsy mihoatra ny 1 novambra." } },
-        { "article": "CPF VII-59",
-          "titre": { "fr": "En cas de contestation : le sursis de paiement", "en": "If you dispute: suspension of payment", "mg": "Raha misy fanoherana: fampiatoana ny fandoavana" },
-          "texte": { "fr": "Contester ne suspend pas le paiement. Pour obtenir un sursis sur la partie contestée, il faut : une réclamation déposée, le paiement complet de la partie acceptée, le montant du dégrèvement demandé, et une garantie de 10 % des redressements contestés à la Caisse des dépôts. Réponse sous 10 jours.", "en": "Disputing does not suspend payment. To get a suspension on the disputed part, you need: a complaint filed, full payment of the accepted part, the amount of relief requested, and a 10% guarantee of the disputed adjustments with the deposit fund. Reply within 10 days.", "mg": "Tsy mampiato ny fandoavana ny fanoherana. Mba hahazoana fampiatoana amin'ny ampahany ankatoavina, ilaina: fitarainana napetraka, fandoavana manontolo ny ampahany ekena, ny vola angatahina hesorina, ary antoka 10 % amin'ny fanitsiana ankatoavina any amin'ny Caisse des dépôts. Valiny ao anatin'ny 10 andro." } }
+        {
+          "article": "CPF VII-32",
+          "titre": {
+            "fr": "Déclarer et payer à son service des impôts",
+            "en": "File and pay at your tax office",
+            "mg": "Manambara sy mandoa any amin'ny biraon'ny hetra"
+          },
+          "texte": {
+            "fr": "Les impôts sur déclaration se paient, à l'initiative du contribuable, au service fiscal qui gère son dossier ; les impôts communaux, au service de recouvrement de la commune. On peut payer par avance, par acomptes.",
+            "en": "Self-assessed taxes are paid, on the taxpayer's initiative, to the tax office managing the file; municipal taxes, to the commune's collection office. You can pay early, in instalments.",
+            "mg": "Ny hetra ambara dia aloan'ny mpandoa any amin'ny biraon'ny hetra mitantana ny antontan-taratasiny; ny hetra ifotony, any amin'ny kaominina. Azo aloa mialoha, amin'ny ampahany."
+          }
+        },
+        {
+          "article": "CPF VII-32",
+          "titre": {
+            "fr": "Choisir le moyen de paiement",
+            "en": "Choose how to pay",
+            "mg": "Misafidy ny fomba fandoavana"
+          },
+          "texte": {
+            "fr": "Espèces, chèque, effet bancaire ou postal, paiement en ligne, téléphone mobile, ou virement au compte du comptable public. Au-delà d'un seuil fixé par décision, le virement est obligatoire.",
+            "en": "Cash, cheque, bank or postal bill, online payment, mobile phone, or transfer to the public accountant's account. Above a threshold set by decision, transfer is mandatory.",
+            "mg": "Vola an-tanana, seky, taratasy avy amin'ny banky na paositra, fandoavana an-tserasera, finday, na famindram-bola any amin'ny kaontin'ny mpitam-bolam-panjakana. Mihoatra ny fetra voafaritra, tsy maintsy famindram-bola."
+          }
+        },
+        {
+          "article": "CPF VII-32",
+          "titre": {
+            "fr": "Arrondir le montant",
+            "en": "Round the amount",
+            "mg": "Boriborina ny vola"
+          },
+          "texte": {
+            "fr": "Le montant à payer est arrondi à la centaine d'ariary inférieure (règle ajoutée par la LFR 2026).",
+            "en": "The amount payable is rounded down to the nearest hundred ariary (rule added by the 2026 amending law).",
+            "mg": "Boriborina ho amin'ny zato ariary ambany ny vola aloa (fitsipika nampidirin'ny LFR 2026)."
+          }
+        },
+        {
+          "article": "CPF VII-01, VII-33",
+          "titre": {
+            "fr": "Impôts locaux : attendre l'avis d'imposition",
+            "en": "Local taxes: wait for the tax notice",
+            "mg": "Hetra ifotony: miandry ny fampandrenesana"
+          },
+          "texte": {
+            "fr": "Les impôts fonciers sont exigibles à partir du 1er mars. L'avis d'imposition doit être signé par le Maire et visé par le centre fiscal (ou porter un code QR) : sinon il est nul.",
+            "en": "Property taxes are due from 1 March. The tax notice must be signed by the Mayor and stamped by the tax centre (or bear a QR code): otherwise it is void.",
+            "mg": "Tsy maintsy aloa manomboka ny 1 martsa ny hetra amin'ny tany sy trano. Tsy maintsy nosoniavin'ny Ben'ny tanàna sy nohamarinin'ny foibe misahana ny hetra (na misy QR code) ny fampandrenesana: raha tsy izany, tsy manan-kery."
+          }
+        },
+        {
+          "article": "CPF VII-02, VII-03",
+          "titre": {
+            "fr": "Demander un paiement échelonné ou différé",
+            "en": "Ask for payment by instalments or deferral",
+            "mg": "Mangataka fandoavana tsikelikely na ahemotra"
+          },
+          "texte": {
+            "fr": "Pour les impôts fonciers, on peut demander à la commune un paiement échelonné. Le centre fiscal peut aussi différer le paiement selon la période où les contribuables ont le plus de ressources, mais pas au-delà du 1er novembre.",
+            "en": "For property taxes, you can ask the commune to pay in instalments. The tax centre can also defer payment to when taxpayers have most income, but not beyond 1 November.",
+            "mg": "Ho an'ny hetra amin'ny tany sy trano, azo angatahana amin'ny kaominina ny fandoavana tsikelikely. Afaka manemotra ny fandoavana ihany koa ny foibe misahana ny hetra, nefa tsy mihoatra ny 1 novambra."
+          }
+        },
+        {
+          "article": "CPF VII-59",
+          "titre": {
+            "fr": "En cas de contestation : le sursis de paiement",
+            "en": "If you dispute: suspension of payment",
+            "mg": "Raha misy fanoherana: fampiatoana ny fandoavana"
+          },
+          "texte": {
+            "fr": "Contester ne suspend pas le paiement. Pour obtenir un sursis sur la partie contestée, il faut : une réclamation déposée, le paiement complet de la partie acceptée, le montant du dégrèvement demandé, et une garantie de 10 % des redressements contestés à la Caisse des dépôts. Réponse sous 10 jours.",
+            "en": "Disputing does not suspend payment. To get a suspension on the disputed part, you need: a complaint filed, full payment of the accepted part, the amount of relief requested, and a 10% guarantee of the disputed adjustments with the deposit fund. Reply within 10 days.",
+            "mg": "Tsy mampiato ny fandoavana ny fanoherana. Mba hahazoana fampiatoana amin'ny ampahany ankatoavina, ilaina: fitarainana napetraka, fandoavana manontolo ny ampahany ekena, ny vola angatahina hesorina, ary antoka 10 % amin'ny fanitsiana ankatoavina any amin'ny Caisse des dépôts. Valiny ao anatin'ny 10 andro."
+          }
+        }
       ],
       "droits": [
-        { "article": "CPF VII-32", "texte": { "fr": "Une échéance qui tombe un samedi, un dimanche ou un jour férié est reportée au premier jour ouvrable suivant.", "en": "A deadline falling on a Saturday, Sunday or public holiday moves to the next working day.", "mg": "Ny fe-potoana mianjera amin'ny asabotsy, alahady na andro tsy iasana dia afindra amin'ny andro fiasana manaraka." } },
-        { "article": "CPF VII-32, VII-58", "texte": { "fr": "Chaque paiement donne lieu à une quittance ou à un accusé de réception, à conserver.", "en": "Each payment gives rise to a receipt or acknowledgement, to keep.", "mg": "Isaky ny fandoavana dia misy taratasy fanamarinana, tehirizina." } },
-        { "article": "CPF VII-55", "texte": { "fr": "Une taxe ou une pénalité payée à tort peut être remboursée dans les 3 ans du paiement.", "en": "A tax or penalty paid in error can be refunded within 3 years of payment.", "mg": "Ny haba na sazy naloa diso dia azo averina ao anatin'ny 3 taona aorian'ny fandoavana." } }
+        {
+          "article": "CPF VII-32",
+          "texte": {
+            "fr": "Une échéance qui tombe un samedi, un dimanche ou un jour férié est reportée au premier jour ouvrable suivant.",
+            "en": "A deadline falling on a Saturday, Sunday or public holiday moves to the next working day.",
+            "mg": "Ny fe-potoana mianjera amin'ny asabotsy, alahady na andro tsy iasana dia afindra amin'ny andro fiasana manaraka."
+          }
+        },
+        {
+          "article": "CPF VII-32, VII-58",
+          "texte": {
+            "fr": "Chaque paiement donne lieu à une quittance ou à un accusé de réception, à conserver.",
+            "en": "Each payment gives rise to a receipt or acknowledgement, to keep.",
+            "mg": "Isaky ny fandoavana dia misy taratasy fanamarinana, tehirizina."
+          }
+        },
+        {
+          "article": "CPF VII-55",
+          "texte": {
+            "fr": "Une taxe ou une pénalité payée à tort peut être remboursée dans les 3 ans du paiement.",
+            "en": "A tax or penalty paid in error can be refunded within 3 years of payment.",
+            "mg": "Ny haba na sazy naloa diso dia azo averina ao anatin'ny 3 taona aorian'ny fandoavana."
+          }
+        }
       ],
       "delais": [
-        { "article": "CPF VII-35", "duree": { "fr": "15 jours", "en": "15 days", "mg": "15 andro" }, "libelle": { "fr": "Avant des poursuites, après notification du titre de perception ou du commandement de payer", "en": "Before enforcement, after notice of the collection order or demand", "mg": "Alohan'ny fanenjehana, aorian'ny fampandrenesana" } },
-        { "article": "CPF VIII-05", "duree": { "fr": "15 jours", "en": "15 days", "mg": "15 andro" }, "libelle": { "fr": "Réclamer contre un titre de perception (forme ou exigibilité seulement)", "en": "Object to a collection order (form or due status only)", "mg": "Mitaraina amin'ny taratasy fandraisam-bola" } },
-        { "article": "CPF VIII-05", "duree": { "fr": "8 jours", "en": "8 days", "mg": "8 andro" }, "libelle": { "fr": "Contester une saisie", "en": "Challenge a seizure", "mg": "Manohitra fisamborana" } },
-        { "article": "CPF VII-59", "duree": { "fr": "10 jours", "en": "10 days", "mg": "10 andro" }, "libelle": { "fr": "Réponse à une demande de sursis de paiement ; recours ensuite dans les 10 jours", "en": "Reply to a suspension request; appeal then within 10 days", "mg": "Valiny amin'ny fangatahana fampiatoana; fitarainana ao anatin'ny 10 andro avy eo" } },
-        { "article": "CPF VII-55", "duree": { "fr": "3 ans", "en": "3 years", "mg": "3 taona" }, "libelle": { "fr": "Demander le remboursement d'un paiement à tort", "en": "Ask for a refund of a wrong payment", "mg": "Mangataka famerenana vola naloa diso" } }
+        {
+          "article": "CPF VII-35",
+          "duree": {
+            "fr": "15 jours",
+            "en": "15 days",
+            "mg": "15 andro"
+          },
+          "libelle": {
+            "fr": "Avant des poursuites, après notification du titre de perception ou du commandement de payer",
+            "en": "Before enforcement, after notice of the collection order or demand",
+            "mg": "Alohan'ny fanenjehana, aorian'ny fampandrenesana"
+          }
+        },
+        {
+          "article": "CPF VIII-05",
+          "duree": {
+            "fr": "15 jours",
+            "en": "15 days",
+            "mg": "15 andro"
+          },
+          "libelle": {
+            "fr": "Réclamer contre un titre de perception (forme ou exigibilité seulement)",
+            "en": "Object to a collection order (form or due status only)",
+            "mg": "Mitaraina amin'ny taratasy fandraisam-bola"
+          }
+        },
+        {
+          "article": "CPF VIII-05",
+          "duree": {
+            "fr": "8 jours",
+            "en": "8 days",
+            "mg": "8 andro"
+          },
+          "libelle": {
+            "fr": "Contester une saisie",
+            "en": "Challenge a seizure",
+            "mg": "Manohitra fisamborana"
+          }
+        },
+        {
+          "article": "CPF VII-59",
+          "duree": {
+            "fr": "10 jours",
+            "en": "10 days",
+            "mg": "10 andro"
+          },
+          "libelle": {
+            "fr": "Réponse à une demande de sursis de paiement ; recours ensuite dans les 10 jours",
+            "en": "Reply to a suspension request; appeal then within 10 days",
+            "mg": "Valiny amin'ny fangatahana fampiatoana; fitarainana ao anatin'ny 10 andro avy eo"
+          }
+        },
+        {
+          "article": "CPF VII-55",
+          "duree": {
+            "fr": "3 ans",
+            "en": "3 years",
+            "mg": "3 taona"
+          },
+          "libelle": {
+            "fr": "Demander le remboursement d'un paiement à tort",
+            "en": "Ask for a refund of a wrong payment",
+            "mg": "Mangataka famerenana vola naloa diso"
+          }
+        }
       ],
       "sanctions": [
-        { "article": "CPF VII-21, VII-35", "texte": { "fr": "Sans paiement à l'échéance, des poursuites avec frais peuvent commencer 15 jours après la notification du titre de perception : saisie, vente des biens saisis dans les 5 jours, hypothèque.", "en": "Without payment on time, enforcement with costs can start 15 days after notice of the collection order: seizure, sale of seized goods within 5 days, mortgage.", "mg": "Raha tsy voaloa ara-potoana, mety hanomboka ny fanenjehana 15 andro aorian'ny fampandrenesana: fisamborana, fivarotana ny entana voasambotra ao anatin'ny 5 andro, antoka amin'ny tany." } },
-        { "article": "CPF VII-04", "texte": { "fr": "Tout l'impôt devient immédiatement exigible en cas de déménagement hors de la commune, de départ définitif de Madagascar, de vente ou de faillite.", "en": "All the tax becomes due immediately on moving out of the commune, leaving Madagascar for good, sale or bankruptcy.", "mg": "Tsy maintsy aloa avy hatrany ny hetra rehetra raha mifindra ivelan'ny kaominina, miala tanteraka eto Madagasikara, mivarotra na bankirompitra." } }
+        {
+          "article": "CPF VII-21, VII-35",
+          "texte": {
+            "fr": "Sans paiement à l'échéance, des poursuites avec frais peuvent commencer 15 jours après la notification du titre de perception : saisie, vente des biens saisis dans les 5 jours, hypothèque.",
+            "en": "Without payment on time, enforcement with costs can start 15 days after notice of the collection order: seizure, sale of seized goods within 5 days, mortgage.",
+            "mg": "Raha tsy voaloa ara-potoana, mety hanomboka ny fanenjehana 15 andro aorian'ny fampandrenesana: fisamborana, fivarotana ny entana voasambotra ao anatin'ny 5 andro, antoka amin'ny tany."
+          }
+        },
+        {
+          "article": "CPF VII-04",
+          "texte": {
+            "fr": "Tout l'impôt devient immédiatement exigible en cas de déménagement hors de la commune, de départ définitif de Madagascar, de vente ou de faillite.",
+            "en": "All the tax becomes due immediately on moving out of the commune, leaving Madagascar for good, sale or bankruptcy.",
+            "mg": "Tsy maintsy aloa avy hatrany ny hetra rehetra raha mifindra ivelan'ny kaominina, miala tanteraka eto Madagasikara, mivarotra na bankirompitra."
+          }
+        }
       ]
     },
     {
       "id": "prescription",
-      "titre": { "fr": "Délais et prescription", "en": "Time limits and limitation", "mg": "Fe-potoana sy fahataperan'ny zo" },
+      "titre": {
+        "fr": "Délais et prescription",
+        "en": "Time limits and limitation",
+        "mg": "Fe-potoana sy fahataperan'ny zo"
+      },
       "intro": {
         "fr": "Combien de temps l'administration peut-elle revenir sur un impôt ? En général jusqu'à la fin de la 3e année qui suit, parfois 10 ans. Passé ce délai, l'impôt est éteint, comme s'il avait été payé.",
         "en": "How long can the tax office go back on a tax? Generally until the end of the 3rd following year, sometimes 10 years. After that, the tax is extinguished, as if it had been paid.",
         "mg": "Mandra-pahoviana no afaka miverina amin'ny hetra ny fitondrana? Matetika hatramin'ny fiafaran'ny taona faha-3 manaraka, indraindray 10 taona. Aorian'izay, foana ny hetra, toy ny hoe naloa."
       },
       "etapes": [
-        { "article": "CPF IX-02, IX-03, IX-04",
-          "titre": { "fr": "Impôts sur les revenus, IRCM, impôts fonciers", "en": "Income taxes, IRCM, property taxes", "mg": "Hetra amin'ny vola miditra, IRCM, hetra amin'ny tany" },
-          "texte": { "fr": "Jusqu'à la fin de la 3e année qui suit celle au titre de laquelle l'impôt est dû.", "en": "Until the end of the 3rd year following the year for which the tax is due.", "mg": "Hatramin'ny fiafaran'ny taona faha-3 manaraka ny taona nanaovana ny hetra." } },
-        { "article": "CPF IX-05, IX-10, IX-12",
-          "titre": { "fr": "TVA, taxe sur les assurances, impôts indirects", "en": "VAT, insurance tax, indirect taxes", "mg": "TVA, haba amin'ny fiantohana, hetra ankolaka" },
-          "texte": { "fr": "Jusqu'à la fin de la 3e année qui suit celle où la taxe est devenue exigible.", "en": "Until the end of the 3rd year following the year the tax became due.", "mg": "Hatramin'ny fiafaran'ny taona faha-3 manaraka ny taona nahatonga ny haba ho tsy maintsy aloa." } },
-        { "article": "CPF IX-07, IX-08, IX-09",
-          "titre": { "fr": "Enregistrement et successions", "en": "Registration and estates", "mg": "Fanoratana sy lova" },
-          "texte": { "fr": "3 ans après l'enregistrement de l'acte. Mais 10 ans si la succession n'a pas été déclarée (depuis le décès), si des biens ont été omis, ou si aucun acte n'a été présenté (depuis l'événement).", "en": "3 years after registration of the deed. But 10 years if the estate was not declared (from death), if property was omitted, or if no deed was presented (from the event).", "mg": "3 taona aorian'ny fanoratana ny taratasy. Fa 10 taona raha tsy nambara ny lova (manomboka amin'ny fahafatesana), raha nisy fananana adino, na raha tsy nisy taratasy natolotra (manomboka amin'ny zava-nitranga)." } },
-        { "article": "CPF IX-13, IX-14, IX-17",
-          "titre": { "fr": "Les exceptions", "en": "The exceptions", "mg": "Ireo maningana" },
-          "texte": { "fr": "Une année prescrite peut être vérifiée si elle influence une année non prescrite (déficits, impôts différés). Le délai passe à 10 ans pour un contrôle lancé par la cellule de renseignement financier, et il est prolongé de 2 ans en cas de plainte pour fraude.", "en": "A time-barred year can be audited if it affects a non-barred year (losses, deferred tax). The limit rises to 10 years for an audit started by the financial intelligence unit, and is extended by 2 years where fraud charges are filed.", "mg": "Azo hamarinina ny taona efa tapitra raha misy fiantraikany amin'ny taona tsy mbola tapitra (fatiantoka, hetra ahemotra). Lasa 10 taona ny fe-potoana raha ny sampana misahana ny fampahalalana ara-bola no nanomboka ny fanaraha-maso, ary miampy 2 taona raha misy fitoriana noho ny hosoka." } },
-        { "article": "CPF IX-21, IX-22",
-          "titre": { "fr": "Ce qui interrompt le délai", "en": "What interrupts the time limit", "mg": "Izay manapaka ny fe-potoana" },
-          "texte": { "fr": "Une proposition de redressement, un procès-verbal, un acompte, une réclamation, une demande de remise de pénalité ou tout acte où le contribuable reconnaît sa dette interrompt la prescription : un nouveau délai de même durée recommence.", "en": "An adjustment proposal, an official report, an instalment, a complaint, a penalty-remission request or any act acknowledging the debt interrupts the limitation: a new period of the same length starts.", "mg": "Ny tolo-kevitra fanitsiana, ny fitanana an-tsoratra, ny fandoavana ampahany, ny fitarainana, ny fangatahana fanafoanana sazy na izay fanekena ny trosa dia manapaka ny fe-potoana: manomboka indray ny fe-potoana mitovy halava." } }
+        {
+          "article": "CPF IX-02, IX-03, IX-04",
+          "titre": {
+            "fr": "Impôts sur les revenus, IRCM, impôts fonciers",
+            "en": "Income taxes, IRCM, property taxes",
+            "mg": "Hetra amin'ny vola miditra, IRCM, hetra amin'ny tany"
+          },
+          "texte": {
+            "fr": "Jusqu'à la fin de la 3e année qui suit celle au titre de laquelle l'impôt est dû.",
+            "en": "Until the end of the 3rd year following the year for which the tax is due.",
+            "mg": "Hatramin'ny fiafaran'ny taona faha-3 manaraka ny taona nanaovana ny hetra."
+          }
+        },
+        {
+          "article": "CPF IX-05, IX-10, IX-12",
+          "titre": {
+            "fr": "TVA, taxe sur les assurances, impôts indirects",
+            "en": "VAT, insurance tax, indirect taxes",
+            "mg": "TVA, haba amin'ny fiantohana, hetra ankolaka"
+          },
+          "texte": {
+            "fr": "Jusqu'à la fin de la 3e année qui suit celle où la taxe est devenue exigible.",
+            "en": "Until the end of the 3rd year following the year the tax became due.",
+            "mg": "Hatramin'ny fiafaran'ny taona faha-3 manaraka ny taona nahatonga ny haba ho tsy maintsy aloa."
+          }
+        },
+        {
+          "article": "CPF IX-07, IX-08, IX-09",
+          "titre": {
+            "fr": "Enregistrement et successions",
+            "en": "Registration and estates",
+            "mg": "Fanoratana sy lova"
+          },
+          "texte": {
+            "fr": "3 ans après l'enregistrement de l'acte. Mais 10 ans si la succession n'a pas été déclarée (depuis le décès), si des biens ont été omis, ou si aucun acte n'a été présenté (depuis l'événement).",
+            "en": "3 years after registration of the deed. But 10 years if the estate was not declared (from death), if property was omitted, or if no deed was presented (from the event).",
+            "mg": "3 taona aorian'ny fanoratana ny taratasy. Fa 10 taona raha tsy nambara ny lova (manomboka amin'ny fahafatesana), raha nisy fananana adino, na raha tsy nisy taratasy natolotra (manomboka amin'ny zava-nitranga)."
+          }
+        },
+        {
+          "article": "CPF IX-13, IX-14, IX-17",
+          "titre": {
+            "fr": "Les exceptions",
+            "en": "The exceptions",
+            "mg": "Ireo maningana"
+          },
+          "texte": {
+            "fr": "Une année prescrite peut être vérifiée si elle influence une année non prescrite (déficits, impôts différés). Le délai passe à 10 ans pour un contrôle lancé par la cellule de renseignement financier, et il est prolongé de 2 ans en cas de plainte pour fraude.",
+            "en": "A time-barred year can be audited if it affects a non-barred year (losses, deferred tax). The limit rises to 10 years for an audit started by the financial intelligence unit, and is extended by 2 years where fraud charges are filed.",
+            "mg": "Azo hamarinina ny taona efa tapitra raha misy fiantraikany amin'ny taona tsy mbola tapitra (fatiantoka, hetra ahemotra). Lasa 10 taona ny fe-potoana raha ny sampana misahana ny fampahalalana ara-bola no nanomboka ny fanaraha-maso, ary miampy 2 taona raha misy fitoriana noho ny hosoka."
+          }
+        },
+        {
+          "article": "CPF IX-21, IX-22",
+          "titre": {
+            "fr": "Ce qui interrompt le délai",
+            "en": "What interrupts the time limit",
+            "mg": "Izay manapaka ny fe-potoana"
+          },
+          "texte": {
+            "fr": "Une proposition de redressement, un procès-verbal, un acompte, une réclamation, une demande de remise de pénalité ou tout acte où le contribuable reconnaît sa dette interrompt la prescription : un nouveau délai de même durée recommence.",
+            "en": "An adjustment proposal, an official report, an instalment, a complaint, a penalty-remission request or any act acknowledging the debt interrupts the limitation: a new period of the same length starts.",
+            "mg": "Ny tolo-kevitra fanitsiana, ny fitanana an-tsoratra, ny fandoavana ampahany, ny fitarainana, ny fangatahana fanafoanana sazy na izay fanekena ny trosa dia manapaka ny fe-potoana: manomboka indray ny fe-potoana mitovy halava."
+          }
+        }
       ],
       "droits": [
-        { "article": "CPF IX-20", "texte": { "fr": "Une fois la prescription acquise, l'obligation est éteinte, comme si l'impôt avait été payé.", "en": "Once the limitation period has run, the obligation is extinguished, as if the tax had been paid.", "mg": "Rehefa tapitra ny fe-potoana, foana ny adidy, toy ny hoe naloa ny hetra." } },
-        { "article": "CPF IX-23", "texte": { "fr": "Les délais fiscaux sont francs, sans délai de distance ni délai supplémentaire accordé par un juge.", "en": "Tax time limits are clear days, with no extra time for distance and no extension by a judge.", "mg": "Fe-potoana feno ny fe-potoana ara-ketra, tsy misy fanampiny noho ny halavirana na omen'ny mpitsara." } },
-        { "article": "CPF IX-21", "texte": { "fr": "Un courrier envoyé à l'adresse inscrite sur NIFONLINE interrompt la prescription même s'il n'est pas reçu : d'où l'intérêt de garder son adresse à jour.", "en": "A letter sent to the address on NIFONLINE interrupts the limitation even if not received: hence the importance of keeping your address up to date.", "mg": "Ny taratasy alefa any amin'ny adiresy ao amin'ny NIFONLINE dia manapaka ny fe-potoana na dia tsy voaray aza: ka ilaina ny manavao ny adiresy." } }
+        {
+          "article": "CPF IX-20",
+          "texte": {
+            "fr": "Une fois la prescription acquise, l'obligation est éteinte, comme si l'impôt avait été payé.",
+            "en": "Once the limitation period has run, the obligation is extinguished, as if the tax had been paid.",
+            "mg": "Rehefa tapitra ny fe-potoana, foana ny adidy, toy ny hoe naloa ny hetra."
+          }
+        },
+        {
+          "article": "CPF IX-23",
+          "texte": {
+            "fr": "Les délais fiscaux sont francs, sans délai de distance ni délai supplémentaire accordé par un juge.",
+            "en": "Tax time limits are clear days, with no extra time for distance and no extension by a judge.",
+            "mg": "Fe-potoana feno ny fe-potoana ara-ketra, tsy misy fanampiny noho ny halavirana na omen'ny mpitsara."
+          }
+        },
+        {
+          "article": "CPF IX-21",
+          "texte": {
+            "fr": "Un courrier envoyé à l'adresse inscrite sur NIFONLINE interrompt la prescription même s'il n'est pas reçu : d'où l'intérêt de garder son adresse à jour.",
+            "en": "A letter sent to the address on NIFONLINE interrupts the limitation even if not received: hence the importance of keeping your address up to date.",
+            "mg": "Ny taratasy alefa any amin'ny adiresy ao amin'ny NIFONLINE dia manapaka ny fe-potoana na dia tsy voaray aza: ka ilaina ny manavao ny adiresy."
+          }
+        }
       ],
       "delais": [
-        { "article": "CDI 01.02.07", "duree": { "fr": "3 ans", "en": "3 years", "mg": "3 taona" }, "libelle": { "fr": "Conserver ses documents comptables (impôt synthétique)", "en": "Keep accounting records (synthetic tax)", "mg": "Mitahiry ny antontan-taratasy ara-kaonty (hetra tsotra)" } },
-        { "article": "CDI 06.01.26", "duree": { "fr": "pendant le délai de reprise", "en": "for the limitation period", "mg": "mandritra ny fe-potoana" }, "libelle": { "fr": "Conserver factures et quittances (TVA)", "en": "Keep invoices and receipts (VAT)", "mg": "Mitahiry faktiora sy taratasy fandoavana (TVA)" } },
-        { "article": "CPF IX-18", "duree": { "fr": "le même que l'impôt", "en": "the same as the tax", "mg": "mitovy amin'ny hetra" }, "libelle": { "fr": "Prescription des amendes fiscales", "en": "Limitation of tax fines", "mg": "Fahataperan'ny onitra ara-ketra" } }
+        {
+          "article": "CDI 01.02.07",
+          "duree": {
+            "fr": "3 ans",
+            "en": "3 years",
+            "mg": "3 taona"
+          },
+          "libelle": {
+            "fr": "Conserver ses documents comptables (impôt synthétique)",
+            "en": "Keep accounting records (synthetic tax)",
+            "mg": "Mitahiry ny antontan-taratasy ara-kaonty (hetra tsotra)"
+          }
+        },
+        {
+          "article": "CDI 06.01.26",
+          "duree": {
+            "fr": "pendant le délai de reprise",
+            "en": "for the limitation period",
+            "mg": "mandritra ny fe-potoana"
+          },
+          "libelle": {
+            "fr": "Conserver factures et quittances (TVA)",
+            "en": "Keep invoices and receipts (VAT)",
+            "mg": "Mitahiry faktiora sy taratasy fandoavana (TVA)"
+          }
+        },
+        {
+          "article": "CPF IX-18",
+          "duree": {
+            "fr": "le même que l'impôt",
+            "en": "the same as the tax",
+            "mg": "mitovy amin'ny hetra"
+          },
+          "libelle": {
+            "fr": "Prescription des amendes fiscales",
+            "en": "Limitation of tax fines",
+            "mg": "Fahataperan'ny onitra ara-ketra"
+          }
+        }
       ],
       "sanctions": []
+    },
+    {
+      "id": "controle",
+      "titre": {
+        "fr": "Le contrôle fiscal",
+        "en": "Tax audits",
+        "mg": "Ny fanaraha-maso ara-ketra"
+      },
+      "intro": {
+        "fr": "L'administration peut contrôler vos déclarations depuis son bureau (contrôle sur pièces) ou chez vous (vérification sur place). Dans les deux cas, la procédure est contradictoire : vous pouvez répondre, discuter et vous faire assister.",
+        "en": "The tax office can check your returns from its office (desk audit) or at your premises (field audit). In both cases the procedure is adversarial: you can reply, discuss and be assisted.",
+        "mg": "Afaka manamarina ny fanambaranao avy any amin'ny biraony (fanaraha-maso amin'ny taratasy) na any aminao (fanamarinana an-toerana) ny fitondrana. Amin'izy roa, misy fifampiresahana: afaka mamaly, miady hevitra ary misy manampy anao ianao."
+      },
+      "etapes": [
+        {
+          "article": "CPF V-01, V-02",
+          "titre": {
+            "fr": "Le contrôle sur pièces commence par des questions",
+            "en": "A desk audit starts with questions",
+            "mg": "Fanontaniana no fanombohan’ny fanaraha-maso amin’ny taratasy"
+          },
+          "texte": {
+            "fr": "Depuis son bureau, un agent (au moins contrôleur) peut vous demander des explications ou des justificatifs. Une demande écrite précise les points et vous laisse 15 jours francs pour répondre.",
+            "en": "From the office, an officer (at least a controller) may ask you for explanations or supporting documents. A written request states the points and gives you 15 clear days to reply.",
+            "mg": "Avy any amin'ny biraony, afaka mangataka fanazavana na porofo aminao ny mpiasa (farafahakeliny mpanara-maso). Ny fangatahana an-tsoratra dia milaza ny teboka ary manome 15 andro feno anao hamaliana."
+          }
+        },
+        {
+          "article": "CPF V-09, V-10",
+          "titre": {
+            "fr": "La vérification sur place commence par un avis",
+            "en": "A field audit starts with a notice",
+            "mg": "Fampandrenesana no fanombohan’ny fanamarinana an-toerana"
+          },
+          "texte": {
+            "fr": "Une vérification chez vous ne peut commencer sans un avis de vérification : impôts et années contrôlés, documents demandés, noms des vérificateurs, droit de vous faire assister d'un conseil. Chaque rencontre donne lieu à un procès-verbal.",
+            "en": "A field audit cannot start without an audit notice: taxes and years audited, documents requested, names of the auditors, right to be assisted by an adviser. Each meeting is recorded in an official report.",
+            "mg": "Tsy afaka manomboka ny fanamarinana any aminao raha tsy misy fampandrenesana: hetra sy taona hamarinina, taratasy angatahina, anaran'ny mpanamarina, zo hanana mpanolotsaina. Misy fitanana an-tsoratra isaky ny fihaonana."
+          }
+        },
+        {
+          "article": "CPF V-11, V-12, V-14",
+          "titre": {
+            "fr": "Fournir les documents, dans les délais",
+            "en": "Provide documents on time",
+            "mg": "Manome ny taratasy ara-potoana"
+          },
+          "texte": {
+            "fr": "Les documents demandés sont remis dans les 12 jours, sinon c'est la taxation d'office. Une comptabilité informatisée est remise sous forme numérique dès le début. La vérification sur place dure 3 mois au plus pour les trois années non prescrites, sauf prorogation par le Directeur général.",
+            "en": "Requested documents must be handed over within 12 days, otherwise a default assessment applies. Computerised accounts are handed over in digital form from the start. A field audit lasts at most 3 months for the three non-barred years, unless extended by the Director General.",
+            "mg": "Omena ao anatin'ny 12 andro ny taratasy angatahina, raha tsy izany hetra napetraky ny fitondrana. Ny kaonty amin'ny solosaina dia omena amin'ny endrika nomerika hatrany am-piandohana. 3 volana farafahabetsany ny fanamarinana an-toerana ho an'ny taona telo tsy mbola tapitra, raha tsy omen'ny Tale jeneraly fanalavana."
+          }
+        },
+        {
+          "article": "CPF V-03, V-04, V-16",
+          "titre": {
+            "fr": "La notification primitive : ce que l’administration propose",
+            "en": "The initial notice: what the tax office proposes",
+            "mg": "Fampandrenesana voalohany: izay aroson’ny fitondrana"
+          },
+          "texte": {
+            "fr": "Si l'administration veut corriger vos déclarations, elle vous envoie une notification primitive avec le détail et les motifs des redressements, et vous invite à un débat oral, avec un conseil si vous le souhaitez. Vous avez 30 jours pour accepter ou répondre.",
+            "en": "If the tax office wants to correct your returns, it sends you an initial notice with the details and reasons for the adjustments, and invites you to an oral discussion, with an adviser if you wish. You have 30 days to accept or reply.",
+            "mg": "Raha te hanitsy ny fanambaranao ny fitondrana, mandefa fampandrenesana voalohany aminao izy miaraka amin'ny antsipiriany sy ny antony, ary manasa anao amin'ny fifampiresahana am-bava, miaraka amin'ny mpanolotsaina raha tianao. 30 andro no anananao hanekena na hamaliana."
+          }
+        },
+        {
+          "article": "CPF V-05, V-06",
+          "titre": {
+            "fr": "Répondre et débattre",
+            "en": "Reply and discuss",
+            "mg": "Mamaly sy miady hevitra"
+          },
+          "texte": {
+            "fr": "Dans votre réponse, indiquez ce que vous acceptez, ce que vous contestez avec vos justificatifs, et une date pour le débat oral. Le débat a lieu au bureau des vérificateurs et donne lieu à un procès-verbal signé par les deux parties. Les pièces envoyées hors délai ne sont pas prises en compte.",
+            "en": "In your reply, state what you accept, what you dispute with your evidence, and a date for the oral discussion. The discussion takes place at the auditors’ office and is recorded in a report signed by both parties. Documents sent late are not taken into account.",
+            "mg": "Ao amin'ny valinteninao, lazao izay ekenao, izay ankatoavinao miaraka amin'ny porofo, ary daty ho an'ny fifampiresahana. Atao any amin'ny biraon'ny mpanamarina ny fifampiresahana ary misy fitanana an-tsoratra soniavin'ny andaniny roa. Tsy raisina ny taratasy alefa tara."
+          }
+        },
+        {
+          "article": "CPF V-07, V-30",
+          "titre": {
+            "fr": "La notification définitive",
+            "en": "The final notice",
+            "mg": "Fampandrenesana farany"
+          },
+          "texte": {
+            "fr": "L'administration fixe ensuite les bases et vous adresse une notification définitive, même sans redressement, avec le titre de perception et les voies de recours. Elle doit arriver dans les 90 jours après la notification primitive, sinon le redressement est abandonné, sauf faute de votre part.",
+            "en": "The tax office then sets the bases and sends you a final notice, even with no adjustment, with the collection order and the means of appeal. It must arrive within 90 days of the initial notice, otherwise the adjustment is dropped, unless you are at fault.",
+            "mg": "Avy eo ny fitondrana no mamaritra ny fototra ary mandefa fampandrenesana farany aminao, na dia tsy misy fanitsiana aza, miaraka amin'ny taratasy fandraisam-bola sy ny fomba hitarainana. Tsy maintsy tonga ao anatin'ny 90 andro aorian'ny fampandrenesana voalohany izy, raha tsy izany foana ny fanitsiana, afa-tsy raha anao ny diso."
+          }
+        }
+      ],
+      "droits": [
+        {
+          "article": "CPF V-04, V-10",
+          "texte": {
+            "fr": "Se faire assister d'un conseil de son choix ; sans cette mention dans l'avis de vérification, la procédure est nulle.",
+            "en": "To be assisted by an adviser of your choice; without this statement in the audit notice, the procedure is void.",
+            "mg": "Manana mpanolotsaina safidinao; raha tsy voalaza ao amin'ny fampandrenesana izany, foana ny fomba fiasa."
+          }
+        },
+        {
+          "article": "CPF V-18",
+          "texte": {
+            "fr": "Une période vérifiée sur place pour un impôt ne peut plus être revérifiée pour le même impôt, sauf contrôle limité ou fraude.",
+            "en": "A period audited on site for a tax cannot be audited again for the same tax, except for a limited audit or fraud.",
+            "mg": "Ny vanim-potoana efa nohamarinina an-toerana ho an'ny hetra iray dia tsy azo hamarinina indray ho an'io hetra io, afa-tsy raha voafetra ny fanamarinana na misy hosoka."
+          }
+        },
+        {
+          "article": "CPF V-31",
+          "texte": {
+            "fr": "Pas de redressement fondé sur un changement de doctrine si vous avez suivi l'interprétation admise à l'époque par l'administration.",
+            "en": "No adjustment based on a change of doctrine if you followed the interpretation accepted at the time by the tax office.",
+            "mg": "Tsy misy fanitsiana mifototra amin'ny fiovan'ny fandikana raha nanaraka ny fandikana neken'ny fitondrana tamin'izany fotoana izany ianao."
+          }
+        },
+        {
+          "article": "CPF V-33",
+          "texte": {
+            "fr": "Saisir la Commission fiscale dans les 15 jours qui suivent la notification définitive.",
+            "en": "Refer the matter to the Tax Commission within 15 days of the final notice.",
+            "mg": "Mitondra ny raharaha any amin'ny Vaomiera ara-ketra ao anatin'ny 15 andro aorian'ny fampandrenesana farany."
+          }
+        }
+      ],
+      "delais": [
+        {
+          "article": "CPF V-02",
+          "duree": {
+            "fr": "15 jours",
+            "en": "15 days",
+            "mg": "15 andro"
+          },
+          "libelle": {
+            "fr": "Répondre à une demande écrite d’éclaircissements",
+            "en": "Reply to a written request for clarification",
+            "mg": "Mamaly fangatahana fanazavana an-tsoratra"
+          }
+        },
+        {
+          "article": "CPF V-12",
+          "duree": {
+            "fr": "12 jours",
+            "en": "12 days",
+            "mg": "12 andro"
+          },
+          "libelle": {
+            "fr": "Remettre les documents demandés lors d’une vérification sur place",
+            "en": "Hand over documents requested in a field audit",
+            "mg": "Manome ny taratasy angatahina"
+          }
+        },
+        {
+          "article": "CPF V-04, V-16",
+          "duree": {
+            "fr": "30 jours",
+            "en": "30 days",
+            "mg": "30 andro"
+          },
+          "libelle": {
+            "fr": "Répondre à la notification primitive",
+            "en": "Reply to the initial notice",
+            "mg": "Mamaly ny fampandrenesana voalohany"
+          }
+        },
+        {
+          "article": "CPF V-07",
+          "duree": {
+            "fr": "90 jours",
+            "en": "90 days",
+            "mg": "90 andro"
+          },
+          "libelle": {
+            "fr": "Délai de l’administration pour la notification définitive",
+            "en": "Tax office deadline for the final notice",
+            "mg": "Fe-potoanan'ny fitondrana hanaovana ny fampandrenesana farany"
+          }
+        },
+        {
+          "article": "CPF V-11",
+          "duree": {
+            "fr": "3 mois",
+            "en": "3 months",
+            "mg": "3 volana"
+          },
+          "libelle": {
+            "fr": "Durée maximale de la vérification sur place",
+            "en": "Maximum length of a field audit",
+            "mg": "Faharetan'ny fanamarinana an-toerana"
+          }
+        }
+      ],
+      "sanctions": [
+        {
+          "article": "CPF V-12, V-32, CDI 20.01.54",
+          "texte": {
+            "fr": "Documents non remis à temps : taxation d'office. Opposition au contrôle : évaluation d'office et amende de 150 %.",
+            "en": "Documents not handed over on time: default assessment. Obstructing the audit: default assessment and a 150% fine.",
+            "mg": "Taratasy tsy natolotra ara-potoana: hetra napetraky ny fitondrana. Fanoherana ny fanaraha-maso: tombana avy amin'ny fitondrana sy onitra 150 %."
+          }
+        }
+      ]
+    },
+    {
+      "id": "reclamer",
+      "titre": {
+        "fr": "Réclamer ou demander une remise",
+        "en": "Disputing a tax or asking for relief",
+        "mg": "Mitaraina na mangataka famelana"
+      },
+      "intro": {
+        "fr": "Deux voies existent : la demande gracieuse, qui fait appel à la bienveillance de l'administration quand on ne peut pas payer, et la réclamation contentieuse, quand on estime que l'impôt est mal calculé.",
+        "en": "There are two routes: a request for leniency, appealing to the tax office’s goodwill when you cannot pay, and a formal dispute, when you consider the tax wrongly calculated.",
+        "mg": "Lalana roa no misy: ny fangatahana famelana, mitady ny hatsaram-panahin'ny fitondrana raha tsy afaka mandoa, ary ny fitarainana, raha heverina fa diso ny kajin'ny hetra."
+      },
+      "etapes": [
+        {
+          "article": "CPF VI-02, VI-04",
+          "titre": {
+            "fr": "Demande gracieuse : quand on ne peut pas payer",
+            "en": "Leniency request: when you cannot pay",
+            "mg": "Fangatahana famelana: raha tsy afaka mandoa"
+          },
+          "texte": {
+            "fr": "En cas de difficultés financières, on peut demander une remise d'amendes ou de pénalités, un paiement échelonné, un délai supplémentaire pour ses obligations ou la suspension des poursuites.",
+            "en": "In financial difficulty, you can ask for remission of fines or penalties, payment in instalments, more time for your obligations or suspension of enforcement.",
+            "mg": "Raha sahirana ara-bola, azo angatahina ny famelana onitra na sazy, fandoavana tsikelikely, fe-potoana fanampiny, na fampiatoana ny fanenjehana."
+          }
+        },
+        {
+          "article": "CPF VI-06 à VI-10",
+          "titre": {
+            "fr": "Rédiger la demande gracieuse",
+            "en": "Write the leniency request",
+            "mg": "Manoratra ny fangatahana famelana"
+          },
+          "texte": {
+            "fr": "La demande indique l'impôt, l'année et le montant, expose les motifs, est signée et accompagnée des titres de perception ou de l'avis d'imposition. Le Directeur général des impôts décide ; sa décision n'est susceptible d'aucun recours.",
+            "en": "The request states the tax, year and amount, gives the reasons, is signed and comes with the collection orders or tax notice. The Director General of Taxes decides; the decision cannot be appealed.",
+            "mg": "Milaza ny hetra, ny taona ary ny vola ny fangatahana, manazava ny antony, voasonia ary miaraka amin'ny taratasy fandraisam-bola na fampandrenesana. Ny Talen'ny hetra no manapa-kevitra; tsy azo iampangana ny fanapahan-keviny."
+          }
+        },
+        {
+          "article": "CPF VI-13, VI-15",
+          "titre": {
+            "fr": "Réclamation contentieuse : contester l’impôt",
+            "en": "Formal dispute: challenging the tax",
+            "mg": "Fitarainana: manohitra ny hetra"
+          },
+          "texte": {
+            "fr": "Pour faire corriger une erreur d'assiette ou de calcul, réclamez dans les 30 jours qui suivent la notification définitive (90 jours après l'avis d'imposition pour les impôts locaux).",
+            "en": "To correct an error in the base or calculation, file a complaint within 30 days of the final notice (90 days after the tax notice for local taxes).",
+            "mg": "Mba hanitsiana hadisoana amin'ny fototra na kajy, mitaraina ao anatin'ny 30 andro aorian'ny fampandrenesana farany (90 andro aorian'ny fampandrenesana hetra ho an'ny hetra ifotony)."
+          }
+        },
+        {
+          "article": "CPF VI-16, VI-17",
+          "titre": {
+            "fr": "Réunir toutes les conditions",
+            "en": "Meet all the conditions",
+            "mg": "Manaraka ny fepetra rehetra"
+          },
+          "texte": {
+            "fr": "Une réclamation individuelle, datée, signée, sur une seule notification, avec les motifs, le montant du dégrèvement demandé, la preuve du paiement de la partie acceptée et la copie du titre de perception. Un mandataire doit avoir un mandat enregistré. Un oubli peut être régularisé dans les 15 jours.",
+            "en": "An individual complaint, dated, signed, on a single notice, with reasons, the amount of relief requested, proof of payment of the accepted part and a copy of the collection order. A representative needs a registered mandate. An omission can be fixed within 15 days.",
+            "mg": "Fitarainana manokana, misy daty, voasonia, amin'ny fampandrenesana iray ihany, miaraka amin'ny antony, ny vola angatahina hesorina, ny porofon'ny fandoavana ny ampahany ekena ary ny dika mitovy amin'ny taratasy fandraisam-bola. Ny solontena dia tsy maintsy manana fanomezan-dàlana voasoratra. Azo amboarina ao anatin'ny 15 andro ny tsy fahampiana."
+          }
+        },
+        {
+          "article": "CPF VI-47, VI-53, VI-63",
+          "titre": {
+            "fr": "Option : passer par la Commission fiscale",
+            "en": "Option: go through the Tax Commission",
+            "mg": "Safidy: mandalo amin’ny Vaomiera ara-ketra"
+          },
+          "texte": {
+            "fr": "Pour un désaccord sur des faits après un contrôle, on peut saisir la Commission fiscale dans les 15 jours (sauf taxation d'office ou fraude). Elle rend un avis motivé en 60 jours, qui n'oblige pas les parties ; l'administration décide ensuite dans les 30 jours.",
+            "en": "For a disagreement on facts after an audit, you can refer to the Tax Commission within 15 days (except for default assessment or fraud). It gives a reasoned opinion within 60 days, not binding on the parties; the tax office then decides within 30 days.",
+            "mg": "Raha misy tsy fitovian-kevitra momba ny zava-misy aorian'ny fanaraha-maso, azo entina any amin'ny Vaomiera ara-ketra ao anatin'ny 15 andro (afa-tsy hetra napetraky ny fitondrana na hosoka). Manome hevitra misy antony ao anatin'ny 60 andro izy, tsy manery ny andaniny; avy eo ny fitondrana no manapa-kevitra ao anatin'ny 30 andro."
+          }
+        },
+        {
+          "article": "CPF VI-20, VI-26, VI-27",
+          "titre": {
+            "fr": "La décision, puis le juge",
+            "en": "The decision, then the court",
+            "mg": "Ny fanapahan-kevitra, avy eo ny fitsarana"
+          },
+          "texte": {
+            "fr": "L'administration décide dans les 60 jours. En cas de rejet ou sans réponse, la requête va au Conseil d'État (impôts d'État) ou au tribunal administratif (impôts locaux), dans les 30 jours.",
+            "en": "The tax office decides within 60 days. If rejected or with no reply, the claim goes to the Council of State (State taxes) or the administrative court (local taxes), within 30 days.",
+            "mg": "Manapa-kevitra ao anatin'ny 60 andro ny fitondrana. Raha lavina na tsy misy valiny, entina any amin'ny Filankevitry ny Fanjakana (hetram-panjakana) na ny fitsarana ara-pitantanana (hetra ifotony) ao anatin'ny 30 andro."
+          }
+        }
+      ],
+      "droits": [
+        {
+          "article": "CPF VI-22",
+          "texte": {
+            "fr": "L'administration peut corriger d'office ses propres erreurs, même après les délais.",
+            "en": "The tax office can correct its own errors on its own initiative, even after the deadlines.",
+            "mg": "Afaka manitsy ho azy ny hadisoany ny fitondrana, na dia aorian'ny fe-potoana aza."
+          }
+        },
+        {
+          "article": "CPF VI-05",
+          "texte": {
+            "fr": "Un nouveau délai de 15 jours au plus peut être accordé à qui a agi trop tard.",
+            "en": "A new period of up to 15 days can be granted to someone who acted too late.",
+            "mg": "Azo omena fe-potoana vaovao 15 andro farafahabetsany izay tara."
+          }
+        },
+        {
+          "article": "CPF VII-59",
+          "texte": {
+            "fr": "Réclamer ne suspend pas le paiement, mais un sursis peut être obtenu (voir le guide Payer).",
+            "en": "A complaint does not suspend payment, but a suspension can be obtained (see the Paying guide).",
+            "mg": "Tsy mampiato ny fandoavana ny fitarainana, fa azo angatahina ny fampiatoana (jereo ny torolalana Fandoavana)."
+          }
+        }
+      ],
+      "delais": [
+        {
+          "article": "CPF VI-15",
+          "duree": {
+            "fr": "30 jours",
+            "en": "30 days",
+            "mg": "30 andro"
+          },
+          "libelle": {
+            "fr": "Réclamer contre un impôt d’État, après la notification définitive",
+            "en": "Dispute a State tax, after the final notice",
+            "mg": "Mitaraina amin’ny hetram-panjakana"
+          }
+        },
+        {
+          "article": "CPF VI-15",
+          "duree": {
+            "fr": "90 jours",
+            "en": "90 days",
+            "mg": "90 andro"
+          },
+          "libelle": {
+            "fr": "Réclamer contre un impôt local, après l’avis d’imposition",
+            "en": "Dispute a local tax, after the tax notice",
+            "mg": "Mitaraina amin’ny hetra ifotony"
+          }
+        },
+        {
+          "article": "CPF VI-53, V-33",
+          "duree": {
+            "fr": "15 jours",
+            "en": "15 days",
+            "mg": "15 andro"
+          },
+          "libelle": {
+            "fr": "Saisir la Commission fiscale",
+            "en": "Refer to the Tax Commission",
+            "mg": "Mitondra any amin’ny Vaomiera ara-ketra"
+          }
+        },
+        {
+          "article": "CPF VI-20",
+          "duree": {
+            "fr": "60 jours",
+            "en": "60 days",
+            "mg": "60 andro"
+          },
+          "libelle": {
+            "fr": "Décision de l’administration sur la réclamation",
+            "en": "Tax office decision on the complaint",
+            "mg": "Fanapahan-kevitry ny fitondrana"
+          }
+        },
+        {
+          "article": "CPF VI-27",
+          "duree": {
+            "fr": "30 jours",
+            "en": "30 days",
+            "mg": "30 andro"
+          },
+          "libelle": {
+            "fr": "Saisir le juge après la décision ou le silence de l’administration",
+            "en": "Go to court after the decision or silence of the tax office",
+            "mg": "Mitondra any amin'ny fitsarana"
+          }
+        }
+      ],
+      "sanctions": [
+        {
+          "article": "CPF VI-16, VI-17",
+          "texte": {
+            "fr": "Une réclamation incomplète (sans paiement de la partie acceptée, sans titre de perception, sans mandat…) est irrecevable.",
+            "en": "An incomplete complaint (without payment of the accepted part, collection order, mandate…) is inadmissible.",
+            "mg": "Tsy raisina ny fitarainana tsy feno (tsy nandoa ny ampahany ekena, tsy misy taratasy fandraisam-bola, tsy misy fanomezan-dàlana…)."
+          }
+        }
+      ]
+    },
+    {
+      "id": "communication",
+      "titre": {
+        "fr": "Le droit de communication",
+        "en": "The right to request information",
+        "mg": "Ny zo hangataka fampahalalana"
+      },
+      "intro": {
+        "fr": "Pour établir et contrôler l'impôt, l'administration peut demander des documents à toute personne, et certains contribuables doivent lui déclarer chaque année leurs ventes, achats et paiements à des tiers.",
+        "en": "To assess and check tax, the tax office can request documents from anyone, and some taxpayers must declare their sales, purchases and payments to third parties every year.",
+        "mg": "Mba hamaritana sy hanaraha-maso ny hetra, afaka mangataka taratasy amin'ny olona rehetra ny fitondrana, ary ny mpandoa hetra sasany dia tsy maintsy manambara isan-taona ny varotra, ny fividianana ary ny vola naloa tamin'ny hafa."
+      },
+      "etapes": [
+        {
+          "article": "CPF IV-01, IV-02",
+          "titre": {
+            "fr": "Répondre à une demande de documents",
+            "en": "Answer a request for documents",
+            "mg": "Mamaly fangatahana taratasy"
+          },
+          "texte": {
+            "fr": "Les agents des impôts peuvent obtenir de toute personne, publique ou privée, documents et renseignements, sur tout support. Ils doivent être fournis dans les 10 jours, et immédiatement en cas de saisie de documents informatiques sur ordre de mission.",
+            "en": "Tax officers can obtain documents and information from anyone, public or private, on any medium. They must be provided within 10 days, and immediately when computer documents are seized under a mission order.",
+            "mg": "Afaka mahazo taratasy sy fampahalalana amin'ny olona rehetra ny mpiasan'ny hetra, na amin'ny endrika inona na inona. Tsy maintsy omena ao anatin'ny 10 andro, ary avy hatrany raha alaina ny taratasy amin'ny solosaina."
+          }
+        },
+        {
+          "article": "CPF IV-07, IV-03",
+          "titre": {
+            "fr": "Personne ne peut opposer le secret",
+            "en": "No one can invoke secrecy",
+            "mg": "Tsy misy afaka manafina"
+          },
+          "texte": {
+            "fr": "Les administrations, collectivités et entreprises publiques ne peuvent pas opposer le secret professionnel ; notaires, huissiers et greffiers communiquent sans frais.",
+            "en": "Government bodies, local authorities and public companies cannot invoke professional secrecy; notaries, bailiffs and court clerks provide information free of charge.",
+            "mg": "Ny sampam-panjakana, vondrom-bahoaka ary orinasam-panjakana dia tsy afaka manafina; ny notera, huissier ary mpiraki-draharaha dia manome maimaimpoana."
+          }
+        },
+        {
+          "article": "CPF IV-08, IV-09",
+          "titre": {
+            "fr": "Qui doit faire la déclaration annuelle",
+            "en": "Who must file the annual statement",
+            "mg": "Iza no tsy maintsy manao ny fanambarana isan-taona"
+          },
+          "texte": {
+            "fr": "Les personnes physiques dont le chiffre d'affaires hors taxe atteint 100 millions d'Ar et toutes les personnes morales déclarent leurs ventes par client et par mode de paiement, leurs achats et les sommes versées à des tiers.",
+            "en": "Individuals with turnover excluding tax of 100 million Ar or more and all legal entities declare their sales by customer and payment method, their purchases and sums paid to third parties.",
+            "mg": "Ny olona manana tondrom-barotra tsy misy haba 100 tapitrisa Ar na mihoatra sy ny fikambanana rehetra dia manambara ny varotra isaky ny mpanjifa sy fomba fandoavana, ny fividianana ary ny vola naloa tamin'ny hafa."
+          }
+        },
+        {
+          "article": "CPF IV-10",
+          "titre": {
+            "fr": "Déclarer en ligne avant le 30 juin",
+            "en": "File online by 30 June",
+            "mg": "Manambara an-tserasera alohan’ny 30 jona"
+          },
+          "texte": {
+            "fr": "La déclaration porte sur l'année civile précédente et se dépose en ligne sur la plateforme dédiée avant le 30 juin, quelle que soit la date de clôture. On peut la rectifier tant que l'administration n'a pas commencé le traitement.",
+            "en": "The statement covers the previous calendar year and is filed online on the dedicated platform before 30 June, whatever the closing date. It can be corrected until the tax office starts processing.",
+            "mg": "Mikasika ny taona lasa ny fanambarana ary apetraka an-tserasera alohan'ny 30 jona, na rahoviana na rahoviana ny fanakatonana. Azo ahitsy raha mbola tsy nanomboka ny fitondrana."
+          }
+        },
+        {
+          "article": "CPF IV-11",
+          "titre": {
+            "fr": "Obligations particulières",
+            "en": "Special obligations",
+            "mg": "Adidy manokana"
+          },
+          "texte": {
+            "fr": "Banques et établissements financiers déclarent les comptes et mouvements (et chaque mois les ouvertures et fermetures, avant le 25) ; sociétés de droits d'auteur, organisateurs d'événements culturels et coopératives font aussi une déclaration avant le 30 juin.",
+            "en": "Banks and financial institutions declare accounts and flows (and each month openings and closures, by the 25th); copyright societies, cultural event organisers and cooperatives also file by 30 June.",
+            "mg": "Ny banky sy ny sampana ara-bola dia manambara ny kaonty sy ny fivezivezen'ny vola (ary isam-bolana ny fanokafana sy fanakatonana, alohan'ny 25); ny fikambanana momba ny zon'ny mpamorona, ny mpikarakara hetsika ara-kolontsaina ary ny koperativa koa dia manambara alohan'ny 30 jona."
+          }
+        }
+      ],
+      "droits": [
+        {
+          "article": "CPF IV-12, IV-13",
+          "texte": {
+            "fr": "Si des renseignements déclarés par d'autres sont utilisés contre vous, vous pouvez les contester par lettre au service du droit de communication, ce qui suspend la procédure.",
+            "en": "If information declared by others is used against you, you can dispute it by letter to the information-request office, which suspends the procedure.",
+            "mg": "Raha ampiasaina aminao ny fampahalalana nambaran'ny hafa, azonao ankatoavina amin'ny taratasy alefa any amin'ny sampana misahana izany, ka mihantona ny fomba fiasa."
+          }
+        },
+        {
+          "article": "CPF IV-06",
+          "texte": {
+            "fr": "Les agents qui vous assistent sont tenus au secret professionnel.",
+            "en": "Officers assisting are bound by professional secrecy.",
+            "mg": "Voafehin'ny tsiambaratelon'ny asa ny mpiasa manampy."
+          }
+        }
+      ],
+      "delais": [
+        {
+          "article": "CPF IV-02",
+          "duree": {
+            "fr": "10 jours",
+            "en": "10 days",
+            "mg": "10 andro"
+          },
+          "libelle": {
+            "fr": "Fournir les documents demandés",
+            "en": "Provide requested documents",
+            "mg": "Manome ny taratasy angatahina"
+          }
+        },
+        {
+          "article": "CPF IV-10",
+          "duree": {
+            "fr": "30 juin",
+            "en": "30 June",
+            "mg": "30 jona"
+          },
+          "libelle": {
+            "fr": "Déclaration annuelle de communication (année précédente)",
+            "en": "Annual information statement (previous year)",
+            "mg": "Fanambarana isan-taona"
+          }
+        },
+        {
+          "article": "CPF IV-10",
+          "duree": {
+            "fr": "8 jours",
+            "en": "8 days",
+            "mg": "8 andro"
+          },
+          "libelle": {
+            "fr": "Régulariser après une relance",
+            "en": "Comply after a reminder",
+            "mg": "Manitsy aorian’ny fampahatsiahivana"
+          }
+        },
+        {
+          "article": "CPF IV-11",
+          "duree": {
+            "fr": "25 du mois suivant",
+            "en": "25th of the following month",
+            "mg": "25 amin’ny volana manaraka"
+          },
+          "libelle": {
+            "fr": "Banques : ouvertures et fermetures de comptes du mois",
+            "en": "Banks: account openings and closures in the month",
+            "mg": "Banky: fanokafana sy fanakatonana kaonty"
+          }
+        }
+      ],
+      "sanctions": [
+        {
+          "article": "CPF IV-10, CDI 20.01.56.16",
+          "texte": {
+            "fr": "Sans régularisation 8 jours après une relance, les sanctions de l'article 20.01.56.16 s'appliquent.",
+            "en": "Without compliance 8 days after a reminder, the penalties of article 20.01.56.16 apply.",
+            "mg": "Raha tsy manitsy 8 andro aorian'ny fampahatsiahivana, mihatra ny sazy voalazan'ny andininy 20.01.56.16."
+          }
+        }
+      ]
     }
   ]
 }

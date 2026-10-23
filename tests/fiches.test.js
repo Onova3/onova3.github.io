@@ -502,7 +502,7 @@ test('Amendes : chaque amende a un article et un libellé de module', () => {
 // --- Guides et prescription (phase 5, étape 3) ---
 const guides = lire('data/guides.json').guides;
 test('Guides : trois guides complets, chaque texte en trois langues avec son article', () => {
-  assert.deepEqual(guides.map(g => g.id), ['immatriculation', 'payer', 'prescription']);
+  assert.deepEqual(guides.map(g => g.id), ['immatriculation', 'payer', 'prescription', 'controle', 'reclamer', 'communication']);
   for (const g of guides) {
     assert.ok(trilingue(g.titre) && trilingue(g.intro), g.id);
     for (const e of g.etapes) { assert.ok(e.article && trilingue(e.titre) && trilingue(e.texte), `${g.id} étape`); }
