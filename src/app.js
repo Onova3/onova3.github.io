@@ -23,8 +23,8 @@ const TEXTES = Object.fromEntries(LANGUES.map((l, i) => [l, textes[i]]));
 const stockage = creerStockage();
 const sombreSysteme = matchMedia('(prefers-color-scheme: dark)');
 function appliquerApparence() {
-  const racine = document.documentElement, choix = stockage.preference('theme'), attr = attributTheme(choix);
-  if (attr) racine.dataset.theme = attr; else delete racine.dataset.theme;
+  const racine = document.documentElement, choix = stockage.preference('theme');
+  racine.dataset.theme = attributTheme(choix, sombreSysteme.matches);
   racine.style.fontSize = TAILLES[stockage.preference('taille')] + '%';
   document.querySelectorAll('meta[name=theme-color]').forEach(m => m.remove());
   const meta = Object.assign(document.createElement('meta'), { name: 'theme-color', content: couleurBarre(themeEffectif(choix, sombreSysteme.matches)) });

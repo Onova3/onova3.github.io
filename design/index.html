@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="fr" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Hetrako · système de design (page interne)</title>
+<link rel="stylesheet" href="../src/polices.css">
+<link rel="stylesheet" href="../src/design.css">
+<style>
+  /* Mise en page de cette page interne seulement. Non liée depuis l'application, non mise en cache hors ligne. */
+  body{margin:0;background:var(--fond-2);font:400 var(--t-texte)/1.5 var(--police-texte);color:var(--texte)}
+  .entete{padding:var(--u3) var(--marge)}
+  .themes{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr))}
+  .theme{background:var(--fond);color:var(--texte);padding:var(--u3) var(--marge) var(--u6)}
+  .pile{display:flex;flex-direction:column;gap:var(--u2)}
+  .couleurs{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--u)}
+  .couleurs div{display:flex;flex-direction:column;gap:4px;font:500 var(--t-etiquette) var(--police-chiffres);color:var(--texte-2)}
+  .couleurs i{display:block;height:40px;box-shadow:inset 0 0 0 1px var(--filet)}
+  .barre-demo{margin-inline:calc(-1 * var(--marge))}
+</style>
+</head>
+<body>
+<div class="entete">
+  <p class="h-etiquette">Page interne · non visible des utilisateurs</p>
+  <h1 class="h-titre">Système de design Hetrako</h1>
+  <p>Jetons et composants de <code>src/design.css</code> et <code>src/composants.js</code>, en thème clair et sombre. Les montants ci-dessous sont des exemples de mise en page, sans valeur fiscale.</p>
+</div>
+<div class="themes">
+  <section class="theme" data-theme="light" aria-label="Thème clair"></section>
+  <section class="theme" data-theme="dark" aria-label="Thème sombre"></section>
+</div>
+<script type="module">
+import { bouton, titreSection, champ, compteur, caseACocher, onglets, ligneListe, pastille, blocResultat, largeursTranches } from '../src/composants.js';
+import { logoHTML } from '../src/logo.js';
+
+const JETONS = ['--fond', '--fond-2', '--texte', '--texte-2', '--filet', '--filet-2', '--vert', '--vert-doux', '--or', '--noir', '--alerte', '--piste'];
+const icone = d => `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="${d}"/></svg>`;
+const tranchesExemple = [{ de: 0, a: 100 }, { de: 100, a: 200 }, { de: 200, a: 400 }, { de: 400, a: null }];
+const parts = largeursTranches(tranchesExemple, 500);
+
+const contenu = nom => `
+  ${logoHTML({ taille: 40 })}
+  <p class="h-etiquette" style="margin-top:16px">${nom}</p>
+
+  ${titreSection('Couleurs')}
+  <div class="couleurs">${JETONS.map(j => `<div><i style="background:var(${j})"></i>${j.slice(2)}</div>`).join('')}</div>
+
+  ${titreSection('Typographie')}
+  <div class="pile">
+    <h2 class="h-titre">Archivo 800, titre</h2>
+    <p style="margin:0">Public Sans pour le texte courant, lisible au téléphone.</p>
+    <span class="h-etiquette">JetBrains Mono · étiquette</span>
+    <span class="h-montant">1 234 500 Ar</span>
+  </div>
+
+  ${titreSection('Boutons')}
+  <div class="pile">
+    ${bouton('Bouton principal', { plein: true })}
+    ${bouton('Bouton secondaire', { variante: 'secondaire', plein: true })}
+    ${bouton('Bouton texte', { variante: 'texte' })}
+    ${bouton('Désactivé', { plein: true, attrs: 'disabled' })}
+  </div>
+
+  ${titreSection('Champs')}
+  <div class="pile">
+    ${champ(nom + '-m', 'Montant', '1 200 000', 'Ar')}
+    ${compteur(nom + '-c', 'Compteur', 2)}
+    ${caseACocher(nom + '-k', 'Case à cocher', true)}
+    ${caseACocher(nom + '-k2', 'Case non cochée')}
+  </div>
+
+  ${titreSection('Onglets d’une fiche')}
+  ${onglets([['a', 'Comprendre', '#'], ['b', 'Calculer', '#'], ['c', 'Déclarer et payer', '#'], ['d', 'Sanctions', '#']], 'b')}
+
+  ${titreSection('Barre d’onglets du bas')}
+  <nav class="h-barre barre-demo">
+    <a href="#" aria-current="page">${icone('M4 11 12 4l8 7v9h-5v-6H9v6H4z')}<span>Accueil</span></a>
+    <a href="#">${icone('M6 3h12v18l-3-2-3 2-3-2-3 2zM9 8h6M9 12h6')}<span>Impôts</span></a>
+    <a href="#">${icone('M4 5h16v15H4zM4 10h16M9 3v4M15 3v4')}<span>Calendrier</span></a>
+    <a href="#">${icone('M3 8l9-4 9 4-9 4zM7 10v5c3 2 7 2 10 0v-5')}<span>Apprendre</span></a>
+    <a href="#">${icone('M5 12h.01M12 12h.01M19 12h.01')}<span>Plus</span></a>
+  </nav>
+
+  ${titreSection('Lignes de liste')}
+  <ul class="h-liste">
+    ${ligneListe({ sigle: 'ABC', nom: 'Nom d’un impôt', detail: 'CDI · référence' })}
+    ${ligneListe({ sigle: 'DEFG', nom: 'Un nom plus long qui passe sur deux lignes au téléphone', detail: 'CDI · référence' })}
+  </ul>
+
+  ${titreSection('Pastilles')}
+  <div class="h-pastilles">${pastille('Net', '1 000 Ar')}${pastille('Taux effectif', '10 %')}${pastille('Tranche', '20 %')}${pastille('Pénalité', '500 Ar', { alerte: true })}</div>
+
+  ${titreSection('Bloc de résultat')}
+  ${blocResultat({
+    lignes: [{ libelle: 'Ligne de calcul', montant: '1 000 000 Ar', article: 'Art. 00.00.00' }, { libelle: 'Déduction', montant: '− 50 000 Ar', article: 'Art. 00.00.01' }],
+    tranches: tranchesExemple.map((t, i) => ({ libelle: ['0 %', '5 %', '10 %', '20 %'][i], part: parts[i], montant: ['0', '5 000', '20 000', '24 000'][i] })),
+    libelleTotal: 'Montant à payer', total: '49 000 Ar',
+    pastilles: [pastille('Net', '951 000 Ar'), pastille('Taux effectif', '4,9 %'), pastille('Tranche', '20 %')],
+    mention: 'Estimation pédagogique, pas un avis fiscal.',
+  })}`;
+
+document.querySelectorAll('.theme').forEach(s => { s.innerHTML = contenu(s.getAttribute('aria-label')); });
+</script>
+</body>
+</html>

@@ -661,9 +661,10 @@ test('Thème : automatique suit le téléphone, sinon le choix ; tailles de text
   assert.equal(themeEffectif('auto', false), 'clair');
   assert.equal(themeEffectif('clair', true), 'clair');
   assert.equal(themeEffectif('sombre', false), 'sombre');
-  assert.equal(attributTheme('auto'), null);
-  assert.equal(attributTheme('sombre'), 'dark');
-  assert.equal(attributTheme('clair'), 'light');
+  assert.equal(attributTheme('auto', true), 'dark');
+  assert.equal(attributTheme('auto', false), 'light');
+  assert.equal(attributTheme('sombre', false), 'dark');
+  assert.equal(attributTheme('clair', true), 'light');
   assert.notEqual(couleurBarre('clair'), couleurBarre('sombre'));
   assert.ok(TAILLES.normale === 100 && TAILLES.grande > 100 && TAILLES.tresGrande > TAILLES.grande);
   // Le script anti-flash de index.html reprend les mêmes valeurs.
@@ -751,4 +752,51 @@ test('Icônes et polices : présentes, déclarées et sans chargement depuis Int
   const html = readFileSync('index.html', 'utf8');
   assert.doesNotMatch(html, /fonts\.googleapis|fonts\.gstatic/);
   for (const p of ['archivo-800', 'public-sans', 'jetbrains-mono']) assert.equal(readFileSync(`assets/polices/${p}.woff2`).subarray(0, 4).toString(), 'wOF2');
+});
+
+// --- Système de design (src/design.css, src/composants.js) ---
+import { contraste } from '../src/contraste.js';
+import { largeursTranches, blocResultat } from '../src/composants.js';
+const design = readFileSync('src/design.css', 'utf8');
+const jetons = selecteur => {
+  const bloc = design.slice(design.indexOf(selecteur + '{')).split('}')[0];
+  return Object.fromEntries([...bloc.matchAll(/--([\w-]+):(#[0-9A-Fa-f]{6})/g)].map(m => [m[1], m[2]]));
+};
+const clair = jetons(':root,[data-theme=light]'), sombre = jetons('[data-theme=dark]');
+test('Jetons : palette suisse exacte, chaque couleur définie une fois par thème', () => {
+  assert.deepEqual(
+    [clair.fond, clair['fond-2'], clair.texte, clair['texte-2'], clair.filet, clair['filet-2'], clair.vert, clair['vert-doux'], clair.or, clair.noir, clair.alerte],
+    ['#FFFFFF', '#F2F3F1', '#111412', '#5E6662', '#D9DDDA', '#E3E7E4', '#0B6E4F', '#DDEDE5', '#F2B13C', '#141414', '#B3122B']);
+  assert.deepEqual([sombre.fond, sombre.texte, sombre['texte-2'], sombre.filet, sombre.vert, sombre['vert-doux'], sombre.piste, sombre.or, sombre.alerte],
+    ['#0C1412', '#E6EEEA', '#93A39B', '#26332E', '#43C394', '#173629', '#1C2925', '#F2B13C', '#FF7A85']);
+  assert.deepEqual(Object.keys(clair).sort(), Object.keys(sombre).sort(), 'mêmes jetons dans les deux thèmes');
+  // Aucune couleur en dur ailleurs que dans les jetons.
+  const horsJetons = design.replace(/:root,\[data-theme=light\]\{[^}]*\}/, '').replace(/\[data-theme=dark\]\{[^}]*\}/, '');
+  assert.doesNotMatch(horsJetons, /#[0-9A-Fa-f]{3,6}\b/);
+  assert.doesNotMatch(readFileSync('src/style.css', 'utf8'), /#[0-9A-Fa-f]{6}\b|prefers-color-scheme/);
+});
+test('Contrastes lisibles dans les deux thèmes', () => {
+  assert.ok(Math.abs(contraste('#000000', '#FFFFFF') - 21) < 0.01);
+  for (const [nom, j] of [['clair', clair], ['sombre', sombre]]) {
+    for (const fond of [j.fond, j['fond-2']]) {
+      assert.ok(contraste(j.texte, fond) >= 7, `${nom} texte`);
+      assert.ok(contraste(j['texte-2'], fond) >= 4.5, `${nom} texte secondaire`);
+      assert.ok(contraste(j.vert, fond) >= 4.5, `${nom} vert`);
+      assert.ok(contraste(j.alerte, fond) >= 4.5, `${nom} alerte`);
+    }
+    assert.ok(contraste(j['sur-vert'], j.vert) >= 4.5, `${nom} texte du bouton principal`);
+    assert.ok(contraste(j.texte, j['vert-doux']) >= 4.5, `${nom} pastille`);
+    assert.ok(contraste(j['avis-texte'], j['avis-fond']) >= 4.5, `${nom} bandeau d'avis`);
+  }
+});
+test('Barres du barème : proportionnelles à la base dans chaque tranche', () => {
+  const tr = [{ de: 0, a: 100 }, { de: 100, a: 200 }, { de: 200, a: 400 }, { de: 400, a: null }];
+  assert.deepEqual(largeursTranches(tr, 320), [83.3, 83.3, 100, 0]);
+  assert.deepEqual(largeursTranches(tr, 0), [0, 0, 0, 0]);
+  assert.deepEqual(largeursTranches(tr, 1000), [16.7, 16.7, 33.3, 100]);
+});
+test('Bloc de résultat : double trait doré juste au-dessus du montant final', () => {
+  const h = blocResultat({ lignes: [{ libelle: 'A', montant: '1 Ar', article: 'Art. 1' }], libelleTotal: 'Total', total: '1 Ar', mention: 'Estimation' });
+  assert.ok(h.indexOf('h-double-trait') < h.indexOf('h-montant'));
+  assert.match(h, /h-article">Art\. 1/);
 });

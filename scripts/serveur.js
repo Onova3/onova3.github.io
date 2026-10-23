@@ -11,7 +11,7 @@ const TYPES = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/cs
 
 createServer(async (req, res) => {
   const chemin = decodeURIComponent(new URL(req.url, 'http://x').pathname);
-  const fichier = join(racine, normalize(chemin === '/' ? '/index.html' : chemin));
+  const fichier = join(racine, normalize(chemin.endsWith('/') ? chemin + 'index.html' : chemin));
   if (!fichier.startsWith(racine)) { res.writeHead(403).end(); return; }
   try {
     const contenu = await readFile(fichier);

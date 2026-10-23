@@ -15,11 +15,11 @@
 // Thème et taille du texte appliqués avant l'affichage, pour éviter un flash blanc (mêmes valeurs que src/reglages.js et src/stockage.js).
 try {
   var th = localStorage.getItem('kh-theme'), ta = localStorage.getItem('kh-taille');
-  if (th === 'clair') document.documentElement.dataset.theme = 'light';
-  if (th === 'sombre') document.documentElement.dataset.theme = 'dark';
+  var sombre = th === 'sombre' || (th !== 'clair' && matchMedia('(prefers-color-scheme: dark)').matches);
+  document.documentElement.dataset.theme = sombre ? 'dark' : 'light';
   var tailles = { grande: 112.5, tresGrande: 125 };
   if (tailles[ta]) document.documentElement.style.fontSize = tailles[ta] + '%';
-} catch (e) {}
+} catch (e) { document.documentElement.dataset.theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; }
 </script>
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="assets/icones/favicon.svg" type="image/svg+xml">
@@ -27,6 +27,7 @@ try {
 <link rel="apple-touch-icon" href="assets/icones/apple-touch-icon-180.png">
 <link rel="preload" href="assets/polices/archivo-800.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="src/polices.css">
+<link rel="stylesheet" href="src/design.css">
 <link rel="stylesheet" href="src/style.css">
 </head>
 <body>

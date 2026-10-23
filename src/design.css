@@ -1,0 +1,144 @@
+/* Système de design Hetrako — style suisse.
+   1. Jetons : chaque couleur, police, taille et espacement est défini UNE seule fois ici, en version claire et sombre.
+      Le thème est porté par l'attribut data-theme (« light » ou « dark »), toujours posé par index.html et app.js,
+      y compris en mode Automatique (src/reglages.js). Un bloc peut forcer son thème avec data-theme (page de démonstration).
+   2. Composants de base, préfixe « h- » : bouton, champ, compteur, case, onglets, barre de navigation, lignes de liste,
+      pastilles, titre de section, bloc de résultat. Angles droits partout ; seul le logo garde ses coins arrondis. */
+
+/* ---------- 1. Jetons ---------- */
+:root,[data-theme=light]{
+  --fond:#FFFFFF; --fond-2:#F2F3F1;
+  --texte:#111412; --texte-2:#5E6662;
+  --filet:#D9DDDA; --filet-2:#E3E7E4;
+  --vert:#0B6E4F; --vert-doux:#DDEDE5; --sur-vert:#FFFFFF;
+  --or:#F2B13C; --noir:#141414; --encre:#141414;
+  --alerte:#B3122B;
+  --piste:#E3E7E4;
+  --avis-fond:#FCEFD3; --avis-texte:#5C3F00;
+  --blanc:#FFFFFF; --ko-sur-vert:#A9DCC4;
+  color-scheme:light;
+}
+[data-theme=dark]{
+  --fond:#0C1412; --fond-2:#121C19;
+  --texte:#E6EEEA; --texte-2:#93A39B;
+  --filet:#26332E; --filet-2:#26332E;
+  --vert:#43C394; --vert-doux:#173629; --sur-vert:#0C1412;
+  --or:#F2B13C; --noir:#141414; --encre:#E6EEEA;
+  --alerte:#FF7A85;
+  --piste:#1C2925;
+  --avis-fond:#3A2E10; --avis-texte:#FFD98A;
+  --blanc:#FFFFFF; --ko-sur-vert:#A9DCC4;
+  color-scheme:dark;
+}
+:root{
+  /* Polices (assets/polices, src/polices.css) */
+  --police-titre:"Archivo","Segoe UI",system-ui,sans-serif;
+  --police-texte:"Public Sans",system-ui,"Segoe UI",sans-serif;
+  --police-chiffres:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  --serrage-titre:-.02em; --espace-etiquette:.1em;
+  /* Tailles du texte, en rem pour suivre le réglage « Taille du texte » */
+  --t-etiquette:.75rem; --t-petit:.875rem; --t-texte:1rem; --t-sous-titre:1.25rem;
+  --t-titre:1.75rem; --t-grand-titre:2.25rem; --t-montant:clamp(2.25rem,11vw,3.25rem);
+  /* Grille de 8 px */
+  --u:8px; --u2:16px; --u3:24px; --u4:32px; --u6:48px;
+  --marge:24px;
+  /* Dimensions */
+  --tactile:44px; --h-bouton:54px; --filet-fort:2px; --trait-actif:3px;
+  --rayon-logo:22%;
+  --duree:.18s;
+}
+
+/* ---------- 2. Composants ---------- */
+.h-etiquette{font:500 var(--t-etiquette)/1.3 var(--police-chiffres);letter-spacing:var(--espace-etiquette);text-transform:uppercase;color:var(--texte-2)}
+
+/* Titre de section : étiquette en majuscules au-dessus d'un filet noir de 2 px */
+.h-section{margin:var(--u4) 0 var(--u2);padding-bottom:var(--u);border-bottom:var(--filet-fort) solid var(--encre);
+  font:500 var(--t-etiquette)/1.3 var(--police-chiffres);letter-spacing:var(--espace-etiquette);text-transform:uppercase;color:var(--texte)}
+.h-titre{font:800 var(--t-grand-titre)/1.05 var(--police-titre);letter-spacing:var(--serrage-titre);margin:0;color:var(--texte);text-wrap:balance}
+
+/* Boutons */
+.h-btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--u);min-height:var(--h-bouton);padding:0 var(--u3);
+  border:0;border-radius:0;background:var(--vert);color:var(--sur-vert);font:600 var(--t-texte) var(--police-texte);text-decoration:none;cursor:pointer}
+.h-btn--plein{width:100%}
+.h-btn--secondaire{background:transparent;color:var(--texte);box-shadow:inset 0 0 0 var(--filet-fort) var(--encre)}
+.h-btn--texte{background:transparent;color:var(--vert);min-height:var(--tactile);padding:0 var(--u)}
+.h-btn:disabled{opacity:.45;cursor:not-allowed}
+
+/* Champs : fond gris clair, filet noir de 2 px en bas */
+.h-champ{display:flex;flex-direction:column;gap:var(--u)}
+.h-champ > span:first-child{font:600 var(--t-petit) var(--police-texte);color:var(--texte)}
+.h-champ .h-saisie{position:relative;display:flex;align-items:center}
+.h-champ input,.h-champ select{width:100%;min-height:var(--h-bouton);padding:0 var(--u2);border:0;border-bottom:var(--filet-fort) solid var(--encre);border-radius:0;
+  background:var(--fond-2);color:var(--texte);font:500 1.125rem var(--police-chiffres);font-variant-numeric:tabular-nums}
+.h-champ select{font:500 var(--t-texte) var(--police-texte)}
+.h-champ .h-unite{position:absolute;right:var(--u2);font:500 var(--t-petit) var(--police-chiffres);color:var(--texte-2);pointer-events:none}
+.h-champ input:focus{outline:none;border-bottom-color:var(--vert);box-shadow:inset 0 calc(-1 * var(--trait-actif)) 0 var(--vert)}
+
+/* Compteur */
+.h-compteur{display:flex;align-items:stretch;width:max-content}
+.h-compteur button{width:var(--h-bouton);min-height:var(--h-bouton);border:0;border-radius:0;background:var(--fond-2);color:var(--texte);font:600 1.25rem var(--police-chiffres);cursor:pointer;border-bottom:var(--filet-fort) solid var(--encre)}
+.h-compteur input{width:72px;text-align:center;border:0;border-radius:0;border-bottom:var(--filet-fort) solid var(--encre);background:var(--fond);color:var(--texte);font:600 1.125rem var(--police-chiffres)}
+
+/* Case à cocher */
+.h-case{display:flex;align-items:center;gap:var(--u2);min-height:var(--tactile);font:400 var(--t-texte) var(--police-texte);color:var(--texte);cursor:pointer}
+.h-case input{appearance:none;flex:none;width:24px;height:24px;margin:0;border:var(--filet-fort) solid var(--encre);border-radius:0;background:var(--fond);display:grid;place-items:center;cursor:pointer}
+.h-case input:checked{background:var(--vert);border-color:var(--vert)}
+.h-case input:checked::after{content:"";width:6px;height:12px;border:solid var(--sur-vert);border-width:0 3px 3px 0;transform:translateY(-2px) rotate(45deg)}
+
+/* Onglets d'une fiche : soulignés d'un trait vert de 3 px */
+.h-onglets{display:flex;gap:var(--u3);overflow-x:auto;border-bottom:1px solid var(--filet);scrollbar-width:none}
+.h-onglets::-webkit-scrollbar{display:none}
+.h-onglets a,.h-onglets button{flex:none;display:flex;align-items:center;min-height:var(--tactile);padding:0;border:0;background:none;
+  color:var(--texte-2);font:600 var(--t-petit) var(--police-texte);text-decoration:none;white-space:nowrap;box-shadow:inset 0 0 0 transparent;cursor:pointer}
+.h-onglets [aria-selected=true],.h-onglets [aria-current=page]{color:var(--texte);box-shadow:inset 0 calc(-1 * var(--trait-actif)) 0 var(--vert)}
+
+/* Barre d'onglets du bas : onglet actif en vert, trait vert de 3 px en haut */
+.h-barre{display:grid;grid-template-columns:repeat(5,1fr);background:var(--fond);border-top:1px solid var(--filet)}
+.h-barre a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-height:56px;color:var(--texte-2);text-decoration:none;
+  font:600 var(--t-etiquette) var(--police-texte);box-shadow:inset 0 0 0 transparent}
+.h-barre svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:square;stroke-linejoin:miter}
+.h-barre [aria-current=page]{color:var(--vert);box-shadow:inset 0 var(--trait-actif) 0 var(--vert)}
+
+/* Lignes de liste : séparées par des filets fins, sans carte */
+.h-liste{list-style:none;margin:0;padding:0;border-top:1px solid var(--filet)}
+.h-ligne{display:grid;grid-template-columns:4.5rem minmax(0,1fr) auto;align-items:center;gap:var(--u2);min-height:64px;padding:var(--u) 0;
+  border-bottom:1px solid var(--filet);color:var(--texte);text-decoration:none}
+.h-ligne .h-sigle{font:600 var(--t-petit) var(--police-chiffres);color:var(--vert)}
+.h-ligne .h-nom{display:flex;flex-direction:column;min-width:0;font:600 var(--t-texte)/1.3 var(--police-texte)}
+.h-ligne .h-nom small{font:400 var(--t-petit) var(--police-texte);color:var(--texte-2)}
+.h-ligne .h-fleche{font:400 1.25rem var(--police-chiffres);color:var(--texte-2)}
+
+/* Pastilles d'information */
+.h-pastilles{display:flex;flex-wrap:wrap;gap:var(--u)}
+.h-pastille{display:inline-flex;align-items:baseline;gap:var(--u);padding:6px 10px;background:var(--vert-doux);color:var(--texte);font:600 var(--t-petit) var(--police-chiffres)}
+.h-pastille b{font:500 var(--t-etiquette) var(--police-chiffres);letter-spacing:var(--espace-etiquette);text-transform:uppercase;color:var(--texte-2)}
+.h-pastille--alerte{background:transparent;box-shadow:inset 0 0 0 1px var(--alerte);color:var(--alerte)}
+
+/* Bloc de résultat : lignes avec article, barres par tranche, double trait doré, montant en grand */
+.h-resultat{display:flex;flex-direction:column}
+.h-resultat .h-ligne-calc{display:flex;justify-content:space-between;gap:var(--u2);padding:var(--u) 0;border-bottom:1px solid var(--filet-2);font:400 var(--t-petit)/1.4 var(--police-texte);color:var(--texte-2)}
+.h-resultat .h-ligne-calc > span:last-child{font:500 var(--t-petit) var(--police-chiffres);font-variant-numeric:tabular-nums;color:var(--texte);white-space:nowrap}
+.h-article{display:block;font:500 var(--t-etiquette) var(--police-chiffres);color:var(--vert);margin-top:2px}
+.h-tranches{display:flex;flex-direction:column;gap:6px;padding:var(--u2) 0}
+.h-tranche{display:grid;grid-template-columns:3.5rem minmax(0,1fr) 5.5rem;align-items:center;gap:var(--u);font:500 var(--t-etiquette) var(--police-chiffres);color:var(--texte-2)}
+.h-tranche .h-piste{height:8px;background:var(--piste)}
+.h-tranche > span:last-child{text-align:right;font-variant-numeric:tabular-nums}
+.h-tranche .h-jauge{display:block;height:100%;background:var(--vert)}
+.h-double-trait{height:9px;margin:var(--u3) 0 var(--u);border-top:3px solid var(--or);border-bottom:3px solid var(--or)}
+.h-total{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:var(--u)}
+.h-montant{font:800 var(--t-montant)/1 var(--police-titre);letter-spacing:var(--serrage-titre);color:var(--texte);font-variant-numeric:tabular-nums}
+.h-montant--alerte{color:var(--alerte)}
+.h-mention{margin:var(--u2) 0 0;font:400 var(--t-etiquette)/1.4 var(--police-texte);color:var(--texte-2)}
+
+/* Logo (src/logo.js) : symbole + nom en Archivo 800, « ko » en vert ; seul élément aux coins arrondis. */
+.logo{display:inline-flex;align-items:center;gap:.3em;font:800 1.625rem/1 var(--police-titre);letter-spacing:-.03em;color:var(--texte)}
+.logo svg{flex:none;width:1.55em;height:1.55em}
+.logo .ko{color:var(--vert)}
+.logo--empile{flex-direction:column;gap:.35em;font-size:2rem}
+.logo--empile svg{width:2.6em;height:2.6em}
+.logo--sur-vert{color:var(--blanc)}.logo--sur-vert .ko{color:var(--ko-sur-vert)}
+
+/* Accessibilité commune */
+:where(.h-btn,.h-champ input,.h-champ select,.h-compteur button,.h-case input,.h-onglets a,.h-onglets button,.h-barre a,.h-ligne):focus-visible{
+  outline:3px solid var(--vert);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
