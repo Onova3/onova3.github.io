@@ -10,7 +10,6 @@ const carte = (titre, items, vars) => (items?.length ? `<div class="card"><h3>${
 
 export function rendreFiche(el, { fiche, impot, onglet, b, obligations }) {
   el.innerHTML = `
-    <a class="retour" href="#/">${t('retour')}</a>
     <header class="fiche-tete">
       <span class="sigle-g">${esc(impot.sigle)}</span>
       <h2>${esc(tr(impot.nom))}</h2>

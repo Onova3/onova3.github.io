@@ -18,7 +18,6 @@ export function monter(el, { impots, obligations, profils, sous }) {
     parMois.get(cle).push(e);
   }
   el.innerHTML = `
-    <a class="retour" href="#/">${t('retour')}</a>
     <header class="fiche-tete"><h2>${t('module_calendrier')}</h2>
       <p class="lead">${t('calendrier_lead')}</p></header>
     <nav class="tabs" aria-label="${esc(t('par_profil'))}">

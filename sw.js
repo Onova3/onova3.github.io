@@ -1,6 +1,6 @@
 // Service worker : garde l'application sur le téléphone pour qu'elle marche sans réseau.
 // Changer VERSION à chaque mise en ligne. Un test vérifie que FICHIERS liste tous les fichiers de src/ et data/.
-const VERSION = 'kh-2026-10-23b';
+const VERSION = 'kh-0.2.0';
 const FICHIERS = [
   './',
   'index.html',
@@ -14,6 +14,13 @@ const FICHIERS = [
   'data/profils.json',
   'data/quiz.json',
   'src/app.js',
+  'src/stockage.js',
+  'src/reglages.js',
+  'src/version.js',
+  'src/modules/accueil.js',
+  'src/modules/impots.js',
+  'src/modules/apprendre.js',
+  'src/modules/plus.js',
   'src/calc/accises.js',
   'src/calc/appareils.js',
   'src/calc/assurance.js',

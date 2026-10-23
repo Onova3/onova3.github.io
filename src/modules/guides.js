@@ -30,7 +30,6 @@ const dateLisible = iso => { const [a, m, j] = iso.split('-'); return `${j}/${m}
 
 function index(el, guides) {
   el.innerHTML = `
-    <a class="retour" href="#/">${t('retour')}</a>
     <header class="fiche-tete"><h2>${l('index')}</h2><p class="lead">${l('indexLead')}</p></header>
     <div class="profils">${guides.map(g => `<a class="profil" href="${lienModule('guides', g.id)}"><b>${esc(tr(g.titre))}</b><span>${esc(tr(g.intro)).slice(0, 110)}…</span></a>`).join('')}</div>`;
 }
@@ -59,7 +58,6 @@ export function monter(el, { guides, sous }) {
   if (!g) return index(el, guides);
   const liste = items => `<ul class="puces">${items.map(i => `<li>${esc(tr(i.texte))}${art(i.article)}</li>`).join('')}</ul>`;
   el.innerHTML = `
-    <a class="retour" href="${lienModule('guides')}">← ${l('index')}</a>
     <header class="fiche-tete"><h2>${esc(tr(g.titre))}</h2><p class="lead">${esc(tr(g.intro))}</p></header>
     ${g.id === 'prescription' ? `<h3 class="titre-sim">${l('calcTitre')}</h3><div id="presc"></div>` : ''}
     <h3 class="titre-sim">${l('etapes')}</h3>

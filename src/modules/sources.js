@@ -22,7 +22,6 @@ const dateLisible = iso => { const [a, m, j] = iso.split('-'); return `${j}/${m}
 export function monter(el, { b, impots }) {
   const verifies = impots.filter(i => i.statut === 'verifie').length;
   el.innerHTML = `
-    <a class="retour" href="#/">${t('retour')}</a>
     <header class="fiche-tete"><h2>${l('titre')}</h2><p class="lead">${l('lead')}</p></header>
     <div class="grid">
       <div class="card"><h3>${l('textes')}</h3><ol class="puces">${b.textes.map(x => `<li>${esc(x)}</li>`).join('')}</ol>

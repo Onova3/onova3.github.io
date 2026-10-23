@@ -602,3 +602,86 @@ test('Hors ligne : le service worker met en cache tous les fichiers de src/ et d
   const m = JSON.parse(readFileSync('manifest.webmanifest', 'utf8'));
   assert.equal(m.display, 'standalone');
 });
+
+// --- Application mobile, étape 1 : navigation, stockage, réglages ---
+import { ongletBarre, lienRetour, BARRE } from '../src/routes.js';
+import { creerStockage, PREFERENCES } from '../src/stockage.js';
+import { themeEffectif, attributTheme, couleurBarre, TAILLES } from '../src/reglages.js';
+import { VERSION } from '../src/version.js';
+import { filtrerImpots } from '../src/modules/impots.js';
+
+test('Navigation : 5 onglets, onglet actif et flèche de retour', () => {
+  assert.deepEqual(BARRE, ['accueil', 'impots', 'calendrier', 'apprendre', 'plus']);
+  const cas = [
+    ['#/', 'accueil', null], ['#/impots', 'impots', null], ['#/irsa/calculer', 'impots', '#/impots'],
+    ['#/calendrier', 'calendrier', null], ['#/calendrier/employeur', 'calendrier', null],
+    ['#/apprendre', 'apprendre', null], ['#/guides', 'apprendre', '#/apprendre'], ['#/guides/payer', 'apprendre', '#/guides'],
+    ['#/quiz/tva', 'apprendre', '#/quiz'], ['#/sanctions', 'apprendre', '#/apprendre'],
+    ['#/plus', 'plus', null], ['#/plus/a-propos', 'plus', '#/plus'], ['#/sources', 'plus', '#/plus'],
+  ];
+  for (const [hash, onglet, retour] of cas) {
+    const r = lireRoute(hash);
+    assert.equal(ongletBarre(r), onglet, hash);
+    assert.equal(lienRetour(r), retour, hash);
+  }
+});
+
+const faux = () => { const m = new Map(); return { getItem: k => (m.has(k) ? m.get(k) : null), setItem: (k, v) => m.set(k, String(v)), removeItem: k => m.delete(k), m }; };
+test('Stockage : valeurs par défaut, choix mémorisé, valeur inconnue refusée', () => {
+  const s = creerStockage(faux());
+  assert.equal(s.preference('theme'), 'auto');
+  assert.equal(s.preference('lang'), 'fr');
+  assert.equal(s.preference('taille'), 'normale');
+  assert.ok(s.choisir('theme', 'sombre'));
+  assert.equal(s.preference('theme'), 'sombre');
+  assert.equal(s.choisir('theme', 'violet'), false);
+  assert.equal(s.preference('theme'), 'sombre');
+  s.ecrireJSON('favoris', ['irsa']);
+  assert.deepEqual(s.lireJSON('favoris', []), ['irsa']);
+  for (const p of Object.values(PREFERENCES)) assert.ok(p.valeurs.includes(p.defaut));
+});
+test('Stockage : une valeur abîmée redonne la valeur par défaut', () => {
+  const f = faux(); f.setItem('kh-taille', 'enorme'); f.setItem('kh-favoris', '{pas du json');
+  const s = creerStockage(f);
+  assert.equal(s.preference('taille'), 'normale');
+  assert.deepEqual(s.lireJSON('favoris', []), []);
+});
+test('Stockage indisponible : l’application continue, les choix tiennent en mémoire', () => {
+  const casse = { getItem() { throw new Error('bloqué'); }, setItem() { throw new Error('bloqué'); }, removeItem() {} };
+  for (const support of [null, casse]) {
+    const s = creerStockage(support);
+    assert.equal(s.preference('lang'), 'fr');
+    assert.ok(s.choisir('lang', 'mg'));
+    assert.equal(s.preference('lang'), 'mg');
+  }
+  assert.equal(creerStockage(null).disponible, false);
+});
+test('Thème : automatique suit le téléphone, sinon le choix ; tailles de texte croissantes', () => {
+  assert.equal(themeEffectif('auto', true), 'sombre');
+  assert.equal(themeEffectif('auto', false), 'clair');
+  assert.equal(themeEffectif('clair', true), 'clair');
+  assert.equal(themeEffectif('sombre', false), 'sombre');
+  assert.equal(attributTheme('auto'), null);
+  assert.equal(attributTheme('sombre'), 'dark');
+  assert.equal(attributTheme('clair'), 'light');
+  assert.notEqual(couleurBarre('clair'), couleurBarre('sombre'));
+  assert.ok(TAILLES.normale === 100 && TAILLES.grande > 100 && TAILLES.tresGrande > TAILLES.grande);
+  // Le script anti-flash de index.html reprend les mêmes valeurs.
+  const html = readFileSync('index.html', 'utf8');
+  for (const v of [TAILLES.grande, TAILLES.tresGrande]) assert.ok(html.includes(String(v)), v);
+  assert.ok(html.includes("'kh-theme'") && html.includes("'kh-taille'"));
+});
+test('Version identique dans version.js, package.json et sw.js', () => {
+  assert.equal(JSON.parse(readFileSync('package.json', 'utf8')).version, VERSION);
+  assert.ok(readFileSync('sw.js', 'utf8').includes(`'kh-${VERSION}'`));
+});
+test('Recherche d’impôts : par sigle ou par nom, dans les trois langues', () => {
+  const liste = lire('data/impots.json').impots;
+  assert.ok(filtrerImpots(liste, 'irsa').some(i => i.id === 'irsa'));
+  assert.ok(filtrerImpots(liste, 'value added').some(i => i.id === 'tva'));
+  assert.equal(filtrerImpots(liste, '').length, liste.length);
+});
+test('Textes : chaque clé existe en français, anglais et malgache', () => {
+  const [fr, en, mg] = ['fr', 'en', 'mg'].map(l => lire(`src/i18n/${l}.json`));
+  for (const k of Object.keys(fr)) assert.ok(k in en && k in mg, k);
+});

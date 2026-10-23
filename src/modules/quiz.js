@@ -17,7 +17,6 @@ const choixTexte = c => (typeof c === 'string' ? c : tr(c));
 
 function index(el, chapitres) {
   el.innerHTML = `
-    <a class="retour" href="#/">${t('retour')}</a>
     <header class="fiche-tete"><h2>${l('index')}</h2><p class="lead">${l('indexLead')}</p></header>
     <div class="profils">${chapitres.map(c => `<a class="profil" href="${lienModule('quiz', c.id)}"><b>${esc(tr(c.titre))}</b><span>${l('nb', { n: c.questions.length })}</span></a>`).join('')}</div>`;
 }
@@ -27,7 +26,6 @@ export function monter(el, { quiz, sous }) {
   if (!c) return index(el, quiz);
   const reponses = c.questions.map(() => null);
   el.innerHTML = `
-    <a class="retour" href="${lienModule('quiz')}">← ${l('index')}</a>
     <header class="fiche-tete"><h2>${esc(tr(c.titre))}</h2></header>
     <ol class="etapes">${c.questions.map((q, i) => `<li class="card quiz-q" data-q="${i}">
       <h3>${esc(tr(q.question))}</h3>

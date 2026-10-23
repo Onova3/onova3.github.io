@@ -85,7 +85,6 @@ export function monter(el, { b }) {
   const montants = P.amendeDefautDepot.map(a => a.montant);
   const decrire = a => a.fixe ? `${ar(a.fixe)} (${l('fixe')})` : `${pct(a.taux)} ${l('de', { base: tr(BASES[a.base]) })}${a.minimum ? ', ' + l('min', { min: ar(a.minimum) }) : ''}`;
   el.innerHTML = `
-    <a class="retour" href="#/">${t('retour')}</a>
     <header class="fiche-tete"><h2>${t('module_sanctions')}</h2><p class="lead">${l('intro')}</p></header>
     <div class="grid">
       <div class="card"><h3>${l('base3')}</h3><ul class="puces">

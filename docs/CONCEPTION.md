@@ -225,5 +225,5 @@ Kajy Hetra est une application web installable (PWA), sans étape de compilation
 
 - `manifest.webmanifest` et `icone.svg` : sur Android (Chrome) « Ajouter à l'écran d'accueil », sur iPhone (Safari) « Partager › Sur l'écran d'accueil ». L'application s'ouvre alors en plein écran, sans barre d'adresse.
 - `sw.js` : met en cache tous les fichiers de `src/` et `data/` ; tout fonctionne sans réseau après la première visite. Changer `VERSION` à chaque mise en ligne. Un test vérifie que la liste est complète.
-- Navigation : barre d'onglets en bas (Impôts, Calendrier, Sanctions, Guides, Quiz), en-tête et onglets des fiches collés en haut, cibles tactiles d'au moins 44 px, zones sûres de l'encoche respectées.
+- Navigation, réglages, premier lancement, états des écrans et évolutions futures : voir `docs/APPLICATION-MOBILE.md`.
 - Pour une publication sur les magasins d'applications (Play Store, App Store), l'application pourra être emballée plus tard (par exemple Capacitor ou TWA) sans changer le code.
