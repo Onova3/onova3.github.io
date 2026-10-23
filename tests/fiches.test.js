@@ -838,3 +838,29 @@ test('États vides : message et action, composition au-dessus', () => {
   assert.match(h, /href="#\/impots"/);
   assert.doesNotMatch(etatVide({ message: 'x' }), /bouton/);
 });
+
+// --- États des écrans (src/etats.js) ---
+import { squelette, etatErreur, ERREUR_DEMARRAGE, dureeConfirmation } from '../src/etats.js';
+test('Chargement : blocs gris marqués « occupé » pour les lecteurs d’écran', () => {
+  const h = squelette({ lignes: 4 });
+  assert.match(h, /aria-busy="true"/);
+  assert.equal((h.match(/sq-ligne/g) || []).length, 4);
+  assert.match(readFileSync('src/style.css', 'utf8'), /\.squelette span\{[^}]*animation:luire/);
+});
+test('Erreur : message clair et bouton « Réessayer », dans les trois langues même sans fichier de langue', () => {
+  for (const l of ['fr', 'en', 'mg']) {
+    const e = ERREUR_DEMARRAGE[l];
+    assert.ok(e.titre && e.message && e.reessayer, l);
+    const h = etatErreur(e);
+    assert.match(h, /role="alert"/);
+    assert.match(h, /<button type="button" class="bouton" data-reessayer>/);
+  }
+});
+test('Confirmation : durée d’affichage entre 2,5 et 6 secondes selon la longueur', () => {
+  assert.equal(dureeConfirmation('OK'), 2500);
+  assert.ok(dureeConfirmation('Un message un peu plus long que les autres') > 2500);
+  assert.equal(dureeConfirmation('x'.repeat(500)), 6000);
+});
+test('Hors connexion : bandeau discret présent dans la page', () => {
+  assert.match(readFileSync('index.html', 'utf8'), /class="bandeau-hors-ligne" id="hors-ligne" hidden/);
+});

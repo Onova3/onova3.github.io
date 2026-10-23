@@ -136,5 +136,8 @@
   "prochaine_echeance": "Next deadline",
   "voir_calendrier": "Full calendar",
   "tous_impots": "All taxes",
-  "effacer_recherche": "Clear the search"
+  "effacer_recherche": "Clear the search",
+  "reglage_enregistre": "Setting saved",
+  "connexion_retablie": "Back online",
+  "partage_impossible": "Sharing is not available on this device"
 }

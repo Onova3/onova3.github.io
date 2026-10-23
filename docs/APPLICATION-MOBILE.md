@@ -50,16 +50,17 @@ Affiché une seule fois, mémorisé par `src/stockage.js` :
 
 « Revoir la présentation » dans l'onglet Plus relance les écrans 2 à 4.
 
-## 5. États des écrans (étape 3)
+## 5. États des écrans (fait)
 
-| État | Rendu | Exemple |
+Éléments réutilisables : `src/etats.js` (chargement, erreur, confirmation) et `etatVide` dans `src/composants.js`.
+
+| État | Rendu | Où |
 |---|---|---|
-| Chargement | Blocs gris animés (animation coupée si demandé) | Démarrage, ouverture d'une fiche |
-| Vide | Message + action | « Aucun favori. Touchez l'étoile sur une fiche pour l'ajouter. » |
-| Erreur | Message clair + « Réessayer » | Fichier de données illisible |
-| Hors connexion | Bandeau discret en haut | Déjà en place (`#hors-ligne`) |
-| Confirmation | Petit message temporaire en bas | « Ajouté aux favoris » |
-| À venir | Carte en pointillés + badge « À venir » | Lexique |
+| Chargement | Blocs gris animés (`squelette`), animation coupée si demandé | Démarrage, et à chaque « Réessayer » |
+| Vide | Petite composition, message et action (`etatVide`) | Recherche sans résultat (« Effacer la recherche »), calendrier sans échéance (« Tous »), fiche sans calculateur (« Comprendre »), fiche introuvable (« Tous les impôts ») ; favoris et historique à l'étape 4 |
+| Erreur | Message clair et « Réessayer » (`etatErreur`), textes en trois langues même si les fichiers de langue manquent | Données illisibles au démarrage |
+| Hors connexion | Bandeau discret sous l'en-tête (`#hors-ligne`) ; « Connexion rétablie » au retour | Partout |
+| Confirmation | Petit message en bas de l'écran, lu par les lecteurs d'écran (`confirmer`), 2,5 à 6 s | Réglage enregistré, résultat copié, partage impossible, connexion rétablie |
 
 ## 6. Accessibilité
 

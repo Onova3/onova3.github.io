@@ -9,15 +9,24 @@ import { themeEffectif, attributTheme, couleurBarre, TAILLES } from './reglages.
 import { CLE as CLE_BIENVENUE, doitAfficher, marquerAccepte } from './bienvenue.js';
 import { ouvrirBienvenue } from './bienvenue-ecran.js';
 
-const LANGUES = ['fr', 'en', 'mg'];
-const json = async u => (await fetch(u)).json();
+import { squelette, etatErreur, ERREUR_DEMARRAGE, confirmer } from './etats.js';
+import { etatVide } from './composants.js';
+import { composition } from './bauhaus.js';
 
-const [inventaire, b, obligations, donneesProfils, donneesGuides, donneesQuiz, ...textes] = await Promise.all([
-  json('data/impots.json'), json('data/baremes-2026.json'), json('data/obligations.json'), json('data/profils.json'), json('data/guides.json'), json('data/quiz.json'),
-  ...LANGUES.map(l => json(`src/i18n/${l}.json`)),
-]);
-const impots = inventaire.impots, profils = donneesProfils.profils, guides = donneesGuides.guides, quiz = donneesQuiz.chapitres;
-const TEXTES = Object.fromEntries(LANGUES.map((l, i) => [l, textes[i]]));
+const LANGUES = ['fr', 'en', 'mg'];
+const json = async u => { const r = await fetch(u); if (!r.ok) throw new Error(`${u} : ${r.status}`); return r.json(); };
+
+// Données chargées au démarrage (voir demarrer()).
+let impots, b, obligations, profils, guides, quiz, TEXTES;
+async function chargerDonnees() {
+  const [inventaire, bareme, oblig, donneesProfils, donneesGuides, donneesQuiz, ...textes] = await Promise.all([
+    json('data/impots.json'), json('data/baremes-2026.json'), json('data/obligations.json'), json('data/profils.json'), json('data/guides.json'), json('data/quiz.json'),
+    ...LANGUES.map(l => json(`src/i18n/${l}.json`)),
+  ]);
+  impots = inventaire.impots; b = bareme; obligations = oblig;
+  profils = donneesProfils.profils; guides = donneesGuides.guides; quiz = donneesQuiz.chapitres;
+  TEXTES = Object.fromEntries(LANGUES.map((l, i) => [l, textes[i]]));
+}
 
 // Réglages mémorisés (src/stockage.js) : langue, thème, taille du texte.
 const stockage = creerStockage();
@@ -38,6 +47,7 @@ const reglages = {
     if (cle === 'lang') etat.lang = valeur;
     appliquerApparence();
     afficher();
+    if (!document.querySelector('.bienvenue')) confirmer(t('reglage_enregistre'));
   },
   revoirPresentation: () => presentation(),
 };
@@ -55,6 +65,7 @@ const retour = document.getElementById('retour');
 let routePrecedente = null;
 
 function afficher() {
+  if (!TEXTES) return; // données pas encore chargées
   etat.textes = TEXTES[etat.lang];
   document.documentElement.lang = etat.lang;
   document.querySelectorAll('[data-i18n]').forEach(e => { e.textContent = t(e.dataset.i18n); });
@@ -85,7 +96,7 @@ function afficher() {
     MODULES_ECRANS[r.id].monter(contenu, ctx);
     document.title = `${t('module_' + r.id)} · Hetrako`;
   } else if (r.page === 'fiche') {
-    contenu.innerHTML = `<p class="lead">${t('introuvable')}</p>`;
+    contenu.innerHTML = etatVide({ message: t('introuvable'), action: { libelle: t('tous_impots'), href: '#/impots' } }, composition('vide'));
   } else {
     MODULES_ECRANS.accueil.monter(contenu, ctx);
     document.title = 'Hetrako';
@@ -94,12 +105,27 @@ function afficher() {
 
 window.addEventListener('hashchange', afficher);
 
-// Application installable et utilisable hors ligne (sw.js).
+// Bandeau discret hors connexion ; petite confirmation quand la connexion revient.
 const horsLigne = () => { document.getElementById('hors-ligne').hidden = navigator.onLine; };
-window.addEventListener('online', horsLigne);
+window.addEventListener('online', () => { horsLigne(); if (TEXTES) confirmer(t('connexion_retablie')); });
 window.addEventListener('offline', horsLigne);
 horsLigne();
 if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
-afficher();
-document.getElementById('demarrage')?.remove();
-if (doitAfficher(stockage.lireJSON(CLE_BIENVENUE, null))) presentation();
+
+// Démarrage : blocs gris pendant le chargement, message d'erreur et « Réessayer » si les données ne se lisent pas.
+async function demarrer() {
+  contenu.innerHTML = squelette();
+  try {
+    await chargerDonnees();
+  } catch (e) {
+    document.getElementById('demarrage')?.remove();
+    contenu.innerHTML = etatErreur(ERREUR_DEMARRAGE[etat.lang] ?? ERREUR_DEMARRAGE.fr);
+    contenu.querySelector('[data-reessayer]').addEventListener('click', demarrer, { once: true });
+    contenu.querySelector('[data-reessayer]').focus();
+    return;
+  }
+  afficher();
+  document.getElementById('demarrage')?.remove();
+  if (doitAfficher(stockage.lireJSON(CLE_BIENVENUE, null))) presentation();
+}
+demarrer();

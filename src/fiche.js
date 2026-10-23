@@ -5,6 +5,7 @@ import { ONGLETS, lien } from './routes.js';
 import { calculPenalites, calculPenalitesLocales } from './calc/penalites.js';
 import { texteResultat, lireTicket, partager } from './partage.js';
 import { etatVide } from './composants.js';
+import { confirmer } from './etats.js';
 import { composition } from './bauhaus.js';
 
 // Les textes peuvent contenir des {variables} (taux, seuils) tirées du barème par fiche.variables(b).
@@ -46,7 +47,8 @@ function completerResultats(panneau, impot) {
     bouton.addEventListener('click', async () => {
       const { lignes, total } = lireTicket(ticket);
       const issue = await partager(texteResultat({ titre: `${impot.sigle} · ${tr(impot.nom)}`, lignes, total, mention: t('mention_estimation'), lien: location.href }), 'Hetrako');
-      if (issue === 'copie') { bouton.textContent = t('resultat_copie'); setTimeout(() => { bouton.textContent = t('partager_resultat'); }, 2500); }
+      if (issue === 'copie') confirmer(t('resultat_copie'));
+      if (issue === 'echec') confirmer(t('partage_impossible'));
     });
     // Aperçu du montant juste avant le résultat, sur téléphone (masqué sur grand écran par la feuille de style).
     const apercu = document.createElement('div');
