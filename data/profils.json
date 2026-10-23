@@ -1,0 +1,26 @@
+{
+  "note": "Profils de contribuables pour le calendrier et l'accueil : chaque profil regroupe les impôts qui le concernent le plus souvent. Textes malgaches à relire.",
+  "profils": [
+    { "id": "particulier", "impots": ["trd", "tpc", "tvm"],
+      "libelle": { "fr": "Particulier", "en": "Individual", "mg": "Olon-tsotra" },
+      "description": { "fr": "Habitant d'une commune, propriétaire d'un véhicule ou d'un chien", "en": "Commune resident, owner of a vehicle or a dog", "mg": "Mponina ao amin'ny kaominina, tompon'ny fiara na alika" } },
+    { "id": "proprietaire", "impots": ["ift", "ifpb"],
+      "libelle": { "fr": "Propriétaire", "en": "Property owner", "mg": "Tompon-tany sy trano" },
+      "description": { "fr": "Propriétaire d'un terrain ou d'une maison", "en": "Owner of land or a house", "mg": "Tompon'ny tany na trano" } },
+    { "id": "employeur", "impots": ["irsa"],
+      "libelle": { "fr": "Employeur", "en": "Employer", "mg": "Mpampiasa" },
+      "description": { "fr": "Qui verse des salaires et retient l'IRSA", "en": "Pays salaries and withholds IRSA", "mg": "Mandoa karama sy manala IRSA" } },
+    { "id": "entrepreneur", "impots": ["is", "irsa"],
+      "libelle": { "fr": "Entrepreneur (impôt synthétique)", "en": "Small business (synthetic tax)", "mg": "Mpandraharaha (hetra tsotra)" },
+      "description": { "fr": "Activité de moins de 400 millions d'ariary par an", "en": "Business under 400 million ariary a year", "mg": "Asa latsaky ny 400 tapitrisa ariary isan-taona" } },
+    { "id": "entreprise", "impots": ["ir", "tva", "irsa", "ircm"],
+      "libelle": { "fr": "Entreprise au réel", "en": "Business under the real regime", "mg": "Orinasa amin'ny rafitra tena izy" },
+      "description": { "fr": "Impôt sur les revenus et TVA", "en": "Income tax and VAT", "mg": "Hetra amin'ny vola miditra sy TVA" } },
+    { "id": "hotellerie", "impots": ["sejour", "licence", "fetes"],
+      "libelle": { "fr": "Hôtel, bar, spectacle", "en": "Hotel, bar, events", "mg": "Hotely, fisotroana, fampisehoana" },
+      "description": { "fr": "Hébergement, vente d'alcool, entrées payantes", "en": "Accommodation, alcohol sales, paid entry", "mg": "Fandraisam-bahiny, fivarotana toaka, fidirana mandoa" } },
+    { "id": "industrie", "impots": ["da", "tsabtj", "ppa", "eaux"],
+      "libelle": { "fr": "Fabricant ou importateur", "en": "Manufacturer or importer", "mg": "Mpamokatra na mpanafatra" },
+      "description": { "fr": "Boissons, alcools, tabacs, produits soumis aux accises", "en": "Drinks, spirits, tobacco, excise goods", "mg": "Zava-pisotro, toaka, paraky, vokatra iharan'ny haba manokana" } }
+  ]
+}

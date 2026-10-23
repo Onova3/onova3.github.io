@@ -63,6 +63,9 @@
           "fr": "Cas général : dans les 15 premiers jours du mois qui suit celui de la retenue.",
           "en": "General rule: within the first 15 days of the month following the withholding.",
           "mg": "Fitsipika ankapobeny: ao anatin'ny 15 andro voalohany amin'ny volana manaraka ny nanalana ny hetra."
+        },
+        "echeance": {
+          "mensuel": 15
         }
       },
       {
@@ -82,6 +85,18 @@
           "fr": "ONG, associations, projets et organismes publics ou privés non soumis à l'IR ni à l'IS : si les retenues ne dépassent pas 50 000 Ar par mois, versement par semestre, dans les 15 premiers jours du mois qui suit le semestre.",
           "en": "NGOs, associations, projects and public or private bodies not subject to IR or synthetic tax: if withholdings do not exceed 50,000 Ar a month, payment every six months, within the first 15 days of the month after the half-year.",
           "mg": "ONG, fikambanana, tetikasa ary sampana tsy iharan'ny IR na hetra tsotra: raha tsy mihoatra ny 50 000 Ar isam-bolana ny hetra nesorina, aloa isaky ny enim-bolana, ao anatin'ny 15 andro voalohany amin'ny volana manaraka ny enim-bolana."
+        },
+        "echeance": {
+          "annuel": [
+            [
+              1,
+              15
+            ],
+            [
+              7,
+              15
+            ]
+          ]
         }
       }
     ],
@@ -167,6 +182,14 @@
           "fr": "Déclaration et paiement : au plus tard le 31 mars de l'année qui suit. Exercice à cheval : au plus tard à la fin du 3e mois après la clôture.",
           "en": "Return and payment: by 31 March of the following year. Non-calendar year: by the end of the 3rd month after closing.",
           "mg": "Fanambarana sy fandoavana: farany ny 31 martsa amin'ny taona manaraka. Taom-piasana tsy mifanandrify amin'ny taona: farany amin'ny fiafaran'ny volana faha-3 aorian'ny fanakatonana."
+        },
+        "echeance": {
+          "annuel": [
+            [
+              3,
+              31
+            ]
+          ]
         }
       },
       {
@@ -176,6 +199,18 @@
           "fr": "Acomptes de l'année en cours (calculés sur l'impôt de l'année précédente) : 1er acompte au plus tard le 31 mars, 2e acompte au plus tard le 30 juin.",
           "en": "Instalments for the current year (based on the previous year's tax): 1st by 31 March, 2nd by 30 June.",
           "mg": "Fandoavana mialoha amin'ny taona ankehitriny (kajiana araka ny hetra tamin'ny taona lasa): ny voalohany farany ny 31 martsa, ny faharoa farany ny 30 jona."
+        },
+        "echeance": {
+          "annuel": [
+            [
+              3,
+              31
+            ],
+            [
+              6,
+              30
+            ]
+          ]
         }
       },
       {
@@ -261,6 +296,14 @@
           "fr": "Exercice clos le 31 décembre : déclaration et paiement au plus tard le 15 mai de l'année suivante.",
           "en": "Year ending 31 December: return and payment by 15 May of the following year.",
           "mg": "Taom-piasana mifarana ny 31 desambra: fanambarana sy fandoavana farany ny 15 mey amin'ny taona manaraka."
+        },
+        "echeance": {
+          "annuel": [
+            [
+              5,
+              15
+            ]
+          ]
         }
       },
       {
@@ -270,6 +313,14 @@
           "fr": "Exercice clos le 30 juin : au plus tard le 15 novembre de la même année.",
           "en": "Year ending 30 June: by 15 November of the same year.",
           "mg": "Taom-piasana mifarana ny 30 jona: farany ny 15 novambra amin'io taona io ihany."
+        },
+        "echeance": {
+          "annuel": [
+            [
+              11,
+              15
+            ]
+          ]
         }
       },
       {
@@ -288,6 +339,34 @@
           "fr": "Acomptes provisionnels (calculés sur l'impôt de l'année précédente) : tous les deux mois, au plus tard le 15 du dernier mois de la période.",
           "en": "Provisional instalments (based on the previous year's tax): every two months, by the 15th of the last month of the period.",
           "mg": "Fandoavana mialoha (kajiana araka ny hetra tamin'ny taona lasa): isaky ny roa volana, farany ny faha-15 amin'ny volana farany amin'ny vanim-potoana."
+        },
+        "echeance": {
+          "annuel": [
+            [
+              2,
+              15
+            ],
+            [
+              4,
+              15
+            ],
+            [
+              6,
+              15
+            ],
+            [
+              8,
+              15
+            ],
+            [
+              10,
+              15
+            ],
+            [
+              12,
+              15
+            ]
+          ]
         }
       },
       {
@@ -381,6 +460,9 @@
           "fr": "Au plus tard le 15 du mois qui suit la retenue (pour le comptable) ou l'encaissement du prix, des avances ou des acomptes (pour le titulaire).",
           "en": "By the 15th of the month after the withholding (for the accountant) or after receiving the price, advances or instalments (for the contractor).",
           "mg": "Farany ny faha-15 amin'ny volana manaraka ny fanalana (ho an'ny mpitam-bola) na ny fandraisana ny vidiny, ny vola mialoha (ho an'ny tompon'ny tsena)."
+        },
+        "echeance": {
+          "mensuel": 15
         }
       }
     ]
@@ -424,6 +506,9 @@
           "fr": "L'impôt est dû dès que les revenus sont mis à disposition ou inscrits en compte. Déclaration et paiement au plus tard le 15 du mois qui suit.",
           "en": "Tax is due as soon as the income is made available or credited to an account. Return and payment by the 15th of the following month.",
           "mg": "Tsy maintsy aloa ny hetra raha vao omena na soratana ao amin'ny kaonty ny vola. Fanambarana sy fandoavana farany ny faha-15 amin'ny volana manaraka."
+        },
+        "echeance": {
+          "mensuel": 15
         }
       }
     ]
@@ -528,6 +613,14 @@
           "fr": "Au plus tard le 15 mai pour un exercice calé sur l'année civile, le 15 novembre pour un exercice clos le 30 juin, et 4 mois après la clôture dans les autres cas.",
           "en": "By 15 May for a calendar year, 15 November for a year ending 30 June, and 4 months after closing otherwise.",
           "mg": "Farany ny 15 mey raha mifanandrify amin'ny taona ny taom-piasana, ny 15 novambra raha mifarana ny 30 jona, ary 4 volana aorian'ny fanakatonana amin'ny tranga hafa."
+        },
+        "echeance": {
+          "annuel": [
+            [
+              5,
+              15
+            ]
+          ]
         }
       },
       {
@@ -611,6 +704,9 @@
           "fr": "Chaque mois, au plus tard le 15 du mois suivant, même s'il n'y a rien à payer.",
           "en": "Every month, by the 15th of the following month, even if nothing is due.",
           "mg": "Isam-bolana, farany ny faha-15 amin'ny volana manaraka, na dia tsy misy aloa aza."
+        },
+        "echeance": {
+          "mensuel": 15
         }
       },
       {
@@ -833,6 +929,14 @@
           "fr": "Impôt annuel sur les armes à feu : au plus tard le 31 mars, ou avant la délivrance de l'autorisation.",
           "en": "Annual firearm tax: by 31 March, or before the permit is issued.",
           "mg": "Hetra isan-taona amin'ny basy: farany ny 31 martsa, na alohan'ny hanomezana ny fahazoan-dalana."
+        },
+        "echeance": {
+          "annuel": [
+            [
+              3,
+              31
+            ]
+          ]
         }
       }
     ]
@@ -892,6 +996,30 @@
           "fr": "Acompte au plus tard le 15 du mois qui suit chaque trimestre ; liquidation de l'année précédente au plus tard le 15 mai.",
           "en": "Instalment by the 15th of the month after each quarter; settlement for the previous year by 15 May.",
           "mg": "Fandoavana mialoha farany ny faha-15 amin'ny volana manaraka ny telo volana tsirairay; famaranana ny taona lasa farany ny 15 mey."
+        },
+        "echeance": {
+          "annuel": [
+            [
+              1,
+              15
+            ],
+            [
+              4,
+              15
+            ],
+            [
+              5,
+              15
+            ],
+            [
+              7,
+              15
+            ],
+            [
+              10,
+              15
+            ]
+          ]
         }
       },
       {
@@ -901,6 +1029,14 @@
           "fr": "Si c'est l'assuré qui paie : au plus tard le 15 mai de l'année qui suit chaque échéance de prime.",
           "en": "If the policyholder pays: by 15 May of the year after each premium due date.",
           "mg": "Raha ny voaantoka no mandoa: farany ny 15 mey amin'ny taona manaraka ny fe-potoanan'ny sarany."
+        },
+        "echeance": {
+          "annuel": [
+            [
+              5,
+              15
+            ]
+          ]
         }
       }
     ],
@@ -954,6 +1090,14 @@
           "fr": "Au plus tard le 31 janvier pour un véhicule en service au 1er janvier ; immédiatement pour un véhicule mis en circulation après cette date.",
           "en": "By 31 January for a vehicle in service on 1 January; immediately for a vehicle put on the road after that date.",
           "mg": "Farany ny 31 janoary ho an'ny fiara efa mandeha amin'ny 1 janoary; avy hatrany ho an'ny fiara vao mandeha aorian'io daty io."
+        },
+        "echeance": {
+          "annuel": [
+            [
+              1,
+              31
+            ]
+          ]
         }
       }
     ],
@@ -1015,6 +1159,9 @@
           "fr": "Chaque mois, au plus tard le 15 du mois suivant.",
           "en": "Every month, by the 15th of the following month.",
           "mg": "Isam-bolana, farany ny faha-15 amin'ny volana manaraka."
+        },
+        "echeance": {
+          "mensuel": 15
         }
       }
     ],
@@ -1068,6 +1215,9 @@
           "fr": "Au plus tard le 15 du mois qui suit celui de la fabrication ou de l'encaissement des recettes.",
           "en": "By the 15th of the month after manufacture or receipt of the proceeds.",
           "mg": "Farany ny faha-15 amin'ny volana manaraka ny famokarana na ny fandraisana ny vola."
+        },
+        "echeance": {
+          "mensuel": 15
         }
       }
     ],
@@ -1129,6 +1279,9 @@
           "fr": "Dans les quinze premiers jours du mois qui suit celui de la mise à la consommation.",
           "en": "Within the first fifteen days of the month after release for consumption.",
           "mg": "Ao anatin'ny 15 andro voalohany amin'ny volana manaraka ny famoahana ho amin'ny fanjifana."
+        },
+        "echeance": {
+          "mensuel": 15
         }
       }
     ]
@@ -1188,6 +1341,9 @@
           "fr": "Au plus tard le 15 du mois qui suit la fabrication ou la mise à la consommation.",
           "en": "By the 15th of the month after manufacture or release for consumption.",
           "mg": "Farany ny faha-15 amin'ny volana manaraka ny famokarana na ny famoahana ho amin'ny fanjifana."
+        },
+        "echeance": {
+          "mensuel": 15
         }
       },
       {
@@ -1274,6 +1430,14 @@
           "fr": "Déclaration au plus tard le 15 octobre ; tout changement dans la location avant le 1er janvier se déclare par une déclaration rectificative.",
           "en": "Return by 15 October; any change in the lease before 1 January requires a corrected return.",
           "mg": "Fanambarana farany ny 15 oktobra; ny fiovana amin'ny fanofana alohan'ny 1 janoary dia ambara amin'ny fanambarana fanitsiana."
+        },
+        "echeance": {
+          "annuel": [
+            [
+              10,
+              15
+            ]
+          ]
         }
       },
       {
@@ -1283,6 +1447,14 @@
           "fr": "Demande d'exonération pour un terrain nouvellement mis en culture ou reboisé : au plus tard le 15 octobre.",
           "en": "Exemption request for newly cultivated or reforested land: by 15 October.",
           "mg": "Fangatahana fanafahana ho an'ny tany vao nambolena na novolena hazo: farany ny 15 oktobra."
+        },
+        "echeance": {
+          "annuel": [
+            [
+              10,
+              15
+            ]
+          ]
         }
       },
       {
@@ -1292,6 +1464,14 @@
           "fr": "L'impôt est exigible à partir du 1er mars. La commune envoie un avis d'imposition signé par le Maire et visé par le centre fiscal (ou doté d'un code QR) ; sans ce visa, l'avis est nul.",
           "en": "The tax is due from 1 March. The commune sends a tax notice signed by the Mayor and stamped by the tax centre (or bearing a QR code); without it, the notice is void.",
           "mg": "Tsy maintsy aloa manomboka ny 1 martsa ny hetra. Mandefa fampandrenesana hetra nosoniavin'ny Ben'ny tanàna sy nohamarinin'ny foibe misahana ny hetra (na misy QR code) ny kaominina; raha tsy misy izany, tsy manan-kery ilay fampandrenesana."
+        },
+        "echeance": {
+          "annuel": [
+            [
+              3,
+              1
+            ]
+          ]
         }
       },
       {
@@ -1378,6 +1558,14 @@
           "fr": "Déclaration avant le 15 octobre ; tout changement dans la location avant le 1er janvier se déclare par une déclaration rectificative.",
           "en": "Return before 15 October; any change in the lease before 1 January requires a corrected return.",
           "mg": "Fanambarana alohan'ny 15 oktobra; ny fiovana amin'ny fanofana alohan'ny 1 janoary dia ambara amin'ny fanambarana fanitsiana."
+        },
+        "echeance": {
+          "annuel": [
+            [
+              10,
+              15
+            ]
+          ]
         }
       },
       {
@@ -1387,6 +1575,14 @@
           "fr": "Construction neuve : demande d'exonération au centre fiscal avec le permis d'habiter. Si la maison est achevée au dernier trimestre, produire le permis avant le 1er avril de l'année suivante.",
           "en": "New building: exemption request to the tax centre with the occupancy permit. If completed in the last quarter, produce the permit before 1 April of the following year.",
           "mg": "Trano vaovao: fangatahana fanafahana any amin'ny foibe misahana ny hetra miaraka amin'ny fahazoan-dalana hipetraka. Raha vita tamin'ny telo volana farany, atolotra alohan'ny 1 aprily amin'ny taona manaraka ny fahazoan-dalana."
+        },
+        "echeance": {
+          "annuel": [
+            [
+              4,
+              1
+            ]
+          ]
         }
       },
       {
@@ -1396,6 +1592,14 @@
           "fr": "L'impôt est exigible à partir du 1er mars. La commune envoie un avis d'imposition signé par le Maire et visé par le centre fiscal (ou doté d'un code QR) ; sans ce visa, l'avis est nul.",
           "en": "The tax is due from 1 March. The commune sends a tax notice signed by the Mayor and stamped by the tax centre (or bearing a QR code); without it, the notice is void.",
           "mg": "Tsy maintsy aloa manomboka ny 1 martsa ny hetra. Mandefa fampandrenesana hetra nosoniavin'ny Ben'ny tanàna sy nohamarinin'ny foibe misahana ny hetra (na misy QR code) ny kaominina; raha tsy misy izany, tsy manan-kery ilay fampandrenesana."
+        },
+        "echeance": {
+          "annuel": [
+            [
+              3,
+              1
+            ]
+          ]
         }
       },
       {
@@ -1458,6 +1662,14 @@
           "fr": "Au plus tard le 15 janvier de chaque année.",
           "en": "By 15 January each year.",
           "mg": "Farany ny 15 janoary isan-taona."
+        },
+        "echeance": {
+          "annuel": [
+            [
+              1,
+              15
+            ]
+          ]
         }
       },
       {
@@ -1510,6 +1722,14 @@
           "fr": "Déclaration et paiement de toute la taxe en même temps, au plus tard le 15 juin.",
           "en": "Return and payment of the whole tax at the same time, by 15 June.",
           "mg": "Fanambarana sy fandoavana ny haba manontolo miaraka, farany ny 15 jona."
+        },
+        "echeance": {
+          "annuel": [
+            [
+              6,
+              15
+            ]
+          ]
         }
       },
       {
@@ -1562,6 +1782,9 @@
           "fr": "Chaque mois, au plus tard le 10 : état récapitulatif et versement de toute la taxe perçue le mois précédent.",
           "en": "Each month, by the 10th: summary and payment of all the tax collected the previous month.",
           "mg": "Isam-bolana, farany ny faha-10: famintinana sy fandoavana ny haba rehetra voaray tamin'ny volana teo aloha."
+        },
+        "echeance": {
+          "mensuel": 10
         }
       },
       {
@@ -1648,6 +1871,26 @@
           "fr": "Par trimestre et d’avance : au plus tard le 15e jour de chaque trimestre ; pour une nouvelle licence, au plus tard le 15e jour d’exploitation. Tout trimestre commencé est dû.",
           "en": "Quarterly in advance: by the 15th day of each quarter; for a new licence, by the 15th day of trading. Any quarter started is due.",
           "mg": "Isaky ny telo volana sy mialoha: farany ny andro faha-15 amin'ny telo volana tsirairay; ho an'ny fahazoan-dalana vaovao, farany ny andro faha-15 amin'ny fiasana. Aloa manontolo ny telo volana efa nanomboka."
+        },
+        "echeance": {
+          "annuel": [
+            [
+              1,
+              15
+            ],
+            [
+              4,
+              15
+            ],
+            [
+              7,
+              15
+            ],
+            [
+              10,
+              15
+            ]
+          ]
         }
       },
       {
@@ -1727,6 +1970,14 @@
           "fr": "Années suivantes : plein tarif au plus tard le 31 janvier.",
           "en": "Following years: full rate by 31 January.",
           "mg": "Taona manaraka: vidiny feno farany ny 31 janoary."
+        },
+        "echeance": {
+          "annuel": [
+            [
+              1,
+              31
+            ]
+          ]
         }
       }
     ]
@@ -1786,6 +2037,26 @@
           "fr": "Avant la fin du mois qui suit chaque trimestre, avec le paiement de toute la taxe du trimestre.",
           "en": "Before the end of the month after each quarter, with payment of the whole quarter’s tax.",
           "mg": "Alohan'ny fiafaran'ny volana manaraka ny telo volana tsirairay, miaraka amin'ny fandoavana ny haba rehetra."
+        },
+        "echeance": {
+          "annuel": [
+            [
+              1,
+              "fin"
+            ],
+            [
+              4,
+              "fin"
+            ],
+            [
+              7,
+              "fin"
+            ],
+            [
+              10,
+              "fin"
+            ]
+          ]
         }
       }
     ]
@@ -1862,6 +2133,9 @@
           "fr": "Audiovisuel et presse : chaque mois, au plus tard le 15 du mois suivant la collecte.",
           "en": "Broadcast and press: each month, by the 15th of the month after collection.",
           "mg": "Fahitalavitra sy gazety: isam-bolana, farany ny faha-15 amin'ny volana manaraka ny fanangonana."
+        },
+        "echeance": {
+          "mensuel": 15
         }
       }
     ]
@@ -2018,6 +2292,14 @@
           "fr": "Déclaration et paiement de toute la taxe au plus tard le 15 octobre.",
           "en": "Return and payment of the whole tax by 15 October.",
           "mg": "Fanambarana sy fandoavana ny haba manontolo farany ny 15 oktobra."
+        },
+        "echeance": {
+          "annuel": [
+            [
+              10,
+              15
+            ]
+          ]
         }
       },
       {
@@ -2086,6 +2368,9 @@
           "fr": "Versement chaque mois, avant le 15 du mois qui suit la collecte.",
           "en": "Payment each month, before the 15th of the month after collection.",
           "mg": "Fandoavana isam-bolana, alohan'ny faha-15 amin'ny volana manaraka ny fanangonana."
+        },
+        "echeance": {
+          "mensuel": 15
         }
       }
     ]

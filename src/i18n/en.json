@@ -54,5 +54,14 @@
   "r_total": "Total to pay",
   "hors_fourchette": "This amount is outside the limits set by the Code: check your commune's decision.",
   "valeur_exemple": "Example value: enter the rate voted by your commune.",
-  "sanc_local": "Local tax: late-payment penalty of {taux} per month late."
+  "sanc_local": "Local tax: late-payment penalty of {taux} per month late.",
+  "module_calendrier": "Tax calendar",
+  "calendrier_court": "All the key dates, month by month",
+  "calendrier_lead": "Deadlines for the next twelve months, with their article. Choose your profile to see only what concerns you.",
+  "par_profil": "I am…",
+  "outils": "Tools",
+  "tous": "All",
+  "ce_mois": "This month",
+  "aucune_echeance": "No fixed-date deadline for this profile.",
+  "calendrier_note": "Only fixed-date deadlines appear here. Those that depend on an event (sale, opening, death, show…) are in each guide's “File and pay” tab. A date falling on a public holiday or weekend is not moved."
 }

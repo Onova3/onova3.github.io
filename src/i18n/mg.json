@@ -54,5 +54,14 @@
   "r_total": "Totaliny aloa",
   "hors_fourchette": "Mivoaka ny fetra napetraky ny Fehezan-dalàna io vola io: hamarino ny fanapahan-kevitry ny kaominanao.",
   "valeur_exemple": "Ohatra fotsiny: ampidiro ny taha nolanian'ny kaominanao.",
-  "sanc_local": "Hetra ifotony: sazy noho ny fahatarana {taux} isaky ny volana tara."
+  "sanc_local": "Hetra ifotony: sazy noho ny fahatarana {taux} isaky ny volana tara.",
+  "module_calendrier": "Tetiandro ara-ketra",
+  "calendrier_court": "Ireo daty rehetra tokony hotadidiana, isam-bolana",
+  "calendrier_lead": "Ny fe-potoana amin'ny roa ambin'ny folo volana ho avy, miaraka amin'ny andininy. Safidio ny toerana misy anao mba hahitana izay mikasika anao ihany.",
+  "par_profil": "Izaho dia…",
+  "outils": "Fitaovana",
+  "tous": "Rehetra",
+  "ce_mois": "Amin'ity volana ity",
+  "aucune_echeance": "Tsy misy fe-potoana raikitra ho an'ity sokajy ity.",
+  "calendrier_note": "Ny fe-potoana raikitra daty ihany no hita eto. Ireo miankina amin'ny zava-mitranga (varotra, fanokafana, fahafatesana, fampisehoana…) dia ao amin'ny tabilao « Hanambara sy handoa » amin'ny pejy tsirairay. Tsy afindra ny daty raha andro tsy iasana na faran'ny herinandro."
 }

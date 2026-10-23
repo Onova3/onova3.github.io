@@ -54,5 +54,14 @@
   "r_total": "Total à payer",
   "hors_fourchette": "Ce montant sort des limites fixées par le Code : vérifiez la délibération de votre commune.",
   "valeur_exemple": "Valeur d'exemple : saisissez le tarif voté par votre commune.",
-  "sanc_local": "Impôt local : pénalité de retard de {taux} par mois de retard."
+  "sanc_local": "Impôt local : pénalité de retard de {taux} par mois de retard.",
+  "module_calendrier": "Calendrier fiscal",
+  "calendrier_court": "Toutes les dates à retenir, mois par mois",
+  "calendrier_lead": "Les dates limites des douze prochains mois, avec leur article. Choisissez votre profil pour ne voir que ce qui vous concerne.",
+  "par_profil": "Je suis…",
+  "outils": "Outils",
+  "tous": "Tous",
+  "ce_mois": "Ce mois-ci",
+  "aucune_echeance": "Aucune échéance à date fixe pour ce profil.",
+  "calendrier_note": "Seules les échéances à date fixe figurent ici. Celles qui dépendent d'un événement (vente, ouverture, décès, spectacle…) sont dans l'onglet « Déclarer et payer » de chaque fiche. Une date qui tombe un jour férié ou un week-end n'est pas décalée."
 }

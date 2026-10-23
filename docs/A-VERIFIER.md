@@ -155,3 +155,13 @@ Points que le texte des codes ne tranche pas clairement. L'application suit l'in
 | 87 | Pylônes : un équipement installé au dernier trimestre | CDI 10.12.02 | Mentionné ; non géré par le calculateur |
 | 88 | Jeux radiotélévisés : pas de chapitre dans le CPF | Obligations tirées des articles 10.13.04 et 10.13.05 du CDI | Repris tels quels |
 | 89 | Pénalité de 1 % par mois (20.01.53.4) pour des taxes versées au Trésor (jeux radiotélévisés, publicité audiovisuelle) | CDI 20.01.53.4 vise les impôts du Livre II | Appliquée à toutes les fiches du Livre II |
+
+## Calendrier fiscal (phase 5, étape 1)
+
+| # | Point | Texte | Choix actuel de l'application |
+|---|---|---|---|
+| 90 | Échéance un samedi, un dimanche ou un jour férié : reportée au jour ouvré suivant ? | Aucune règle relevée dans le CPF | Date affichée telle quelle, avec une mention |
+| 91 | IR : seul l'exercice clos le 31 décembre (15 mai) et celui clos le 30 juin (15 novembre) sont dans le calendrier | CPF I-11 | Les deux dates sont affichées pour le profil « entreprise au réel » |
+| 92 | IRSA par bimestre (employeurs à l'impôt synthétique) | CPF I-21 (point 5) | Absent du calendrier faute de date |
+| 93 | « 15 premiers jours du mois » et « au plus tard le 15 » | CPF I-21, I-103, etc. | Tous ramenés au 15 du mois |
+| 94 | Composition des profils (quels impôts pour quel profil) | Choix pédagogique, pas un texte | À relire : un enseignant peut proposer d'autres regroupements |

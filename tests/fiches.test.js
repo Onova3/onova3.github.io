@@ -28,7 +28,8 @@ import { calculEauElec } from '../src/calc/eauElec.js';
 import { calculFetes } from '../src/calc/fetes.js';
 import { calculPylones } from '../src/calc/pylones.js';
 import { calculJeuxTv } from '../src/calc/jeuxTv.js';
-import { lireRoute, lien } from '../src/routes.js';
+import { lireRoute, lien, lienModule } from '../src/routes.js';
+import { datesEcheance, ajouterMois, calendrier } from '../src/calendrier.js';
 import { FICHES } from '../src/fiches/index.js';
 import { etat, fmt, tr } from '../src/ui.js';
 
@@ -421,6 +422,51 @@ test('Les 29 impôts de l’inventaire ont une fiche et des obligations', () => 
     assert.ok(FICHES[id], `fiche ${id}`);
     assert.ok(obligations[id]?.qui?.length && obligations[id]?.quand?.length, `obligations ${id}`);
   }
+});
+
+// --- Calendrier fiscal et profils (phase 5, étape 1) ---
+const impotsInv = lire('data/impots.json').impots;
+const profils = lire('data/profils.json').profils;
+test('Calendrier : échéance mensuelle et fin de mois', () => {
+  assert.deepEqual(datesEcheance({ mensuel: 15 }, '2026-10-20', '2027-01-20'), ['2026-11-15', '2026-12-15', '2027-01-15']);
+  assert.deepEqual(datesEcheance({ annuel: [[1, 'fin'], [4, 'fin']] }, '2027-01-01', '2027-12-31'), ['2027-01-31', '2027-04-30']);
+  assert.deepEqual(datesEcheance({ annuel: [[3, 31], [6, 30]] }, '2026-10-23', '2027-10-23'), ['2027-03-31', '2027-06-30']);
+});
+test('Calendrier : ajout de mois et bornes', () => {
+  assert.equal(ajouterMois('2026-10-23', 12), '2027-10-23');
+  assert.equal(ajouterMois('2027-01-31', 1), '2027-02-28');
+});
+test('Calendrier : profil employeur = IRSA chaque mois le 15, plus le versement semestriel', () => {
+  const p = profils.find(x => x.id === 'employeur');
+  const c = calendrier({ obligations, impots: impotsInv, ids: p.impots, depuis: '2026-10-23', mois: 12 });
+  assert.ok(c.every(e => e.id === 'irsa'));
+  assert.equal(c.filter(e => e.date.endsWith('-15')).length, 14); // 12 mensuelles + 15 janvier et 15 juillet
+  assert.deepEqual(c.slice(0, 2).map(e => e.date), ['2026-11-15', '2026-12-15']);
+});
+test('Calendrier : propriétaire = IFT et IFPB (15 octobre, 1er mars, 1er avril)', () => {
+  const c = calendrier({ obligations, impots: impotsInv, ids: ['ift', 'ifpb'], depuis: '2026-10-23', mois: 12 });
+  assert.deepEqual([...new Set(c.map(e => e.date))], ['2027-03-01', '2027-04-01', '2027-10-15']);
+});
+test('Échéances structurées bien formées et profils cohérents', () => {
+  let n = 0;
+  for (const [id, o] of Object.entries(obligations)) {
+    if (id === 'note') continue;
+    for (const q of o.quand ?? []) if (q.echeance) {
+      n++;
+      const e = q.echeance;
+      assert.ok(e.mensuel ? e.mensuel >= 1 && e.mensuel <= 28 : e.annuel.every(([m, j]) => m >= 1 && m <= 12 && (j === 'fin' || (j >= 1 && j <= 31))), `${id}`);
+    }
+  }
+  assert.equal(n, 34);
+  for (const p of profils) {
+    assert.ok(trilingue(p.libelle) && trilingue(p.description), p.id);
+    for (const id of p.impots) assert.ok(impotsInv.some(i => i.id === id), `${p.id} → ${id}`);
+  }
+});
+test('Routes : modules transversaux', () => {
+  assert.deepEqual(lireRoute('#/calendrier'), { page: 'module', id: 'calendrier', sous: null });
+  assert.deepEqual(lireRoute('#/calendrier/employeur'), { page: 'module', id: 'calendrier', sous: 'employeur' });
+  assert.equal(lienModule('calendrier', 'proprietaire'), '#/calendrier/proprietaire');
 });
 
 // --- Navigation ---

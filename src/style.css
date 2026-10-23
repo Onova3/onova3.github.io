@@ -104,3 +104,12 @@ footer{margin-top:30px;padding-top:14px;border-top:1px solid var(--line);color:v
 .produit{display:block;width:100%;text-align:left;border:0;border-bottom:1px dashed var(--line);background:none;color:var(--ink);padding:8px 0;font:14px/1.4 var(--body);cursor:pointer}
 .produit[aria-pressed=true]{color:var(--accent);font-weight:600}
 #da-liste{max-height:360px;overflow-y:auto}
+/* Accueil : profils et outils ; module calendrier */
+.profils{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px}
+.profil{display:flex;flex-direction:column;gap:2px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:12px 14px;color:inherit;text-decoration:none}
+.profil:hover{border-color:var(--accent)}.profil span{color:var(--muted);font-size:13px}
+.calendrier{display:grid;gap:14px;margin-top:14px}
+ul.echeances{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.echeances li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:10px;align-items:start;border-bottom:1px dashed var(--line);padding-bottom:10px}
+.echeances .jour{font:600 22px/1 var(--mono);color:var(--stamp);text-align:center}
+.echeances .sigle{text-decoration:none}

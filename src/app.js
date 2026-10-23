@@ -1,18 +1,19 @@
-// Point d'entrée : charge les données, gère la langue et affiche l'accueil ou une fiche selon le lien (#/irsa/calculer).
+// Point d'entrée : charge les données, gère la langue et affiche l'accueil, une fiche (#/irsa/calculer) ou un module (#/calendrier).
 import { etat, t, tr, esc } from './ui.js';
-import { lireRoute, lien } from './routes.js';
+import { lireRoute, lien, lienModule } from './routes.js';
 import { rendreFiche } from './fiche.js';
 import { FICHES } from './fiches/index.js';
+import { MODULES_ECRANS } from './modules/index.js';
 
 const LANGUES = ['fr', 'en', 'mg'];
 const CATEGORIES = ['revenus', 'enregistrement', 'consommation', 'local'];
 const json = async u => (await fetch(u)).json();
 
-const [inventaire, b, obligations, ...textes] = await Promise.all([
-  json('data/impots.json'), json('data/baremes-2026.json'), json('data/obligations.json'),
+const [inventaire, b, obligations, donneesProfils, ...textes] = await Promise.all([
+  json('data/impots.json'), json('data/baremes-2026.json'), json('data/obligations.json'), json('data/profils.json'),
   ...LANGUES.map(l => json(`src/i18n/${l}.json`)),
 ]);
-const impots = inventaire.impots;
+const impots = inventaire.impots, profils = donneesProfils.profils;
 const TEXTES = Object.fromEntries(LANGUES.map((l, i) => [l, textes[i]]));
 try { const l = localStorage.getItem('kh-lang'); if (LANGUES.includes(l)) etat.lang = l; } catch {}
 
@@ -23,6 +24,11 @@ function accueil() {
   contenu.innerHTML = `
     <label class="search"><span class="sr">${t('recherche')}</span>
       <input id="q" type="search" placeholder="${esc(t('recherche'))}" value="${esc(recherche)}"></label>
+    <section><h2>${t('par_profil')}</h2>
+      <div class="profils">${profils.map(p => `<a class="profil" href="${lienModule('calendrier', p.id)}">
+        <b>${esc(tr(p.libelle))}</b><span>${esc(tr(p.description))}</span></a>`).join('')}</div></section>
+    <section><h2>${t('outils')}</h2>
+      <div class="profils"><a class="profil" href="${lienModule('calendrier')}"><b>${t('module_calendrier')}</b><span>${t('calendrier_court')}</span></a></div></section>
     <div id="liste"></div>`;
   const q = contenu.querySelector('#q');
   q.addEventListener('input', () => { recherche = q.value; liste(); });
@@ -59,6 +65,9 @@ function afficher() {
   if (impot && FICHES[r.id]) {
     rendreFiche(contenu, { fiche: FICHES[r.id], impot, onglet: r.onglet, b, obligations });
     document.title = `${impot.sigle} · Kajy Hetra`;
+  } else if (r.page === 'module' && MODULES_ECRANS[r.id]) {
+    MODULES_ECRANS[r.id].monter(contenu, { impots, obligations, profils, b, sous: r.sous });
+    document.title = `${t('module_' + r.id)} · Kajy Hetra`;
   } else if (r.page === 'fiche') {
     contenu.innerHTML = `<a class="retour" href="#/">${t('retour')}</a><p class="lead">${t('introuvable')}</p>`;
   } else {
