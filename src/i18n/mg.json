@@ -63,5 +63,8 @@
   "tous": "Rehetra",
   "ce_mois": "Amin'ity volana ity",
   "aucune_echeance": "Tsy misy fe-potoana raikitra ho an'ity sokajy ity.",
-  "calendrier_note": "Ny fe-potoana raikitra daty ihany no hita eto. Ireo miankina amin'ny zava-mitranga (varotra, fanokafana, fahafatesana, fampisehoana…) dia ao amin'ny tabilao « Hanambara sy handoa » amin'ny pejy tsirairay. Tsy afindra ny daty raha andro tsy iasana na faran'ny herinandro."
+  "calendrier_note": "Ny fe-potoana raikitra daty ihany no hita eto. Ireo miankina amin'ny zava-mitranga (varotra, fanokafana, fahafatesana, fampisehoana…) dia ao amin'ny tabilao « Hanambara sy handoa » amin'ny pejy tsirairay. Tsy afindra ny daty raha andro tsy iasana na faran'ny herinandro.",
+  "module_sanctions": "Sazy",
+  "sanctions_court": "Fahatarana, onitra, hosoka, hetra napetraky ny fitondrana",
+  "voir_sanctions": "Ny onitra rehetra sy fitaovana fanaovana tombana →"
 }

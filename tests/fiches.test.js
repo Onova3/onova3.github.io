@@ -16,7 +16,7 @@ import { calculPrelevement } from '../src/calc/prelevementAlcools.js';
 import { calculAccises, chercherProduits } from '../src/calc/accises.js';
 import { calculIFT } from '../src/calc/ift.js';
 import { calculIFPB } from '../src/calc/ifpb.js';
-import { calculPenalitesLocales } from '../src/calc/penalites.js';
+import { calculPenalitesLocales, calculAmende } from '../src/calc/penalites.js';
 import { calculTPC } from '../src/calc/tpc.js';
 import { calculTRD } from '../src/calc/trd.js';
 import { calculSejour } from '../src/calc/sejour.js';
@@ -467,6 +467,35 @@ test('Routes : modules transversaux', () => {
   assert.deepEqual(lireRoute('#/calendrier'), { page: 'module', id: 'calendrier', sous: null });
   assert.deepEqual(lireRoute('#/calendrier/employeur'), { page: 'module', id: 'calendrier', sous: 'employeur' });
   assert.equal(lienModule('calendrier', 'proprietaire'), '#/calendrier/proprietaire');
+});
+
+// --- Module Sanctions : amendes du Livre III (CDI 20.01.54 à 20.01.56.7) ---
+test('Amendes : insuffisance 40 % avec minimum de 100 000 Ar', () => {
+  assert.equal(calculAmende('insuffisance', 1000000, b).amende, 400000);
+  const r = calculAmende('insuffisance', 100000, b);
+  assert.ok(r.minimumApplique);
+  assert.equal(r.amende, 100000);
+});
+test('Amendes : IRSA non retenu 40 %, retenu non versé 80 %', () => {
+  assert.equal(calculAmende('irsaNonRetenu', 500000, b).amende, 200000);
+  assert.equal(calculAmende('irsaNonVerse', 500000, b).amende, 400000);
+});
+test('Amendes : TVA 10, 40, 80 et 150 %', () => {
+  assert.deepEqual(['tvaFacture', 'tvaNonApparente', 'tvaDeductionAbusive', 'tvaDissimulation'].map(id => calculAmende(id, 1000000, b).amende),
+    [100000, 400000, 800000, 1500000]);
+});
+test('Amendes : montants fixes et bases particulières', () => {
+  assert.equal(calculAmende('refusDocuments', 0, b).amende, 200000);
+  assert.equal(calculAmende('autreInfraction', 0, b).amende, 100000);
+  assert.equal(calculAmende('sansComptabilite', 300000000, b).amende, 1500000);
+  assert.equal(calculAmende('intermittentNonRetenu', 50000, b).amende, 20000);
+});
+test('Amendes : chaque amende a un article et un libellé de module', () => {
+  for (const a of b.amendes.liste) {
+    assert.match(a.article, /^CDI 20\.01\.5/, a.id);
+    assert.ok(a.fixe || (a.taux > 0 && a.base), a.id);
+  }
+  assert.deepEqual(lireRoute('#/sanctions'), { page: 'module', id: 'sanctions', sous: null });
 });
 
 // --- Navigation ---

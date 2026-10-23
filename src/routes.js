@@ -1,7 +1,7 @@
 // Liens partageables : #/ (accueil), #/irsa (fiche, onglet Comprendre), #/irsa/calculer, etc.
 // Modules transversaux : #/calendrier, #/calendrier/employeur…
 export const ONGLETS = ['comprendre', 'calculer', 'declarer', 'sanctions'];
-export const MODULES = ['calendrier'];
+export const MODULES = ['calendrier', 'sanctions'];
 
 export function lireRoute(hash = '') {
   const [id = '', suite = ''] = hash.replace(/^#\/?/, '').split('/');

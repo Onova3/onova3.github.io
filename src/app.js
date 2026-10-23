@@ -28,7 +28,8 @@ function accueil() {
       <div class="profils">${profils.map(p => `<a class="profil" href="${lienModule('calendrier', p.id)}">
         <b>${esc(tr(p.libelle))}</b><span>${esc(tr(p.description))}</span></a>`).join('')}</div></section>
     <section><h2>${t('outils')}</h2>
-      <div class="profils"><a class="profil" href="${lienModule('calendrier')}"><b>${t('module_calendrier')}</b><span>${t('calendrier_court')}</span></a></div></section>
+      <div class="profils"><a class="profil" href="${lienModule('calendrier')}"><b>${t('module_calendrier')}</b><span>${t('calendrier_court')}</span></a>
+        <a class="profil" href="${lienModule('sanctions')}"><b>${t('module_sanctions')}</b><span>${t('sanctions_court')}</span></a></div></section>
     <div id="liste"></div>`;
   const q = contenu.querySelector('#q');
   q.addEventListener('input', () => { recherche = q.value; liste(); });

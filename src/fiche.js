@@ -68,7 +68,8 @@ function sanctionsLocales(p, f, b, ob) {
         <div class="total"><span class="k">${t('r_total')}</span><span class="v" id="pen-total"></span></div>
         <p class="arr">${t('arrondi')}${art(P.articles.arrondi)}</p>
       </div>
-    </div>`;
+    </div>
+    <p><a class="bouton" href="#/sanctions">${t('voir_sanctions')}</a></p>`;
   const $ = id => p.querySelector('#' + id);
   const recalculer = () => {
     const impot = lireMontant($('pen-impot')), mois = lireEntier($('pen-mois'), 1, 120);
@@ -108,7 +109,8 @@ function sanctions(p, f, b, ob) {
         <div class="total"><span class="k">${t('r_total')}</span><span class="v" id="pen-total"></span></div>
         <p class="arr">${t('arrondi')}${art(P.articles.arrondi)}</p>
       </div>
-    </div>`;
+    </div>
+    <p><a class="bouton" href="#/sanctions">${t('voir_sanctions')}</a></p>`;
   const $ = id => p.querySelector('#' + id);
   const recalculer = () => {
     const impot = lireMontant($('pen-impot')), mois = lireEntier($('pen-mois'), 1, 120), defaut = $('pen-defaut').checked;

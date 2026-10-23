@@ -25,3 +25,16 @@ export function calculPenalitesLocales({ impot, moisRetard }, b) {
   const interets = impot > 0 ? arrondiInf(impot * p.retardLivreII * mois, p.arrondiImpot) : 0;
   return { mois, interets, total: arrondiInf(impot + interets, p.arrondiImpot) };
 }
+
+/**
+ * Amende pour insuffisance, inexactitude, fraude ou autre manquement (CDI 20.01.54 à 20.01.56.7).
+ * Soit un taux sur une base (droits éludés, taxe, chiffre d'affaires…), avec un minimum éventuel, soit un montant fixe.
+ */
+export function calculAmende(id, base, b) {
+  const a = b.amendes.liste.find(x => x.id === id);
+  if (a.fixe) return { amende: a.fixe, fixe: true, article: a.article };
+  const calcule = base * a.taux;
+  const minimumApplique = a.minimum ? calcule < a.minimum : false;
+  return { taux: a.taux, calcule, minimumApplique, article: a.article,
+    amende: arrondiInf(minimumApplique ? a.minimum : calcule, b.penalites.arrondiImpot) };
+}

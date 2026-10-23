@@ -307,6 +307,35 @@
     "articles": { "champ": "CDI 10.13.02", "tarif": "CDI 10.13.03", "declaration": "CDI 10.13.04", "paiement": "CDI 10.13.05" },
     "source": "LFI 2026"
   },
+  "amendes": {
+    "note": "Amendes du Livre III, chapitre III (CDI 20.01.51 et suivants). « taux » s'applique à la base indiquée ; « fixe » est un montant ; « minimum » est un plancher.",
+    "liste": [
+      { "id": "insuffisance", "groupe": "declaration", "taux": 0.40, "minimum": 100000, "base": "droits", "article": "CDI 20.01.54" },
+      { "id": "oppositionControle", "groupe": "controle", "taux": 1.50, "minimum": 100000, "base": "elements", "article": "CDI 20.01.54" },
+      { "id": "irsaNonRetenu", "groupe": "retenues", "taux": 0.40, "base": "sommes", "article": "CDI 20.01.54.1" },
+      { "id": "irsaNonVerse", "groupe": "retenues", "taux": 0.80, "base": "sommes", "article": "CDI 20.01.54.1" },
+      { "id": "intermittentNonRetenu", "groupe": "retenues", "taux": 0.10, "minimum": 20000, "base": "droits", "article": "CDI 20.01.54.1" },
+      { "id": "retenueNonVersee", "groupe": "retenues", "taux": 0.40, "minimum": 100000, "base": "droits", "article": "CDI 20.01.54.1" },
+      { "id": "tvaFacture", "groupe": "tva", "taux": 0.10, "base": "taxe", "article": "CDI 20.01.54.2 A" },
+      { "id": "tvaNonApparente", "groupe": "tva", "taux": 0.40, "base": "taxe", "article": "CDI 20.01.54.2 B" },
+      { "id": "tvaDeductionAbusive", "groupe": "tva", "taux": 0.80, "base": "taxe", "article": "CDI 20.01.54.2 C" },
+      { "id": "tvaDissimulation", "groupe": "tva", "taux": 1.50, "base": "taxe", "article": "CDI 20.01.54.2 D" },
+      { "id": "foncier", "groupe": "declaration", "taux": 0.40, "base": "droits", "article": "CDI 20.01.54.3" },
+      { "id": "dissimulationActe", "groupe": "enregistrement", "taux": 0.80, "base": "droits", "article": "CDI 20.01.54.8, 20.01.54.9" },
+      { "id": "fausseDeclarationActe", "groupe": "enregistrement", "taux": 0.40, "base": "sommeContrat", "article": "CDI 20.01.54.10" },
+      { "id": "taxationOffice", "groupe": "controle", "taux": 0.40, "base": "droits", "article": "CDI 20.01.55" },
+      { "id": "fraude", "groupe": "controle", "taux": 0.80, "base": "droits", "article": "CDI 20.01.56.5" },
+      { "id": "deficitRedresse", "groupe": "declaration", "taux": 0.40, "base": "impotFictif", "article": "CDI 20.01.56.1" },
+      { "id": "sansComptabilite", "groupe": "autres", "taux": 0.005, "base": "ca", "article": "CDI 20.01.56.1" },
+      { "id": "especes", "groupe": "autres", "taux": 0.10, "base": "transactions", "article": "CDI 20.01.56" },
+      { "id": "chequeSansProvision", "groupe": "autres", "taux": 1.50, "base": "montantExigible", "article": "CDI 20.01.56" },
+      { "id": "refusDocuments", "groupe": "controle", "fixe": 200000, "article": "CDI 20.01.56.4" },
+      { "id": "refusAccesIfpb", "groupe": "autres", "fixe": 200000, "article": "CDI 20.01.56.3" },
+      { "id": "autreInfraction", "groupe": "autres", "fixe": 100000, "article": "CDI 20.01.56" }
+    ],
+    "articles": { "general": "CDI 20.01.51", "remise": "CDI 20.01.51", "cga": "CDI 20.01.54.4", "taxationOffice": "CPF V-34 à V-37" },
+    "source": "LFI 2026"
+  },
   "tva": {
     "tauxNormal": 0.20,
     "tauxReduit": 0.05,

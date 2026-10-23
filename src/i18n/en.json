@@ -63,5 +63,8 @@
   "tous": "All",
   "ce_mois": "This month",
   "aucune_echeance": "No fixed-date deadline for this profile.",
-  "calendrier_note": "Only fixed-date deadlines appear here. Those that depend on an event (sale, opening, death, show…) are in each guide's “File and pay” tab. A date falling on a public holiday or weekend is not moved."
+  "calendrier_note": "Only fixed-date deadlines appear here. Those that depend on an event (sale, opening, death, show…) are in each guide's “File and pay” tab. A date falling on a public holiday or weekend is not moved.",
+  "module_sanctions": "Penalties",
+  "sanctions_court": "Late payment, fines, fraud, default assessment",
+  "voir_sanctions": "All fines and a simulator →"
 }

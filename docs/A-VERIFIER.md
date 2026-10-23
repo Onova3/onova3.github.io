@@ -165,3 +165,14 @@ Points que le texte des codes ne tranche pas clairement. L'application suit l'in
 | 92 | IRSA par bimestre (employeurs à l'impôt synthétique) | CPF I-21 (point 5) | Absent du calendrier faute de date |
 | 93 | « 15 premiers jours du mois » et « au plus tard le 15 » | CPF I-21, I-103, etc. | Tous ramenés au 15 du mois |
 | 94 | Composition des profils (quels impôts pour quel profil) | Choix pédagogique, pas un texte | À relire : un enseignant peut proposer d'autres regroupements |
+
+## Module Sanctions (phase 5, étape 2)
+
+| # | Point | Texte | Choix actuel de l'application |
+|---|---|---|---|
+| 95 | Minimum de 100 000 Ar de l'article 20.01.54 : vaut-il pour l'insuffisance (40 %) et l'opposition au contrôle (150 %), ou pour la seule opposition ? | CDI 20.01.54, dernier alinéa | Appliqué aux deux |
+| 96 | La pénalité de retard s'ajoute-t-elle à l'amende elle-même, ou seulement au complément d'impôt ? | CDI 20.01.51 : « toutes les infractions […] sont passibles de la pénalité de retard » | Calculée sur le complément d'impôt seulement |
+| 97 | Fraude non chiffrable : amende forfaitaire de 5 à 50 millions d'Ar fixée par la Commission des fraudes | CDI 20.01.56.5 | Mentionnée dans le Code, non simulée |
+| 98 | Sanctions pénales (emprisonnement de 6 mois à 3 ans, 5 ans en récidive) | CDI 20.01.56.5, 20.01.56.7 | Non reprises dans le module |
+| 99 | Amende d'IR intermittent (10 %) : seulement pour les personnes au minimum de perception ou exonérées | CDI 20.01.54.1, 4e alinéa | Condition non vérifiée par le simulateur |
+| 100 | Inexactitudes de l'annexe TVA (0,5 % des opérations) | CDI 20.01.56 | Non reprises (modalités fixées par texte réglementaire) |
