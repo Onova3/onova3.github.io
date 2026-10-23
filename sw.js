@@ -14,6 +14,8 @@ const FICHIERS = [
   'data/profils.json',
   'data/quiz.json',
   'src/app.js',
+  'src/bienvenue.js',
+  'src/bienvenue-ecran.js',
   'src/stockage.js',
   'src/reglages.js',
   'src/version.js',

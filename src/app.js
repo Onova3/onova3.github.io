@@ -6,6 +6,8 @@ import { FICHES } from './fiches/index.js';
 import { MODULES_ECRANS } from './modules/index.js';
 import { creerStockage } from './stockage.js';
 import { themeEffectif, attributTheme, couleurBarre, TAILLES } from './reglages.js';
+import { CLE as CLE_BIENVENUE, doitAfficher, marquerAccepte } from './bienvenue.js';
+import { ouvrirBienvenue } from './bienvenue-ecran.js';
 
 const LANGUES = ['fr', 'en', 'mg'];
 const json = async u => (await fetch(u)).json();
@@ -37,7 +39,13 @@ const reglages = {
     appliquerApparence();
     afficher();
   },
+  revoirPresentation: () => presentation(),
 };
+
+// Premier lancement (src/bienvenue.js) : langue, présentation, avertissement à accepter.
+function presentation() {
+  ouvrirBienvenue({ reglages, onFin: () => stockage.ecrireJSON(CLE_BIENVENUE, marquerAccepte(new Date().toISOString().slice(0, 10))) });
+}
 etat.lang = stockage.preference('lang');
 appliquerApparence();
 sombreSysteme.addEventListener('change', appliquerApparence);
@@ -93,3 +101,5 @@ window.addEventListener('offline', horsLigne);
 horsLigne();
 if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
 afficher();
+document.getElementById('demarrage')?.remove();
+if (doitAfficher(stockage.lireJSON(CLE_BIENVENUE, null))) presentation();

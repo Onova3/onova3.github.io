@@ -42,8 +42,10 @@ export function monter(el, { b, sous, reglages }) {
     </section>
     <ul class="menu">
       <li><a href="${lienModule('sources')}"><b>${t('module_sources')}</b><span>${t('maj_baremes')} ${dateLisible(b.misAJour)}</span></a></li>
+      <li><button type="button" id="revoir"><b>${t('revoir_presentation')}</b><span>${t('revoir_court')}</span></button></li>
       <li><a href="${lienModule('plus', 'a-propos')}"><b>${t('a_propos')}</b><span>${t('version')} ${VERSION}</span></a></li>
     </ul>`;
+  el.querySelector('#revoir').addEventListener('click', () => reglages.revoirPresentation());
   el.querySelectorAll('[data-reglage]').forEach(bt => bt.addEventListener('click', () => {
     reglages.changer(bt.dataset.reglage, bt.dataset.valeur);
   }));

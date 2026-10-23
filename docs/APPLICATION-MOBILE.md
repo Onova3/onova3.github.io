@@ -20,7 +20,7 @@ La barre d'onglets (en bas sur téléphone, à gauche à partir de 900 px de lar
 | **Plus** | Réglages : langue, thème, taille du texte | `#/plus` | Fait |
 | | Sources et limites, date des barèmes | `#/sources` | Fait |
 | | À propos, numéro de version | `#/plus/a-propos` | Fait |
-| | Revoir la présentation | — | Étape 2 |
+| | Revoir la présentation | bouton dans `#/plus` | Fait |
 | | Signaler une erreur | — | Étape 4 |
 | | Conditions d'utilisation, Confidentialité | — | Étape 5 |
 
@@ -39,11 +39,11 @@ La barre d'onglets (en bas sur téléphone, à gauche à partir de 900 px de lar
 - **Taille du texte** : Normale (100 %), Grande (112,5 %), Très grande (125 %) ; toutes les polices sont en `rem` et suivent ce réglage.
 - **Version** : `src/version.js`, identique dans `package.json` et `sw.js` (vérifié par un test).
 
-## 4. Premier lancement (étape 2)
+## 4. Premier lancement (fait)
 
 Affiché une seule fois, mémorisé par `src/stockage.js` :
 
-1. Écran de démarrage avec le logo, le temps du chargement seulement.
+1. Écran de démarrage avec le logo, le temps du chargement seulement (affiché à chaque ouverture tant que les données se chargent).
 2. Choix de la langue.
 3. Trois écrans de présentation à faire défiler, avec « Passer » : calculer ses impôts ; comprendre le Code avec ses articles ; utiliser l'application hors connexion.
 4. Avertissement « Outil pédagogique, pas un avis fiscal », à accepter.

@@ -685,3 +685,29 @@ test('Textes : chaque clé existe en français, anglais et malgache', () => {
   const [fr, en, mg] = ['fr', 'en', 'mg'].map(l => lire(`src/i18n/${l}.json`));
   for (const k of Object.keys(fr)) assert.ok(k in en && k in mg, k);
 });
+
+// --- Application mobile, étape 2 : premier lancement ---
+import { doitAfficher, avancer, marquerAccepte, DIAPOSITIVES, VERSION_AVERTISSEMENT, CLE as CLE_BIENVENUE } from '../src/bienvenue.js';
+test('Premier lancement : affiché tant que l’avertissement en vigueur n’est pas accepté', () => {
+  assert.equal(doitAfficher(null), true);
+  assert.equal(doitAfficher({}), true);
+  assert.equal(doitAfficher({ accepte: VERSION_AVERTISSEMENT - 1 }), true);
+  assert.equal(doitAfficher(marquerAccepte('2026-10-23')), false);
+  const s = creerStockage(faux());
+  s.ecrireJSON(CLE_BIENVENUE, marquerAccepte('2026-10-23'));
+  assert.equal(doitAfficher(s.lireJSON(CLE_BIENVENUE, null)), false);
+});
+test('Premier lancement : langue → 3 diapositives → avertissement → fin', () => {
+  let e = { etape: 'langue', diapo: 0 };
+  e = avancer(e, 'suivant');
+  assert.deepEqual(e, { etape: 'presentation', diapo: 0 });
+  for (let i = 1; i < DIAPOSITIVES.length; i++) { e = avancer(e, 'suivant'); assert.equal(e.diapo, i); }
+  e = avancer(e, 'suivant');
+  assert.equal(e.etape, 'avertissement');
+  assert.equal(avancer(e, 'suivant').etape, 'avertissement', 'il faut accepter');
+  assert.equal(avancer(e, 'accepter').etape, 'fin');
+  assert.equal(DIAPOSITIVES.length, 3);
+});
+test('Premier lancement : « Passer » mène à l’avertissement, jamais à la fin', () => {
+  assert.equal(avancer({ etape: 'presentation', diapo: 0 }, 'passer').etape, 'avertissement');
+});
