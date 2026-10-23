@@ -9,11 +9,11 @@ const LANGUES = ['fr', 'en', 'mg'];
 const CATEGORIES = ['revenus', 'enregistrement', 'consommation', 'local'];
 const json = async u => (await fetch(u)).json();
 
-const [inventaire, b, obligations, donneesProfils, donneesGuides, ...textes] = await Promise.all([
-  json('data/impots.json'), json('data/baremes-2026.json'), json('data/obligations.json'), json('data/profils.json'), json('data/guides.json'),
+const [inventaire, b, obligations, donneesProfils, donneesGuides, donneesQuiz, ...textes] = await Promise.all([
+  json('data/impots.json'), json('data/baremes-2026.json'), json('data/obligations.json'), json('data/profils.json'), json('data/guides.json'), json('data/quiz.json'),
   ...LANGUES.map(l => json(`src/i18n/${l}.json`)),
 ]);
-const impots = inventaire.impots, profils = donneesProfils.profils, guides = donneesGuides.guides;
+const impots = inventaire.impots, profils = donneesProfils.profils, guides = donneesGuides.guides, quiz = donneesQuiz.chapitres;
 const TEXTES = Object.fromEntries(LANGUES.map((l, i) => [l, textes[i]]));
 try { const l = localStorage.getItem('kh-lang'); if (LANGUES.includes(l)) etat.lang = l; } catch {}
 
@@ -30,7 +30,9 @@ function accueil() {
     <section><h2>${t('outils')}</h2>
       <div class="profils"><a class="profil" href="${lienModule('calendrier')}"><b>${t('module_calendrier')}</b><span>${t('calendrier_court')}</span></a>
         <a class="profil" href="${lienModule('sanctions')}"><b>${t('module_sanctions')}</b><span>${t('sanctions_court')}</span></a>
-        <a class="profil" href="${lienModule('guides')}"><b>${t('module_guides')}</b><span>${t('guides_court')}</span></a></div></section>
+        <a class="profil" href="${lienModule('guides')}"><b>${t('module_guides')}</b><span>${t('guides_court')}</span></a>
+        <a class="profil" href="${lienModule('quiz')}"><b>${t('module_quiz')}</b><span>${t('quiz_court')}</span></a>
+        <a class="profil" href="${lienModule('sources')}"><b>${t('module_sources')}</b><span>${t('sources_court')}</span></a></div></section>
     <div id="liste"></div>`;
   const q = contenu.querySelector('#q');
   q.addEventListener('input', () => { recherche = q.value; liste(); });
@@ -68,7 +70,7 @@ function afficher() {
     rendreFiche(contenu, { fiche: FICHES[r.id], impot, onglet: r.onglet, b, obligations });
     document.title = `${impot.sigle} · Kajy Hetra`;
   } else if (r.page === 'module' && MODULES_ECRANS[r.id]) {
-    MODULES_ECRANS[r.id].monter(contenu, { impots, obligations, profils, guides, b, sous: r.sous });
+    MODULES_ECRANS[r.id].monter(contenu, { impots, obligations, profils, guides, quiz, b, sous: r.sous });
     document.title = `${t('module_' + r.id)} · Kajy Hetra`;
   } else if (r.page === 'fiche') {
     contenu.innerHTML = `<a class="retour" href="#/">${t('retour')}</a><p class="lead">${t('introuvable')}</p>`;

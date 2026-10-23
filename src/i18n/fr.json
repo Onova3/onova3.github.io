@@ -68,5 +68,9 @@
   "sanctions_court": "Retards, amendes, fraude, taxation d'office",
   "voir_sanctions": "Toutes les amendes et un simulateur →",
   "module_guides": "Guides pas à pas",
-  "guides_court": "S'immatriculer, payer, délais et prescription"
+  "guides_court": "S'immatriculer, payer, délais et prescription",
+  "module_quiz": "Quiz de révision",
+  "quiz_court": "Testez vos connaissances, chapitre par chapitre",
+  "module_sources": "Sources et limites",
+  "sources_court": "Textes utilisés, date de mise à jour, limites"
 }

@@ -84,12 +84,13 @@ Phase 4. Beaucoup de taux sont votés par chaque commune dans une fourchette lé
 | Calendrier fiscal | Toutes les échéances, filtrables par impôt et par profil (salarié, IS, réel) | CPF Titre I |
 | Sanctions | Pénalités de retard, amendes de défaut de dépôt, amendes pour inexactitude, taxation d'office | CDI Livre III Titre I (art. 20.01.52 et suivants), CPF Titre V Chap. IV |
 | Immatriculation | NIF, carte fiscale, cessation, mise en veilleuse | CPF Titre I, ST I |
-| Droit de communication | Qui déclare quoi, délais (30 jours depuis la LFR 2026) | CPF Titre IV |
+| Droit de communication | Qui déclare quoi, délais (10 jours dans le CPF 2026 ; 30 jours selon la LFR 2026, à confirmer : point 106) | CPF Titre IV |
 | Contrôle fiscal | Contrôle sur pièces, vérification sur place, droits du contribuable | CPF Titre V |
 | Réclamer | Procédure gracieuse, contentieux d'assiette, Commission fiscale, délais | CPF Titre VI |
 | Payer | Avis d'imposition, déclaration spontanée, sursis de paiement, arrondi à la centaine | CPF Titres VII et VIII |
 | Prescription | Délais de reprise par impôt | CPF Titre IX Chap. I |
-| Quiz | Questions par chapitre, pour réviser | Tous |
+| Quiz | Questions par chapitre, pour réviser ; chaque chiffre est relié au barème par un test (`data/quiz.json`) | Tous |
+| Sources | Textes utilisés, date de mise à jour des barèmes, limites (`#/sources`) | — |
 
 ### 4.4 Livre IV et annexes (phase 6)
 
@@ -215,5 +216,5 @@ Points relevés pendant la phase 4 :
 | 2 | Enregistrement, timbre, assurance, véhicules, TVA (n° 8 à 12) | Terminée le 22 octobre 2026 : 5 fiches, 64 tests au total, points « À vérifier » 30 à 50 |
 | 3 | Impôts indirects (n° 13 à 16) | Terminée le 22 octobre 2026 : 4 fiches, 72 tests au total, points « À vérifier » 51 à 63 |
 | 4 | Impôts locaux (n° 17 à 29) | Terminée le 23 octobre 2026 : 13 fiches, 89 tests au total, points « À vérifier » 64 à 89 ; les 29 impôts ont leur fiche |
-| 5 | Modules CPF transversaux | |
+| 5 | Modules CPF transversaux | Terminée le 23 octobre 2026 : calendrier par profil, sanctions, 6 guides, quiz (14 questions reliées au barème), écran Sources ; 105 tests au total, points « À vérifier » 90 à 109 |
 | 6 | Régimes spécifiques et conventions | |

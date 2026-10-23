@@ -117,3 +117,8 @@ ol.etapes{list-style:none;counter-reset:etape;margin:0;padding:0;display:flex;fl
 ol.etapes li{counter-increment:etape;position:relative;padding-left:58px}
 ol.etapes li::before{content:counter(etape);position:absolute;left:18px;top:18px;width:28px;height:28px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font:600 14px var(--mono)}
 ol.etapes p{margin:0}
+.quiz-choix{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+.quiz-choix .chip{border:1px solid var(--line,transparent);cursor:pointer;min-height:40px;padding:8px 14px}
+.quiz-choix .chip:disabled{cursor:default;opacity:.7}
+.quiz-choix .chip.bon{background:var(--accent);color:var(--accent-ink);opacity:1}
+.quiz-choix .chip.mauvais{text-decoration:line-through;opacity:1}

@@ -1,6 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
+import { corriger, lireChemin } from '../src/quiz.js';
 import { calculIRSA, calculIRSASpecial } from '../src/calc/irsa.js';
 import { calculIS, acompteDebutActivite } from '../src/calc/is.js';
 import { calculIR } from '../src/calc/ir.js';
@@ -565,4 +566,29 @@ test('Interface : les trois fichiers de langue ont les mêmes clés', () => {
   const [fr, en, mg] = LANGUES.map(l => Object.keys(lire(`src/i18n/${l}.json`)).sort());
   assert.deepEqual(en, fr);
   assert.deepEqual(mg, fr);
+});
+
+// --- Quiz et Sources (phase 5, étape 5) ---
+const quiz = lire('data/quiz.json').chapitres;
+test('Quiz : chaque question en trois langues, avec article et bonne réponse valide', () => {
+  assert.ok(quiz.length >= 4);
+  for (const c of quiz) {
+    assert.ok(trilingue(c.titre), c.id);
+    for (const q of c.questions) {
+      assert.ok(q.article && trilingue(q.question) && trilingue(q.explication), c.id);
+      assert.ok(q.choix.length >= 2 && q.bonne >= 0 && q.bonne < q.choix.length, c.id);
+      for (const ch of q.choix) assert.ok(typeof ch === 'string' || trilingue(ch), c.id);
+    }
+  }
+});
+test('Quiz : les chiffres des bonnes réponses correspondent au barème', () => {
+  const avecVerif = quiz.flatMap(c => c.questions).filter(q => q.verif);
+  assert.ok(avecVerif.length >= 8);
+  for (const q of avecVerif) assert.equal(lireChemin(b, q.verif.chemin), q.verif.valeur, q.verif.chemin);
+});
+test('Quiz : correction (2 bonnes sur 3 répondues)', () => {
+  const qs = [{ bonne: 0 }, { bonne: 1 }, { bonne: 2 }, { bonne: 0 }];
+  assert.deepEqual(corriger(qs, [0, 1, 0, null]), { bonnes: 2, repondues: 3, total: 4 });
+  assert.deepEqual(lireRoute('#/quiz/tva'), { page: 'module', id: 'quiz', sous: 'tva' });
+  assert.deepEqual(lireRoute('#/sources'), { page: 'module', id: 'sources', sous: null });
 });

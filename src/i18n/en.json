@@ -68,5 +68,9 @@
   "sanctions_court": "Late payment, fines, fraud, default assessment",
   "voir_sanctions": "All fines and a simulator →",
   "module_guides": "Step-by-step guides",
-  "guides_court": "Registering, paying, time limits"
+  "guides_court": "Registering, paying, time limits",
+  "module_quiz": "Revision quiz",
+  "quiz_court": "Test your knowledge, chapter by chapter",
+  "module_sources": "Sources and limits",
+  "sources_court": "Texts used, update date, limits"
 }

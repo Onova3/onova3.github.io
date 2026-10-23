@@ -1,0 +1,394 @@
+{
+  "chapitres": [
+    {
+      "id": "revenus",
+      "titre": {
+        "fr": "Impôts sur les revenus",
+        "en": "Income taxes",
+        "mg": "Hetra amin’ny fidiram-bola"
+      },
+      "questions": [
+        {
+          "article": "CDI 01.03.16",
+          "question": {
+            "fr": "Jusqu’à quel salaire mensuel imposable l’IRSA est-il à 0 % ?",
+            "en": "Up to what monthly taxable salary is IRSA at 0%?",
+            "mg": "Hatramin'ny karama isam-bolana hoatrinona no 0 % ny IRSA?"
+          },
+          "choix": [
+            "250 000 Ar",
+            "350 000 Ar",
+            "500 000 Ar"
+          ],
+          "bonne": 1,
+          "explication": {
+            "fr": "La première tranche du barème, jusqu’à 350 000 Ar, est taxée à 0 %.",
+            "en": "The first band, up to 350,000 Ar, is taxed at 0%.",
+            "mg": "0 % ny sokajy voalohany, hatramin'ny 350 000 Ar."
+          },
+          "verif": {
+            "chemin": "irsa.tranches.0.a",
+            "valeur": 350000
+          }
+        },
+        {
+          "article": "CDI 01.03.16",
+          "question": {
+            "fr": "Quel est le minimum d’IRSA à payer par mois ?",
+            "en": "What is the minimum monthly IRSA?",
+            "mg": "Hoatrinona ny IRSA farafahakeliny isam-bolana?"
+          },
+          "choix": [
+            "2 000 Ar",
+            "3 000 Ar",
+            "10 000 Ar"
+          ],
+          "bonne": 1,
+          "explication": {
+            "fr": "Au-delà de la première tranche, l’IRSA ne peut pas être inférieur à 3 000 Ar.",
+            "en": "Above the first band, IRSA cannot be less than 3,000 Ar.",
+            "mg": "Mihoatra ny sokajy voalohany, tsy latsaky ny 3 000 Ar ny IRSA."
+          },
+          "verif": {
+            "chemin": "irsa.minimum",
+            "valeur": 3000
+          }
+        },
+        {
+          "article": "CDI 01.02.02",
+          "question": {
+            "fr": "En dessous de quel chiffre d’affaires annuel relève-t-on de l’impôt synthétique ?",
+            "en": "Below what annual turnover does the synthetic tax apply?",
+            "mg": "Ambanin'ny tondrom-barotra hoatrinona no mihatra ny IS?"
+          },
+          "choix": [
+            "200 M Ar",
+            "400 M Ar",
+            "1 Md Ar"
+          ],
+          "bonne": 1,
+          "explication": {
+            "fr": "L’impôt synthétique concerne les entreprises dont le chiffre d’affaires est inférieur à 400 millions d’Ar.",
+            "en": "The synthetic tax covers businesses with turnover below 400 million Ar.",
+            "mg": "Ho an'ny orinasa manana tondrom-barotra latsaky ny 400 tapitrisa Ar ny IS."
+          },
+          "verif": {
+            "chemin": "impotSynthetique.seuilCA",
+            "valeur": 400000000
+          }
+        },
+        {
+          "article": "CDI 01.04.04",
+          "question": {
+            "fr": "Quel abattement s’applique aux dividendes pour l’IRCM ?",
+            "en": "What allowance applies to dividends for IRCM?",
+            "mg": "Inona no fanalana mihatra amin'ny tombom-barotra zaraina ho an'ny IRCM?"
+          },
+          "choix": [
+            "20 %",
+            "50 %",
+            "0 %"
+          ],
+          "bonne": 1,
+          "explication": {
+            "fr": "Les dividendes ne sont imposés que sur la moitié de leur montant.",
+            "en": "Dividends are taxed on only half of their amount.",
+            "mg": "Ny antsasany ihany no iharan'ny hetra."
+          },
+          "verif": {
+            "chemin": "ircm.abattementDividendes",
+            "valeur": 0.5
+          }
+        }
+      ]
+    },
+    {
+      "id": "tva",
+      "titre": {
+        "fr": "TVA",
+        "en": "VAT",
+        "mg": "TVA"
+      },
+      "questions": [
+        {
+          "article": "CDI 06.01.12",
+          "question": {
+            "fr": "Quel est le taux normal de la TVA ?",
+            "en": "What is the standard VAT rate?",
+            "mg": "Hoatrinona ny tahan'ny TVA mahazatra?"
+          },
+          "choix": [
+            "5 %",
+            "18 %",
+            "20 %"
+          ],
+          "bonne": 2,
+          "explication": {
+            "fr": "Le taux normal est de 20 %.",
+            "en": "The standard rate is 20%.",
+            "mg": "20 % ny taha mahazatra."
+          },
+          "verif": {
+            "chemin": "tva.tauxNormal",
+            "valeur": 0.2
+          }
+        },
+        {
+          "article": "CDI 06.01.12",
+          "question": {
+            "fr": "Quel est le taux de TVA sur les exportations ?",
+            "en": "What is the VAT rate on exports?",
+            "mg": "Hoatrinona ny TVA amin'ny entana aondrana?"
+          },
+          "choix": [
+            "0 %",
+            "5 %",
+            "20 %"
+          ],
+          "bonne": 0,
+          "explication": {
+            "fr": "Les exportations sont taxées à 0 % : la TVA payée sur les achats peut être récupérée.",
+            "en": "Exports are taxed at 0%: VAT paid on purchases can be recovered.",
+            "mg": "0 % ny entana aondrana: azo averina ny TVA naloa tamin'ny fividianana."
+          },
+          "verif": {
+            "chemin": "tva.tauxExport",
+            "valeur": 0
+          }
+        },
+        {
+          "article": "CDI 06.01.04",
+          "question": {
+            "fr": "À partir de quel chiffre d’affaires la TVA est-elle obligatoire ?",
+            "en": "From what turnover is VAT compulsory?",
+            "mg": "Manomboka amin'ny tondrom-barotra hoatrinona no tsy maintsy misy TVA?"
+          },
+          "choix": [
+            "100 M Ar",
+            "200 M Ar",
+            "400 M Ar"
+          ],
+          "bonne": 2,
+          "explication": {
+            "fr": "La TVA est obligatoire à partir de 400 millions d’Ar ; on peut opter dès 200 millions.",
+            "en": "VAT is compulsory from 400 million Ar; you can opt in from 200 million.",
+            "mg": "Tsy maintsy misy TVA manomboka amin'ny 400 tapitrisa Ar; azo safidiana manomboka amin'ny 200 tapitrisa."
+          },
+          "verif": {
+            "chemin": "tva.seuilObligatoire",
+            "valeur": 400000000
+          }
+        }
+      ]
+    },
+    {
+      "id": "sanctions",
+      "titre": {
+        "fr": "Retards et sanctions",
+        "en": "Late payment and penalties",
+        "mg": "Fahatarana sy sazy"
+      },
+      "questions": [
+        {
+          "article": "CDI 20.01.53",
+          "question": {
+            "fr": "Quel est le minimum des pénalités de retard, par impôt et par période ?",
+            "en": "What is the minimum late-payment penalty, per tax and per period?",
+            "mg": "Hoatrinona ny sazy noho ny fahatarana farafahakeliny?"
+          },
+          "choix": [
+            "2 000 Ar",
+            "10 000 Ar",
+            "50 000 Ar"
+          ],
+          "bonne": 1,
+          "explication": {
+            "fr": "Les pénalités de retard ne peuvent pas être inférieures à 10 000 Ar par impôt et par période.",
+            "en": "Late-payment penalties cannot be less than 10,000 Ar per tax and per period.",
+            "mg": "Tsy latsaky ny 10 000 Ar isaky ny hetra sy vanim-potoana ny sazy."
+          },
+          "verif": {
+            "chemin": "penalites.minimumRetard",
+            "valeur": 10000
+          }
+        },
+        {
+          "article": "CDI 20.01.53",
+          "question": {
+            "fr": "Après le premier mois, combien de pénalité s’ajoute par mois de retard ?",
+            "en": "After the first month, how much penalty is added per month late?",
+            "mg": "Aorian'ny volana voalohany, firy isan-jato isam-bolana?"
+          },
+          "choix": [
+            "1 %",
+            "3 %",
+            "5 %"
+          ],
+          "bonne": 0,
+          "explication": {
+            "fr": "Chaque mois de retard supplémentaire ajoute 1 %.",
+            "en": "Each further month late adds 1%.",
+            "mg": "1 % isaky ny volana fanampiny."
+          },
+          "verif": {
+            "chemin": "penalites.retard.0.moisSuivants",
+            "valeur": 0.01
+          }
+        },
+        {
+          "article": "CDI 20.01.54",
+          "question": {
+            "fr": "Quelle amende en cas d’opposition au contrôle fiscal ?",
+            "en": "What fine for obstructing a tax audit?",
+            "mg": "Onitra hoatrinona raha manohitra ny fanaraha-maso?"
+          },
+          "choix": [
+            "40 %",
+            "80 %",
+            "150 %"
+          ],
+          "bonne": 2,
+          "explication": {
+            "fr": "L’amende est de 150 % de la base des éléments que possède l’administration.",
+            "en": "The fine is 150% of the base of the information held by the tax office.",
+            "mg": "150 % amin'ny fototra fantatry ny fitondrana ny onitra."
+          }
+        }
+      ]
+    },
+    {
+      "id": "procedures",
+      "titre": {
+        "fr": "Procédures fiscales",
+        "en": "Tax procedures",
+        "mg": "Fomba fiasa ara-ketra"
+      },
+      "questions": [
+        {
+          "article": "CPF IX-02",
+          "question": {
+            "fr": "Pendant combien d’années, en général, l’administration peut-elle revenir sur un impôt ?",
+            "en": "For how many years, in general, can the tax office go back on a tax?",
+            "mg": "Firy taona amin'ny ankapobeny no afaka miverina amin'ny hetra ny fitondrana?"
+          },
+          "choix": [
+            {
+              "fr": "3 ans",
+              "en": "3 years",
+              "mg": "3 taona"
+            },
+            {
+              "fr": "5 ans",
+              "en": "5 years",
+              "mg": "5 taona"
+            },
+            {
+              "fr": "10 ans",
+              "en": "10 years",
+              "mg": "10 taona"
+            }
+          ],
+          "bonne": 0,
+          "explication": {
+            "fr": "Le délai de reprise général est de 3 ans ; il passe à 10 ans dans certains cas (succession non déclarée, flux illicites).",
+            "en": "The general period is 3 years; it rises to 10 years in some cases (undeclared estate, illicit flows).",
+            "mg": "3 taona ny fe-potoana mahazatra; 10 taona amin'ny tranga sasany."
+          }
+        },
+        {
+          "article": "CPF VI-15",
+          "question": {
+            "fr": "Combien de temps pour réclamer contre un impôt d’État après la notification définitive ?",
+            "en": "How long to dispute a State tax after the final notice?",
+            "mg": "Firy andro no hitarainana aorian'ny fampandrenesana farany?"
+          },
+          "choix": [
+            {
+              "fr": "15 jours",
+              "en": "15 days",
+              "mg": "15 andro"
+            },
+            {
+              "fr": "30 jours",
+              "en": "30 days",
+              "mg": "30 andro"
+            },
+            {
+              "fr": "90 jours",
+              "en": "90 days",
+              "mg": "90 andro"
+            }
+          ],
+          "bonne": 1,
+          "explication": {
+            "fr": "30 jours pour les impôts d’État ; 90 jours après l’avis d’imposition pour les impôts locaux.",
+            "en": "30 days for State taxes; 90 days after the tax notice for local taxes.",
+            "mg": "30 andro ho an'ny hetram-panjakana; 90 andro ho an'ny hetra ifotony."
+          }
+        },
+        {
+          "article": "CPF V-04",
+          "question": {
+            "fr": "Combien de temps pour répondre à une notification primitive ?",
+            "en": "How long to reply to an initial notice?",
+            "mg": "Firy andro no hamaliana ny fampandrenesana voalohany?"
+          },
+          "choix": [
+            {
+              "fr": "8 jours",
+              "en": "8 days",
+              "mg": "8 andro"
+            },
+            {
+              "fr": "15 jours",
+              "en": "15 days",
+              "mg": "15 andro"
+            },
+            {
+              "fr": "30 jours",
+              "en": "30 days",
+              "mg": "30 andro"
+            }
+          ],
+          "bonne": 2,
+          "explication": {
+            "fr": "Le contribuable a 30 jours pour accepter ou présenter ses observations.",
+            "en": "The taxpayer has 30 days to accept or reply.",
+            "mg": "30 andro no anananao hanekena na hamaliana."
+          }
+        },
+        {
+          "article": "CPF IV-10",
+          "question": {
+            "fr": "Avant quelle date dépose-t-on la déclaration annuelle de communication ?",
+            "en": "By what date is the annual information statement filed?",
+            "mg": "Alohan'ny daty inona no apetraka ny fanambarana isan-taona?"
+          },
+          "choix": [
+            {
+              "fr": "31 mars",
+              "en": "31 March",
+              "mg": "31 marsa"
+            },
+            {
+              "fr": "30 juin",
+              "en": "30 June",
+              "mg": "30 jona"
+            },
+            {
+              "fr": "31 décembre",
+              "en": "31 December",
+              "mg": "31 desambra"
+            }
+          ],
+          "bonne": 1,
+          "explication": {
+            "fr": "Avant le 30 juin, en ligne, pour l’année civile précédente.",
+            "en": "Before 30 June, online, for the previous calendar year.",
+            "mg": "Alohan'ny 30 jona, an-tserasera, ho an'ny taona lasa."
+          }
+        }
+      ]
+    }
+  ]
+}

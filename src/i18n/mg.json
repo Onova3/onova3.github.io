@@ -68,5 +68,9 @@
   "sanctions_court": "Fahatarana, onitra, hosoka, hetra napetraky ny fitondrana",
   "voir_sanctions": "Ny onitra rehetra sy fitaovana fanaovana tombana →",
   "module_guides": "Torolalana tsikelikely",
-  "guides_court": "Fisoratana, fandoavana, fe-potoana"
+  "guides_court": "Fisoratana, fandoavana, fe-potoana",
+  "module_quiz": "Fanontaniana famerenana",
+  "quiz_court": "Andramo ny fahalalanao isaky ny toko",
+  "module_sources": "Loharano sy fetra",
+  "sources_court": "Lahatsoratra, daty fanavaozana, fetra"
 }
