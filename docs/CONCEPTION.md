@@ -1,6 +1,6 @@
 # Kajy Hetra — Dossier de conception
 
-Version 0.4 · 22 octobre 2026 (fin de la phase 3)
+Version 0.5 · 23 octobre 2026 (fin de la phase 4 : les 29 impôts ont leur fiche)
 
 ## 1. Le produit en une phrase
 
@@ -61,21 +61,21 @@ Règle : un taux, un seuil ou un délai n'entre dans l'application **que s'il es
 
 | # | Impôt | Code des impôts | Code des procédures fiscales | Outil prévu |
 |---|---|---|---|---|
-| 17 | Impôt foncier sur les terrains (IFT) | Titre I | Chap. XII | Calculateur |
-| 18 | Impôt foncier sur la propriété bâtie (IFPB) | Titre II | Chap. XIII | Calculateur |
-| 19 | Taxe de protection civile | Titre III | Chap. XIV | Fiche |
-| 20 | Taxe de résidence pour le développement | Titre IV | Chap. XV | Fiche |
-| 21 | Taxe de séjour | Titre V | Chap. XVI | Calculateur |
-| 22 | Impôt de licence (alcools et autres) | Titre VI | Titre III | Fiche |
-| 23 | Taxe annuelle sur les appareils automatiques | Titre VII | Chap. XVII | Fiche |
-| 24 | Taxe sur les eaux minérales | Titre VIII | Chap. XVIII | Fiche |
-| 25 | Taxe sur la publicité | Titre IX | Chap. XIX | Fiche |
-| 26 | Taxe sur l'eau et/ou l'électricité | Titre X | — | Fiche |
-| 27 | Taxe sur les fêtes, spectacles et manifestations | Titre XI | Chap. XX | Fiche |
-| 28 | Taxe sur les pylônes, relais, antennes ou mâts | Titre XII | Chap. XXI | Fiche |
-| 29 | Taxe sur les jeux radiotélévisés | Titre XIII | — | Fiche |
+| 17 | Impôt foncier sur les terrains (IFT) | Titre I | Chap. XII | 6 catégories ; tarif par hectare voté, 1 % en catégorie 6, minimum 2 000 Ar (fait) |
+| 18 | Impôt foncier sur la propriété bâtie (IFPB) | Titre II | Chap. XIII | Valeur locative selon l’usage, 5 %, minimum 5 000 Ar (fait) |
+| 19 | Taxe de protection civile | Titre III | Chap. XIV | Calcul : chiens, animaux, armes blanches ; tarifs plafonnés, forfait professionnel (fait) |
+| 20 | Taxe de résidence pour le développement | Titre IV | Chap. XV | Calcul : tarif plafonné à 5 000 Ar, demi-tarif (fait) |
+| 21 | Taxe de séjour | Titre V | Chap. XVI | Calcul par nuitée, plafonds par catégorie (fait) |
+| 22 | Impôt de licence (alcools et autres) | Titre VI | Titre III | Calcul : alcool (fourchette par catégorie de commune), foraine, nuit, tombola (fait) |
+| 23 | Taxe annuelle sur les appareils automatiques | Titre VII | Chap. XVII | Calcul, demi-tarif au second semestre (fait) |
+| 24 | Taxe sur les eaux minérales | Titre VIII | Chap. XVIII | Calcul au litre, plafond 20 Ar (fait) |
+| 25 | Taxe sur la publicité | Titre IX | Chap. XIX | Calcul : affiches, panneaux, audiovisuel et presse (fait) |
+| 26 | Taxe sur l'eau et/ou l'électricité | Titre X | — (CDI 10.10.05) | Calcul : 10 % de la facture HT (fait) |
+| 27 | Taxe sur les fêtes, spectacles et manifestations | Titre XI | Chap. XX | Calcul : 5 % des places ou 3 % des recettes, cautionnement (fait) |
+| 28 | Taxe sur les pylônes, relais, antennes ou mâts | Titre XII | Chap. XXI | Calcul : tarifs plafonnés par pylône et antenne (fait) |
+| 29 | Taxe sur les jeux radiotélévisés | Titre XIII | — (CDI 10.13.04, 10.13.05) | Calcul par SMS et par appel (fait) |
 
-Phase 4. Beaucoup de taux sont votés par chaque commune dans une fourchette légale : l'outil affiche la fourchette et laisse saisir le taux local.
+Phase 4. Beaucoup de taux sont votés par chaque commune dans une fourchette légale ou sous un plafond. Le champ commun `champCommunal` (`src/ui.js`) affiche la règle du Code et son article, pré-remplit une valeur marquée « exemple », et prévient si la saisie sort des limites (testé sous un minimum et au-dessus d'un maximum). Le site ne contient aucun taux propre à une commune. Les fiches locales (`impotLocal: true`) utilisent la pénalité de retard du Livre II : 1 % par mois (art. 20.01.53.4).
 
 ### 4.3 Livre III et Code des procédures fiscales · Modules transversaux (phase 5)
 
@@ -197,6 +197,15 @@ Points relevés pendant la phase 3 :
 
 Les données extraites automatiquement d’un texte (tableau des accises) passent par un script relançable, qui signale les lignes illisibles au lieu de les deviner ; chaque correction manuelle y est écrite avec sa raison.
 
+Points relevés pendant la phase 4 :
+
+| Point | Constat |
+|---|---|
+| Plafonds et fourchettes | La plupart des montants du Livre II sont des **maxima** votés par la commune ; seules la licence d'alcool (fourchette) et la licence foraine (minimum) ont un plancher |
+| Pénalité des impôts locaux | Taux unique de 1 % par mois (art. 20.01.53.4), au lieu du barème par chiffre d'affaires |
+| Autres licences (foires, billards…) | Plafonds exprimés en % d'un « minimum de l'impôt synthétique » sans montant dans le Code : non calculables |
+| Deux taxes sans chapitre CPF | Eau et électricité, jeux radiotélévisés : obligations tirées du CDI |
+
 ## 9. Phases
 
 | Phase | Contenu | Livrable |
@@ -205,6 +214,6 @@ Les données extraites automatiquement d’un texte (tableau des accises) passen
 | 1 | Impôts sur les revenus (n° 1 à 7) + accueil + gabarit de fiche | Terminée le 22 octobre 2026 : 7 fiches, 45 tests ; reste la relecture du malgache et des points « À vérifier » avant la première mise en ligne |
 | 2 | Enregistrement, timbre, assurance, véhicules, TVA (n° 8 à 12) | Terminée le 22 octobre 2026 : 5 fiches, 64 tests au total, points « À vérifier » 30 à 50 |
 | 3 | Impôts indirects (n° 13 à 16) | Terminée le 22 octobre 2026 : 4 fiches, 72 tests au total, points « À vérifier » 51 à 63 |
-| 4 | Impôts locaux (n° 17 à 29) | |
+| 4 | Impôts locaux (n° 17 à 29) | Terminée le 23 octobre 2026 : 13 fiches, 89 tests au total, points « À vérifier » 64 à 89 ; les 29 impôts ont leur fiche |
 | 5 | Modules CPF transversaux | |
 | 6 | Régimes spécifiques et conventions | |

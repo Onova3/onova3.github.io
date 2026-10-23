@@ -284,11 +284,11 @@
       },
       "livre": "II",
       "refCDI": "Titre I",
-      "refCPF": "Chap. XII",
+      "refCPF": "Titre I, ST II, Chap. XII",
       "categorie": "local",
       "phase": 4,
-      "calculateur": null,
-      "statut": "a-faire"
+      "calculateur": "calculIFT",
+      "statut": "verifie"
     },
     {
       "numero": 18,
@@ -301,11 +301,11 @@
       },
       "livre": "II",
       "refCDI": "Titre II",
-      "refCPF": "Chap. XIII",
+      "refCPF": "Titre I, ST II, Chap. XIII",
       "categorie": "local",
       "phase": 4,
-      "calculateur": null,
-      "statut": "a-faire"
+      "calculateur": "calculIFPB",
+      "statut": "verifie"
     },
     {
       "numero": 19,
@@ -318,11 +318,11 @@
       },
       "livre": "II",
       "refCDI": "Titre III",
-      "refCPF": "Chap. XIV",
+      "refCPF": "Titre I, ST II, Chap. XIV",
       "categorie": "local",
       "phase": 4,
-      "calculateur": null,
-      "statut": "a-faire"
+      "calculateur": "calculTPC",
+      "statut": "verifie"
     },
     {
       "numero": 20,
@@ -335,11 +335,11 @@
       },
       "livre": "II",
       "refCDI": "Titre IV",
-      "refCPF": "Chap. XV",
+      "refCPF": "Titre I, ST II, Chap. XV",
       "categorie": "local",
       "phase": 4,
-      "calculateur": null,
-      "statut": "a-faire"
+      "calculateur": "calculTRD",
+      "statut": "verifie"
     },
     {
       "numero": 21,
@@ -352,11 +352,11 @@
       },
       "livre": "II",
       "refCDI": "Titre V",
-      "refCPF": "Chap. XVI",
+      "refCPF": "Titre I, ST II, Chap. XVI",
       "categorie": "local",
       "phase": 4,
-      "calculateur": null,
-      "statut": "a-faire"
+      "calculateur": "calculSejour",
+      "statut": "verifie"
     },
     {
       "numero": 22,
@@ -372,8 +372,8 @@
       "refCPF": "Titre III",
       "categorie": "local",
       "phase": 4,
-      "calculateur": null,
-      "statut": "a-faire"
+      "calculateur": "calculLicence, calculLicenceForaine, calculLicenceNuit, calculLicenceTombola",
+      "statut": "verifie"
     },
     {
       "numero": 23,
@@ -386,11 +386,11 @@
       },
       "livre": "II",
       "refCDI": "Titre VII",
-      "refCPF": "Chap. XVII",
+      "refCPF": "Titre I, ST II, Chap. XVII",
       "categorie": "local",
       "phase": 4,
-      "calculateur": null,
-      "statut": "a-faire"
+      "calculateur": "calculAppareils",
+      "statut": "verifie"
     },
     {
       "numero": 24,
@@ -403,11 +403,11 @@
       },
       "livre": "II",
       "refCDI": "Titre VIII",
-      "refCPF": "Chap. XVIII",
+      "refCPF": "Titre I, ST II, Chap. XVIII",
       "categorie": "local",
       "phase": 4,
-      "calculateur": null,
-      "statut": "a-faire"
+      "calculateur": "calculEaux",
+      "statut": "verifie"
     },
     {
       "numero": 25,
@@ -420,11 +420,11 @@
       },
       "livre": "II",
       "refCDI": "Titre IX",
-      "refCPF": "Chap. XIX",
+      "refCPF": "Titre I, ST II, Chap. XIX",
       "categorie": "local",
       "phase": 4,
-      "calculateur": null,
-      "statut": "a-faire"
+      "calculateur": "calculAffiches, calculPanneaux, calculPubliciteMedia",
+      "statut": "verifie"
     },
     {
       "numero": 26,
@@ -440,8 +440,8 @@
       "refCPF": null,
       "categorie": "local",
       "phase": 4,
-      "calculateur": null,
-      "statut": "a-faire"
+      "calculateur": "calculEauElec",
+      "statut": "verifie"
     },
     {
       "numero": 27,
@@ -454,11 +454,11 @@
       },
       "livre": "II",
       "refCDI": "Titre XI",
-      "refCPF": "Chap. XX",
+      "refCPF": "Titre I, ST II, Chap. XX",
       "categorie": "local",
       "phase": 4,
-      "calculateur": null,
-      "statut": "a-faire"
+      "calculateur": "calculFetes",
+      "statut": "verifie"
     },
     {
       "numero": 28,
@@ -471,11 +471,11 @@
       },
       "livre": "II",
       "refCDI": "Titre XII",
-      "refCPF": "Chap. XXI",
+      "refCPF": "Titre I, ST II, Chap. XXI",
       "categorie": "local",
       "phase": 4,
-      "calculateur": null,
-      "statut": "a-faire"
+      "calculateur": "calculPylones",
+      "statut": "verifie"
     },
     {
       "numero": 29,
@@ -491,8 +491,8 @@
       "refCPF": null,
       "categorie": "local",
       "phase": 4,
-      "calculateur": null,
-      "statut": "a-faire"
+      "calculateur": "calculJeuxTv",
+      "statut": "verifie"
     }
   ]
 }
