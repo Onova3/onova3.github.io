@@ -113,3 +113,7 @@ ul.echeances{list-style:none;margin:0;padding:0;display:flex;flex-direction:colu
 .echeances li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:10px;align-items:start;border-bottom:1px dashed var(--line);padding-bottom:10px}
 .echeances .jour{font:600 22px/1 var(--mono);color:var(--stamp);text-align:center}
 .echeances .sigle{text-decoration:none}
+ol.etapes{list-style:none;counter-reset:etape;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+ol.etapes li{counter-increment:etape;position:relative;padding-left:58px}
+ol.etapes li::before{content:counter(etape);position:absolute;left:18px;top:18px;width:28px;height:28px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font:600 14px var(--mono)}
+ol.etapes p{margin:0}

@@ -160,7 +160,7 @@ Points que le texte des codes ne tranche pas clairement. L'application suit l'in
 
 | # | Point | Texte | Choix actuel de l'application |
 |---|---|---|---|
-| 90 | Échéance un samedi, un dimanche ou un jour férié : reportée au jour ouvré suivant ? | Aucune règle relevée dans le CPF | Date affichée telle quelle, avec une mention |
+| 90 | ~~Échéance un samedi, un dimanche ou un jour férié~~ **Résolu** | CPF VII-32 : prolongée au premier jour ouvrable suivant (relevé à l'étape 3 de la phase 5) | Date de principe affichée, avec la règle de report et son article |
 | 91 | IR : seul l'exercice clos le 31 décembre (15 mai) et celui clos le 30 juin (15 novembre) sont dans le calendrier | CPF I-11 | Les deux dates sont affichées pour le profil « entreprise au réel » |
 | 92 | IRSA par bimestre (employeurs à l'impôt synthétique) | CPF I-21 (point 5) | Absent du calendrier faute de date |
 | 93 | « 15 premiers jours du mois » et « au plus tard le 15 » | CPF I-21, I-103, etc. | Tous ramenés au 15 du mois |
@@ -176,3 +176,13 @@ Points que le texte des codes ne tranche pas clairement. L'application suit l'in
 | 98 | Sanctions pénales (emprisonnement de 6 mois à 3 ans, 5 ans en récidive) | CDI 20.01.56.5, 20.01.56.7 | Non reprises dans le module |
 | 99 | Amende d'IR intermittent (10 %) : seulement pour les personnes au minimum de perception ou exonérées | CDI 20.01.54.1, 4e alinéa | Condition non vérifiée par le simulateur |
 | 100 | Inexactitudes de l'annexe TVA (0,5 % des opérations) | CDI 20.01.56 | Non reprises (modalités fixées par texte réglementaire) |
+
+## Guides S'immatriculer, Payer, Délais et prescription (phase 5, étape 3)
+
+| # | Point | Texte | Choix actuel de l'application |
+|---|---|---|---|
+| 101 | Arrondi à la centaine inférieure : ajouté à l'article VII-32 par la LFR 2026, mais absent du texte du CPF 2026 du projet | `data/baremes-2026.json` (« CPF VII-32 (LFR 2026) ») | Repris dans le guide Payer avec la mention LFR 2026 ; à confirmer avec le texte de la LFR |
+| 102 | Seuil du virement obligatoire | CPF VII-32 : « seuil fixé par décision du Ministère » | Seuil non chiffré |
+| 103 | Prescription : point de départ « année au titre de laquelle l'impôt est dû » (IR) ou « année d'exigibilité » (TVA) | CPF IX-02, IX-05 | Le calculateur demande une seule année, à saisir selon le cas |
+| 104 | Durée de conservation des documents comptables hors impôt synthétique | CDI 01.02.07 (3 ans pour l'IS) ; pas d'article général relevé | Seuls l'IS (3 ans) et la TVA (délai de reprise) sont indiqués |
+| 105 | Délai de 30 jours d'opposition aux poursuites (impôts recouvrés par le Trésor) et de 15 jours (services fiscaux) | CPF VIII-01, VIII-05 | Seul le délai de 15 jours est affiché dans le guide Payer |

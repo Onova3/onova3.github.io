@@ -30,6 +30,7 @@ import { calculPylones } from '../src/calc/pylones.js';
 import { calculJeuxTv } from '../src/calc/jeuxTv.js';
 import { lireRoute, lien, lienModule } from '../src/routes.js';
 import { datesEcheance, ajouterMois, calendrier } from '../src/calendrier.js';
+import { finPrescription } from '../src/prescription.js';
 import { FICHES } from '../src/fiches/index.js';
 import { etat, fmt, tr } from '../src/ui.js';
 
@@ -496,6 +497,25 @@ test('Amendes : chaque amende a un article et un libellé de module', () => {
     assert.ok(a.fixe || (a.taux > 0 && a.base), a.id);
   }
   assert.deepEqual(lireRoute('#/sanctions'), { page: 'module', id: 'sanctions', sous: null });
+});
+
+// --- Guides et prescription (phase 5, étape 3) ---
+const guides = lire('data/guides.json').guides;
+test('Guides : trois guides complets, chaque texte en trois langues avec son article', () => {
+  assert.deepEqual(guides.map(g => g.id), ['immatriculation', 'payer', 'prescription']);
+  for (const g of guides) {
+    assert.ok(trilingue(g.titre) && trilingue(g.intro), g.id);
+    for (const e of g.etapes) { assert.ok(e.article && trilingue(e.titre) && trilingue(e.texte), `${g.id} étape`); }
+    for (const d of [...g.droits, ...g.sanctions]) assert.ok(d.article && trilingue(d.texte), `${g.id} droit`);
+    for (const d of g.delais) assert.ok(d.article && trilingue(d.duree) && trilingue(d.libelle), `${g.id} délai`);
+  }
+  assert.deepEqual(lireRoute('#/guides/payer'), { page: 'module', id: 'guides', sous: 'payer' });
+});
+test('Prescription : 3 ans en général, 10 ans pour une succession non déclarée', () => {
+  assert.equal(finPrescription('revenus', 2025), '2028-12-31');
+  assert.equal(finPrescription('tva', 2026), '2029-12-31');
+  assert.equal(finPrescription('successionNonDeclaree', '2024-05-10'), '2034-05-10');
+  assert.equal(finPrescription('fluxIllicites', 2020), '2030-12-31');
 });
 
 // --- Navigation ---
