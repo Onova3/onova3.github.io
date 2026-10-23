@@ -122,3 +122,46 @@ ol.etapes p{margin:0}
 .quiz-choix .chip:disabled{cursor:default;opacity:.7}
 .quiz-choix .chip.bon{background:var(--accent);color:var(--accent-ink);opacity:1}
 .quiz-choix .chip.mauvais{text-decoration:line-through;opacity:1}
+
+/* Application mobile : barre d'onglets en bas, cibles tactiles de 44 px, zones sûres (encoche, barre de geste). */
+html{-webkit-text-size-adjust:100%;scroll-padding-top:12px}
+body{-webkit-tap-highlight-color:transparent;overscroll-behavior-y:none;padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+a,button{touch-action:manipulation}
+.barre{position:fixed;left:0;right:0;bottom:0;z-index:20;display:grid;grid-template-columns:repeat(5,1fr);
+  background:color-mix(in srgb,var(--surface) 92%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border-top:1px solid var(--line);padding:6px max(6px,env(safe-area-inset-right,0px)) calc(6px + env(safe-area-inset-bottom,0px)) max(6px,env(safe-area-inset-left,0px))}
+.barre a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:52px;border-radius:12px;
+  color:var(--muted);text-decoration:none;font:600 11px/1.1 var(--body);text-align:center}
+.barre svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.barre a[aria-current=page]{color:var(--accent)}
+.barre a[aria-current=page] svg{background:var(--soft);border-radius:999px;padding:3px 16px;box-sizing:content-box}
+@media (min-width:900px){.barre{max-width:560px;margin:0 auto 14px;border:1px solid var(--line);border-radius:18px;box-shadow:0 6px 24px rgb(0 0 0 / .08)}}
+
+@media (max-width:560px){
+  body{font-size:16px}
+  .top{position:sticky;top:0;z-index:10;background:var(--bg);padding-block:calc(10px + env(safe-area-inset-top,0px)) 10px;margin-top:calc(-1 * env(safe-area-inset-top,0px));flex-wrap:nowrap}
+  .brand p{display:none}
+  h1{font-size:22px}
+  .mark{width:36px;height:36px;font-size:13px}
+  .lang button{padding:8px 10px;min-height:36px}
+  h2{font-size:19px;margin:22px 0 10px}
+  .card,.ticket{padding:16px}
+  .grid{gap:12px}
+  /* Profils en carrousel horizontal pour garder la liste des impôts visible. */
+  section:first-of-type .profils{grid-auto-flow:column;grid-auto-columns:78%;grid-template-columns:none;overflow-x:auto;scroll-snap-type:x mandatory;
+    margin-inline:-16px;padding-inline:16px;scroll-padding-inline:16px;scrollbar-width:none}
+  section:first-of-type .profils::-webkit-scrollbar{display:none}
+  section:first-of-type .profil{scroll-snap-align:start}
+  .profils{grid-template-columns:1fr 1fr}
+  .profil{min-height:72px}
+  .impot{min-height:60px}
+  nav.tabs{position:sticky;top:58px;z-index:9;background:var(--bg);margin-inline:-16px;padding:10px 16px}
+  .tab{min-height:40px;display:flex;align-items:center}
+  .retour{padding:10px 0;margin:0}
+  .seg button,.produit{min-height:44px}
+  .check{min-height:32px}
+  .row{font-size:14.5px}
+  footer{margin-bottom:8px}
+  .dans-barre{display:none}
+}
+@media (display-mode:standalone){footer{font-size:12px}}

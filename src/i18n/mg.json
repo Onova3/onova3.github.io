@@ -72,5 +72,12 @@
   "module_quiz": "Fanontaniana famerenana",
   "quiz_court": "Andramo ny fahalalanao isaky ny toko",
   "module_sources": "Loharano sy fetra",
-  "sources_court": "Lahatsoratra, daty fanavaozana, fetra"
+  "sources_court": "Lahatsoratra, daty fanavaozana, fetra",
+  "nav_impots": "Hetra",
+  "nav_calendrier": "Tetiandro",
+  "nav_sanctions": "Sazy",
+  "nav_guides": "Torolalana",
+  "nav_quiz": "Fanontaniana",
+  "nav_label": "Fitetezana lehibe",
+  "hors_ligne": "Tsy misy tambajotra: mbola azo atao ny kajy."
 }

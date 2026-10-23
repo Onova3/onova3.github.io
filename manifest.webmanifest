@@ -1,0 +1,15 @@
+{
+  "name": "Kajy Hetra",
+  "short_name": "Kajy Hetra",
+  "description": "Tous les impôts de Madagascar, expliqués et calculés selon les codes 2026.",
+  "lang": "fr",
+  "start_url": "./#/",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#EEF2EF",
+  "theme_color": "#0B6E4F",
+  "icons": [
+    { "src": "icone.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

@@ -7,7 +7,7 @@ import { fileURLToPath } from 'node:url';
 const racine = fileURLToPath(new URL('..', import.meta.url));
 const port = Number(process.env.PORT) || 3000;
 const TYPES = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json',
-  '.svg': 'image/svg+xml', '.png': 'image/png', '.pdf': 'application/pdf', '.txt': 'text/plain' };
+  '.svg': 'image/svg+xml', '.webmanifest': 'application/manifest+json', '.png': 'image/png', '.pdf': 'application/pdf', '.txt': 'text/plain' };
 
 createServer(async (req, res) => {
   const chemin = decodeURIComponent(new URL(req.url, 'http://x').pathname);

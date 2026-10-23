@@ -28,10 +28,10 @@ function accueil() {
       <div class="profils">${profils.map(p => `<a class="profil" href="${lienModule('calendrier', p.id)}">
         <b>${esc(tr(p.libelle))}</b><span>${esc(tr(p.description))}</span></a>`).join('')}</div></section>
     <section><h2>${t('outils')}</h2>
-      <div class="profils"><a class="profil" href="${lienModule('calendrier')}"><b>${t('module_calendrier')}</b><span>${t('calendrier_court')}</span></a>
-        <a class="profil" href="${lienModule('sanctions')}"><b>${t('module_sanctions')}</b><span>${t('sanctions_court')}</span></a>
-        <a class="profil" href="${lienModule('guides')}"><b>${t('module_guides')}</b><span>${t('guides_court')}</span></a>
-        <a class="profil" href="${lienModule('quiz')}"><b>${t('module_quiz')}</b><span>${t('quiz_court')}</span></a>
+      <div class="profils"><a class="profil dans-barre" href="${lienModule('calendrier')}"><b>${t('module_calendrier')}</b><span>${t('calendrier_court')}</span></a>
+        <a class="profil dans-barre" href="${lienModule('sanctions')}"><b>${t('module_sanctions')}</b><span>${t('sanctions_court')}</span></a>
+        <a class="profil dans-barre" href="${lienModule('guides')}"><b>${t('module_guides')}</b><span>${t('guides_court')}</span></a>
+        <a class="profil dans-barre" href="${lienModule('quiz')}"><b>${t('module_quiz')}</b><span>${t('quiz_court')}</span></a>
         <a class="profil" href="${lienModule('sources')}"><b>${t('module_sources')}</b><span>${t('sources_court')}</span></a></div></section>
     <div id="liste"></div>`;
   const q = contenu.querySelector('#q');
@@ -61,8 +61,11 @@ function afficher() {
   document.querySelectorAll('[data-i18n]').forEach(e => { e.textContent = t(e.dataset.i18n); });
   document.querySelectorAll('[data-lang]').forEach(bt => bt.setAttribute('aria-pressed', bt.dataset.lang === etat.lang));
   document.getElementById('relire').hidden = etat.lang !== 'mg';
+  document.querySelectorAll('[data-i18n-label]').forEach(e => e.setAttribute('aria-label', t(e.dataset.i18nLabel)));
 
   const r = lireRoute(location.hash);
+  const actif = r.page === 'module' ? r.id : 'accueil';
+  document.querySelectorAll('[data-nav]').forEach(a => { if (a.dataset.nav === actif) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
   const impot = r.page === 'fiche' ? impots.find(i => i.id === r.id) : null;
   if (r.id !== ficheAffichee) window.scrollTo(0, 0);
   ficheAffichee = r.id;
@@ -86,4 +89,11 @@ document.querySelectorAll('[data-lang]').forEach(bt => bt.addEventListener('clic
   afficher();
 }));
 window.addEventListener('hashchange', afficher);
+
+// Application installable et utilisable hors ligne (sw.js).
+const horsLigne = () => { document.getElementById('hors-ligne').hidden = navigator.onLine; };
+window.addEventListener('online', horsLigne);
+window.addEventListener('offline', horsLigne);
+horsLigne();
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
 afficher();

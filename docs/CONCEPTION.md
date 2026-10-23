@@ -218,3 +218,12 @@ Points relevés pendant la phase 4 :
 | 4 | Impôts locaux (n° 17 à 29) | Terminée le 23 octobre 2026 : 13 fiches, 89 tests au total, points « À vérifier » 64 à 89 ; les 29 impôts ont leur fiche |
 | 5 | Modules CPF transversaux | Terminée le 23 octobre 2026 : calendrier par profil, sanctions, 6 guides, quiz (14 questions reliées au barème), écran Sources ; 105 tests au total, points « À vérifier » 90 à 109 |
 | 6 | Régimes spécifiques et conventions | |
+
+## 10. Application mobile
+
+Kajy Hetra est une application web installable (PWA), sans étape de compilation :
+
+- `manifest.webmanifest` et `icone.svg` : sur Android (Chrome) « Ajouter à l'écran d'accueil », sur iPhone (Safari) « Partager › Sur l'écran d'accueil ». L'application s'ouvre alors en plein écran, sans barre d'adresse.
+- `sw.js` : met en cache tous les fichiers de `src/` et `data/` ; tout fonctionne sans réseau après la première visite. Changer `VERSION` à chaque mise en ligne. Un test vérifie que la liste est complète.
+- Navigation : barre d'onglets en bas (Impôts, Calendrier, Sanctions, Guides, Quiz), en-tête et onglets des fiches collés en haut, cibles tactiles d'au moins 44 px, zones sûres de l'encoche respectées.
+- Pour une publication sur les magasins d'applications (Play Store, App Store), l'application pourra être emballée plus tard (par exemple Capacitor ou TWA) sans changer le code.

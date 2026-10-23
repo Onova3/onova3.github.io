@@ -72,5 +72,12 @@
   "module_quiz": "Revision quiz",
   "quiz_court": "Test your knowledge, chapter by chapter",
   "module_sources": "Sources and limits",
-  "sources_court": "Texts used, update date, limits"
+  "sources_court": "Texts used, update date, limits",
+  "nav_impots": "Taxes",
+  "nav_calendrier": "Calendar",
+  "nav_sanctions": "Penalties",
+  "nav_guides": "Guides",
+  "nav_quiz": "Quiz",
+  "nav_label": "Main navigation",
+  "hors_ligne": "Offline: calculations remain available."
 }

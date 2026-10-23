@@ -592,3 +592,13 @@ test('Quiz : correction (2 bonnes sur 3 répondues)', () => {
   assert.deepEqual(lireRoute('#/quiz/tva'), { page: 'module', id: 'quiz', sous: 'tva' });
   assert.deepEqual(lireRoute('#/sources'), { page: 'module', id: 'sources', sous: null });
 });
+
+// --- Application mobile : hors ligne ---
+test('Hors ligne : le service worker met en cache tous les fichiers de src/ et data/', async () => {
+  const { readdirSync, statSync } = await import('node:fs');
+  const tous = d => readdirSync(d).flatMap(f => { const p = `${d}/${f}`; return statSync(p).isDirectory() ? tous(p) : [p]; });
+  const sw = readFileSync('sw.js', 'utf8');
+  for (const f of [...tous('src'), ...tous('data'), 'index.html', 'manifest.webmanifest', 'icone.svg']) assert.ok(sw.includes(`'${f}'`), f);
+  const m = JSON.parse(readFileSync('manifest.webmanifest', 'utf8'));
+  assert.equal(m.display, 'standalone');
+});

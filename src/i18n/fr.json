@@ -72,5 +72,12 @@
   "module_quiz": "Quiz de révision",
   "quiz_court": "Testez vos connaissances, chapitre par chapitre",
   "module_sources": "Sources et limites",
-  "sources_court": "Textes utilisés, date de mise à jour, limites"
+  "sources_court": "Textes utilisés, date de mise à jour, limites",
+  "nav_impots": "Impôts",
+  "nav_calendrier": "Calendrier",
+  "nav_sanctions": "Sanctions",
+  "nav_guides": "Guides",
+  "nav_quiz": "Quiz",
+  "nav_label": "Navigation principale",
+  "hors_ligne": "Hors ligne : les calculs restent disponibles."
 }
