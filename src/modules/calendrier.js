@@ -4,7 +4,7 @@ import { lien, lienModule } from '../routes.js';
 import { etat, t, tr, esc, art } from '../ui.js';
 
 const MOIS_MG = ['janoary', 'febroary', 'martsa', 'aprily', 'mey', 'jona', 'jolay', 'aogositra', 'septambra', 'oktobra', 'novambra', 'desambra'];
-const nomMois = (a, m) => etat.lang === 'mg' ? `${MOIS_MG[m - 1]} ${a}`
+export const nomMois = (a, m) => etat.lang === 'mg' ? `${MOIS_MG[m - 1]} ${a}`
   : new Date(Date.UTC(a, m - 1, 1)).toLocaleDateString(etat.lang === 'en' ? 'en-GB' : 'fr-FR', { month: 'long', year: 'numeric', timeZone: 'UTC' });
 const aujourdhui = () => new Date().toISOString().slice(0, 10);
 

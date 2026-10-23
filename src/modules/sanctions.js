@@ -110,7 +110,7 @@ export function monter(el, { b }) {
         ${champMontant('sa-ca', l('ca'), 30000000)}
         <label class="check"><input type="checkbox" id="sa-defaut"><span>${l('defautCoche')}</span></label>
       </div>
-      <div class="ticket" aria-live="polite">
+      <div class="ticket ticket--alerte" aria-live="polite">
         <div class="t-head"><span>${t('avis')} · ${t('module_sanctions')}</span><span>CDI</span></div>
         <div class="rows" id="sa-rows"></div>
         <div class="total"><span class="k">${l('total')}</span><span class="v" id="sa-total"></span></div>

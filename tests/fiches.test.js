@@ -800,3 +800,13 @@ test('Bloc de résultat : double trait doré juste au-dessus du montant final', 
   assert.ok(h.indexOf('h-double-trait') < h.indexOf('h-montant'));
   assert.match(h, /h-article">Art\. 1/);
 });
+
+// --- Style suisse appliqué : partage d'un résultat ---
+import { texteResultat } from '../src/partage.js';
+test('Partage : texte du résultat avec ses lignes, le total, la mention et le lien', () => {
+  const s = texteResultat({ titre: 'IRSA · Impôt', lignes: [['Salaire brut', '1 200 000 Ar'], ['Note sans montant', '']], total: ['Impôt', '138 700 Ar'], mention: 'Estimation', lien: 'https://exemple/#/irsa/calculer' });
+  assert.match(s, /^IRSA · Impôt\n/);
+  assert.match(s, /Salaire brut : 1 200 000 Ar/);
+  assert.doesNotMatch(s, /Note sans montant/);
+  assert.match(s, /Impôt : 138 700 Ar\n\nEstimation\nhttps:\/\/exemple\/#\/irsa\/calculer$/);
+});

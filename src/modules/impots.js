@@ -20,7 +20,7 @@ export function listeImpots(impots, recherche) {
       const dispo = Boolean(FICHES[i.id]);
       const corps = `<span class="sigle">${esc(i.sigle)}</span>
         <span class="nom">${esc(tr(i.nom))}<small>CDI · ${esc(i.refCDI)}</small></span>
-        <span class="statut">${dispo ? t('fiche_dispo') : `${t('statut_' + i.statut)} · ${t('phase')} ${i.phase}`}</span>`;
+        ${dispo ? '<span class="fleche" aria-hidden="true">→</span>' : `<span class="statut">${t('statut_' + i.statut)}</span>`}`;
       return `<li>${dispo ? `<a class="impot dispo" href="${lien(i.id)}">${corps}</a>` : `<div class="impot">${corps}</div>`}</li>`;
     }).join('')}</ul></section>`;
   }).join('') || `<p class="lead">${t('aucun_resultat')}</p>`;

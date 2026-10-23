@@ -127,5 +127,13 @@
   "bv_avert_texte": "Hetrako helps you understand and estimate. It replaces neither the tax administration nor an adviser. Before any decision, check with the tax offices.",
   "bv_avert_accord": "I understand",
   "bv_commencer": "Start",
-  "slogan": "Ny hetrako · My tax"
+  "slogan": "Ny hetrako · My tax",
+  "partager_resultat": "Share the result",
+  "resultat_copie": "Result copied",
+  "mention_estimation": "Educational estimate, not tax advice.",
+  "voir_calcul_detaille": "See the detailed calculation",
+  "pastille_tranche": "Band",
+  "prochaine_echeance": "Next deadline",
+  "voir_calendrier": "Full calendar",
+  "tous_impots": "All taxes"
 }

@@ -3,6 +3,7 @@
 import { t, tr, fmt, esc, art, ar, pct, ligne, champMontant, champCompteur, lireMontant, lireEntier, brancher } from './ui.js';
 import { ONGLETS, lien } from './routes.js';
 import { calculPenalites, calculPenalitesLocales } from './calc/penalites.js';
+import { texteResultat, lireTicket, partager } from './partage.js';
 
 // Les textes peuvent contenir des {variables} (taux, seuils) tirées du barème par fiche.variables(b).
 const liste = (items = [], vars = {}) => `<ul class="puces">${items.map(i => `<li>${esc(fmt(tr(i.texte), vars))}${art(i.article)}</li>`).join('')}</ul>`;
@@ -11,15 +12,52 @@ const carte = (titre, items, vars) => (items?.length ? `<div class="card"><h3>${
 export function rendreFiche(el, { fiche, impot, onglet, b, obligations }) {
   el.innerHTML = `
     <header class="fiche-tete">
-      <span class="sigle-g">${esc(impot.sigle)}</span>
+      <div class="etiquettes"><span class="sigle-g">${esc(impot.sigle)}</span>
+        <span class="refs">CDI · ${esc(impot.refCDI)}</span><span class="refs">CPF · ${esc(impot.refCPF ?? '—')}</span></div>
       <h2>${esc(tr(impot.nom))}</h2>
-      <p class="refs">CDI · ${esc(impot.refCDI)} — CPF · ${esc(impot.refCPF ?? '—')}</p>
     </header>
     <nav class="tabs" role="tablist">${ONGLETS.map(o =>
       `<a class="tab" role="tab" href="${lien(fiche.id, o)}" aria-selected="${o === onglet}">${t('onglet_' + o)}</a>`).join('')}</nav>
     <section class="panel" role="tabpanel" id="panneau"></section>`;
   const panneaux = { comprendre, calculer, declarer, sanctions };
-  panneaux[onglet](el.querySelector('#panneau'), fiche, b, obligations[fiche.id] ?? {});
+  const panneau = el.querySelector('#panneau');
+  panneaux[onglet](panneau, fiche, b, obligations[fiche.id] ?? {});
+  completerResultats(panneau, impot);
+  // Certains calculateurs se redessinent (changement de mode) : on complète à nouveau leurs résultats.
+  new MutationObserver(() => completerResultats(panneau, impot)).observe(panneau, { childList: true });
+}
+
+/**
+ * Ajoute à chaque résultat (.ticket) l'aperçu du montant sous le formulaire, le bouton « Partager le résultat »
+ * et la mention « Estimation pédagogique ». Affichage seulement : aucun calcul n'est modifié.
+ */
+function completerResultats(panneau, impot) {
+  panneau.querySelectorAll('.ticket').forEach((ticket, i) => {
+    const v = ticket.querySelector('.total .v');
+    if (!v || ticket.dataset.complete) return;
+    ticket.dataset.complete = '1';
+    if (!ticket.id) ticket.id = 'resultat-' + i;
+    ticket.insertAdjacentHTML('beforeend', `<div class="ticket-actions">
+      <button type="button" class="bouton bouton--secondaire bouton--plein" data-partager>${t('partager_resultat')}</button>
+      <p class="mention">${t('mention_estimation')}</p></div>`);
+    const bouton = ticket.querySelector('[data-partager]');
+    bouton.addEventListener('click', async () => {
+      const { lignes, total } = lireTicket(ticket);
+      const issue = await partager(texteResultat({ titre: `${impot.sigle} · ${tr(impot.nom)}`, lignes, total, mention: t('mention_estimation'), lien: location.href }), 'Hetrako');
+      if (issue === 'copie') { bouton.textContent = t('resultat_copie'); setTimeout(() => { bouton.textContent = t('partager_resultat'); }, 2500); }
+    });
+    // Aperçu du montant juste avant le résultat, sur téléphone (masqué sur grand écran par la feuille de style).
+    const apercu = document.createElement('div');
+    apercu.className = 'apercu';
+    apercu.setAttribute('aria-hidden', 'true');
+    apercu.innerHTML = `<div><span class="k">${esc(ticket.querySelector('.total .k')?.textContent ?? '')}</span><span class="v"></span></div>
+      <a class="bouton" href="#${ticket.id}" tabindex="-1">${t('voir_calcul_detaille')}</a>`;
+    apercu.querySelector('a').addEventListener('click', e => { e.preventDefault(); ticket.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' }); });
+    ticket.before(apercu);
+    const copier = () => { apercu.querySelector('.v').textContent = v.textContent; };
+    new MutationObserver(copier).observe(v, { childList: true, characterData: true, subtree: true });
+    copier();
+  });
 }
 
 function comprendre(p, f, b) {
@@ -61,7 +99,7 @@ function sanctionsLocales(p, f, b, ob) {
         ${champMontant('pen-impot', t('f_impot_du'), f.impotExemple ? f.impotExemple(b) : 50000)}
         ${champCompteur('pen-mois', t('f_mois'), 3, 1, 120)}
       </div>
-      <div class="ticket" aria-live="polite">
+      <div class="ticket ticket--alerte" aria-live="polite">
         <div class="t-head"><span>${t('avis')} · ${t('onglet_sanctions')}</span><span>CDI</span></div>
         <div class="rows" id="pen-rows"></div>
         <div class="total"><span class="k">${t('r_total')}</span><span class="v" id="pen-total"></span></div>
@@ -102,7 +140,7 @@ function sanctions(p, f, b, ob) {
         ${champMontant('pen-ca', t('f_ca'), 30000000)}
         <label class="check"><input type="checkbox" id="pen-defaut" checked><span>${t('f_defaut')}</span></label>
       </div>
-      <div class="ticket" aria-live="polite">
+      <div class="ticket ticket--alerte" aria-live="polite">
         <div class="t-head"><span>${t('avis')} · ${t('onglet_sanctions')}</span><span>CDI · CPF</span></div>
         <div class="rows" id="pen-rows"></div>
         <div class="total"><span class="k">${t('r_total')}</span><span class="v" id="pen-total"></span></div>

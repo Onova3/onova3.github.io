@@ -1,5 +1,6 @@
 // Fiche IRSA (CDI Partie I, Titre III ; CPF Titre I, ST II, Chap. V). Textes malgaches à relire.
 import { calculIRSA, calculIRSASpecial } from '../calc/irsa.js';
+import { largeursTranches } from '../composants.js';
 import { t, tr, fmt, ar, pct, ligne, puce, champMontant, champCompteur, lireMontant, lireEntier, brancher } from '../ui.js';
 
 const EXEMPLE = { brut: 1200000, personnesACharge: 2, remuneration: 300000, tauxUnitaire: 1500 };
@@ -146,6 +147,7 @@ function monterCalculateur(p, b) {
       <div class="ticket" aria-live="polite">
         <div class="t-head"><span>${t('avis')} · IRSA</span><span>${t('par_mois')}</span></div>
         <div class="rows" id="irsa-rows"></div>
+        <div class="h-tranches" id="irsa-barres" aria-hidden="true"></div>
         <div class="total"><span class="k">${l('total')}</span><span class="v" id="irsa-total"></span></div>
         <div class="sub" id="irsa-sub"></div>
         <p class="arr">${t('arrondi')}<small class="art">${b.penalites.articles.arrondi}</small></p>
@@ -173,7 +175,10 @@ function monterCalculateur(p, b) {
     }
     $('irsa-rows').innerHTML = h;
     $('irsa-total').textContent = ar(r.impot);
-    $('irsa-sub').innerHTML = puce(l('net'), ar(r.net)) + puce(l('eff'), brut ? pct(r.impot / brut) : '0 %');
+    const parts = largeursTranches(b.irsa.tranches, r.base);
+    $('irsa-barres').innerHTML = b.irsa.tranches.map((x, i) => `<div class="h-tranche"><span>${pct(x.taux, 0)}</span><span class="h-piste"><span class="h-jauge" style="width:${parts[i]}%"></span></span><span>${ar(r.tranches[i]?.impot ?? 0)}</span></div>`).join('');
+    const marginale = [...r.tranches].reverse().find(x => x.montant > 0);
+    $('irsa-sub').innerHTML = puce(l('net'), ar(r.net)) + puce(l('eff'), brut ? pct(r.impot / brut) : '0 %') + puce(t('pastille_tranche'), pct(marginale?.taux ?? 0, 0));
   } : () => {
     const remu = lireMontant($('irsa-remu')), unitaire = lireMontant($('irsa-unitaire'));
     const r = calculIRSASpecial(remu, unitaire, b);
@@ -181,6 +186,7 @@ function monterCalculateur(p, b) {
       ? l('palierSup', { max: ar(b.irsa.regimeSpecial.at(-2).tauxUnitaireMax), taux: pct(r.taux, 0) })
       : l('palier', { max: ar(r.palier.tauxUnitaireMax), taux: pct(r.taux, 0) });
     $('irsa-rows').innerHTML = ligne(l('remu'), ar(remu)) + ligne(pal, pct(r.taux, 0), art016 + ' B');
+    $('irsa-barres').innerHTML = '';
     $('irsa-total').textContent = ar(r.impot);
     $('irsa-sub').innerHTML = puce(l('net'), ar(remu - r.impot));
   };
