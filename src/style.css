@@ -183,7 +183,7 @@ a.profil:hover{background:var(--fond-2)}
 ul.echeances{list-style:none;margin:0;padding:0}
 .echeances li{display:grid;grid-template-columns:3rem minmax(0,1fr);gap:var(--u2);align-items:start;padding:var(--u2) 0;border-bottom:1px solid var(--filet)}
 .echeances .jour{font:800 1.75rem/1 var(--police-titre);color:var(--texte);font-variant-numeric:tabular-nums}
-.echeances .sigle{text-decoration:none}
+.echeances .sigle{display:inline-flex;align-items:center;min-height:var(--tactile);min-width:var(--tactile);text-decoration:none}
 
 /* ---------- Guides : étapes numérotées ---------- */
 ol.etapes{list-style:none;counter-reset:etape;margin:0;padding:0;display:flex;flex-direction:column}

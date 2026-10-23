@@ -787,6 +787,11 @@ test('Contrastes lisibles dans les deux thèmes', () => {
     assert.ok(contraste(j['sur-vert'], j.vert) >= 4.5, `${nom} texte du bouton principal`);
     assert.ok(contraste(j.texte, j['vert-doux']) >= 4.5, `${nom} pastille`);
     assert.ok(contraste(j['avis-texte'], j['avis-fond']) >= 4.5, `${nom} bandeau d'avis`);
+    assert.ok(contraste(j['texte-2'], j['vert-doux']) >= 4.5, `${nom} étiquette de pastille`);
+    assert.ok(contraste(j.fond, j.encre) >= 4.5, `${nom} choix segmenté actif`);
+    assert.ok(contraste(j.vert, j.piste) >= 3, `${nom} barre du barème`);
+    assert.ok(contraste(j.vert, j['vert-doux']) >= 3, `${nom} icône sur vert doux`);
+    assert.ok(contraste(j.encre, j['fond-2']) >= 3, `${nom} formes noires Bauhaus`);
   }
 });
 test('Barres du barème : proportionnelles à la base dans chaque tranche', () => {
