@@ -23,7 +23,8 @@ La barre d'onglets (en bas sur téléphone, à gauche à partir de 900 px de lar
 | | Revoir la présentation | bouton dans `#/plus` | Fait |
 | | Historique des 20 derniers calculs | `#/plus/historique` | Fait |
 | | Signaler une erreur (e-mail pré-rempli) | lien dans Plus et dans chaque fiche | Fait |
-| | Conditions d'utilisation, Confidentialité | — | Étape 5 |
+| | Conditions d'utilisation, Confidentialité | `#/plus/conditions`, `#/plus/confidentialite` (`data/pages.json`) | Fait |
+| | Installer l'application (si le navigateur le permet) | bouton dans `#/plus` | Fait |
 
 ## 2. Navigation
 
@@ -72,6 +73,13 @@ Affiché une seule fois, mémorisé par `src/stockage.js` :
 - **Signaler une erreur** : `src/signaler.js`, e-mail pré-rempli (fiche, onglet, lien, version, langue) vers l'adresse du propriétaire du projet.
 - **Calendrier** : échéances des impôts au statut « vérifié », mois par mois à partir du mois en cours.
 - **Lexique** : `data/lexique.json`, un test vérifie que chaque article cité existe dans le texte du Code.
+
+## 5 ter. Installation et hors connexion (fait)
+
+- **Installable** : `manifest.webmanifest` (nom Hetrako, couleurs du système de design, icônes normales et « maskable », raccourcis IRSA et Calendrier). Bouton « Installer l'application » dans Plus quand le navigateur l'annonce (`beforeinstallprompt`, Chrome et Edge) ; « Application installée » une fois ouverte en plein écran.
+- **Hors connexion** : `sw.js` met en cache tous les fichiers de l'application à l'installation et les sert depuis le cache. Les PDF des codes ne sont jamais téléchargés d'office (réseau seulement).
+- **Nouvelle version** : changer `VERSION` dans `sw.js` (et `src/version.js`, `package.json`) à chaque mise en ligne. Un changement des barèmes oblige à recopier `misAJour` dans la constante `BAREMES` de `sw.js` (vérifié par un test), ce qui crée aussi une nouvelle version. Le téléphone installe la nouvelle version en arrière-plan ; le bandeau « Nouvelle version disponible » propose « Mettre à jour », qui active la version et recharge la page (`src/mise-a-jour.js`).
+- **Pages** : « Conditions d'utilisation » et « Confidentialité » (aucune donnée personnelle collectée, tout reste sur le téléphone).
 
 ## 6. Accessibilité
 

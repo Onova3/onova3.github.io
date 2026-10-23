@@ -1,0 +1,49 @@
+{
+  "note": "Pages courtes de l'onglet Plus. Textes malgaches à relire. Elles décrivent le fonctionnement réel de l'application : à mettre à jour si un compte, un serveur ou des statistiques sont ajoutés.",
+  "pages": [
+    {
+      "id": "conditions",
+      "titre": { "fr": "Conditions d'utilisation", "en": "Terms of use", "mg": "Fepetra fampiasana" },
+      "sections": [
+        {
+          "titre": { "fr": "Un outil pédagogique", "en": "A learning tool", "mg": "Fitaovana fanabeazana" },
+          "texte": { "fr": "Hetrako explique les impôts de Madagascar et donne des estimations. Ce n'est ni un avis fiscal, ni un logiciel de déclaration, ni un document officiel. Avant toute décision, vérifiez auprès des services des impôts ou d'un conseiller.", "en": "Hetrako explains Madagascar's taxes and gives estimates. It is not tax advice, filing software or an official document. Before any decision, check with the tax offices or an adviser.", "mg": "Manazava ny hetra eto Madagasikara sy manome tombana ny Hetrako. Tsy torohevitra ara-ketra, tsy rindrambaiko fanambarana, ary tsy taratasy ofisialy izy. Alohan'ny handraisana fanapahan-kevitra, manontania any amin'ny biraon'ny hetra na mpanolotsaina." }
+        },
+        {
+          "titre": { "fr": "Les sources", "en": "Sources", "mg": "Loharano" },
+          "texte": { "fr": "Les taux, seuils et délais viennent du Code des impôts et du Code des procédures fiscales suivant la loi de finances 2026, et de la loi de finances rectificative 2026. Chaque chiffre renvoie à son article. Les points que le texte ne tranche pas sont signalés.", "en": "Rates, thresholds and time limits come from the Tax Code and the Tax Procedures Code following the 2026 Finance Act, and from the 2026 Amending Finance Act. Each figure points to its article. Points the text leaves open are flagged.", "mg": "Avy amin'ny Fehezan-dalàna momba ny hetra sy ny Fehezan-dalàna momba ny fomba fiasa araka ny lalàna momba ny tetibola 2026, ary ny lalàna fanitsiana 2026 ny taha, fetra ary fe-potoana. Misy andininy isaky ny isa. Voamarika ireo teboka tsy mazava." }
+        },
+        {
+          "titre": { "fr": "Les limites", "en": "Limits", "mg": "Fetra" },
+          "texte": { "fr": "Malgré le soin apporté, une erreur reste possible et les textes peuvent changer. L'application est fournie telle quelle, sans garantie. Les textes en malgache sont en cours de relecture.", "en": "Despite the care taken, errors remain possible and the law may change. The application is provided as is, without warranty. Malagasy texts are being reviewed.", "mg": "Na dia nitandrina aza, mety mbola misy hadisoana ary mety miova ny lalàna. Omena araka izao ny fampiharana, tsy misy antoka. Mbola havaozina ny lahatsoratra malagasy." }
+        },
+        {
+          "titre": { "fr": "Signaler une erreur", "en": "Report an error", "mg": "Hanambara hadisoana" },
+          "texte": { "fr": "Si vous trouvez une erreur, utilisez « Signaler une erreur » : un e-mail pré-rempli s'ouvre, que vous choisissez d'envoyer ou non.", "en": "If you find an error, use “Report an error”: a pre-filled e-mail opens, which you choose to send or not.", "mg": "Raha mahita hadisoana ianao, ampiasao ny « Hanambara hadisoana »: misokatra ny mailaka efa voafeno, ary ianao no misafidy handefa azy na tsia." }
+        }
+      ]
+    },
+    {
+      "id": "confidentialite",
+      "titre": { "fr": "Confidentialité", "en": "Privacy", "mg": "Fiarovana ny fiainana manokana" },
+      "sections": [
+        {
+          "titre": { "fr": "Aucune donnée personnelle collectée", "en": "No personal data collected", "mg": "Tsy misy angona manokana angonina" },
+          "texte": { "fr": "Hetrako n'a ni compte, ni serveur, ni publicité, ni mesure d'audience. Les montants que vous saisissez ne sont envoyés nulle part : les calculs se font sur votre téléphone.", "en": "Hetrako has no account, server, advertising or audience tracking. The amounts you enter are sent nowhere: calculations happen on your phone.", "mg": "Tsy misy kaonty, mpizara, dokam-barotra na fanaraha-maso mpampiasa ny Hetrako. Tsy alefa na aiza na aiza ny vola ampidirinao: ao amin'ny findainao no anaovana ny kajy." }
+        },
+        {
+          "titre": { "fr": "Ce qui reste sur votre téléphone", "en": "What stays on your phone", "mg": "Izay mijanona ao amin'ny findainao" },
+          "texte": { "fr": "Vos réglages (langue, thème, taille du texte), vos favoris, les fiches consultées et vos 20 derniers calculs sont gardés uniquement dans la mémoire de ce téléphone. L'application garde aussi une copie de ses propres fichiers pour marcher sans connexion.", "en": "Your settings (language, theme, text size), favourites, viewed sheets and last 20 calculations are kept only in this phone's memory. The app also keeps a copy of its own files to work offline.", "mg": "Ao amin'ny fitadidian'ity finday ity ihany no itahirizana ny fandrindranao (fiteny, endrika, haben'ny soratra), ny tianao, ny fiche nojerena ary ny kajy 20 farany. Mitahiry dika mitovy amin'ny rakitra ihany koa ny fampiharana mba handeha tsy misy tambajotra." }
+        },
+        {
+          "titre": { "fr": "Tout effacer", "en": "Erase everything", "mg": "Fafana daholo" },
+          "texte": { "fr": "Vous pouvez effacer l'historique dans Plus › Historique des calculs. Pour tout effacer, supprimez les données du site ou désinstallez l'application dans les réglages de votre téléphone.", "en": "You can clear the history in More › Calculation history. To erase everything, clear the site data or uninstall the app in your phone settings.", "mg": "Azonao fafana ny tantara ao amin'ny Hafa › Tantaran'ny kajy. Raha hamafa daholo, fafao ny angon'ny tranonkala na esory ny fampiharana ao amin'ny fandrindrana ny findainao." }
+        },
+        {
+          "titre": { "fr": "Quand vous nous écrivez", "en": "When you write to us", "mg": "Rehefa manoratra aminay ianao" },
+          "texte": { "fr": "« Signaler une erreur » ouvre votre propre messagerie : rien n'est envoyé sans votre action. Le message contient la page concernée, la version et la langue de l'application, et votre adresse e-mail.", "en": "“Report an error” opens your own e-mail app: nothing is sent without your action. The message contains the page concerned, the app version and language, and your e-mail address.", "mg": "Manokatra ny mailakao manokana ny « Hanambara hadisoana »: tsy misy alefa raha tsy ianao no manao izany. Ao anatin'ny hafatra ny pejy voakasika, ny dikan-teny sy ny fitenin'ny fampiharana, ary ny adiresy mailakao." }
+        }
+      ]
+    }
+  ]
+}

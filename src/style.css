@@ -309,3 +309,14 @@ ol.etapes p{margin:var(--u) 0 0}
 .terme dd{margin:var(--u) 0 0;color:var(--texte-2)}
 .terme .art{display:block;margin:var(--u) 0 0}
 .art--vide{color:var(--texte-2)}
+
+/* ---------- Installation et mises à jour ---------- */
+.bandeau-maj{position:fixed;left:var(--marge);right:var(--marge);bottom:calc(76px + env(safe-area-inset-bottom,0px));z-index:31;max-width:480px;margin:0 auto;
+  display:flex;align-items:center;justify-content:space-between;gap:var(--u2);padding:var(--u) var(--u) var(--u) var(--u2);
+  background:var(--fond);color:var(--texte);box-shadow:inset 0 0 0 var(--filet-fort) var(--encre),inset var(--trait-actif) 0 0 var(--or);font:600 var(--t-petit)/1.3 var(--police-texte)}
+.bandeau-maj[hidden]{display:none}
+.bandeau-maj .bouton{min-height:var(--tactile);padding:0 var(--u2);font-size:var(--t-petit);flex:none}
+@media (min-width:900px){.bandeau-maj{bottom:var(--u3);left:calc(112px + var(--marge))}}
+.menu-info{display:flex;flex-direction:column;justify-content:center;gap:2px;min-height:64px;padding:var(--u) 0}
+.page-texte section{padding:var(--u2) 0;border-bottom:1px solid var(--filet)}
+.page-texte p{margin:var(--u) 0 0;max-width:62ch}

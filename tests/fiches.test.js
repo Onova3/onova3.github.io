@@ -933,3 +933,36 @@ test('Lexique : chaque terme en trois langues, chaque article cité existe dans 
   assert.equal(ongletBarre(lireRoute('#/lexique')), 'apprendre');
   assert.equal(lienRetour(lireRoute('#/plus/historique')), '#/plus');
 });
+
+// --- Application installable et hors ligne ---
+import { nouvelleVersionEnAttente } from '../src/mise-a-jour.js';
+test('Mise à jour : bandeau seulement si une nouvelle version attend alors qu’une autre est active', () => {
+  assert.equal(nouvelleVersionEnAttente({ enAttente: {}, controleur: {} }), true);
+  assert.equal(nouvelleVersionEnAttente({ enAttente: {}, controleur: null }), false, 'première installation');
+  assert.equal(nouvelleVersionEnAttente({ enAttente: null, controleur: {} }), false);
+});
+test('Service worker : barèmes liés, activation à la demande, PDF jamais gardés d’office', () => {
+  const sw = readFileSync('sw.js', 'utf8');
+  assert.ok(sw.includes(`const BAREMES = '${b.misAJour}';`), 'recopier misAJour des barèmes dans sw.js');
+  assert.doesNotMatch(sw.slice(sw.indexOf("addEventListener('install'"), sw.indexOf("addEventListener('message'")), /skipWaiting/);
+  assert.match(sw, /e\.data === 'activer'\) self\.skipWaiting\(\)/);
+  assert.match(sw, /reseauSeulement = url => \/\\.pdf\$\/i/);
+  assert.doesNotMatch(sw, /'codes\//, 'aucun PDF dans la liste hors ligne');
+  assert.match(readFileSync('index.html', 'utf8'), /id="maj"[^>]*hidden/);
+});
+test('Manifeste : nom, couleurs et icônes de l’application', () => {
+  const m = JSON.parse(readFileSync('manifest.webmanifest', 'utf8'));
+  assert.equal(m.name, 'Hetrako');
+  assert.equal(m.display, 'standalone');
+  assert.equal(m.theme_color, '#0B6E4F');
+  assert.equal(m.background_color, clair['fond-2']);
+  assert.ok(m.icons.some(i => i.sizes === '192x192' && i.purpose === 'any') && m.icons.some(i => i.sizes === '512x512' && i.purpose === 'maskable'));
+  for (const r of m.shortcuts) assert.ok(r.url.startsWith('./#/'));
+});
+test('Pages Conditions et Confidentialité : trois langues, aucune donnée collectée', () => {
+  const pages = lire('data/pages.json').pages;
+  assert.deepEqual(pages.map(p => p.id), ['conditions', 'confidentialite']);
+  for (const p of pages) for (const x of p.sections) assert.ok(trilingue(x.titre) && trilingue(x.texte), p.id);
+  assert.match(pages[1].sections[0].titre.fr, /Aucune donnée personnelle/);
+  assert.equal(lienRetour(lireRoute('#/plus/confidentialite')), '#/plus');
+});

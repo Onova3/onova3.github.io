@@ -162,5 +162,14 @@
   "aucun_calcul": "Aucun calcul pour l’instant. Ouvrez l’onglet Calculer d’une fiche : vos calculs s’enregistrent ici.",
   "lexique_recherche": "Chercher un terme",
   "lexique_sans_article": "Terme de l’application, sans article du Code",
-  "aucun_terme": "Aucun terme ne correspond."
+  "aucun_terme": "Aucun terme ne correspond.",
+  "maj_disponible": "Nouvelle version disponible.",
+  "maj_bouton": "Mettre à jour",
+  "installer_app": "Installer l’application",
+  "installer_court": "Sur l’écran d’accueil, utilisable sans connexion",
+  "installation_ok": "Application installée",
+  "app_installee": "Application installée",
+  "app_installee_court": "Elle marche sans connexion",
+  "conditions_court": "Outil pédagogique, sources, limites",
+  "confidentialite_court": "Aucune donnée collectée, tout reste sur le téléphone"
 }

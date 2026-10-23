@@ -7,7 +7,7 @@
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#EEF2EF",
+  "background_color": "#F2F3F1",
   "theme_color": "#0B6E4F",
   "icons": [
     {
@@ -39,6 +39,35 @@
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"
+    }
+  ],
+  "id": "./",
+  "categories": [
+    "education",
+    "finance"
+  ],
+  "shortcuts": [
+    {
+      "name": "Calculer l’IRSA",
+      "short_name": "IRSA",
+      "url": "./#/irsa/calculer",
+      "icons": [
+        {
+          "src": "assets/icones/icone-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Calendrier fiscal",
+      "short_name": "Calendrier",
+      "url": "./#/calendrier",
+      "icons": [
+        {
+          "src": "assets/icones/icone-192.png",
+          "sizes": "192x192"
+        }
+      ]
     }
   ]
 }

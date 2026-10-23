@@ -1,6 +1,9 @@
 // Service worker : garde l'application sur le téléphone pour qu'elle marche sans réseau.
-// Changer VERSION à chaque mise en ligne. Un test vérifie que FICHIERS liste tous les fichiers de src/ et data/.
-const VERSION = 'kh-0.8.0';
+// Changer VERSION à chaque mise en ligne, et à chaque changement des barèmes : c'est ce qui déclenche le bandeau « Nouvelle version disponible ». Un test vérifie que FICHIERS liste tous les fichiers de src/ et data/.
+const VERSION = 'kh-0.9.0';
+// Date de mise à jour des barèmes (data/baremes-2026.json, « misAJour ») : un test oblige à la recopier ici,
+// donc tout changement des barèmes produit un nouveau service worker et le bandeau de mise à jour.
+const BAREMES = '2026-10-22';
 const FICHIERS = [
   './',
   'index.html',
@@ -14,11 +17,13 @@ const FICHIERS = [
   'src/bauhaus.js',
   'src/etats.js',
   'src/memoire.js',
+  'src/mise-a-jour.js',
   'src/recherche.js',
   'src/signaler.js',
   'src/modules/lexique.js',
   'data/mots-courants.json',
   'data/lexique.json',
+  'data/pages.json',
   'assets/polices/archivo-800.woff2',
   'assets/polices/public-sans.woff2',
   'assets/polices/jetbrains-mono.woff2',
@@ -128,25 +133,33 @@ const FICHIERS = [
   'src/ui.js',
 ];
 
+// Installation : tous les fichiers de l'application sont mis en cache. La nouvelle version attend ensuite
+// que l'utilisateur touche « Mettre à jour » dans le bandeau « Nouvelle version disponible » (src/mise-a-jour.js).
 self.addEventListener('install', e => {
-  e.waitUntil(caches.open(VERSION).then(c => c.addAll(FICHIERS)).then(() => self.skipWaiting()));
+  e.waitUntil(caches.open(VERSION + '-' + BAREMES).then(c => c.addAll(FICHIERS)));
+});
+
+self.addEventListener('message', e => {
+  if (e.data === 'activer') self.skipWaiting();
 });
 
 self.addEventListener('activate', e => {
   e.waitUntil(caches.keys()
-    .then(cles => Promise.all(cles.filter(k => k !== VERSION).map(k => caches.delete(k))))
+    .then(cles => Promise.all(cles.filter(k => k !== VERSION + '-' + BAREMES).map(k => caches.delete(k))))
     .then(() => self.clients.claim()));
 });
 
-// Réponse immédiate depuis le cache, mise à jour en arrière-plan (polices et PDF compris, gardés après la première visite).
+/** Les PDF des codes ne sont jamais téléchargés ni gardés d'office : ils restent sur le réseau. */
+const reseauSeulement = url => /\.pdf$/i.test(new URL(url).pathname);
+
+// Hors connexion : chaque version sert ses propres fichiers depuis le cache ; le réseau ne sert qu'à ce qui manque.
 self.addEventListener('fetch', e => {
-  if (e.request.method !== 'GET') return;
-  e.respondWith(caches.open(VERSION).then(async cache => {
+  if (e.request.method !== 'GET' || reseauSeulement(e.request.url)) return;
+  e.respondWith(caches.open(VERSION + '-' + BAREMES).then(async cache => {
     const enCache = await cache.match(e.request, { ignoreSearch: true });
-    const reseau = fetch(e.request).then(r => {
-      if (r.ok || r.type === 'opaque') cache.put(e.request, r.clone());
-      return r;
-    }).catch(() => enCache);
-    return enCache || reseau;
+    if (enCache) return enCache;
+    const r = await fetch(e.request);
+    if (r.ok && new URL(e.request.url).origin === self.location.origin) cache.put(e.request, r.clone());
+    return r;
   }));
 });

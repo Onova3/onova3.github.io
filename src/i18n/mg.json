@@ -162,5 +162,14 @@
   "aucun_calcul": "Tsy mbola misy kajy. Sokafy ny tabilao Kajy amin’ny fiche iray: voatahiry eto ny kajinao.",
   "lexique_recherche": "Hitady teny",
   "lexique_sans_article": "Tenin’ny fampiharana, tsy voafaritry ny Fehezan-dalàna",
-  "aucun_terme": "Tsy misy teny mifanaraka."
+  "aucun_terme": "Tsy misy teny mifanaraka.",
+  "maj_disponible": "Misy dikan-teny vaovao.",
+  "maj_bouton": "Havaozina",
+  "installer_app": "Apetraho ny fampiharana",
+  "installer_court": "Eo amin’ny efijery fandraisana, mandeha tsy misy tambajotra",
+  "installation_ok": "Voapetraka ny fampiharana",
+  "app_installee": "Voapetraka ny fampiharana",
+  "app_installee_court": "Mandeha tsy misy tambajotra izy",
+  "conditions_court": "Fitaovana fanabeazana, loharano, fetra",
+  "confidentialite_court": "Tsy misy angona angonina, ao amin’ny finday daholo"
 }

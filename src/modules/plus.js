@@ -1,14 +1,15 @@
 // Onglet Plus (#/plus) : réglages mémorisés (langue, thème, taille du texte), historique des calculs (#/plus/historique),
-// sources, signaler une erreur, à propos (#/plus/a-propos).
-import { lienModule } from '../routes.js';
+// installer l'application, sources, signaler une erreur, conditions d'utilisation et confidentialité (#/plus/conditions,
+// #/plus/confidentialite, textes dans data/pages.json), à propos (#/plus/a-propos).
+import { lien, lienModule } from '../routes.js';
 import { PREFERENCES } from '../stockage.js';
 import { VERSION } from '../version.js';
-import { t, esc, etat } from '../ui.js';
-import { lien } from '../routes.js';
+import { t, tr, esc, etat } from '../ui.js';
 import { etatVide } from '../composants.js';
 import { composition } from '../bauhaus.js';
 import { confirmer } from '../etats.js';
 import { lienSignalement } from '../signaler.js';
+import { installationPossible, surInstallation, installer, dejaInstallee } from '../mise-a-jour.js';
 
 const LIBELLES_LANG = { fr: 'Français', en: 'English', mg: 'Malagasy' };
 const dateLisible = iso => { const [a, m, j] = iso.split('-'); return `${j}/${m}/${a}`; };
@@ -57,8 +58,29 @@ const signalementGeneral = () => lienSignalement({
   lignes: [t('signaler_corps'), '', '', '—', location.href, `Hetrako ${VERSION} · ${document.documentElement.lang}`],
 });
 
-export function monter(el, { b, sous, reglages, memoire }) {
+/** Page courte (conditions d'utilisation, confidentialité) tirée de data/pages.json. */
+function pageTexte(el, page) {
+  el.innerHTML = `
+    <header class="fiche-tete"><h2>${esc(tr(page.titre))}</h2></header>
+    <div class="page-texte">${page.sections.map(x => `<section><h3>${esc(tr(x.titre))}</h3><p>${esc(tr(x.texte))}</p></section>`).join('')}</div>`;
+}
+
+/** Bouton « Installer l'application », visible seulement quand le navigateur le permet. */
+function brancherInstallation(el) {
+  const li = el.querySelector('#installer-li'), bouton = el.querySelector('#installer');
+  const maj = possible => { li.hidden = !possible; };
+  maj(installationPossible());
+  const arreter = surInstallation(possible => { if (document.body.contains(li)) maj(possible); else arreter(); });
+  bouton.addEventListener('click', async () => {
+    const issue = await installer();
+    if (issue === 'accepted') confirmer(t('installation_ok'));
+  });
+}
+
+export function monter(el, { b, sous, reglages, memoire, pages }) {
   if (sous === 'a-propos') return aPropos(el);
+  const page = pages.find(p => p.id === sous);
+  if (page) return pageTexte(el, page);
   if (sous === 'historique') return historique(el, memoire);
   el.innerHTML = `
     <header class="fiche-tete"><h2>${t('nav_plus')}</h2></header>
@@ -70,13 +92,18 @@ export function monter(el, { b, sous, reglages, memoire }) {
       ${reglages.memorise ? '' : `<p class="aide">${t('stockage_indisponible')}</p>`}
     </section>
     <ul class="menu">
+      <li id="installer-li" hidden><button type="button" id="installer"><b>${t('installer_app')}</b><span>${t('installer_court')}</span></button></li>
+      ${dejaInstallee() ? `<li><span class="menu-info"><b>${t('app_installee')}</b><span>${t('app_installee_court')}</span></span></li>` : ''}
       <li><a href="${lienModule('plus', 'historique')}"><b>${t('historique')}</b><span>${t('historique_court', { n: memoire.historique().length })}</span></a></li>
       <li><a href="${lienModule('sources')}"><b>${t('module_sources')}</b><span>${t('maj_baremes')} ${dateLisible(b.misAJour)}</span></a></li>
       <li><button type="button" id="revoir"><b>${t('revoir_presentation')}</b><span>${t('revoir_court')}</span></button></li>
       <li><a href="${signalementGeneral()}"><b>${t('signaler_erreur')}</b><span>${t('signaler_court')}</span></a></li>
+      <li><a href="${lienModule('plus', 'conditions')}"><b>${tr(pages.find(p => p.id === 'conditions').titre)}</b><span>${t('conditions_court')}</span></a></li>
+      <li><a href="${lienModule('plus', 'confidentialite')}"><b>${tr(pages.find(p => p.id === 'confidentialite').titre)}</b><span>${t('confidentialite_court')}</span></a></li>
       <li><a href="${lienModule('plus', 'a-propos')}"><b>${t('a_propos')}</b><span>${t('version')} ${VERSION}</span></a></li>
     </ul>`;
   el.querySelector('#revoir').addEventListener('click', () => reglages.revoirPresentation());
+  brancherInstallation(el);
   el.querySelectorAll('[data-reglage]').forEach(bt => bt.addEventListener('click', () => {
     reglages.changer(bt.dataset.reglage, bt.dataset.valeur);
   }));

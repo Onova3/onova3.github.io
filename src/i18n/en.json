@@ -162,5 +162,14 @@
   "aucun_calcul": "No calculations yet. Open the Calculate tab of a tax sheet: your calculations are saved here.",
   "lexique_recherche": "Search for a term",
   "lexique_sans_article": "App term, not defined by the Code",
-  "aucun_terme": "No term matches."
+  "aucun_terme": "No term matches.",
+  "maj_disponible": "New version available.",
+  "maj_bouton": "Update",
+  "installer_app": "Install the app",
+  "installer_court": "On the home screen, works offline",
+  "installation_ok": "App installed",
+  "app_installee": "App installed",
+  "app_installee_court": "It works offline",
+  "conditions_court": "Learning tool, sources, limits",
+  "confidentialite_court": "No data collected, everything stays on the phone"
 }

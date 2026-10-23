@@ -11,6 +11,7 @@ import { ouvrirBienvenue } from './bienvenue-ecran.js';
 
 import { squelette, etatErreur, ERREUR_DEMARRAGE, confirmer } from './etats.js';
 import { creerMemoire } from './memoire.js';
+import { surveillerVersions } from './mise-a-jour.js';
 import { etatVide } from './composants.js';
 import { composition } from './bauhaus.js';
 
@@ -18,16 +19,16 @@ const LANGUES = ['fr', 'en', 'mg'];
 const json = async u => { const r = await fetch(u); if (!r.ok) throw new Error(`${u} : ${r.status}`); return r.json(); };
 
 // Données chargées au démarrage (voir demarrer()).
-let impots, b, obligations, profils, guides, quiz, motsCourants, lexique, TEXTES;
+let impots, b, obligations, profils, guides, quiz, motsCourants, lexique, pages, TEXTES;
 async function chargerDonnees() {
-  const [inventaire, bareme, oblig, donneesProfils, donneesGuides, donneesQuiz, donneesMots, donneesLexique, ...textes] = await Promise.all([
+  const [inventaire, bareme, oblig, donneesProfils, donneesGuides, donneesQuiz, donneesMots, donneesLexique, donneesPages, ...textes] = await Promise.all([
     json('data/impots.json'), json('data/baremes-2026.json'), json('data/obligations.json'), json('data/profils.json'), json('data/guides.json'), json('data/quiz.json'),
-    json('data/mots-courants.json'), json('data/lexique.json'),
+    json('data/mots-courants.json'), json('data/lexique.json'), json('data/pages.json'),
     ...LANGUES.map(l => json(`src/i18n/${l}.json`)),
   ]);
   impots = inventaire.impots; b = bareme; obligations = oblig;
   profils = donneesProfils.profils; guides = donneesGuides.guides; quiz = donneesQuiz.chapitres;
-  motsCourants = donneesMots.mots; lexique = donneesLexique.termes;
+  motsCourants = donneesMots.mots; lexique = donneesLexique.termes; pages = donneesPages.pages;
   TEXTES = Object.fromEntries(LANGUES.map((l, i) => [l, textes[i]]));
 }
 
@@ -92,7 +93,7 @@ function afficher() {
   routePrecedente = { cle, id: r.id, page: r.page };
 
   const impot = r.page === 'fiche' ? impots.find(i => i.id === r.id) : null;
-  const ctx = { impots, obligations, profils, guides, quiz, motsCourants, lexique, b, sous: r.sous ?? null, reglages, memoire };
+  const ctx = { impots, obligations, profils, guides, quiz, motsCourants, lexique, pages, b, sous: r.sous ?? null, reglages, memoire };
   if (impot && FICHES[r.id]) {
     rendreFiche(contenu, { fiche: FICHES[r.id], impot, onglet: r.onglet, b, obligations, memoire });
     document.title = `${impot.sigle} · Hetrako`;
@@ -114,7 +115,12 @@ const horsLigne = () => { document.getElementById('hors-ligne').hidden = navigat
 window.addEventListener('online', () => { horsLigne(); if (TEXTES) confirmer(t('connexion_retablie')); });
 window.addEventListener('offline', horsLigne);
 horsLigne();
-if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
+// Nouvelle version (application ou barèmes) : bandeau avec « Mettre à jour » (src/mise-a-jour.js).
+surveillerVersions({ surNouvelleVersion: activer => {
+  const bandeau = document.getElementById('maj');
+  bandeau.hidden = false;
+  document.getElementById('maj-bouton').onclick = () => { bandeau.hidden = true; activer(); };
+} });
 
 // Démarrage : blocs gris pendant le chargement, message d'erreur et « Réessayer » si les données ne se lisent pas.
 async function demarrer() {
