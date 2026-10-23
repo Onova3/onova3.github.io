@@ -54,3 +54,14 @@ export function blocResultat(r) {
     ${r.pastilles?.length ? `<div class="h-pastilles" style="margin-top:16px">${r.pastilles.join('')}</div>` : ''}
     <p class="h-mention">${esc(r.mention)}</p></section>`;
 }
+
+/**
+ * État vide : petite composition Bauhaus, un message et une action (lien ou bouton).
+ * @param {{titre?: string, message: string, action?: {libelle: string, href?: string, attrs?: string}}} o
+ */
+export function etatVide({ titre = '', message, action }, composition = '') {
+  const bouton = !action ? '' : action.href
+    ? `<a class="bouton bouton--secondaire" href="${action.href}">${esc(action.libelle)}</a>`
+    : `<button type="button" class="bouton bouton--secondaire" ${action.attrs ?? ''}>${esc(action.libelle)}</button>`;
+  return `<div class="etat-vide" role="status">${composition}${titre ? `<p class="titre-vide">${esc(titre)}</p>` : ''}<p>${esc(message)}</p>${bouton}</div>`;
+}

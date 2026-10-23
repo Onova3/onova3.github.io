@@ -138,6 +138,10 @@
 .logo--empile svg{width:2.6em;height:2.6em}
 .logo--sur-vert{color:var(--blanc)}.logo--sur-vert .ko{color:var(--ko-sur-vert)}
 
+/* Formes Bauhaus (src/bauhaus.js) : moments forts seulement. Le noir Bauhaus suit --encre pour rester visible en sombre. */
+.b-vert{fill:var(--vert)} .b-noir{fill:var(--encre)} .b-or{fill:var(--or)}
+.bauhaus{display:block;width:100%;height:auto}
+
 /* Accessibilité commune */
 :where(.h-btn,.h-champ input,.h-champ select,.h-compteur button,.h-case input,.h-onglets a,.h-onglets button,.h-barre a,.h-ligne):focus-visible{
   outline:3px solid var(--vert);outline-offset:2px}

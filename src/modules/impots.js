@@ -2,6 +2,8 @@
 import { lien } from '../routes.js';
 import { FICHES } from '../fiches/index.js';
 import { t, tr, esc } from '../ui.js';
+import { etatVide } from '../composants.js';
+import { composition } from '../bauhaus.js';
 
 const CATEGORIES = ['revenus', 'enregistrement', 'consommation', 'local'];
 
@@ -23,7 +25,7 @@ export function listeImpots(impots, recherche) {
         ${dispo ? '<span class="fleche" aria-hidden="true">→</span>' : `<span class="statut">${t('statut_' + i.statut)}</span>`}`;
       return `<li>${dispo ? `<a class="impot dispo" href="${lien(i.id)}">${corps}</a>` : `<div class="impot">${corps}</div>`}</li>`;
     }).join('')}</ul></section>`;
-  }).join('') || `<p class="lead">${t('aucun_resultat')}</p>`;
+  }).join('') || etatVide({ message: t('aucun_resultat'), action: { libelle: t('effacer_recherche'), attrs: 'data-effacer' } }, composition('vide'));
 }
 
 let recherche = '';
@@ -37,5 +39,6 @@ export function monter(el, { impots }) {
   const q = el.querySelector('#q'), out = el.querySelector('#liste');
   const maj = () => { out.innerHTML = listeImpots(impots, recherche); };
   q.addEventListener('input', () => { recherche = q.value; maj(); });
+  el.addEventListener('click', e => { if (e.target.closest('[data-effacer]')) { recherche = ''; q.value = ''; maj(); q.focus(); } });
   maj();
 }

@@ -2,6 +2,7 @@
 import { corriger } from '../quiz.js';
 import { lienModule } from '../routes.js';
 import { t, tr, fmt, esc, art } from '../ui.js';
+import { composition } from '../bauhaus.js';
 
 const L = {
   index: { fr: 'Quiz de révision', en: 'Revision quiz', mg: 'Fanontaniana famerenana' },
@@ -17,7 +18,7 @@ const choixTexte = c => (typeof c === 'string' ? c : tr(c));
 
 function index(el, chapitres) {
   el.innerHTML = `
-    <header class="fiche-tete"><h2>${l('index')}</h2><p class="lead">${l('indexLead')}</p></header>
+    <header class="fiche-tete quiz-tete"><div><h2>${l('index')}</h2><p class="lead">${l('indexLead')}</p></div>${composition('quiz')}</header>
     <div class="profils">${chapitres.map(c => `<a class="profil" href="${lienModule('quiz', c.id)}"><b>${esc(tr(c.titre))}</b><span>${l('nb', { n: c.questions.length })}</span></a>`).join('')}</div>`;
 }
 

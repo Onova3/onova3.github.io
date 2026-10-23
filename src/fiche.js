@@ -4,6 +4,8 @@ import { t, tr, fmt, esc, art, ar, pct, ligne, champMontant, champCompteur, lire
 import { ONGLETS, lien } from './routes.js';
 import { calculPenalites, calculPenalitesLocales } from './calc/penalites.js';
 import { texteResultat, lireTicket, partager } from './partage.js';
+import { etatVide } from './composants.js';
+import { composition } from './bauhaus.js';
 
 // Les textes peuvent contenir des {variables} (taux, seuils) tirées du barème par fiche.variables(b).
 const liste = (items = [], vars = {}) => `<ul class="puces">${items.map(i => `<li>${esc(fmt(tr(i.texte), vars))}${art(i.article)}</li>`).join('')}</ul>`;
@@ -73,7 +75,7 @@ function comprendre(p, f, b) {
 }
 
 function calculer(p, f, b) {
-  if (!f.monterCalculateur) { p.innerHTML = `<p class="lead">${t('sans_calcul')}</p>`; return; }
+  if (!f.monterCalculateur) { p.innerHTML = etatVide({ message: t('sans_calcul'), action: { libelle: t('onglet_comprendre'), href: lien(f.id) } }, composition('vide')); return; }
   f.monterCalculateur(p, b);
 }
 

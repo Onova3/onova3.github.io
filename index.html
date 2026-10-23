@@ -31,7 +31,17 @@ try {
 <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
-<div class="demarrage" id="demarrage" aria-hidden="true"><span class="logo logo--empile"><svg viewBox="0 0 120 120" width="96" height="96" aria-hidden="true"><rect x="0" y="0" width="120" height="120" rx="26" fill="#0B6E4F"/><rect x="28" y="26" width="12" height="68" rx="6" fill="#E6F2EC"/><rect x="80" y="26" width="12" height="68" rx="6" fill="#E6F2EC"/><rect x="44" y="50" width="32" height="7" rx="3.5" fill="#F2B13C"/><rect x="44" y="63" width="32" height="7" rx="3.5" fill="#F2B13C"/></svg><span class="logo-nom">Hetra<span class="ko">ko</span></span></span></div>
+<div class="demarrage" id="demarrage" role="status">
+  <span class="bh-disque" aria-hidden="true"></span><span class="bh-barre" aria-hidden="true"></span><span class="bh-quart" aria-hidden="true"></span>
+  <div class="demarrage-centre"><span class="logo logo--empile"><svg viewBox="0 0 120 120" width="96" height="96" aria-hidden="true"><rect x="0" y="0" width="120" height="120" rx="26" fill="#0B6E4F"/><rect x="28" y="26" width="12" height="68" rx="6" fill="#E6F2EC"/><rect x="80" y="26" width="12" height="68" rx="6" fill="#E6F2EC"/><rect x="44" y="50" width="32" height="7" rx="3.5" fill="#F2B13C"/><rect x="44" y="63" width="32" height="7" rx="3.5" fill="#F2B13C"/></svg><span class="logo-nom">Hetra<span class="ko">ko</span></span></span>
+    <div class="chargement"><span class="chargement-piste"><span class="chargement-jauge"></span></span>
+      <span class="chargement-texte" id="chargement-texte" data-fr="Chargement des barèmes 2026" data-en="Loading the 2026 rates" data-mg="Mampiditra ny taha 2026">Chargement des barèmes 2026</span></div>
+  </div>
+</div>
+<script>
+// Texte de chargement dans la langue mémorisée (avant que l'application ne charge ses textes).
+try { var lg = localStorage.getItem('kh-lang'), ct = document.getElementById('chargement-texte'); if (ct.dataset[lg]) ct.textContent = ct.dataset[lg]; } catch (e) {}
+</script>
 <div class="wrap">
   <header class="top">
     <a class="brand" href="#/"><h1><span class="logo"><svg viewBox="0 0 120 120" width="40" height="40" aria-hidden="true"><rect x="0" y="0" width="120" height="120" rx="26" fill="#0B6E4F"/><rect x="28" y="26" width="12" height="68" rx="6" fill="#E6F2EC"/><rect x="80" y="26" width="12" height="68" rx="6" fill="#E6F2EC"/><rect x="44" y="50" width="32" height="7" rx="3.5" fill="#F2B13C"/><rect x="44" y="63" width="32" height="7" rx="3.5" fill="#F2B13C"/></svg><span class="logo-nom">Hetra<span class="ko">ko</span></span></span></h1><p data-i18n="slogan"></p></a>

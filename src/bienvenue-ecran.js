@@ -2,14 +2,9 @@
 import { avancer, DIAPOSITIVES } from './bienvenue.js';
 import { t } from './ui.js';
 import { logoHTML } from './logo.js';
+import { composition } from './bauhaus.js';
 
 const LANGUES = [['fr', 'Français'], ['en', 'English'], ['mg', 'Malagasy']];
-const ICONES = {
-  calculer: '<rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8 11h2M12 11h2M16 11v6M8 15h2M12 15h2"/>',
-  comprendre: '<path d="M4 5h6a2 2 0 0 1 2 2v12a2 2 0 0 0-2-2H4zM20 5h-6a2 2 0 0 0-2 2v12a2 2 0 0 1 2-2h6z"/>',
-  horsLigne: '<path d="M3 9a14 14 0 0 1 18 0M6.5 12.5a9 9 0 0 1 11 0M10 16a4 4 0 0 1 4 0"/><circle cx="12" cy="19" r="1"/>',
-};
-const icone = id => `<svg viewBox="0 0 24 24" aria-hidden="true">${ICONES[id]}</svg>`;
 
 /**
  * Ouvre le parcours. L'application derrière devient inactive (inert) jusqu'à l'acceptation.
@@ -31,7 +26,7 @@ export function ouvrirBienvenue({ reglages, onFin }) {
   function rendre() {
     if (etat.etape === 'fin') return fermer();
     const corps = { langue, presentation, avertissement }[etat.etape]();
-    boite.innerHTML = `<div class="bv-carte">${corps}</div>`;
+    boite.innerHTML = `<div class="bv-carte${etat.etape === 'presentation' ? ' bv-carte--presentation' : ''}">${corps}</div>`;
     brancher();
     (boite.querySelector('[data-focus]') ?? boite.querySelector('button'))?.focus();
   }
@@ -44,16 +39,19 @@ export function ouvrirBienvenue({ reglages, onFin }) {
       `<button type="button" class="bv-langue" data-lang="${code}" aria-pressed="${reglages.lire('lang') === code}" ${reglages.lire('lang') === code ? 'data-focus' : ''}>${nom}</button>`).join('')}</div>
     <button type="button" class="bouton bv-principal" data-action="suivant">${t('bv_continuer')}</button>`;
 
+  // Chaque écran a sa composition Bauhaus dans la moitié haute ; en bas : 1 / 3, titre, texte, Passer et Suivant.
   const presentation = () => `
-    <div class="bv-haut"><span class="sr" id="bv-titre">${t('bv_presentation')}</span>
-      <button type="button" class="bv-passer" data-action="passer">${t('bv_passer')}</button></div>
+    <span class="sr" id="bv-titre">${t('bv_presentation')}</span>
     <div class="bv-diapos" tabindex="-1">${DIAPOSITIVES.map((d, i) => `
       <section class="bv-diapo" aria-roledescription="${t('bv_diapo')}" aria-label="${i + 1} / ${DIAPOSITIVES.length}">
-        <div class="bv-icone">${icone(d)}</div>
+        ${composition(d)}
+        <span class="bv-compteur">${i + 1} / ${DIAPOSITIVES.length}</span>
         <h2>${t('bv_' + d + '_titre')}</h2><p class="lead">${t('bv_' + d + '_texte')}</p>
       </section>`).join('')}</div>
-    <div class="bv-points" aria-hidden="true">${DIAPOSITIVES.map((d, i) => `<span class="${i === etat.diapo ? 'on' : ''}"></span>`).join('')}</div>
-    <button type="button" class="bouton bv-principal" data-action="suivant" data-focus>${t('bv_suivant')}</button>`;
+    <div class="bv-actions">
+      <button type="button" class="bv-passer" data-action="passer">${t('bv_passer')}</button>
+      <button type="button" class="bouton bv-principal" data-action="suivant" data-focus>${t('bv_suivant')}</button>
+    </div>`;
 
   const avertissement = () => `
     <div class="bv-icone bv-alerte"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 20h20zM12 10v4M12 17v.5"/></svg></div>

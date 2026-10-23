@@ -2,6 +2,8 @@
 import { calendrier } from '../calendrier.js';
 import { lien, lienModule } from '../routes.js';
 import { etat, t, tr, esc, art } from '../ui.js';
+import { etatVide } from '../composants.js';
+import { composition } from '../bauhaus.js';
 
 const MOIS_MG = ['janoary', 'febroary', 'martsa', 'aprily', 'mey', 'jona', 'jolay', 'aogositra', 'septambra', 'oktobra', 'novambra', 'desambra'];
 export const nomMois = (a, m) => etat.lang === 'mg' ? `${MOIS_MG[m - 1]} ${a}`
@@ -32,6 +34,6 @@ export function monter(el, { impots, obligations, profils, sous }) {
           <span class="jour">${Number(e.date.slice(8))}</span>
           <span><a class="sigle" href="${lien(e.id, 'declarer')}">${esc(e.sigle)}</a> ${esc(tr(e.nom))}<br>
             <span class="aide">${esc(tr(e.texte))}</span>${art(e.article)}</span></li>`).join('')}</ul></section>`;
-    }).join('') : `<p class="lead">${t('aucune_echeance')}</p>`}</div>
+    }).join('') : etatVide({ message: t('aucune_echeance'), action: profil ? { libelle: t('tous'), href: lienModule('calendrier') } : null }, composition('vide'))}</div>
     <p class="aide">${t('calendrier_note')}</p>`;
 }

@@ -44,5 +44,6 @@ export function monter(el, { impots, obligations, profils, reglages }) {
     el.querySelector('#hors-recherche').hidden = actif;
   };
   q.addEventListener('input', () => { recherche = q.value; maj(); });
+  el.addEventListener('click', e => { if (e.target.closest('[data-effacer]')) { recherche = ''; q.value = ''; maj(); q.focus(); } });
   maj();
 }

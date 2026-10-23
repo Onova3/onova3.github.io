@@ -810,3 +810,26 @@ test('Partage : texte du résultat avec ses lignes, le total, la mention et le l
   assert.doesNotMatch(s, /Note sans montant/);
   assert.match(s, /Impôt : 138 700 Ar\n\nEstimation\nhttps:\/\/exemple\/#\/irsa\/calculer$/);
 });
+
+// --- Touches Bauhaus ---
+import { COMPOSITIONS, composition } from '../src/bauhaus.js';
+import { etatVide } from '../src/composants.js';
+test('Bauhaus : formes du logo uniquement, couleurs par jetons, compositions différentes', () => {
+  for (const [nom, svg] of Object.entries(COMPOSITIONS)) {
+    assert.doesNotMatch(svg, /#[0-9A-Fa-f]{3,6}|fill="/, nom);
+    assert.match(svg, /class="b-vert"/, nom);
+    assert.match(svg, /class="b-or"/, nom);
+    assert.match(svg, /class="b-noir"/, nom);
+    for (const c of svg.matchAll(/class="(b-\w+)"/g)) assert.ok(['b-vert', 'b-noir', 'b-or'].includes(c[1]), nom);
+  }
+  const diapos = ['calculer', 'comprendre', 'horsLigne'].map(n => COMPOSITIONS[n]);
+  assert.equal(new Set(diapos).size, 3);
+  assert.match(composition('h'), /aria-hidden="true"/);
+  assert.match(readFileSync('src/design.css', 'utf8'), /\.b-or\{fill:var\(--or\)\}/);
+});
+test('États vides : message et action, composition au-dessus', () => {
+  const h = etatVide({ message: 'Aucun favori.', action: { libelle: 'Voir les impôts', href: '#/impots' } }, composition('vide'));
+  assert.ok(h.indexOf('<svg') < h.indexOf('Aucun favori.'));
+  assert.match(h, /href="#\/impots"/);
+  assert.doesNotMatch(etatVide({ message: 'x' }), /bouton/);
+});

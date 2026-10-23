@@ -83,7 +83,7 @@ input:focus,select:focus{outline:none;box-shadow:inset 0 calc(-1 * var(--trait-a
 .seg{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--encre);padding:2px}
 .seg3{grid-template-columns:repeat(3,1fr)}
 .seg2x2{grid-template-columns:1fr 1fr}
-.seg button{min-height:var(--tactile);border:0;border-radius:0;background:var(--fond);color:var(--texte);font:600 var(--t-petit) var(--police-texte);padding:var(--u);cursor:pointer;overflow-wrap:anywhere}
+.seg button{min-height:var(--tactile);border:0;border-radius:0;background:var(--fond);color:var(--texte);font:600 var(--t-petit) var(--police-texte);padding:4px;cursor:pointer;overflow-wrap:break-word;hyphens:auto}
 .seg button[aria-pressed=true]{background:var(--encre);color:var(--fond)}
 /* Compteur */
 .step{display:flex;align-items:stretch}
@@ -239,3 +239,33 @@ ol.etapes p{margin:var(--u) 0 0}
 .bv-points span{width:24px;height:4px;background:var(--filet)}
 .bv-points span.on{background:var(--vert)}
 .bv-accord{min-height:var(--tactile)}
+
+/* ---------- Touches Bauhaus ---------- */
+/* Démarrage : fond gris clair, disque doré qui déborde en haut à droite, barre noire à gauche, quart de cercle vert en bas à gauche */
+.demarrage{background:var(--fond-2);overflow:hidden}
+.bh-disque,.bh-barre,.bh-quart{position:absolute;display:block}
+.bh-disque{width:min(70vw,360px);aspect-ratio:1;border-radius:50%;background:var(--or);top:calc(-1 * min(22vw,110px));right:calc(-1 * min(22vw,110px))}
+.bh-barre{width:clamp(20px,6vw,36px);top:12%;bottom:30%;left:var(--marge);background:var(--encre)}
+.bh-quart{width:min(48vw,240px);aspect-ratio:1;left:0;bottom:0;background:var(--vert);border-top-right-radius:100%}
+.demarrage-centre{position:relative;display:flex;flex-direction:column;align-items:center;gap:var(--u4)}
+.chargement{display:flex;flex-direction:column;align-items:center;gap:var(--u)}
+.chargement-piste{display:block;width:160px;height:4px;background:var(--filet);overflow:hidden}
+.chargement-jauge{display:block;width:40%;height:100%;background:var(--vert);animation:charge 1.1s ease-in-out infinite}
+@keyframes charge{from{transform:translateX(-100%)}to{transform:translateX(250%)}}
+.chargement-texte{font:500 var(--t-etiquette)/1.3 var(--police-chiffres);letter-spacing:var(--espace-etiquette);text-transform:uppercase;color:var(--texte-2)}
+
+/* Présentation : composition dans la moitié haute, texte et boutons en bas */
+.bv-diapo .bauhaus{width:min(100%,320px);max-height:42vh;margin:0 auto var(--u2)}
+.bv-compteur{font:500 var(--t-etiquette)/1.3 var(--police-chiffres);letter-spacing:var(--espace-etiquette);color:var(--texte-2)}
+.bv-actions{display:grid;grid-template-columns:1fr 1fr;gap:var(--u)}
+.bv-actions .bv-passer{min-height:var(--h-bouton);box-shadow:inset 0 0 0 var(--filet-fort) var(--encre);color:var(--texte)}
+.bv-carte--presentation{justify-content:space-between}
+
+/* États vides : petite composition au-dessus du message et d'une action */
+.etat-vide{display:flex;flex-direction:column;align-items:flex-start;gap:var(--u2);padding:var(--u4) 0}
+.etat-vide .bauhaus{width:96px}
+.etat-vide p{margin:0;max-width:40ch}
+.etat-vide .titre-vide{font:800 var(--t-sous-titre)/1.2 var(--police-titre);letter-spacing:-.01em;color:var(--texte)}
+
+/* Quiz : composition en tête de l'index */
+.quiz-tete{display:grid;grid-template-columns:minmax(0,1fr) 96px;gap:var(--u2);align-items:end}
