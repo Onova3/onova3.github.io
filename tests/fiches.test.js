@@ -966,3 +966,14 @@ test('Pages Conditions et Confidentialité : trois langues, aucune donnée colle
   assert.match(pages[1].sections[0].titre.fr, /Aucune donnée personnelle/);
   assert.equal(lienRetour(lireRoute('#/plus/confidentialite')), '#/plus');
 });
+
+// --- Préparation de la publication ---
+test('Fiche Play Store : trois langues, description courte ≤ 80 et complète ≤ 4 000 caractères', () => {
+  const p = JSON.parse(readFileSync('docs/publication/play-store.json', 'utf8'));
+  for (const l of ['fr', 'en', 'mg']) {
+    assert.ok([...p.nom[l]].length <= 30, `nom ${l}`);
+    assert.ok([...p.courte[l]].length <= 80, `courte ${l}`);
+    assert.ok([...p.complete[l]].length <= 4000, `complète ${l}`);
+    assert.doesNotMatch(p.complete[l], /\d+\s?%|\d[\d ]{3,}\s?Ar/, `aucun taux ni montant (${l})`);
+  }
+});
