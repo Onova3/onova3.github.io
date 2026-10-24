@@ -1,6 +1,6 @@
 // Service worker : garde l'application sur le téléphone pour qu'elle marche sans réseau.
 // Changer VERSION à chaque mise en ligne, et à chaque changement des barèmes : c'est ce qui déclenche le bandeau « Nouvelle version disponible ». Un test vérifie que FICHIERS liste tous les fichiers de src/ et data/.
-const VERSION = 'kh-0.9.0';
+const VERSION = 'kh-0.9.2';
 // Date de mise à jour des barèmes (data/baremes-2026.json, « misAJour ») : un test oblige à la recopier ici,
 // donc tout changement des barèmes produit un nouveau service worker et le bandeau de mise à jour.
 const BAREMES = '2026-10-22';

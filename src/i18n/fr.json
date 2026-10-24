@@ -171,5 +171,6 @@
   "app_installee": "Application installée",
   "app_installee_court": "Elle marche sans connexion",
   "conditions_court": "Outil pédagogique, sources, limites",
-  "confidentialite_court": "Aucune donnée collectée, tout reste sur le téléphone"
+  "confidentialite_court": "Aucune donnée collectée, tout reste sur le téléphone",
+  "tous_profils": "Tous les profils"
 }

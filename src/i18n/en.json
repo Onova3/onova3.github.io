@@ -171,5 +171,6 @@
   "app_installee": "App installed",
   "app_installee_court": "It works offline",
   "conditions_court": "Learning tool, sources, limits",
-  "confidentialite_court": "No data collected, everything stays on the phone"
+  "confidentialite_court": "No data collected, everything stays on the phone",
+  "tous_profils": "All profiles"
 }

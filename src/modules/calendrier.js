@@ -23,9 +23,9 @@ export function monter(el, { impots, obligations, profils, sous }) {
   el.innerHTML = `
     <header class="fiche-tete"><h2>${t('module_calendrier')}</h2>
       <p class="lead">${t('calendrier_lead')}</p></header>
-    <nav class="tabs" aria-label="${esc(t('par_profil'))}">
-      <a class="tab" href="${lienModule('calendrier')}" aria-selected="${!profil}">${t('tous')}</a>
-      ${profils.map(p => `<a class="tab" href="${lienModule('calendrier', p.id)}" aria-selected="${p === profil}">${esc(tr(p.libelle))}</a>`).join('')}
+    <nav class="choix-profils" aria-label="${esc(t('par_profil'))}">
+      <a href="${lienModule('calendrier')}"${!profil ? ' aria-current="page"' : ''}>${t('tous')}</a>
+      ${profils.map(p => `<a href="${lienModule('calendrier', p.id)}"${p === profil ? ' aria-current="page"' : ''}>${esc(tr(p.libelle))}</a>`).join('')}
     </nav>
     ${profil ? `<p class="aide">${esc(tr(profil.description))}</p>` : ''}
     <div class="calendrier">${parMois.size ? [...parMois].map(([cle, items]) => {

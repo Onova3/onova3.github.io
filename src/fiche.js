@@ -32,6 +32,7 @@ export function rendreFiche(el, { fiche, impot, onglet, b, obligations, memoire 
     <section class="panel" role="tabpanel" id="panneau"></section>
     <p class="signaler"><a href="${lienSignalement(signalement(impot, onglet))}">${t('signaler_erreur')}</a></p>`;
   memoire.noterConsultation(fiche.id);
+  signalerSuite(el.querySelector('nav.tabs'));
   el.querySelector('#favori').addEventListener('click', e => {
     const ajoute = memoire.basculerFavori(fiche.id);
     e.currentTarget.setAttribute('aria-pressed', ajoute);
@@ -52,6 +53,21 @@ export function rendreFiche(el, { fiche, impot, onglet, b, obligations, memoire 
   completerResultats(panneau, impot);
   // Certains calculateurs se redessinent (changement de mode) : on complète à nouveau leurs résultats.
   new MutationObserver(() => completerResultats(panneau, impot)).observe(panneau, { childList: true });
+}
+
+/**
+ * Onglets qui ne tiennent pas en largeur : l'onglet actif est amené à l'écran et un dégradé sur le bord
+ * indique qu'il reste des onglets à faire glisser (classes suite-gauche et suite-droite).
+ */
+function signalerSuite(nav) {
+  const maj = () => {
+    nav.classList.toggle('suite-gauche', nav.scrollLeft > 4);
+    nav.classList.toggle('suite-droite', nav.scrollLeft + nav.clientWidth < nav.scrollWidth - 4);
+  };
+  nav.querySelector('[aria-selected=true]')?.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+  nav.addEventListener('scroll', maj, { passive: true });
+  new ResizeObserver(maj).observe(nav);
+  maj();
 }
 
 const signalement = (impot, onglet) => ({

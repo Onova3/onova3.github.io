@@ -60,7 +60,8 @@ export function monter(el, { impots, obligations, motsCourants, reglages, memoir
     <div id="hors-recherche">
       ${prochaineEcheance(impots, obligations)}
       <section><h2>${t('par_profil')}</h2>
-        <div class="profils">${RACCOURCIS.map(r => `<a class="profil profil--simple" href="${r.href}"><b>${t('raccourci_' + r.id)}</b></a>`).join('')}</div></section>
+        <div class="profils">${RACCOURCIS.map(r => `<a class="profil profil--simple" href="${r.href}"><b>${t('raccourci_' + r.id)}</b></a>`).join('')}</div>
+        <a class="tous-profils" href="${lienModule('calendrier')}">${t('tous_profils')} →</a></section>
       ${recents(impots, memoire)}
       ${favoris(impots, memoire)}
       ${listeImpots(impots, '')}

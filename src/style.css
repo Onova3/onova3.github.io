@@ -320,3 +320,23 @@ ol.etapes p{margin:var(--u) 0 0}
 .menu-info{display:flex;flex-direction:column;justify-content:center;gap:2px;min-height:64px;padding:var(--u) 0}
 .page-texte section{padding:var(--u2) 0;border-bottom:1px solid var(--filet)}
 .page-texte p{margin:var(--u) 0 0;max-width:62ch}
+
+/* ---------- Choix visibles d'un coup ---------- */
+/* Calendrier : tous les profils en grille, sans défilement caché */
+.choix-profils{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:var(--u3);background:var(--encre);padding:2px}
+@media (min-width:760px){.choix-profils{grid-template-columns:repeat(4,1fr)}}
+.choix-profils a{display:flex;align-items:center;min-height:var(--tactile);padding:var(--u) var(--u2);background:var(--fond);color:var(--texte);
+  font:600 var(--t-petit)/1.25 var(--police-texte);text-decoration:none;overflow-wrap:break-word;hyphens:auto}
+.choix-profils a[aria-current=page]{background:var(--encre);color:var(--fond)}
+/* Onglets des fiches : resserrés sur petit écran ; dégradé au bord quand il reste des onglets à faire glisser */
+@media (max-width:420px){nav.tabs{gap:var(--u2)}}
+nav.tabs.suite-droite{-webkit-mask-image:linear-gradient(90deg,black 80%,transparent);mask-image:linear-gradient(90deg,black 80%,transparent)}
+nav.tabs.suite-gauche{-webkit-mask-image:linear-gradient(90deg,transparent,black 20%);mask-image:linear-gradient(90deg,transparent,black 20%)}
+nav.tabs.suite-gauche.suite-droite{-webkit-mask-image:linear-gradient(90deg,transparent,black 20%,black 80%,transparent);mask-image:linear-gradient(90deg,transparent,black 20%,black 80%,transparent)}
+.tous-profils{display:inline-flex;align-items:center;min-height:var(--tactile);margin-top:var(--u);font-weight:600}
+.choix-profils + .aide{margin-top:var(--u)}
+/* Téléphone : les 4 onglets d’une fiche sur deux colonnes, tous visibles sans défilement */
+@media (max-width:520px){
+  nav.tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 var(--u2);overflow:visible}
+  nav.tabs .tab{white-space:normal;line-height:1.2;padding:4px 0;min-height:var(--tactile);overflow-wrap:break-word}
+}
